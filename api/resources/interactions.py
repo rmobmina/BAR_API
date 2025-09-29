@@ -314,13 +314,12 @@ class InteractionsByRef(Resource):
         try:
             interactions_database = PostInteractions
             itnsjoin_database = PostInteractionsSourceMiJoin
-            query = db.select(
-                interactions_database,
-                itnsjoin_database
-                ).select_from(interactions_database).join(
-                        itnsjoin_database,
-                        interactions_database.interaction_id == itnsjoin_database.interaction_id
-                    ).where(itnsjoin_database.source_id == paper_id)
+            query = (
+                db.select(interactions_database, itnsjoin_database)
+                .select_from(interactions_database)
+                .join(itnsjoin_database, interactions_database.interaction_id == itnsjoin_database.interaction_id)
+                .where(itnsjoin_database.source_id == paper_id)
+            )
             rows = db.session.execute(query).all()
             for i, m in rows:
                 result.append(
@@ -382,9 +381,7 @@ class SearchByTag(Resource):
             # Step 1: Get source_ids that contain the searched tag
 
             matching_source_ids = []
-            query_source = db.select(src_tag_join_database.source_id).where(
-                src_tag_join_database.tag_name == tag
-            )
+            query_source = db.select(src_tag_join_database.source_id).where(src_tag_join_database.tag_name == tag)
             rows_source = db.session.execute(query_source).all()
             matching_source_ids = [row[0] for row in rows_source]
 
@@ -393,11 +390,7 @@ class SearchByTag(Resource):
 
             # Step 2: Get all tags for those sources
             query = (
-                db.select(
-                    ext_src_database,
-                    src_tag_join_database.tag_name,
-                    tag_lkup_database.tag_group
-                )
+                db.select(ext_src_database, src_tag_join_database.tag_name, tag_lkup_database.tag_group)
                 .join(src_tag_join_database, ext_src_database.source_id == src_tag_join_database.source_id)
                 .join(tag_lkup_database, src_tag_join_database.tag_name == tag_lkup_database.tag_name)
                 .where(ext_src_database.source_id.in_(matching_source_ids))  # Keep all tags for matched sources
@@ -425,7 +418,7 @@ class SearchByTag(Resource):
                         "image_url": ex.image_url,
                         "grn_title": ex.grn_title,
                         "cyjs_layout": ex.cyjs_layout,
-                        "tag": "|".join(src_tag_match[ex.source_id])
+                        "tag": "|".join(src_tag_match[ex.source_id]),
                     }
                     result.append(one_source[source_id])
 
@@ -494,7 +487,7 @@ class GetPaper(Resource):
                         "url": row.url,
                         "image_url": row.image_url,
                         "grn_title": row.grn_title,
-                        "cyjs_layout": row.cyjs_layout
+                        "cyjs_layout": row.cyjs_layout,
                     }
                 )
 
@@ -530,7 +523,7 @@ class GetPaperByAGI(Resource):
                     es.comments,
                     es.cyjs_layout,
                     stjt.tag_name,
-                    tlt.tag_group
+                    tlt.tag_group,
                 )
                 .join(i_s_mi_join_table, i_s_mi_join_table.source_id == es.source_id)
                 .join(i, i.interaction_id == i_s_mi_join_table.interaction_id)
@@ -557,20 +550,14 @@ class GetPaperByAGI(Resource):
                         "source_name": row.source_name,
                         "comments": row.comments,
                         "cyjs_layout": row.cyjs_layout,
-                        "tags": []
+                        "tags": [],
                     }
 
                 tag_entry = f"{row.tag_name}:{row.tag_group}"
                 if tag_entry not in result_dict[source_id]["tags"]:  # DISTINCT
                     result_dict[source_id]["tags"].append(tag_entry)
 
-            result = [
-                {
-                    **data,
-                    "tags": "|".join(data["tags"])  # overwrites tags
-                }
-                for data in result_dict.values()
-            ]
+            result = [{**data, "tags": "|".join(data["tags"])} for data in result_dict.values()]  # overwrites tags
 
             if len(result) == 0:
                 return BARUtils.error_exit("Invalid AGI"), 400
@@ -603,7 +590,7 @@ class GetPaperByAGIPair(Resource):
                     es.comments,
                     es.cyjs_layout,
                     stjt.tag_name,
-                    tlt.tag_group
+                    tlt.tag_group,
                 )
                 .join(i_s_mi_join_table, i_s_mi_join_table.source_id == es.source_id)
                 .join(i, i.interaction_id == i_s_mi_join_table.interaction_id)
@@ -630,18 +617,14 @@ class GetPaperByAGIPair(Resource):
                         "source_name": row.source_name,
                         "comments": row.comments,
                         "cyjs_layout": row.cyjs_layout,
-                        "tags": set()
+                        "tags": set(),
                     }
 
-                result_dict[source_id]["tags"].add(f"{row.tag_name}:{row.tag_group}")  # ensures uniqueness automatically with `set`
+                result_dict[source_id]["tags"].add(
+                    f"{row.tag_name}:{row.tag_group}"
+                )  # ensures uniqueness automatically with `set`
 
-            result = [
-                {
-                    **data,
-                    "tags": "|".join(sorted(data["tags"]))
-                }
-                for data in result_dict.values()
-            ]
+            result = [{**data, "tags": "|".join(sorted(data["tags"]))} for data in result_dict.values()]
 
             if len(result) == 0:
                 return BARUtils.error_exit("Both AGI invalid"), 400
@@ -664,11 +647,7 @@ class GetAllGRNs(Resource):
             stjt = SourceTagJoinTable
             tlt = TagLookupTable
             query = (
-                db.select(
-                    es,
-                    stjt.tag_name,
-                    tlt.tag_group
-                )
+                db.select(es, stjt.tag_name, tlt.tag_group)
                 .join(stjt, es.source_id == stjt.source_id)
                 .join(tlt, stjt.tag_name == tlt.tag_name)
             )
@@ -695,7 +674,7 @@ class GetAllGRNs(Resource):
                         "image_url": ex.image_url,
                         "grn_title": ex.grn_title,
                         "cyjs_layout": ex.cyjs_layout,
-                        "tag": "|".join(src_tag_match[ex.source_id])
+                        "tag": "|".join(src_tag_match[ex.source_id]),
                     }
                     result.append(one_source[source_id])
 

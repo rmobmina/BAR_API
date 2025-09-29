@@ -210,26 +210,20 @@ class TestIntegrations(TestCase):
                     "pearson_correlation_coeff": None,
                     "entity_1": "AT4G25470",
                     "entity_2": "AT5G50720",
-                    "interaction_type_id": 1
+                    "interaction_type_id": 1,
                 }
-            ]
+            ],
         }
         self.assertEqual(response.json, expected)
 
         # Input not a number
         response = self.app_client.get("/interactions/single_interaction/g")
-        expected = {
-            "wasSuccessful": False,
-            "error": "ID given was not a number!"
-        }
+        expected = {"wasSuccessful": False, "error": "ID given was not a number!"}
         self.assertEqual(response.json, expected)
 
         # Not a valid interaction ID
         response = self.app_client.get("/interactions/single_interaction/3")
-        expected = {
-            "wasSuccessful": False,
-            "error": "Invalid interaction ID"
-        }
+        expected = {"wasSuccessful": False, "error": "Invalid interaction ID"}
         self.assertEqual(response.json, expected)
 
     def test_itrn_by_ref(self):
@@ -245,18 +239,12 @@ class TestIntegrations(TestCase):
 
         # Input not a number
         response = self.app_client.get("/interactions/interactions_by_ref/k")
-        expected = {
-            "wasSuccessful": False,
-            "error": "ID given was not a number!"
-        }
+        expected = {"wasSuccessful": False, "error": "ID given was not a number!"}
         self.assertEqual(response.json, expected)
 
         # Not a valid paper ID
         response = self.app_client.get("/interactions/interactions_by_ref/1")
-        expected = {
-            "wasSuccessful": False,
-            "error": "Invalid paper ID"
-        }
+        expected = {"wasSuccessful": False, "error": "Invalid paper ID"}
         self.assertEqual(response.json, expected)
 
     def test_all_tags(self):
@@ -283,10 +271,7 @@ class TestIntegrations(TestCase):
 
         # Invalid tag name
         response = self.app_client.get("/interactions/search_by_tag/p")
-        expected = {
-            "wasSuccessful": False,
-            "error": "Invalid tag name"
-        }
+        expected = {"wasSuccessful": False, "error": "Invalid tag name"}
         self.assertEqual(response.json, expected)
 
     def test_get_all_papers(self):
@@ -318,34 +303,25 @@ class TestIntegrations(TestCase):
                     "url": "www.ncbi.nlm.nih.gov/pubmed/25736223",
                     "image_url": "https://bar.utoronto.ca/GRN_Images/25736223%232.jpg",
                     "grn_title": "Park et al.(The Plant Journal, 2015) CBF Regulon Low Temperature Network",
-                    "cyjs_layout": "{\"name\": \"breadthfirst\", \"animate\" : \"true\"}"
+                    "cyjs_layout": '{"name": "breadthfirst", "animate" : "true"}',
                 }
-            ]
+            ],
         }
         self.assertEqual(response.json, expected)
 
         # Input not an integer, a string
         response = self.app_client.get("/interactions/get_paper/p")
-        expected = {
-            "wasSuccessful": False,
-            "error": "Input number is not an integer!"
-        }
+        expected = {"wasSuccessful": False, "error": "Input number is not an integer!"}
         self.assertEqual(response.json, expected)
 
         # Input not an integer, a float
         response = self.app_client.get("/interactions/get_paper/2.2")
-        expected = {
-            "wasSuccessful": False,
-            "error": "Input number is not an integer!"
-        }
+        expected = {"wasSuccessful": False, "error": "Input number is not an integer!"}
         self.assertEqual(response.json, expected)
 
         # Invalid source ID
         response = self.app_client.get("/interactions/get_paper/3")
-        expected = {
-            "wasSuccessful": False,
-            "error": "Invalid source ID"
-        }
+        expected = {"wasSuccessful": False, "error": "Invalid source ID"}
         self.assertEqual(response.json, expected)
 
     def test_get_paper_by_agi(self):
@@ -361,10 +337,7 @@ class TestIntegrations(TestCase):
 
         # Invalid AGI
         response = self.app_client.get("/interactions/get_paper_by_agi/AT1G00000")
-        expected = {
-            "wasSuccessful": False,
-            "error": "Invalid AGI"
-        }
+        expected = {"wasSuccessful": False, "error": "Invalid AGI"}
         self.assertEqual(response.json, expected)
 
     def test_get_paper_by_agi_pair(self):
@@ -380,10 +353,7 @@ class TestIntegrations(TestCase):
 
         # Both AGI invalid
         response = self.app_client.get("/interactions/get_paper_by_agi_pair/AT1G00000/AT2G00000")
-        expected = {
-            "wasSuccessful": False,
-            "error": "Both AGI invalid"
-        }
+        expected = {"wasSuccessful": False, "error": "Both AGI invalid"}
         self.assertEqual(response.json, expected)
 
     def test_get_all_grns(self):
