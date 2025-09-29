@@ -150,7 +150,9 @@ class MfinderUtils:
             if item[1] not in hash_of_ids.values():
                 hash_of_ids[iter] = item[1]
                 iter += 1
-            return_str += f"{MfinderUtils.find_key(hash_of_ids, item[0])} {MfinderUtils.find_key(hash_of_ids, item[1])} 1\n"
+            return_str += (
+                f"{MfinderUtils.find_key(hash_of_ids, item[0])} {MfinderUtils.find_key(hash_of_ids, item[1])} 1\n"
+            )
 
         return hash_of_ids, return_str
 
