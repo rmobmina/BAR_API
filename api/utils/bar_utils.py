@@ -253,12 +253,12 @@ class BARUtils:
             return False
 
     @staticmethod
-    def is_alphanumeric(data):
-        """Check if the input is alphanumeric.
+    def is_gaia_alias(data):
+        """Check if the input is a valid gaia alias.
         :param data
-        :return: True if alphanumeric
+        :return: True if valid gaia alias
         """
-        if re.search(r"^[a-z0-9]{1,50}$", data, re.I):
+        if re.search(r"^[a-z0-9_]{1,50}$", data, re.I):
             return True
         else:
             return False
