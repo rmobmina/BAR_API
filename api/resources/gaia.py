@@ -1,5 +1,3 @@
-from os.path import exists
-
 from flask import request
 from flask_restx import Namespace, Resource, fields
 from markupsafe import escape
@@ -143,7 +141,6 @@ class GaiaPublicationFigures(Resource):
 
         rows = db.session.execute(query).fetchall()
 
-        current_pubmed = ""
         record = {}
 
         if rows and len(rows) > 0:
