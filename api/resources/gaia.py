@@ -1,3 +1,5 @@
+from os.path import exists
+
 from flask import request
 from flask_restx import Namespace, Resource, fields
 from markupsafe import escape
@@ -113,7 +115,6 @@ class GaiaPublicationFigures(Resource):
     @gaia.expect(publication_request_fields)
     def post(self):
         json_data = request.get_json()
-        data = {}
 
         # Validate json
         try:
@@ -123,7 +124,7 @@ class GaiaPublicationFigures(Resource):
 
         pubmeds = json_data["pubmeds"]
 
-        # Check if pubmed ids are valide
+        # Check if pubmed ids are valid
         for pubmed in pubmeds:
             if not BARUtils.is_integer(pubmed):
                 return BARUtils.error_exit("Invalid Pubmed ID"), 400
@@ -137,23 +138,42 @@ class GaiaPublicationFigures(Resource):
             .select_from(Figures)
             .join(PubIds, PubIds.publication_figures_id == Figures.publication_figures_id)
             .filter(PubIds.pubmed.in_(pubmeds))
+            .order_by(PubIds.pubmed.desc())
         )
 
         rows = db.session.execute(query).fetchall()
 
-        # Just output the rows for now, we will format later
+        current_pubmed = ""
+        record = {}
+
         if rows and len(rows) > 0:
             for row in rows:
-                record = {
-                    "img_name": row.img_name,
-                    "caption": row.caption,
-                    "img_url": row.img_url,
-                    "pubmed": row.pubmed,
-                    "pmc": row.pmc,
-                }
 
-                # Add the record to data
-                data.append(record)
+                # Check if record has an id. If it doesn't, this is first row.
+                if "id" in record:
+                    # Check if this is a new pubmed id
+                    if record["id"]["pubmed"] != row.pubmed:
+                        # new record. Add old now to data and create a new record
+                        data.append(record)
+                        record = {}
+
+                # Check if figures exists, if not add it.
+                if record.get("figures") is None:
+                    # Create a new figures record
+                    record["figures"] = []
+
+                # Now append figure to the record
+                figure = {"img_name": row.img_name, "caption": row.caption, "img_url": row.img_url}
+                record["figures"].append(figure)
+
+                # Now add the id. If it exists don't add
+                if record.get("id") is None:
+                    record["id"] = {}
+                    record["id"]["pubmed"] = row.pubmed
+                    record["id"]["pmc"] = row.pmc
+
+        # The last record
+        data.append(record)
 
         # Return final data
         return BARUtils.success_exit(data)
