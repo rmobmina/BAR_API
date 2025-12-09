@@ -1,12 +1,40 @@
-from flask_restx import Namespace, Resource
+from flask import request
+from flask_restx import Namespace, Resource, fields
 from markupsafe import escape
 from api import db
 from api.utils.bar_utils import BARUtils
-from api.models.gaia import Genes, Aliases
+from api.models.gaia import Genes, Aliases, PubIds, Figures
 from sqlalchemy import func, or_
+from marshmallow import Schema, ValidationError, fields as marshmallow_fields
 import json
 
 gaia = Namespace("Gaia", description="Gaia", path="/gaia")
+
+parser = gaia.parser()
+parser.add_argument(
+    "terms",
+    type=list,
+    action="append",
+    required=True,
+    help="Publication IDs",
+    default=["32492426", "32550561"],
+)
+
+publication_request_fields = gaia.model(
+    "Publications",
+    {
+        "pubmeds": fields.List(
+            required=True,
+            example=["32492426", "32550561"],
+            cls_or_instance=fields.String,
+        ),
+    },
+)
+
+
+# Validation is done in a different way to keep things simple
+class PublicationSchema(Schema):
+    pubmeds = marshmallow_fields.List(cls_or_instance=marshmallow_fields.String)
 
 
 @gaia.route("/aliases/<string:identifier>")
@@ -78,3 +106,71 @@ class GaiaAliases(Resource):
 
         else:
             return BARUtils.error_exit("Invalid identifier"), 400
+
+
+@gaia.route("/publication_figures")
+class GaiaPublicationFigures(Resource):
+    @gaia.expect(publication_request_fields)
+    def post(self):
+        json_data = request.get_json()
+
+        # Validate json
+        try:
+            json_data = PublicationSchema().load(json_data)
+        except ValidationError as err:
+            return BARUtils.error_exit(err.messages), 400
+
+        pubmeds = json_data["pubmeds"]
+
+        # Check if pubmed ids are valid
+        for pubmed in pubmeds:
+            if not BARUtils.is_integer(pubmed):
+                return BARUtils.error_exit("Invalid Pubmed ID"), 400
+
+        # It is valid. Continue
+        data = []
+
+        # Left join is important in case aliases do not exist for the given locus / geneid
+        query = (
+            db.select(Figures.img_name, Figures.caption, Figures.img_url, PubIds.pubmed, PubIds.pmc)
+            .select_from(Figures)
+            .join(PubIds, PubIds.publication_figures_id == Figures.publication_figures_id)
+            .filter(PubIds.pubmed.in_(pubmeds))
+            .order_by(PubIds.pubmed.desc())
+        )
+
+        rows = db.session.execute(query).fetchall()
+
+        record = {}
+
+        if rows and len(rows) > 0:
+            for row in rows:
+
+                # Check if record has an id. If it doesn't, this is first row.
+                if "id" in record:
+                    # Check if this is a new pubmed id
+                    if record["id"]["pubmed"] != row.pubmed:
+                        # new record. Add old now to data and create a new record
+                        data.append(record)
+                        record = {}
+
+                # Check if figures exists, if not add it.
+                if record.get("figures") is None:
+                    # Create a new figures record
+                    record["figures"] = []
+
+                # Now append figure to the record
+                figure = {"img_name": row.img_name, "caption": row.caption, "img_url": row.img_url}
+                record["figures"].append(figure)
+
+                # Now add the id. If it exists don't add
+                if record.get("id") is None:
+                    record["id"] = {}
+                    record["id"]["pubmed"] = row.pubmed
+                    record["id"]["pmc"] = row.pmc
+
+        # The last record
+        data.append(record)
+
+        # Return final data
+        return BARUtils.success_exit(data)
