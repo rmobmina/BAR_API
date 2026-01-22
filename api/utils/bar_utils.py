@@ -253,6 +253,17 @@ class BARUtils:
             return False
 
     @staticmethod
+    def is_gaia_alias(data):
+        """Check if the input is a valid gaia alias.
+        :param data
+        :return: True if valid gaia alias
+        """
+        if re.search(r"^[a-z0-9_]{1,50}$", data, re.I):
+            return True
+        else:
+            return False
+
+    @staticmethod
     def format_poplar(poplar_gene):
         """Format Poplar gene ID to be Potri.016G107900, i.e. capitalized P and G
         :param poplar_gene: gene id

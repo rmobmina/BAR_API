@@ -52,6 +52,7 @@ def create_app():
 
     # Now add routes
     from api.resources.gene_information import gene_information
+    from api.resources.gaia import gaia
     from api.resources.rnaseq_gene_expression import rnaseq_gene_expression
     from api.resources.microarray_gene_expression import microarray_gene_expression
     from api.resources.proxy import bar_proxy
@@ -66,6 +67,7 @@ def create_app():
     from api.resources.llama3 import llama3
 
     bar_api.add_namespace(gene_information)
+    bar_api.add_namespace(gaia)
     bar_api.add_namespace(rnaseq_gene_expression)
     bar_api.add_namespace(microarray_gene_expression)
     bar_api.add_namespace(bar_proxy)
