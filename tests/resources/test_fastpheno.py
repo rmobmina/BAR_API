@@ -216,6 +216,16 @@ class TestIntegrations(TestCase):
         }
         self.assertEqual(response.json, expected)
 
+        # With site filter
+        response = self.app_client.get("/fastpheno/timeseries/genotype/619/398nm/aggregate?site=Pintendre")
+        self.assertEqual(response.json["wasSuccessful"], True)
+        self.assertEqual(len(response.json["data"]), 1)
+
+        # No data when site has no matching trees
+        response = self.app_client.get("/fastpheno/timeseries/genotype/619/398nm/aggregate?site=Pickering")
+        expected = {"wasSuccessful": False, "error": "No data found for the given parameters"}
+        self.assertEqual(response.json, expected)
+
         # No data for valid but non-existent genotype
         response = self.app_client.get("/fastpheno/timeseries/genotype/9999/398nm/aggregate")
         expected = {"wasSuccessful": False, "error": "No data found for the given parameters"}
@@ -229,6 +239,11 @@ class TestIntegrations(TestCase):
         # Invalid band
         response = self.app_client.get("/fastpheno/timeseries/genotype/619/398!nm/aggregate")
         expected = {"wasSuccessful": False, "error": "Invalid band"}
+        self.assertEqual(response.json, expected)
+
+        # Invalid site name
+        response = self.app_client.get("/fastpheno/timeseries/genotype/619/398nm/aggregate?site=123")
+        expected = {"wasSuccessful": False, "error": "Invalid site name"}
         self.assertEqual(response.json, expected)
 
     def test_sites(self):

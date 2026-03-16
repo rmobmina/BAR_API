@@ -170,12 +170,14 @@ class FastPhenoTimeSeries(Resource):
 class FastPhenoGenotypeTimeSeries(Resource):
     @fastpheno.param("tree_site_id", _in="path", default="619")
     @fastpheno.param("band", _in="path", default="398nm")
+    @fastpheno.param("site", _in="query", required=False, default="Pintendre")
     def get(self, tree_site_id, band):
         """Returns AVG and STDDEV of band values per flight date across all trees sharing a
         genotype (e.g. '619' matches all tree_site_id values starting with '619.'). Intended
-        for genotype-level time series plotting."""
+        for genotype-level time series plotting. Optionally filter by site name."""
         tree_site_id = str(escape(tree_site_id))
         band = str(escape(band))
+        site = request.args.get("site")
 
         if not re.search(r"^[a-zA-Z0-9]{1,10}$", tree_site_id):
             return BARUtils.error_exit("Invalid tree site ID"), 400
@@ -183,7 +185,12 @@ class FastPhenoGenotypeTimeSeries(Resource):
         if not re.search(r"^[a-zA-Z0-9_]{1,20}$", band):
             return BARUtils.error_exit("Invalid band"), 400
 
-        rows = db.session.execute(
+        if site is not None:
+            site = str(escape(site)).capitalize()
+            if not re.search(r"^[a-zA-Z]{1,15}$", site):
+                return BARUtils.error_exit("Invalid site name"), 400
+
+        query = (
             db.select(
                 Flights.flight_date,
                 Flights.flights_pk,
@@ -198,13 +205,19 @@ class FastPhenoGenotypeTimeSeries(Resource):
             )
             .join(Trees, Bands.trees_pk == Trees.trees_pk)
             .join(Flights, Bands.flights_pk == Flights.flights_pk)
+            .join(Sites, Flights.sites_pk == Sites.sites_pk)
             .where(
                 db.or_(Trees.tree_site_id == tree_site_id, Trees.tree_site_id.like(f"{tree_site_id}.%")),
                 Bands.band == band,
             )
             .group_by(Flights.flights_pk, Flights.flight_date)
             .order_by(Flights.flight_date)
-        ).all()
+        )
+
+        if site is not None:
+            query = query.where(Sites.site_name == site)
+
+        rows = db.session.execute(query).all()
 
         if len(rows) == 0:
             return BARUtils.error_exit("No data found for the given parameters"), 400
