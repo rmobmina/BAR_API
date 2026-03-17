@@ -152,8 +152,8 @@ class TestIntegrations(TestCase):
         expected = {"wasSuccessful": False, "error": "No data found for the given parameters"}
         self.assertEqual(response.json, expected)
 
-        # Invalid tree_site_id (too long)
-        response = self.app_client.get("/fastpheno/get_trees/TOOLONGID12345")
+        # Invalid tree_site_id (contains disallowed character)
+        response = self.app_client.get("/fastpheno/get_trees/619!")
         expected = {"wasSuccessful": False, "error": "Invalid tree site ID"}
         self.assertEqual(response.json, expected)
 
@@ -231,8 +231,8 @@ class TestIntegrations(TestCase):
         expected = {"wasSuccessful": False, "error": "No data found for the given parameters"}
         self.assertEqual(response.json, expected)
 
-        # Invalid tree_site_id (too long)
-        response = self.app_client.get("/fastpheno/timeseries/genotype/TOOLONGID123/398nm/aggregate")
+        # Invalid tree_site_id (contains disallowed character)
+        response = self.app_client.get("/fastpheno/timeseries/genotype/619!/398nm/aggregate")
         expected = {"wasSuccessful": False, "error": "Invalid tree site ID"}
         self.assertEqual(response.json, expected)
 

@@ -83,7 +83,7 @@ class FastPhenoTrees(Resource):
         tree_site_id = str(escape(tree_site_id))
         site = request.args.get("site")
 
-        if not re.search(r"^[a-zA-Z0-9]{1,10}$", tree_site_id):
+        if not re.search(r"^[a-zA-Z0-9.]{1,15}$", tree_site_id):
             return BARUtils.error_exit("Invalid tree site ID"), 400
 
         if site is not None:
@@ -179,7 +179,7 @@ class FastPhenoGenotypeTimeSeries(Resource):
         band = str(escape(band))
         site = request.args.get("site")
 
-        if not re.search(r"^[a-zA-Z0-9]{1,10}$", tree_site_id):
+        if not re.search(r"^[a-zA-Z0-9.]{1,15}$", tree_site_id):
             return BARUtils.error_exit("Invalid tree site ID"), 400
 
         if not re.search(r"^[a-zA-Z0-9_]{1,20}$", band):
