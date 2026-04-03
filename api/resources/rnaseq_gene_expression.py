@@ -28,10 +28,7 @@ SPECIES_VALIDATORS = {
 }
 
 # metadata mirrors the schema catalog so validation stays in sync
-DATABASE_METADATA = {
-    name: spec.get("metadata") or {}
-    for name, spec in SIMPLE_EFP_DATABASE_SCHEMAS.items()
-}
+DATABASE_METADATA = {name: spec.get("metadata") or {} for name, spec in SIMPLE_EFP_DATABASE_SCHEMAS.items()}
 
 # this is only needed for swagger ui post examples
 gene_expression_request_fields = rnaseq_gene_expression.model(

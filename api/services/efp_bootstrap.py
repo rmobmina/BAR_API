@@ -148,11 +148,13 @@ def ensure_database(server_url: URL, db_name: str, charset: str) -> None:
     :raises ValueError: If db_name or charset contains invalid characters
     """
     # Validate database name to prevent SQL injection - only allow safe identifier characters
-    if not re.match(r'^[a-zA-Z0-9_$]+$', db_name):
-        raise ValueError(f"Invalid database name: {db_name}. Only alphanumeric, underscore, and dollar sign characters are allowed.")
+    if not re.match(r"^[a-zA-Z0-9_$]+$", db_name):
+        raise ValueError(
+            f"Invalid database name: {db_name}. Only alphanumeric, underscore, and dollar sign characters are allowed."
+        )
 
     # Validate charset name to prevent SQL injection - only allow safe characters
-    if not re.match(r'^[a-zA-Z0-9_]+$', charset):
+    if not re.match(r"^[a-zA-Z0-9_]+$", charset):
         raise ValueError(f"Invalid charset name: {charset}. Only alphanumeric and underscore characters are allowed.")
 
     server_engine = create_engine(server_url)

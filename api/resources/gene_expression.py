@@ -14,16 +14,14 @@ from api.utils.gene_id_utils import (
 )
 
 gene_expression = Namespace(
-    'Gene Expression',
-    description='Gene expression data from BAR eFP databases',
-    path='/gene_expression',
+    "Gene Expression",
+    description="Gene expression data from BAR eFP databases",
+    path="/gene_expression",
 )
 
 
 @gene_expression.route("/expression/<string:database>/<string:gene_id>")
-@gene_expression.doc(
-    description="Retrieve gene expression values from a specified eFP database."
-)
+@gene_expression.doc(description="Retrieve gene expression values from a specified eFP database.")
 @gene_expression.param(
     "gene_id",
     "Gene ID (e.g. AT1G01010 for Arabidopsis, or a probeset like 261585_at)",
@@ -76,4 +74,4 @@ class GeneExpression(Resource):
         return BARUtils.error_exit(result["error"]), result.get("error_code", 500)
 
 
-gene_expression.add_resource(GeneExpression, '/expression/<string:database>/<string:gene_id>')
+gene_expression.add_resource(GeneExpression, "/expression/<string:database>/<string:gene_id>")

@@ -34,31 +34,31 @@ class TestDynamicModelColumns(TestCase):
 
     def test_cannabis_model_columns(self):
         """Test cannabis model has correct columns and types."""
-        model = SIMPLE_EFP_SAMPLE_MODELS['cannabis']
+        model = SIMPLE_EFP_SAMPLE_MODELS["cannabis"]
 
         # Check the 3 data columns
-        self.assertTrue(hasattr(model, 'data_probeset_id'))
-        self.assertTrue(hasattr(model, 'data_signal'))
-        self.assertTrue(hasattr(model, 'data_bot_id'))
+        self.assertTrue(hasattr(model, "data_probeset_id"))
+        self.assertTrue(hasattr(model, "data_signal"))
+        self.assertTrue(hasattr(model, "data_bot_id"))
 
         # Inspect column types
         mapper = inspect(model)
         columns = {col.name: col for col in mapper.columns}
 
         self.assertEqual(len(columns), 3)
-        self.assertEqual(str(columns['data_bot_id'].type), 'VARCHAR(255)')
-        self.assertEqual(str(columns['data_probeset_id'].type), 'VARCHAR(255)')
+        self.assertEqual(str(columns["data_bot_id"].type), "VARCHAR(255)")
+        self.assertEqual(str(columns["data_probeset_id"].type), "VARCHAR(255)")
 
     def test_mouse_db_has_3_columns(self):
         """Test mouse_db model has exactly 3 columns."""
-        model = SIMPLE_EFP_SAMPLE_MODELS['mouse_db']
+        model = SIMPLE_EFP_SAMPLE_MODELS["mouse_db"]
 
         # Get all columns
         mapper = inspect(model)
         column_names = {col.name for col in mapper.columns}
 
         # Should have exactly 3 columns
-        expected = {'data_probeset_id', 'data_signal', 'data_bot_id'}
+        expected = {"data_probeset_id", "data_signal", "data_bot_id"}
         self.assertEqual(column_names, expected)
 
     def test_all_models_have_3_columns(self):
@@ -68,8 +68,7 @@ class TestDynamicModelColumns(TestCase):
                 mapper = inspect(model)
                 column_names = {col.name for col in mapper.columns}
                 self.assertEqual(
-                    len(column_names), 3,
-                    f"{db_name} has {len(column_names)} columns, expected 3: {column_names}"
+                    len(column_names), 3, f"{db_name} has {len(column_names)} columns, expected 3: {column_names}"
                 )
 
 
@@ -87,28 +86,28 @@ class TestDynamicModelPrimaryKeys(TestCase):
 
     def test_cannabis_primary_keys(self):
         """Test cannabis model has correct primary keys."""
-        model = SIMPLE_EFP_SAMPLE_MODELS['cannabis']
+        model = SIMPLE_EFP_SAMPLE_MODELS["cannabis"]
         mapper = inspect(model)
 
         pk_columns = [col.name for col in mapper.primary_key]
 
         # Should have 3 primary keys
         self.assertEqual(len(pk_columns), 3)
-        self.assertIn('data_probeset_id', pk_columns)
-        self.assertIn('data_signal', pk_columns)
-        self.assertIn('data_bot_id', pk_columns)
+        self.assertIn("data_probeset_id", pk_columns)
+        self.assertIn("data_signal", pk_columns)
+        self.assertIn("data_bot_id", pk_columns)
 
     def test_mouse_db_primary_keys(self):
         """Test mouse_db has correct primary keys."""
-        model = SIMPLE_EFP_SAMPLE_MODELS['mouse_db']
+        model = SIMPLE_EFP_SAMPLE_MODELS["mouse_db"]
         mapper = inspect(model)
 
         pk_columns = [col.name for col in mapper.primary_key]
 
         self.assertEqual(len(pk_columns), 3)
-        self.assertIn('data_probeset_id', pk_columns)
-        self.assertIn('data_signal', pk_columns)
-        self.assertIn('data_bot_id', pk_columns)
+        self.assertIn("data_probeset_id", pk_columns)
+        self.assertIn("data_signal", pk_columns)
+        self.assertIn("data_bot_id", pk_columns)
 
     def test_all_models_have_primary_keys(self):
         """Test that all 191 models have at least one primary key."""
@@ -117,10 +116,7 @@ class TestDynamicModelPrimaryKeys(TestCase):
                 mapper = inspect(model)
                 pk_columns = list(mapper.primary_key)
 
-                self.assertGreater(
-                    len(pk_columns), 0,
-                    f"{db_name} has no primary key columns"
-                )
+                self.assertGreater(len(pk_columns), 0, f"{db_name} has no primary key columns")
 
 
 class TestDynamicModelNullability(TestCase):
@@ -137,27 +133,24 @@ class TestDynamicModelNullability(TestCase):
 
     def test_embryo_signal_nullable(self):
         """Test embryo has nullable data_signal."""
-        schema = SIMPLE_EFP_DATABASE_SCHEMAS['embryo']
-        signal_col = next(col for col in schema['columns'] if col['name'] == 'data_signal')
+        schema = SIMPLE_EFP_DATABASE_SCHEMAS["embryo"]
+        signal_col = next(col for col in schema["columns"] if col["name"] == "data_signal")
 
-        self.assertTrue(signal_col.get('nullable', False))
+        self.assertTrue(signal_col.get("nullable", False))
 
     def test_dna_damage_bot_id_nullable(self):
         """Test dna_damage has nullable data_bot_id."""
-        schema = SIMPLE_EFP_DATABASE_SCHEMAS['dna_damage']
-        bot_id_col = next(col for col in schema['columns'] if col['name'] == 'data_bot_id')
+        schema = SIMPLE_EFP_DATABASE_SCHEMAS["dna_damage"]
+        bot_id_col = next(col for col in schema["columns"] if col["name"] == "data_bot_id")
 
-        self.assertTrue(bot_id_col.get('nullable', False))
+        self.assertTrue(bot_id_col.get("nullable", False))
 
     def test_all_columns_nullable(self):
         """All 3 columns in every schema should be nullable."""
         for db_name, schema in SIMPLE_EFP_DATABASE_SCHEMAS.items():
-            for col in schema['columns']:
-                with self.subTest(database=db_name, column=col['name']):
-                    self.assertTrue(
-                        col.get('nullable', False),
-                        f"{db_name}.{col['name']} is not nullable"
-                    )
+            for col in schema["columns"]:
+                with self.subTest(database=db_name, column=col["name"]):
+                    self.assertTrue(col.get("nullable", False), f"{db_name}.{col['name']} is not nullable")
 
 
 class TestUniformColumnTypes(TestCase):
@@ -175,27 +168,27 @@ class TestUniformColumnTypes(TestCase):
     def test_all_string_columns_are_varchar_255(self):
         """All string columns should be VARCHAR(255)."""
         for db_name, schema in SIMPLE_EFP_DATABASE_SCHEMAS.items():
-            for col in schema['columns']:
-                if col['type'] == 'string':
-                    with self.subTest(database=db_name, column=col['name']):
-                        self.assertEqual(col['length'], 255)
+            for col in schema["columns"]:
+                if col["type"] == "string":
+                    with self.subTest(database=db_name, column=col["name"]):
+                        self.assertEqual(col["length"], 255)
 
     def test_affydb_bot_id_is_varchar(self):
         """Test affydb uses VARCHAR(255) for data_bot_id (was TEXT)."""
-        schema = SIMPLE_EFP_DATABASE_SCHEMAS['affydb']
-        bot_id_col = next(col for col in schema['columns'] if col['name'] == 'data_bot_id')
+        schema = SIMPLE_EFP_DATABASE_SCHEMAS["affydb"]
+        bot_id_col = next(col for col in schema["columns"] if col["name"] == "data_bot_id")
 
-        self.assertEqual(bot_id_col['type'], 'string')
-        self.assertEqual(bot_id_col['length'], 255)
+        self.assertEqual(bot_id_col["type"], "string")
+        self.assertEqual(bot_id_col["length"], 255)
 
     def test_canola_columns_are_varchar(self):
         """Test canola uses VARCHAR(255) for both string columns (was TEXT)."""
-        schema = SIMPLE_EFP_DATABASE_SCHEMAS['canola']
-        for col in schema['columns']:
-            if col['name'] in ('data_probeset_id', 'data_bot_id'):
-                with self.subTest(column=col['name']):
-                    self.assertEqual(col['type'], 'string')
-                    self.assertEqual(col['length'], 255)
+        schema = SIMPLE_EFP_DATABASE_SCHEMAS["canola"]
+        for col in schema["columns"]:
+            if col["name"] in ("data_probeset_id", "data_bot_id"):
+                with self.subTest(column=col["name"]):
+                    self.assertEqual(col["type"], "string")
+                    self.assertEqual(col["length"], 255)
 
 
 class TestModelClassNames(TestCase):
@@ -212,18 +205,18 @@ class TestModelClassNames(TestCase):
 
     def test_cannabis_class_name(self):
         """Test cannabis model has correct class name."""
-        model = SIMPLE_EFP_SAMPLE_MODELS['cannabis']
-        self.assertEqual(model.__name__, 'CannabisSampleData')
+        model = SIMPLE_EFP_SAMPLE_MODELS["cannabis"]
+        self.assertEqual(model.__name__, "CannabisSampleData")
 
     def test_maize_atlas_v5_class_name(self):
         """Test maize_atlas_v5 model has correct class name."""
-        model = SIMPLE_EFP_SAMPLE_MODELS['maize_atlas_v5']
-        self.assertEqual(model.__name__, 'MaizeAtlasV5SampleData')
+        model = SIMPLE_EFP_SAMPLE_MODELS["maize_atlas_v5"]
+        self.assertEqual(model.__name__, "MaizeAtlasV5SampleData")
 
     def test_lateral_root_initiation_class_name(self):
         """Test lateral_root_initiation model has correct class name."""
-        model = SIMPLE_EFP_SAMPLE_MODELS['lateral_root_initiation']
-        self.assertEqual(model.__name__, 'LateralRootInitiationSampleData')
+        model = SIMPLE_EFP_SAMPLE_MODELS["lateral_root_initiation"]
+        self.assertEqual(model.__name__, "LateralRootInitiationSampleData")
 
 
 class TestSampleDatabases(TestCase):
@@ -240,10 +233,7 @@ class TestSampleDatabases(TestCase):
 
     def test_arabidopsis_databases(self):
         """Test all arabidopsis-related databases load."""
-        arabidopsis_dbs = [
-            'arabidopsis_ecotypes', 'embryo', 'germination',
-            'dna_damage', 'single_cell', 'silique'
-        ]
+        arabidopsis_dbs = ["arabidopsis_ecotypes", "embryo", "germination", "dna_damage", "single_cell", "silique"]
 
         for db_name in arabidopsis_dbs:
             with self.subTest(database=db_name):
@@ -253,10 +243,7 @@ class TestSampleDatabases(TestCase):
 
     def test_cereal_databases(self):
         """Test cereal crop databases (wheat, barley, rice, maize, sorghum, oat)."""
-        cereal_dbs = [
-            'wheat', 'barley_seed', 'rice_root',
-            'maize_atlas_v5', 'sorghum_atlas_w_BS_cells', 'oat'
-        ]
+        cereal_dbs = ["wheat", "barley_seed", "rice_root", "maize_atlas_v5", "sorghum_atlas_w_BS_cells", "oat"]
 
         for db_name in cereal_dbs:
             with self.subTest(database=db_name):
@@ -266,10 +253,7 @@ class TestSampleDatabases(TestCase):
 
     def test_legume_databases(self):
         """Test legume databases (soybean, medicago, lupin)."""
-        legume_dbs = [
-            'soybean_senescence', 'medicago_root',
-            'lupin_whole_plant', 'arachis'
-        ]
+        legume_dbs = ["soybean_senescence", "medicago_root", "lupin_whole_plant", "arachis"]
 
         for db_name in legume_dbs:
             with self.subTest(database=db_name):
@@ -279,7 +263,7 @@ class TestSampleDatabases(TestCase):
 
     def test_tree_databases(self):
         """Test tree/woody plant databases (poplar, spruce, eucalyptus)."""
-        tree_dbs = ['poplar_hormone', 'spruce', 'eucalyptus', 'willow']
+        tree_dbs = ["poplar_hormone", "spruce", "eucalyptus", "willow"]
 
         for db_name in tree_dbs:
             with self.subTest(database=db_name):
@@ -289,10 +273,7 @@ class TestSampleDatabases(TestCase):
 
     def test_tropical_crop_databases(self):
         """Test tropical crop databases (cacao, cassava, mangosteen)."""
-        tropical_dbs = [
-            'cacao_developmental_atlas', 'cassava_atlas',
-            'mangosteen_fruit_ripening'
-        ]
+        tropical_dbs = ["cacao_developmental_atlas", "cassava_atlas", "mangosteen_fruit_ripening"]
 
         for db_name in tropical_dbs:
             with self.subTest(database=db_name):

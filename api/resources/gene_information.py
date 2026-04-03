@@ -15,7 +15,6 @@ from marshmallow import Schema, ValidationError, fields as marshmallow_fields
 from api import db
 from sqlalchemy import func
 
-
 gene_information = Namespace("Gene Information", description="Information about Genes", path="/gene_information")
 
 parser = gene_information.parser()
@@ -91,9 +90,9 @@ class GeneAliases(Resource):
 
         # Query must be run individually for each species
         lowered_genes = [gene.lower() for gene in genes]
-        rows = db.session.execute(
-            db.select(database).where(func.lower(database.agi).in_(lowered_genes))
-        ).scalars().all()
+        rows = (
+            db.session.execute(db.select(database).where(func.lower(database.agi).in_(lowered_genes))).scalars().all()
+        )
 
         # If there are any isoforms found, return data
         data = []
@@ -286,9 +285,9 @@ class GeneQueryGene(Resource):
         gene_ids = []
         gene_fail = []
         for one_term in terms:
-            query = db.select(alias_database.agi).where(
-                func.lower(alias_database.agi).contains(one_term.lower())
-            ).limit(1)
+            query = (
+                db.select(alias_database.agi).where(func.lower(alias_database.agi).contains(one_term.lower())).limit(1)
+            )
             result = db.session.execute(query).fetchone()
             if result is not None:
                 gene_ids.append(result[0])

@@ -63,9 +63,7 @@ class TestDynamicEfpData(TestCase):
     def test_sample_data_agi_is_converted_to_probeset(self):
         """sample_data requires probesets, so agi ids should be converted automatically"""
         mapping_date = date(2020, 1, 1)
-        db.session.query(AtAgiLookup).filter_by(
-            probeset="261585_at", agi="AT1G01010", date=mapping_date
-        ).delete()
+        db.session.query(AtAgiLookup).filter_by(probeset="261585_at", agi="AT1G01010", date=mapping_date).delete()
         db.session.add(
             AtAgiLookup(
                 probeset="261585_at",
@@ -78,9 +76,7 @@ class TestDynamicEfpData(TestCase):
         try:
             result = query_efp_database_dynamic("sample_data", "At1g01010", allow_empty_results=False)
         finally:
-            db.session.query(AtAgiLookup).filter_by(
-                probeset="261585_at", agi="AT1G01010", date=mapping_date
-            ).delete()
+            db.session.query(AtAgiLookup).filter_by(probeset="261585_at", agi="AT1G01010", date=mapping_date).delete()
             db.session.commit()
 
         self.assertTrue(result["success"])
@@ -159,16 +155,12 @@ class TestProbesetConversion(TestCase):
         self.ctx = app.app_context()
         self.ctx.push()
         # seed the AGI → probeset mapping once for all tests in this class
-        db.session.query(AtAgiLookup).filter_by(
-            probeset=self.PROBESET, agi=self.AGI, date=self.MAPPING_DATE
-        ).delete()
+        db.session.query(AtAgiLookup).filter_by(probeset=self.PROBESET, agi=self.AGI, date=self.MAPPING_DATE).delete()
         db.session.add(AtAgiLookup(probeset=self.PROBESET, agi=self.AGI, date=self.MAPPING_DATE))
         db.session.commit()
 
     def tearDown(self):
-        db.session.query(AtAgiLookup).filter_by(
-            probeset=self.PROBESET, agi=self.AGI, date=self.MAPPING_DATE
-        ).delete()
+        db.session.query(AtAgiLookup).filter_by(probeset=self.PROBESET, agi=self.AGI, date=self.MAPPING_DATE).delete()
         db.session.commit()
         self.ctx.pop()
 
@@ -193,9 +185,7 @@ class TestProbesetConversion(TestCase):
             # Conversion ran but no local DB to query — acceptable in CI/local dev
             pass
         else:
-            self.fail(
-                f"{database}: conversion failed before reaching the DB — error: {error}"
-            )
+            self.fail(f"{database}: conversion failed before reaching the DB — error: {error}")
 
     def test_affydb_converts_agi_to_probeset(self):
         self._assert_probeset_conversion_ran("affydb")

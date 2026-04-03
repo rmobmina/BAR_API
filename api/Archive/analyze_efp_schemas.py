@@ -20,9 +20,21 @@ NEEDED_COLUMNS = {"data_probeset_id", "data_signal", "data_bot_id"}
 
 # Extra columns that some databases have (we want to know which ones)
 EXTRA_COLUMNS = {
-    "channel", "data_call", "data_num", "data_p_val", "data_p_value",
-    "genome", "genome_id", "log", "orthogroup", "p_val", "project_id",
-    "qvalue", "sample_file_name", "sample_tissue", "version",
+    "channel",
+    "data_call",
+    "data_num",
+    "data_p_val",
+    "data_p_value",
+    "genome",
+    "genome_id",
+    "log",
+    "orthogroup",
+    "p_val",
+    "project_id",
+    "qvalue",
+    "sample_file_name",
+    "sample_tissue",
+    "version",
 }
 
 
@@ -94,7 +106,9 @@ def main():
 
     # ---- 2. Group databases by their 3-column signature ----
     print("\n" + "=" * 80)
-    print("GROUPING BY SIGNATURE (probeset_type, probeset_nullable, signal_nullable, signal_default, bot_type, bot_nullable)")
+    print(
+        "GROUPING BY SIGNATURE (probeset_type, probeset_nullable, signal_nullable, signal_default, bot_type, bot_nullable)"
+    )
     print("=" * 80)
 
     sig_groups = defaultdict(list)
@@ -103,7 +117,9 @@ def main():
         sig_groups[sig].append(db)
 
     for sig, dbs in sorted(sig_groups.items(), key=lambda x: -len(x[1])):
-        print(f"\n  Signature: probeset={sig[0]}(nullable={sig[1]}) signal(nullable={sig[2]}, default={sig[3]}) bot={sig[4]}(nullable={sig[5]})")
+        print(
+            f"\n  Signature: probeset={sig[0]}(nullable={sig[1]}) signal(nullable={sig[2]}, default={sig[3]}) bot={sig[4]}(nullable={sig[5]})"
+        )
         print(f"  Count: {len(dbs)}")
         print(f"  DBs: {', '.join(dbs[:10])}{'...' if len(dbs) > 10 else ''}")
 
@@ -135,15 +151,17 @@ def main():
         # Determine extra columns this DB needs
         extras = set(cols.keys()) - NEEDED_COLUMNS - {"proj_id", "sample_id"}
 
-        compact_entries.append({
-            "db": db,
-            "probeset_len": probeset_len,  # None = tinytext
-            "probeset_type": probeset_type,
-            "bot_len": bot_len,  # None = tinytext
-            "bot_type": bot_type,
-            "signal_nullable": signal_nullable,
-            "extras": extras,
-        })
+        compact_entries.append(
+            {
+                "db": db,
+                "probeset_len": probeset_len,  # None = tinytext
+                "probeset_type": probeset_type,
+                "bot_len": bot_len,  # None = tinytext
+                "bot_type": bot_type,
+                "signal_nullable": signal_nullable,
+                "extras": extras,
+            }
+        )
 
     # ---- 4. Show the most compact table-driven representation ----
     print("\n" + "=" * 80)
@@ -180,9 +198,7 @@ def main():
     for e in compact_entries:
         # Filter out databases that ONLY have unneeded extras
         # (sample_file_name, data_call, data_p_val etc. are not needed)
-        has_important_extras = e["extras"] - {
-            "sample_file_name", "data_call", "data_p_val", "data_p_value", "data_num"
-        }
+        has_important_extras = e["extras"] - {"sample_file_name", "data_call", "data_p_val", "data_p_value", "data_num"}
         if has_important_extras:
             complex_dbs.append(e)
         else:
@@ -217,11 +233,13 @@ def main():
         with open(SAMPLE_DATA_CSV, newline="") as f:
             reader = csv.DictReader(f)
             for row in reader:
-                db_samples[row["source_database"]].append({
-                    "data_bot_id": row["data_bot_id"],
-                    "data_probeset_id": row["data_probeset_id"],
-                    "data_signal": row["data_signal"],
-                })
+                db_samples[row["source_database"]].append(
+                    {
+                        "data_bot_id": row["data_bot_id"],
+                        "data_probeset_id": row["data_probeset_id"],
+                        "data_signal": row["data_signal"],
+                    }
+                )
 
         print(f"Total databases with sample data: {len(db_samples)}")
         print(f"Total sample rows: {sum(len(v) for v in db_samples.values())}")
