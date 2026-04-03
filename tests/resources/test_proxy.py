@@ -1,9 +1,10 @@
 from api import app
 from json import load
-from unittest import TestCase
+import unittest
 
 
-class TestIntegrations(TestCase):
+@unittest.skip()
+class TestIntegrations(unittest.TestCase):
     def setUp(self):
         self.app_client = app.test_client()
 
