@@ -3,10 +3,8 @@ from json import load
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
 
-import requests
 
-
-class TestIntegrations(TestCase):
+class TestIntegrations(unittest.TestCase):
     def setUp(self):
         self.app_client = app.test_client()
 
