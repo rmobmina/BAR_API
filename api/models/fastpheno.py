@@ -1,65 +1,84 @@
+from datetime import datetime
 from api import db
-import enum
-from sqlalchemy.dialects.mysql import DECIMAL, ENUM
-from sqlalchemy.orm import relationship
-from sqlalchemy import ForeignKey
-from typing import List
+from sqlalchemy.dialects.mysql import DECIMAL
 
 
 class Sites(db.Model):
     __bind_key__ = "fastpheno"
     __tablename__ = "sites"
 
-    sites_pk: db.Mapped[int] = db.mapped_column(db.Integer, nullable=False, primary_key=True)
+    sites_pk: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
     site_name: db.Mapped[str] = db.mapped_column(db.String(45), nullable=False)
-    site_desc: db.Mapped[str] = db.mapped_column(db.String(99), nullable=True)
-    children: db.Mapped[List["Trees"]] = relationship()
+    lat: db.Mapped[float] = db.mapped_column(DECIMAL(15, 12), nullable=False)
+    lng: db.Mapped[float] = db.mapped_column(DECIMAL(15, 12), nullable=False)
+    site_desc: db.Mapped[str] = db.mapped_column(db.String(999), nullable=True)
+
+
+class Flights(db.Model):
+    __bind_key__ = "fastpheno"
+    __tablename__ = "flights"
+
+    flights_pk: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
+    pilot: db.Mapped[str] = db.mapped_column(db.String(45), nullable=True)
+    flight_date: db.Mapped[datetime] = db.mapped_column(db.DateTime, nullable=False)
+    sites_pk: db.Mapped[int] = db.mapped_column(db.Integer, nullable=False)
+    height: db.Mapped[float] = db.mapped_column(DECIMAL(15, 10), nullable=True)
+    speed: db.Mapped[float] = db.mapped_column(DECIMAL(15, 10), nullable=True)
 
 
 class Trees(db.Model):
     __bind_key__ = "fastpheno"
     __tablename__ = "trees"
 
-    trees_pk: db.Mapped[int] = db.mapped_column(db.Integer, nullable=False, primary_key=True)
-    sites_pk: db.Mapped[int] = db.mapped_column(ForeignKey("sites.sites_pk"))
-    longitude: db.Mapped[float] = db.mapped_column(db.Float, nullable=False)
-    latitude: db.Mapped[float] = db.mapped_column(db.Float, nullable=False)
-    genotype_id: db.Mapped[str] = db.mapped_column(db.String(5), nullable=True)
+    trees_pk: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
+    sites_pk: db.Mapped[int] = db.mapped_column(db.Integer, nullable=False)
+    longitude: db.Mapped[float] = db.mapped_column(DECIMAL(15, 12), nullable=False)
+    latitude: db.Mapped[float] = db.mapped_column(DECIMAL(15, 12), nullable=False)
+    tree_site_id: db.Mapped[str] = db.mapped_column(db.String(45), nullable=True)
+    family_id: db.Mapped[str] = db.mapped_column(db.String(45), nullable=True)
     external_link: db.Mapped[str] = db.mapped_column(db.String(200), nullable=True)
-    tree_given_id: db.Mapped[str] = db.mapped_column(db.String(25), nullable=True)
-    children: db.Mapped[List["Band"]] = relationship()
+    block_num: db.Mapped[int] = db.mapped_column(db.Integer, nullable=True)
+    seq_id: db.Mapped[str] = db.mapped_column(db.String(25), nullable=True)
+    x_pos: db.Mapped[int] = db.mapped_column(db.Integer, nullable=True)
+    y_pos: db.Mapped[int] = db.mapped_column(db.Integer, nullable=True)
+    height_2022: db.Mapped[str] = db.mapped_column(db.String(10), nullable=True)
 
 
-class MonthChoices(enum.Enum):
-    jan = "1"
-    feb = "2"
-    mar = "3"
-    apr = "4"
-    may = "5"
-    jun = "6"
-    jul = "7"
-    aug = "8"
-    sep = "9"
-    oct = "10"
-    nov = "11"
-    dec = "12"
-
-
-class Band(db.Model):
+class TreesFlightsJoinTbl(db.Model):
     __bind_key__ = "fastpheno"
-    __tablename__ = "band"
+    __tablename__ = "trees_flights_join_tbl"
 
-    trees_pk: db.Mapped[int] = db.mapped_column(ForeignKey("trees.trees_pk"), primary_key=True)
-    month: db.Mapped[str] = db.mapped_column(ENUM(MonthChoices), nullable=False, primary_key=True)
-    band: db.Mapped[float] = db.mapped_column(db.String(100), nullable=False, primary_key=True)
+    trees_pk: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
+    flights_pk: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
+    confidence: db.Mapped[float] = db.mapped_column(DECIMAL(8, 5), nullable=True)
+
+
+class Bands(db.Model):
+    __bind_key__ = "fastpheno"
+    __tablename__ = "bands"
+    __table_args__ = (db.Index("bands_flight_band_tree_idx", "flights_pk", "band", "trees_pk"),)
+
+    trees_pk: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
+    flights_pk: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
+    band: db.Mapped[str] = db.mapped_column(db.String(20), primary_key=True, nullable=False)
+    value: db.Mapped[float] = db.mapped_column(DECIMAL(8, 5), nullable=False)
+
+
+class Pigments(db.Model):
+    __bind_key__ = "fastpheno"
+    __tablename__ = "pigments"
+
+    trees_pk: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
+    flights_pk: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
+    pigment: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
     value: db.Mapped[float] = db.mapped_column(DECIMAL(20, 15), nullable=False)
 
 
-class Height(db.Model):
+class Unispec(db.Model):
     __bind_key__ = "fastpheno"
-    __tablename__ = "height"
+    __tablename__ = "unispec"
 
-    trees_pk: db.Mapped[int] = db.mapped_column(ForeignKey("trees.trees_pk"), primary_key=True)
-    month: db.Mapped[str] = db.mapped_column(ENUM(MonthChoices), nullable=False, primary_key=True)
-    tree_height_proxy: db.Mapped[float] = db.mapped_column(DECIMAL(20, 15), nullable=False)
-    ground_height_proxy: db.Mapped[float] = db.mapped_column(DECIMAL(20, 15), nullable=False)
+    trees_pk: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
+    flights_pk: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
+    pigment: db.Mapped[int] = db.mapped_column(db.Integer, primary_key=True, nullable=False)
+    value: db.Mapped[float] = db.mapped_column(DECIMAL(20, 15), nullable=False)
