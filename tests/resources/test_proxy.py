@@ -3,7 +3,7 @@ from json import load
 import unittest
 
 
-@unittest.skip()
+@unittest.skip("External")
 class TestIntegrations(unittest.TestCase):
     def setUp(self):
         self.app_client = app.test_client()
