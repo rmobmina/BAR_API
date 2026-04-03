@@ -1,7 +1,8 @@
 from api import app
 from json import load
-from unittest import TestCase
 from unittest.mock import MagicMock, patch
+import unittest
+import requests
 
 
 class TestIntegrations(unittest.TestCase):

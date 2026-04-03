@@ -42,6 +42,7 @@ def create_app():
         mysql_efp_base = bar_app.config.get("MYSQL_EFP_BASE_URI")
         if mysql_efp_base:
             from api.models.efp_schemas import SIMPLE_EFP_DATABASE_SCHEMAS
+
             binds = bar_app.config.get("SQLALCHEMY_BINDS") or {}
             base = mysql_efp_base.rstrip("/")
             for db_name in SIMPLE_EFP_DATABASE_SCHEMAS:
@@ -70,9 +71,9 @@ def create_app():
         # On BAR, MySQL binds come from the server config — never build SQLite mirrors there.
         # For CI and local dev, determine whether to build SQLite mirrors.
         needs_sqlite_mirrors = (
-            is_ci                                               # always build on CI
-            or bar_app.config.get("TESTING")                   # config requests test mode
-            or "pytest" in os.sys.modules                      # running under pytest
+            is_ci  # always build on CI
+            or bar_app.config.get("TESTING")  # config requests test mode
+            or "pytest" in os.sys.modules  # running under pytest
             or os.environ.get("BAR_API_AUTO_SQLITE_MIRRORS") == "1"  # explicit override
         )
 

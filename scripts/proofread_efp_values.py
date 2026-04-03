@@ -66,7 +66,7 @@ COLUMN_MAP: Dict[str, Dict[str, int]] = {
 }
 
 BAR_CGI_URL = "https://bar.utoronto.ca/eplant/cgi-bin/plantefp.cgi"
-BAR_EFP_DATA = "https://bar.utoronto.ca/efp/data"   # XML directory
+BAR_EFP_DATA = "https://bar.utoronto.ca/efp/data"  # XML directory
 
 # ---------------------------------------------------------------------------
 # View → database name mapping
@@ -279,6 +279,7 @@ DEFAULT_GENES: Dict[str, List[str]] = {
 # Shared helpers
 # ===========================================================================
 
+
 def _parse_fields(raw: str) -> List[str]:
     """Split a raw SQL tuple on ',' and strip surrounding quotes from each field."""
     return [f.strip().strip("'\"") for f in raw.split(",")]
@@ -327,6 +328,7 @@ def query_bar_cgi(db_name: str, gene_id: str, samples: List[str]) -> List[Dict[s
 # ===========================================================================
 # Mode A — SQL dump parsing
 # ===========================================================================
+
 
 def extract_all_genes(db_name: str) -> List[str]:
     """Return all unique gene/probeset IDs found in the dump's sample_data table.
@@ -381,7 +383,7 @@ def parse_dump_for_gene(db_name: str, gene_id: str) -> Dict[str, float]:
         for line in fh:
             if "INSERT INTO `sample_data`" not in line:
                 continue
-            if gene_id not in line:         # fast pre-filter
+            if gene_id not in line:  # fast pre-filter
                 continue
             for m in re.finditer(r"\(([^)]+)\)", line):
                 fields = _parse_fields(m.group(1))
@@ -431,15 +433,15 @@ def compare_dump_vs_api(
             if abs(dump_val - api_val) <= tolerance:
                 matches += 1
             else:
-                mismatches.append({
-                    "sample": sample,
-                    "dump": dump_val,
-                    "api": api_val,
-                    "abs_diff": round(abs(dump_val - api_val), 8),
-                    "rel_diff_%": round(
-                        abs(dump_val - api_val) / max(abs(dump_val), 1e-12) * 100, 4
-                    ),
-                })
+                mismatches.append(
+                    {
+                        "sample": sample,
+                        "dump": dump_val,
+                        "api": api_val,
+                        "abs_diff": round(abs(dump_val - api_val), 8),
+                        "rel_diff_%": round(abs(dump_val - api_val) / max(abs(dump_val), 1e-12) * 100, 4),
+                    }
+                )
         else:
             missing_in_api.append(sample)
 
@@ -447,11 +449,7 @@ def compare_dump_vs_api(
         if sample not in dump_values:
             extra_in_api.append(sample)
 
-    status = (
-        "OK" if not mismatches and not missing_in_api else
-        "MISMATCH" if mismatches else
-        "MISSING"
-    )
+    status = "OK" if not mismatches and not missing_in_api else "MISMATCH" if mismatches else "MISSING"
     return {
         "dump_sample_count": len(dump_values),
         "api_sample_count": len(api_lookup),
@@ -501,8 +499,7 @@ def proofread_gene_dump(
         err = api_result.get("error", "unknown error")
         if verbose:
             print(f"    [API FAIL] {err}")
-        return {"gene_id": gene_id, "status": "API_FAIL", "error": err,
-                "dump_samples": len(dump_values)}
+        return {"gene_id": gene_id, "status": "API_FAIL", "error": err, "dump_samples": len(dump_values)}
 
     api_data = api_result.get("data", [])
     if verbose:
@@ -516,14 +513,15 @@ def proofread_gene_dump(
 
     if verbose:
         if cmp["status"] == "OK":
-            print(f"\n    [OK] {cmp['matches']}/{cmp['dump_sample_count']} samples match "
-                  f"(±1e-4)")
+            print(f"\n    [OK] {cmp['matches']}/{cmp['dump_sample_count']} samples match " f"(±1e-4)")
         elif cmp["mismatches"]:
             print(f"\n    [MISMATCH] {len(cmp['mismatches'])} differences (showing ≤10):")
             for m in cmp["mismatches"][:10]:
-                print(f"      {m['sample']:<34s}  dump={m['dump']:<14}  "
-                      f"api={m['api']:<14}  diff={m['abs_diff']}  "
-                      f"({m['rel_diff_%']}%)")
+                print(
+                    f"      {m['sample']:<34s}  dump={m['dump']:<14}  "
+                    f"api={m['api']:<14}  diff={m['abs_diff']}  "
+                    f"({m['rel_diff_%']}%)"
+                )
         if cmp["missing_in_api"]:
             print(f"    [MISSING] {len(cmp['missing_in_api'])} dump samples absent from API:")
             for s in cmp["missing_in_api"][:5]:
@@ -541,8 +539,10 @@ def proofread_gene_dump(
             confirmed = [d["name"] for d in cgi_data if d.get("value") is not None]
             not_found = [d["name"] for d in cgi_data if d.get("value") is None]
             cgi_summary = {
-                "checked": len(cgi_data), "confirmed": len(confirmed),
-                "not_found": len(not_found), "not_found_samples": not_found[:10],
+                "checked": len(cgi_data),
+                "confirmed": len(confirmed),
+                "not_found": len(not_found),
+                "not_found_samples": not_found[:10],
             }
             if verbose:
                 print(f"    BAR CGI: {len(confirmed)}/{len(cgi_data)} samples confirmed")
@@ -608,15 +608,16 @@ def run_mode_a(
 
         gene_results: List[Dict[str, Any]] = []
         for gene_id in genes:
-            result = proofread_gene_dump(base_url, db_name, gene_id,
-                                         check_cgi=check_cgi, verbose=verbose)
+            result = proofread_gene_dump(base_url, db_name, gene_id, check_cgi=check_cgi, verbose=verbose)
             gene_results.append(result)
 
         statuses = [r["status"] for r in gene_results]
         print(f"\n  ── {db_name} summary ──")
-        print(f"     OK={statuses.count('OK')}  MISMATCH={statuses.count('MISMATCH')}  "
-              f"MISSING={statuses.count('MISSING')}  "
-              f"API_FAIL={statuses.count('API_FAIL')}  SKIP={statuses.count('SKIP')}")
+        print(
+            f"     OK={statuses.count('OK')}  MISMATCH={statuses.count('MISMATCH')}  "
+            f"MISSING={statuses.count('MISSING')}  "
+            f"API_FAIL={statuses.count('API_FAIL')}  SKIP={statuses.count('SKIP')}"
+        )
         all_results[db_name] = gene_results
 
     return all_results
@@ -625,6 +626,7 @@ def run_mode_a(
 # ===========================================================================
 # Mode B — XML-based sample verification
 # ===========================================================================
+
 
 def fetch_efp_xml(view_name: str) -> Optional[str]:
     """Download the eFP Browser XML file for a given view name.
@@ -697,26 +699,20 @@ def parse_efp_xml(xml_content: str) -> Dict[str, Any]:
 
     for group_elem in view_elem.findall(".//group"):
         # collect controls in this group
-        group_controls = [
-            ctrl.get("sample", "")
-            for ctrl in group_elem.findall("control")
-            if ctrl.get("sample")
-        ]
+        group_controls = [ctrl.get("sample", "") for ctrl in group_elem.findall("control") if ctrl.get("sample")]
         all_controls.update(group_controls)
 
         for tissue_elem in group_elem.findall("tissue"):
             tissue_name = tissue_elem.get("name", "")
-            tissue_samples = [
-                s.get("name", "")
-                for s in tissue_elem.findall("sample")
-                if s.get("name")
-            ]
+            tissue_samples = [s.get("name", "") for s in tissue_elem.findall("sample") if s.get("name")]
             all_samples.update(tissue_samples)
-            tissues.append({
-                "name": tissue_name,
-                "samples": tissue_samples,
-                "controls": group_controls,
-            })
+            tissues.append(
+                {
+                    "name": tissue_name,
+                    "samples": tissue_samples,
+                    "controls": group_controls,
+                }
+            )
 
     return {
         "db": db_name,
@@ -743,9 +739,11 @@ def resolve_db_for_view(view_name: str, species: Optional[str] = None) -> Option
     db = VIEW_TO_DB.get(view_name)
     if db:
         if view_name in _AMBIGUOUS_VIEWS:
-            print(f"  [WARN] '{view_name}' maps to multiple DBs: "
-                  f"{_AMBIGUOUS_VIEWS[view_name] + [db]}. "
-                  f"Using first match '{db}'. Pass --species to disambiguate.")
+            print(
+                f"  [WARN] '{view_name}' maps to multiple DBs: "
+                f"{_AMBIGUOUS_VIEWS[view_name] + [db]}. "
+                f"Using first match '{db}'. Pass --species to disambiguate."
+            )
         return db
 
     return None
@@ -788,10 +786,11 @@ def proofread_from_xml(
         if not db_name_from_map:
             return {"status": "XML_FAIL", "view": view_name, "gene_id": gene_id}
         # we have a db name from the map but no XML — can't get sample IDs
-        print(f"  [WARN] Could not fetch XML; db='{db_name_from_map}' from mapping "
-              f"but sample list unavailable. Skipping.")
-        return {"status": "XML_FAIL", "view": view_name, "gene_id": gene_id,
-                "db": db_name_from_map}
+        print(
+            f"  [WARN] Could not fetch XML; db='{db_name_from_map}' from mapping "
+            f"but sample list unavailable. Skipping."
+        )
+        return {"status": "XML_FAIL", "view": view_name, "gene_id": gene_id, "db": db_name_from_map}
 
     xml_data = parse_efp_xml(xml_content)
     if not xml_data:
@@ -804,10 +803,12 @@ def proofread_from_xml(
         return {"status": "NO_DB", "view": view_name, "gene_id": gene_id}
 
     if db_name_from_map and xml_data.get("db") and db_name_from_map != xml_data["db"]:
-        print(f"  [WARN] Mapping says db='{db_name_from_map}' but XML says "
-              f"db='{xml_data['db']}'. Using mapping value.")
+        print(
+            f"  [WARN] Mapping says db='{db_name_from_map}' but XML says "
+            f"db='{xml_data['db']}'. Using mapping value."
+        )
 
-    expected_sids = xml_data["all_samples"]   # data_bot_id values from XML
+    expected_sids = xml_data["all_samples"]  # data_bot_id values from XML
     tissues = xml_data["tissues"]
 
     print(f"  DB (from XML): {db_name}")
@@ -825,9 +826,14 @@ def proofread_from_xml(
         err = api_result.get("error", "unknown error")
         if verbose:
             print(f"\n  [API FAIL] {err}")
-        return {"status": "API_FAIL", "view": view_name, "db": db_name,
-                "gene_id": gene_id, "error": err,
-                "expected_samples": len(expected_sids)}
+        return {
+            "status": "API_FAIL",
+            "view": view_name,
+            "db": db_name,
+            "gene_id": gene_id,
+            "error": err,
+            "expected_samples": len(expected_sids),
+        }
 
     api_data = api_result.get("data", [])
     api_lookup: Dict[str, Optional[float]] = {}
@@ -862,25 +868,22 @@ def proofread_from_xml(
         t_present = [s for s in tissue["samples"] if s in api_lookup and api_lookup[s] is not None]
         t_missing = [s for s in tissue["samples"] if s not in api_lookup]
         t_null = [s for s in tissue["samples"] if s in api_lookup and api_lookup[s] is None]
-        tissue_rows.append({
-            "tissue": tissue["name"],
-            "total": len(tissue["samples"]),
-            "present": len(t_present),
-            "missing": len(t_missing),
-            "null": len(t_null),
-            "ok": len(t_missing) == 0 and len(t_null) == 0,
-            "samples_missing": t_missing,
-        })
+        tissue_rows.append(
+            {
+                "tissue": tissue["name"],
+                "total": len(tissue["samples"]),
+                "present": len(t_present),
+                "missing": len(t_missing),
+                "null": len(t_null),
+                "ok": len(t_missing) == 0 and len(t_null) == 0,
+                "samples_missing": t_missing,
+            }
+        )
 
-    status = (
-        "OK" if not missing and not null_val else
-        "MISSING" if missing else
-        "NULL_VALUES"
-    )
+    status = "OK" if not missing and not null_val else "MISSING" if missing else "NULL_VALUES"
 
     if verbose:
-        print(f"\n  Results: {len(present)}/{len(expected_sids)} expected samples present "
-              f"with valid values")
+        print(f"\n  Results: {len(present)}/{len(expected_sids)} expected samples present " f"with valid values")
         if missing:
             print(f"  [MISSING] {len(missing)} expected sample IDs not in API response:")
             for s in missing[:10]:
@@ -892,8 +895,7 @@ def proofread_from_xml(
             for s in null_val[:5]:
                 print(f"    {s}")
         if extra_in_api:
-            print(f"  [EXTRA] {len(extra_in_api)} API samples not in XML "
-                  f"(may be from other views / older data)")
+            print(f"  [EXTRA] {len(extra_in_api)} API samples not in XML " f"(may be from other views / older data)")
         print(f"\n  Status: {status}")
 
         # Per-tissue table
@@ -904,9 +906,11 @@ def proofread_from_xml(
             print(f"    {'─' * w}  ─────  ───────  ───────  ────  ───")
             for row in tissue_rows:
                 flag = "✓" if row["ok"] else "✗"
-                print(f"    {row['tissue']:<{w}}  {row['total']:5d}  "
-                      f"{row['present']:7d}  {row['missing']:7d}  "
-                      f"{row['null']:4d}  {flag}")
+                print(
+                    f"    {row['tissue']:<{w}}  {row['total']:5d}  "
+                    f"{row['present']:7d}  {row['missing']:7d}  "
+                    f"{row['null']:4d}  {flag}"
+                )
 
     # Step 4 — BAR CGI cross-check on expected samples
     cgi_summary: Optional[Dict[str, Any]] = None
@@ -916,8 +920,10 @@ def proofread_from_xml(
             confirmed = [d["name"] for d in cgi_data if d.get("value") is not None]
             not_found = [d["name"] for d in cgi_data if d.get("value") is None]
             cgi_summary = {
-                "checked": len(cgi_data), "confirmed": len(confirmed),
-                "not_found": len(not_found), "not_found_samples": not_found[:10],
+                "checked": len(cgi_data),
+                "confirmed": len(confirmed),
+                "not_found": len(not_found),
+                "not_found_samples": not_found[:10],
             }
             if verbose:
                 print(f"\n  BAR CGI: {len(confirmed)}/{len(cgi_data)} samples confirmed on production")
@@ -947,46 +953,50 @@ def proofread_from_xml(
 # Main
 # ===========================================================================
 
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Proofread EFP expression values (dump or XML mode, no SQLite)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
-    parser.add_argument("--local-url", default="http://localhost:5000",
-                        help="Base URL of the local BAR API (default: http://localhost:5000)")
+    parser.add_argument(
+        "--local-url",
+        default="http://localhost:5000",
+        help="Base URL of the local BAR API (default: http://localhost:5000)",
+    )
 
     # Mode B (XML) arguments
     xml_grp = parser.add_argument_group("Mode B — XML-based (BAR eFP Browser view)")
-    xml_grp.add_argument("--view", default=None,
-                         help="eFP Browser view name (e.g. 'Embryo', 'Guard_Cell'). "
-                              "Activates XML mode for a single view.")
-    xml_grp.add_argument("--all-views", action="store_true",
-                         help="Run XML mode for every view in VIEW_DB_BY_SPECIES "
-                              "(use with --species to restrict to one species).")
-    xml_grp.add_argument("--species", default=None,
-                         help="Species label to disambiguate view names or restrict "
-                              "--all-views (e.g. 'arabidopsis', 'maize').")
-    xml_grp.add_argument("--gene", default="AT1G01010",
-                         help="Gene ID for XML mode (default: AT1G01010)")
+    xml_grp.add_argument(
+        "--view",
+        default=None,
+        help="eFP Browser view name (e.g. 'Embryo', 'Guard_Cell'). " "Activates XML mode for a single view.",
+    )
+    xml_grp.add_argument(
+        "--all-views",
+        action="store_true",
+        help="Run XML mode for every view in VIEW_DB_BY_SPECIES " "(use with --species to restrict to one species).",
+    )
+    xml_grp.add_argument(
+        "--species",
+        default=None,
+        help="Species label to disambiguate view names or restrict " "--all-views (e.g. 'arabidopsis', 'maize').",
+    )
+    xml_grp.add_argument("--gene", default="AT1G01010", help="Gene ID for XML mode (default: AT1G01010)")
 
     # Mode A (dump) arguments
     dump_grp = parser.add_argument_group("Mode A — dump-based (SQL dump files)")
-    dump_grp.add_argument("--databases", default=None,
-                          help="Comma-separated databases to check "
-                               "(default: embryo, klepikova, soybean)")
-    dump_grp.add_argument("--genes", default=None,
-                          help="Comma-separated gene IDs (overrides --max-genes)")
-    dump_grp.add_argument("--all-genes", action="store_true",
-                          help="Check every gene found in each dump (can be slow)")
-    dump_grp.add_argument("--max-genes", type=int, default=5,
-                          help="Max genes per database in dump mode (default: 5)")
+    dump_grp.add_argument(
+        "--databases", default=None, help="Comma-separated databases to check " "(default: embryo, klepikova, soybean)"
+    )
+    dump_grp.add_argument("--genes", default=None, help="Comma-separated gene IDs (overrides --max-genes)")
+    dump_grp.add_argument("--all-genes", action="store_true", help="Check every gene found in each dump (can be slow)")
+    dump_grp.add_argument("--max-genes", type=int, default=5, help="Max genes per database in dump mode (default: 5)")
 
     # Shared arguments
-    parser.add_argument("--skip-cgi", action="store_true",
-                        help="Skip BAR production CGI cross-check")
-    parser.add_argument("--quiet", action="store_true",
-                        help="Print summaries only, not per-sample detail")
+    parser.add_argument("--skip-cgi", action="store_true", help="Skip BAR production CGI cross-check")
+    parser.add_argument("--quiet", action="store_true", help="Print summaries only, not per-sample detail")
     args = parser.parse_args()
 
     verbose = not args.quiet
@@ -1019,11 +1029,7 @@ def main() -> None:
                     print(f"  Available: {', '.join(VIEW_DB_BY_SPECIES.keys())}")
                     sys.exit(1)
             else:
-                views_to_check = [
-                    (v, sp)
-                    for sp, vmap in VIEW_DB_BY_SPECIES.items()
-                    for v in vmap
-                ]
+                views_to_check = [(v, sp) for sp, vmap in VIEW_DB_BY_SPECIES.items() for v in vmap]
         else:
             views_to_check = [(args.view, args.species)]
 
@@ -1052,8 +1058,7 @@ def main() -> None:
                 all_pass = False
             present = r.get("present", "?")
             expected = r.get("expected_samples", "?")
-            print(f"  {r.get('view', ''):<48s}  {r.get('db', ''):<36s}  "
-                  f"{verdict}  ({present}/{expected})")
+            print(f"  {r.get('view', ''):<48s}  {r.get('db', ''):<36s}  " f"{verdict}  ({present}/{expected})")
 
         print(f"\n  Gene tested : {args.gene}")
         overall = "ALL PASS" if all_pass else "FAILURES FOUND"
@@ -1069,9 +1074,7 @@ def main() -> None:
     else:
         databases = list(DUMP_FILES.keys())
 
-    genes_override = (
-        [g.strip() for g in args.genes.split(",")] if args.genes else None
-    )
+    genes_override = [g.strip() for g in args.genes.split(",")] if args.genes else None
 
     print("=" * 66)
     print("EFP PROOFREADER — Mode A (SQL dump-based)")
@@ -1107,14 +1110,12 @@ def main() -> None:
         total_fail += fail
 
         verdict = "PASS" if mis == 0 and miss == 0 and fail == 0 else "FAIL"
-        print(f"  {db_name:<15s}  {verdict}  "
-              f"ok={ok}  mismatch={mis}  missing={miss}  api_fail={fail}")
+        print(f"  {db_name:<15s}  {verdict}  " f"ok={ok}  mismatch={mis}  missing={miss}  api_fail={fail}")
         mismatch_genes = [r["gene_id"] for r in results if r["status"] == "MISMATCH"]
         if mismatch_genes:
             print(f"    Mismatched genes: {', '.join(mismatch_genes)}")
 
-    print(f"\n  Totals  ok={total_ok}  mismatch={total_mismatch}  "
-          f"missing={total_missing}  api_fail={total_fail}")
+    print(f"\n  Totals  ok={total_ok}  mismatch={total_mismatch}  " f"missing={total_missing}  api_fail={total_fail}")
     overall = "ALL PASS" if (total_mismatch + total_missing + total_fail) == 0 else "FAILURES FOUND"
     print(f"\n  Result: {overall}")
     print("=" * 66)

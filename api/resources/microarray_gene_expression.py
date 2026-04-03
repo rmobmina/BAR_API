@@ -77,7 +77,7 @@ class GetDatabases(Resource):
                 "Bud_Development": "actinidia_bud_development",
                 "Flower_Fruit_Development": "actinidia_flower_fruit_development",
                 "Postharvest": "actinidia_postharvest",
-                "Vegetative_Growth": "actinidia_vegetative_growth"
+                "Vegetative_Growth": "actinidia_vegetative_growth",
             },
             "arabidopsis": {
                 "Abiotic_Stress": "atgenexp_stress",
@@ -105,68 +105,41 @@ class GetDatabases(Resource):
                 "Shoot_Apex": "shoot_apex",
                 "Silique": "silique",
                 "Single_Cell": "single_cell",
-                "Tissue_Specific": "atgenexp_plus"
+                "Tissue_Specific": "atgenexp_plus",
             },
-            "arabidopsis seedcoat": {
-                "Seed_Coat": "seedcoat"
-            },
-            "arachis": {
-                "Arachis_Atlas": "arachis"
-            },
-            "barley": {
-                "barley_mas": "barley_mas",
-                "barley_rma": "barley_rma"
-            },
+            "arabidopsis seedcoat": {"Seed_Coat": "seedcoat"},
+            "arachis": {"Arachis_Atlas": "arachis"},
+            "barley": {"barley_mas": "barley_mas", "barley_rma": "barley_rma"},
             "brachypodium": {
                 "Brachypodium_Atlas": "brachypodium",
                 "Brachypodium_Grains": "brachypodium_grains",
                 "Brachypodium_Spikes": "brachypodium_Bd21",
-                "Photo_Thermocycle": "brachypodium_photo_thermocycle"
+                "Photo_Thermocycle": "brachypodium_photo_thermocycle",
             },
-            "brassica rapa": {
-                "Embryogenesis": "brassica_rapa"
-            },
+            "brassica rapa": {"Embryogenesis": "brassica_rapa"},
             "cacao ccn": {
                 "Developmental_Atlas": "cacao_developmental_atlas",
-                "Drought_Diurnal_Atlas": "cacao_drought_diurnal_atlas"
+                "Drought_Diurnal_Atlas": "cacao_drought_diurnal_atlas",
             },
             "cacao sca": {
                 "Developmental_Atlas": "cacao_developmental_atlas_sca",
                 "Drought_Diurnal_Atlas": "cacao_drought_diurnal_atlas_sca",
                 "Meristem_Atlas": "cacao_meristem_atlas_sca",
-                "Seed_Atlas": "cacao_seed_atlas_sca"
+                "Seed_Atlas": "cacao_seed_atlas_sca",
             },
-            "cacao tc": {
-                "Cacao_Infection": "cacao_infection",
-                "Cacao_Leaf": "cacao_leaf"
-            },
-            "camelina": {
-                "Developmental_Atlas_FPKM": "camelina",
-                "Developmental_Atlas_TPM": "camelina_tpm"
-            },
-            "cannabis": {
-                "Cannabis_Atlas": "cannabis"
-            },
-            "canola": {
-                "Canola_Seed": "canola_seed"
-            },
-            "eutrema": {
-                "Eutrema": "thellungiella_db"
-            },
-            "grape": {
-                "grape_developmental": "grape_developmental"
-            },
-            "kalanchoe": {
-                "Light_Response": "kalanchoe"
-            },
-            "little millet": {
-                "Life_Cycle": "little_millet"
-            },
+            "cacao tc": {"Cacao_Infection": "cacao_infection", "Cacao_Leaf": "cacao_leaf"},
+            "camelina": {"Developmental_Atlas_FPKM": "camelina", "Developmental_Atlas_TPM": "camelina_tpm"},
+            "cannabis": {"Cannabis_Atlas": "cannabis"},
+            "canola": {"Canola_Seed": "canola_seed"},
+            "eutrema": {"Eutrema": "thellungiella_db"},
+            "grape": {"grape_developmental": "grape_developmental"},
+            "kalanchoe": {"Light_Response": "kalanchoe"},
+            "little millet": {"Life_Cycle": "little_millet"},
             "lupin": {
                 "LCM_Leaf": "lupin_lcm_leaf",
                 "LCM_Pod": "lupin_lcm_pod",
                 "LCM_Stem": "lupin_lcm_stem",
-                "Whole_Plant": "lupin_whole_plant"
+                "Whole_Plant": "lupin_whole_plant",
             },
             "maize": {
                 "Downs_et_al_Atlas": "maize_gdowns",
@@ -180,7 +153,7 @@ class GetDatabases(Resource):
                 "Tassel_and_Ear_Primordia": "maize_ears",
                 "maize_iplant": "maize_iplant",
                 "maize_leaf_gradient": "maize_leaf_gradient",
-                "maize_rice_comparison": "maize_rice_comparison"
+                "maize_rice_comparison": "maize_rice_comparison",
             },
             "mangosteen": {
                 "Aril_vs_Rind": "mangosteen_aril_vs_rind",
@@ -188,21 +161,15 @@ class GetDatabases(Resource):
                 "Diseased_vs_Normal": "mangosteen_diseased_vs_normal",
                 "Fruit_Ripening": "mangosteen_fruit_ripening",
                 "Seed_Development": "mangosteen_seed_development",
-                "Seed_Germination": "mangosteen_seed_germination"
+                "Seed_Germination": "mangosteen_seed_germination",
             },
             "medicago": {
                 "medicago_mas": "medicago_mas",
                 "medicago_rma": "medicago_rma",
-                "medicago_seed": "medicago_seed"
+                "medicago_seed": "medicago_seed",
             },
-            "poplar": {
-                "Poplar": "poplar",
-                "PoplarTreatment": "poplar"
-            },
-            "potato": {
-                "Potato_Developmental": "potato_dev",
-                "Potato_Stress": "potato_stress"
-            },
+            "poplar": {"Poplar": "poplar", "PoplarTreatment": "poplar"},
+            "potato": {"Potato_Developmental": "potato_dev", "Potato_Stress": "potato_stress"},
             "rice": {
                 "rice_drought_heat_stress": "rice_drought_heat_stress",
                 "rice_leaf_gradient": "rice_leaf_gradient",
@@ -214,18 +181,18 @@ class GetDatabases(Resource):
                 "ricestigma_mas": "rice_mas",
                 "ricestigma_rma": "rice_rma",
                 "ricestress_mas": "rice_mas",
-                "ricestress_rma": "rice_rma"
+                "ricestress_rma": "rice_rma",
             },
             "soybean": {
                 "soybean": "soybean",
                 "soybean_embryonic_development": "soybean_embryonic_development",
                 "soybean_heart_cotyledon_globular": "soybean_heart_cotyledon_globular",
                 "soybean_senescence": "soybean_senescence",
-                "soybean_severin": "soybean_severin"
+                "soybean_severin": "soybean_severin",
             },
             "strawberry": {
                 "Developmental_Map_Strawberry_Flower_and_Fruit": "strawberry",
-                "Strawberry_Green_vs_White_Stage": "strawberry"
+                "Strawberry_Green_vs_White_Stage": "strawberry",
             },
             "tomato": {
                 "ILs_Leaf_Chitwood_et_al": "tomato_ils",
@@ -236,27 +203,21 @@ class GetDatabases(Resource):
                 "SEED_Lab_Angers": "tomato_seed",
                 "Shade_Mutants": "tomato_shade_mutants",
                 "Shade_Timecourse_WT": "tomato_shade_timecourse",
-                "Tomato_Meristem": "tomato_meristem"
+                "Tomato_Meristem": "tomato_meristem",
             },
-            "triticale": {
-                "triticale": "triticale",
-                "triticale_mas": "triticale_mas"
-            },
+            "triticale": {"triticale": "triticale", "triticale_mas": "triticale_mas"},
             "wheat": {
                 "Developmental_Atlas": "wheat",
                 "Wheat_Abiotic_Stress": "wheat_abiotic_stress",
                 "Wheat_Embryogenesis": "wheat_embryogenesis",
-                "Wheat_Meiosis": "wheat_meiosis"
-            }
+                "Wheat_Meiosis": "wheat_meiosis",
+            },
         }
 
         if species not in species_databases:
             return BARUtils.error_exit("Invalid species")
 
-        return BARUtils.success_exit({
-            "species": species,
-            "databases": species_databases[species]
-        })
+        return BARUtils.success_exit({"species": species, "databases": species_databases[species]})
 
 
 # endpoint made by reena
@@ -285,17 +246,12 @@ class GetSamples1(Resource):
 
         # if user requests all views
         if view.lower() == "all":
-            return BARUtils.success_exit({
-                "species": species,
-                "views": species_data["views"]
-            })
+            return BARUtils.success_exit({"species": species, "views": species_data["views"]})
 
         # otherwise check single view
         if view not in species_data["views"]:
             return BARUtils.error_exit("Invalid view for this species")
 
-        return BARUtils.success_exit({
-            "species": species,
-            "view": view,
-            "groups": species_data["views"][view]["groups"]
-        })
+        return BARUtils.success_exit(
+            {"species": species, "view": view, "groups": species_data["views"][view]["groups"]}
+        )

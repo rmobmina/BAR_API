@@ -474,7 +474,7 @@ class SearchByTag(Resource):
                         "image_url": ex.image_url,
                         "grn_title": ex.grn_title,
                         "cyjs_layout": _normalize_cyjs_layout(ex.cyjs_layout),
-                        "tag": "|".join(_sort_tag_strings(src_tag_match[ex.source_id]))
+                        "tag": "|".join(_sort_tag_strings(src_tag_match[ex.source_id])),
                     }
                     result.append(one_source[source_id])
 
@@ -544,7 +544,7 @@ class GetPaper(Resource):
                         "url": row.url,
                         "image_url": row.image_url,
                         "grn_title": row.grn_title,
-                        "cyjs_layout": _normalize_cyjs_layout(row.cyjs_layout)
+                        "cyjs_layout": _normalize_cyjs_layout(row.cyjs_layout),
                     }
                 )
 
@@ -607,20 +607,14 @@ class GetPaperByAGI(Resource):
                         "source_name": row.source_name,
                         "comments": row.comments,
                         "cyjs_layout": _normalize_cyjs_layout(row.cyjs_layout),
-                        "tags": []
+                        "tags": [],
                     }
 
                 tag_entry = f"{row.tag_name}:{row.tag_group}"
                 if tag_entry not in result_dict[source_id]["tags"]:  # DISTINCT
                     result_dict[source_id]["tags"].append(tag_entry)
 
-            result = [
-                {
-                    **data,
-                    "tags": "|".join(_sort_tag_strings(data["tags"]))
-                }
-                for data in result_dict.values()
-            ]
+            result = [{**data, "tags": "|".join(_sort_tag_strings(data["tags"]))} for data in result_dict.values()]
             result.sort(key=lambda item: (item["grn_title"] or ""))
 
             if len(result) == 0:
@@ -681,7 +675,7 @@ class GetPaperByAGIPair(Resource):
                         "source_name": row.source_name,
                         "comments": row.comments,
                         "cyjs_layout": _normalize_cyjs_layout(row.cyjs_layout),
-                        "tags": []
+                        "tags": [],
                     }
 
                 tag_entry = f"{row.tag_name}:{row.tag_group}"
@@ -689,10 +683,7 @@ class GetPaperByAGIPair(Resource):
                     result_dict[source_id]["tags"].append(tag_entry)
 
             result = [
-                {
-                    **data,
-                    "tags": "|".join(_sort_tag_strings_natural_case_sensitive(data["tags"]))
-                }
+                {**data, "tags": "|".join(_sort_tag_strings_natural_case_sensitive(data["tags"]))}
                 for data in result_dict.values()
             ]
             result.sort(key=lambda item: item["source_id"])
@@ -746,7 +737,7 @@ class GetAllGRNs(Resource):
                         "image_url": ex.image_url,
                         "grn_title": ex.grn_title,
                         "cyjs_layout": _normalize_cyjs_layout(ex.cyjs_layout),
-                        "tag": "|".join(_sort_tag_strings(src_tag_match[ex.source_id]))
+                        "tag": "|".join(_sort_tag_strings(src_tag_match[ex.source_id])),
                     }
                     result.append(one_source[source_id])
 

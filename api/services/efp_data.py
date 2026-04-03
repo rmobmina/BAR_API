@@ -251,10 +251,9 @@ class EFPDataService:
             # gene lookups use the index rather than a full table scan
             try:
                 with sqlite_engine.begin() as _conn:
-                    _conn.execute(text(
-                        "CREATE INDEX IF NOT EXISTS ix_upper_probeset "
-                        "ON sample_data (UPPER(data_probeset_id))"
-                    ))
+                    _conn.execute(
+                        text("CREATE INDEX IF NOT EXISTS ix_upper_probeset " "ON sample_data (UPPER(data_probeset_id))")
+                    )
             except Exception:
                 pass  # read-only db or schema mismatch — best-effort
             yield ("sqlite_mirror", sqlite_engine, True)
@@ -392,7 +391,7 @@ class EFPDataService:
                 (value_col, "value_column"),
                 (table_name, "table"),
             ]:
-                if not re.match(r'^[a-zA-Z_][a-zA-Z0-9_]*$', identifier):
+                if not re.match(r"^[a-zA-Z_][a-zA-Z0-9_]*$", identifier):
                     return {
                         "success": False,
                         "error": f"Invalid schema identifier for {name}: {identifier}",
@@ -458,8 +457,7 @@ class EFPDataService:
                 return {
                     "success": False,
                     "error": (
-                        f"Database query failed for {database}. "
-                        f"{'Last error: ' + last_error if last_error else ''}"
+                        f"Database query failed for {database}. " f"{'Last error: ' + last_error if last_error else ''}"
                     ).strip(),
                     "error_code": 500,
                 }

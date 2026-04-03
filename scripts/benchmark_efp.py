@@ -35,6 +35,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import matplotlib
+
 matplotlib.use("Agg")  # non-interactive — safe in CI and SSH sessions
 
 
@@ -92,6 +93,7 @@ _BAR_HEADERS: Dict[str, str] = {
 # ===========================================================================
 # Dump parsing helpers
 # ===========================================================================
+
 
 def _parse_tuple_fields(raw: str) -> List[str]:
     """Split a raw SQL tuple string on ',' and strip quotes from each field."""
@@ -158,6 +160,7 @@ def count_dump_samples(db_name: str) -> int:
 # Part 1 — Model generation benchmark (flat vs dynamic)
 # ===========================================================================
 
+
 def _simulate_flat_class_creation(db_names: List[str]) -> float:
     """Time the overhead of defining flat-file model classes via type().
 
@@ -171,13 +174,17 @@ def _simulate_flat_class_creation(db_names: List[str]) -> float:
     t0 = time.perf_counter()
     for db_name in db_names:
         class_name = "".join(p.capitalize() for p in db_name.split("_")) + "SampleData"
-        type(class_name, (), {
-            "__bind_key__": db_name,
-            "__tablename__": "sample_data",
-            "data_probeset_id": None,
-            "data_signal": None,
-            "data_bot_id": None,
-        })
+        type(
+            class_name,
+            (),
+            {
+                "__bind_key__": db_name,
+                "__tablename__": "sample_data",
+                "data_probeset_id": None,
+                "data_signal": None,
+                "data_bot_id": None,
+            },
+        )
     return time.perf_counter() - t0
 
 
@@ -252,6 +259,7 @@ def benchmark_model_generation(iterations: int = 100) -> Dict[str, Any]:
 # Part 2 — RAM benchmark
 # ===========================================================================
 
+
 def _rss_kb() -> float:
     """Return current peak RSS in KB (macOS returns bytes; Linux returns KB)."""
     usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
@@ -281,13 +289,17 @@ def benchmark_memory() -> Dict[str, Any]:
     flat_models: Dict[str, Any] = {}
     for db_name in db_names:
         class_name = "".join(p.capitalize() for p in db_name.split("_")) + "FlatSD"
-        flat_models[db_name] = type(class_name, (), {
-            "__bind_key__": db_name,
-            "__tablename__": "sample_data",
-            "data_probeset_id": None,
-            "data_signal": None,
-            "data_bot_id": None,
-        })
+        flat_models[db_name] = type(
+            class_name,
+            (),
+            {
+                "__bind_key__": db_name,
+                "__tablename__": "sample_data",
+                "data_probeset_id": None,
+                "data_signal": None,
+                "data_bot_id": None,
+            },
+        )
 
     snap1 = tracemalloc.take_snapshot()
     rss1 = _rss_kb()
@@ -401,6 +413,7 @@ def benchmark_api(
     :return: Nested dict: {db_name: {avg_ms, min_ms, max_ms, genes_tested, success_rate, first_error}}.
     """
     import time as _time
+
     results: Dict[str, Any] = {}
     # A single persistent session reuses the TCP+TLS connection across all requests
     # (HTTP keep-alive). This is especially important for ngrok where each new
@@ -652,24 +665,17 @@ def verify_values_vs_bar(
                 continue
 
             try:
-                local_resp = requests.get(
-                    f"{base_url}/gene_expression/expression/{db_name}/{gene}", timeout=10
-                )
+                local_resp = requests.get(f"{base_url}/gene_expression/expression/{db_name}/{gene}", timeout=10)
                 local_obj = local_resp.json()
                 if not local_obj.get("success"):
                     print(f"    {gene}: local error — {local_obj.get('error')}")
                     continue
-                local_vals: Dict[str, float] = {
-                    row["name"]: float(row["value"]) for row in local_obj.get("data", [])
-                }
+                local_vals: Dict[str, float] = {row["name"]: float(row["value"]) for row in local_obj.get("data", [])}
             except Exception as exc:
                 print(f"    {gene}: local request failed — {exc}")
                 continue
 
-            mismatches = sum(
-                1 for s, bv in bar_vals.items()
-                if s in local_vals and abs(bv - local_vals[s]) > tol
-            )
+            mismatches = sum(1 for s, bv in bar_vals.items() if s in local_vals and abs(bv - local_vals[s]) > tol)
             missing_in_local = sum(1 for s in bar_vals if s not in local_vals)
             extra_in_local = sum(1 for s in local_vals if s not in bar_vals)
 
@@ -680,8 +686,10 @@ def verify_values_vs_bar(
             else:
                 status = f"COUNT DIFF (missing={missing_in_local} extra={extra_in_local})"
 
-            print(f"    {gene}: BAR={len(bar_vals)} samples  local={len(local_vals)} samples  "
-                  f"mismatches={mismatches}  [{status}]")
+            print(
+                f"    {gene}: BAR={len(bar_vals)} samples  local={len(local_vals)} samples  "
+                f"mismatches={mismatches}  [{status}]"
+            )
 
 
 # ===========================================================================
@@ -725,19 +733,23 @@ def plot_model_generation(results: Dict[str, Any]) -> None:
     # error bars show min/max range
     lower = [avgs[i] - mins[i] for i in range(len(avgs))]
     upper = [maxs[i] - avgs[i] for i in range(len(avgs))]
-    ax.errorbar(x, avgs, yerr=[lower, upper], fmt="none", color="black",
-                capsize=6, linewidth=1.5, zorder=4)
+    ax.errorbar(x, avgs, yerr=[lower, upper], fmt="none", color="black", capsize=6, linewidth=1.5, zorder=4)
 
     for bar, val in zip(bars, avgs):
-        ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.005,
-                f"{val:.3f} ms", ha="center", va="bottom", fontsize=9)
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            bar.get_height() + 0.005,
+            f"{val:.3f} ms",
+            ha="center",
+            va="bottom",
+            fontsize=9,
+        )
 
     ax.set_xticks(list(x))
     ax.set_xticklabels(labels, fontsize=10)
     ax.set_ylabel("Time (ms per full iteration)", fontsize=10)
     ax.set_title(
-        f"Model Creation Time — {results['model_count']} databases, "
-        f"{results['iterations']} iterations",
+        f"Model Creation Time — {results['model_count']} databases, " f"{results['iterations']} iterations",
         fontsize=11,
     )
     ax.yaxis.grid(True, linestyle="--", alpha=0.6)
@@ -764,8 +776,7 @@ def plot_memory(mem: Dict[str, Any]) -> None:
 
     for bar in list(b1) + list(b2):
         h = bar.get_height()
-        ax.text(bar.get_x() + bar.get_width() / 2, h + 0.5,
-                f"{h:.1f}", ha="center", va="bottom", fontsize=8)
+        ax.text(bar.get_x() + bar.get_width() / 2, h + 0.5, f"{h:.1f}", ha="center", va="bottom", fontsize=8)
 
     ax.set_xticks(list(x))
     ax.set_xticklabels(categories, fontsize=10)
@@ -791,6 +802,7 @@ def plot_query_times(
     :param legacy_cgi_results: Output of benchmark_legacy_efp_cgi().
     :param databases:          Ordered list of database names to include.
     """
+
     def _get_avg(result_dict: Dict[str, Any], db: str) -> float:
         return result_dict.get(db, {}).get("avg_ms", 0.0)
 
@@ -816,8 +828,15 @@ def plot_query_times(
         bars = ax.bar(positions, avgs, width=width * 0.95, label=label, color=color, zorder=3)
         for bar, val in zip(bars, avgs):
             if val > 0:
-                ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 2,
-                        f"{val:.0f}", ha="center", va="bottom", fontsize=7, rotation=90)
+                ax.text(
+                    bar.get_x() + bar.get_width() / 2,
+                    bar.get_height() + 2,
+                    f"{val:.0f}",
+                    ha="center",
+                    va="bottom",
+                    fontsize=7,
+                    rotation=90,
+                )
 
     ax.set_xticks(list(x))
     ax.set_xticklabels(databases, fontsize=9, rotation=20, ha="right")
@@ -876,8 +895,7 @@ def plot_query_distributions(
             ax.set_visible(False)
             continue
 
-        bp = ax.boxplot(data_sets, patch_artist=True, notch=False,
-                        medianprops={"color": "black", "linewidth": 1.5})
+        bp = ax.boxplot(data_sets, patch_artist=True, notch=False, medianprops={"color": "black", "linewidth": 1.5})
         for patch, color in zip(bp["boxes"], colors_bp):
             patch.set_facecolor(color)
             patch.set_alpha(0.75)
@@ -896,23 +914,27 @@ def plot_query_distributions(
 # Main
 # ===========================================================================
 
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Benchmark EFP flat vs dynamic models")
-    parser.add_argument("--local-url", default="http://localhost:5000",
-                        help="Base URL of your local BAR API server")
-    parser.add_argument("--ngrok-url", default=None,
-                        help="ngrok tunnel URL (e.g. https://xxxx.ngrok-free.app) "
-                             "for internet-latency-aware benchmarking")
-    parser.add_argument("--iterations", type=int, default=50,
-                        help="Iterations for model-generation microbenchmark (default 50)")
-    parser.add_argument("--query-genes", type=int, default=20,
-                        help="Number of gene IDs per DB to sample for query benchmarks (default 20)")
-    parser.add_argument("--query-iters", type=int, default=3,
-                        help="Repeat each gene query this many times (default 3)")
-    parser.add_argument("--skip-bar", action="store_true",
-                        help="Skip remote BAR CGI requests")
-    parser.add_argument("--seed", type=int, default=42,
-                        help="Random seed for gene sampling (default 42)")
+    parser.add_argument("--local-url", default="http://localhost:5000", help="Base URL of your local BAR API server")
+    parser.add_argument(
+        "--ngrok-url",
+        default=None,
+        help="ngrok tunnel URL (e.g. https://xxxx.ngrok-free.app) " "for internet-latency-aware benchmarking",
+    )
+    parser.add_argument(
+        "--iterations", type=int, default=50, help="Iterations for model-generation microbenchmark (default 50)"
+    )
+    parser.add_argument(
+        "--query-genes",
+        type=int,
+        default=20,
+        help="Number of gene IDs per DB to sample for query benchmarks (default 20)",
+    )
+    parser.add_argument("--query-iters", type=int, default=3, help="Repeat each gene query this many times (default 3)")
+    parser.add_argument("--skip-bar", action="store_true", help="Skip remote BAR CGI requests")
+    parser.add_argument("--seed", type=int, default=42, help="Random seed for gene sampling (default 42)")
     args = parser.parse_args()
 
     random.seed(args.seed)
@@ -931,13 +953,12 @@ def main() -> None:
     for db_name in databases:
         all_genes = extract_genes_from_dump(db_name)
         sample_count = count_dump_samples(db_name)
-        genes_per_db[db_name] = (
-            random.sample(all_genes, min(args.query_genes, len(all_genes)))
-            if all_genes else []
-        )
+        genes_per_db[db_name] = random.sample(all_genes, min(args.query_genes, len(all_genes))) if all_genes else []
         genes_per_db[db_name].sort()
-        print(f"  {db_name:15s}  genes={len(all_genes):6d}  total_rows={sample_count:8d}  "
-              f"query_sample={len(genes_per_db[db_name])}")
+        print(
+            f"  {db_name:15s}  genes={len(all_genes):6d}  total_rows={sample_count:8d}  "
+            f"query_sample={len(genes_per_db[db_name])}"
+        )
 
     if not databases:
         print("  [ERROR] No dump files found in api/Archive/. Exiting.")
@@ -950,10 +971,11 @@ def main() -> None:
     gen_results = benchmark_model_generation(args.iterations)
     flat_d = gen_results["flat"]
     dynamic_d = gen_results["dynamic"]
-    print(f"  Flat-file  avg={flat_d['avg_ms']:.3f} ms  "
-          f"min={flat_d['min_ms']:.3f}  max={flat_d['max_ms']:.3f}")
-    print(f"  Dynamic    avg={dynamic_d['avg_ms']:.3f} ms  "
-          f"min={dynamic_d['min_ms']:.3f}  max={dynamic_d['max_ms']:.3f}")
+    print(f"  Flat-file  avg={flat_d['avg_ms']:.3f} ms  " f"min={flat_d['min_ms']:.3f}  max={flat_d['max_ms']:.3f}")
+    print(
+        f"  Dynamic    avg={dynamic_d['avg_ms']:.3f} ms  "
+        f"min={dynamic_d['min_ms']:.3f}  max={dynamic_d['max_ms']:.3f}"
+    )
     print(f"  Models: {gen_results['model_count']}")
     ratio = dynamic_d["avg_ms"] / max(flat_d["avg_ms"], 1e-9)
     winner = "flat-file" if flat_d["avg_ms"] < dynamic_d["avg_ms"] else "dynamic"
@@ -964,24 +986,30 @@ def main() -> None:
     # ------------------------------------------------------------------
     print("\n[2] Memory usage")
     mem_results = benchmark_memory()
-    print(f"  Flat-file  heap={mem_results['flat_heap_kb']:.1f} KB  "
-          f"RSS delta={mem_results['flat_rss_kb']:.1f} KB")
-    print(f"  Dynamic    heap={mem_results['dynamic_heap_kb']:.1f} KB  "
-          f"RSS delta={mem_results['dynamic_rss_kb']:.1f} KB")
+    print(f"  Flat-file  heap={mem_results['flat_heap_kb']:.1f} KB  " f"RSS delta={mem_results['flat_rss_kb']:.1f} KB")
+    print(
+        f"  Dynamic    heap={mem_results['dynamic_heap_kb']:.1f} KB  "
+        f"RSS delta={mem_results['dynamic_rss_kb']:.1f} KB"
+    )
 
     # ------------------------------------------------------------------
     # 3. Local API query benchmark
     # ------------------------------------------------------------------
     print(f"\n[3] Local API query benchmark  ({args.local_url})")
     local_results = benchmark_api(
-        "local", args.local_url, databases, genes_per_db,
+        "local",
+        args.local_url,
+        databases,
+        genes_per_db,
         iterations=args.query_iters,
     )
     for db_name, stats in local_results.items():
         rate = stats["success_rate"]
-        line = (f"  {db_name:15s}  avg={stats['avg_ms']:>8.2f} ms  "
-                f"genes={stats['genes_tested']}  success={rate}%  "
-                f"avg_records={stats['avg_records']}")
+        line = (
+            f"  {db_name:15s}  avg={stats['avg_ms']:>8.2f} ms  "
+            f"genes={stats['genes_tested']}  success={rate}%  "
+            f"avg_records={stats['avg_records']}"
+        )
         print(line)
         if rate < 100 and stats.get("top_error"):
             print(f"    -> most common error: {stats['top_error']}")
@@ -1000,7 +1028,10 @@ def main() -> None:
         print(f"\n[4] ngrok tunnel query benchmark  ({real_ngrok_url})")
         print("    (throttling to 1 req/1.5 s to stay under ngrok free-tier rate limit)")
         ngrok_results = benchmark_api(
-            "ngrok", real_ngrok_url, databases, genes_per_db,
+            "ngrok",
+            real_ngrok_url,
+            databases,
+            genes_per_db,
             iterations=args.query_iters,
             inter_request_delay=1.5,
         )
@@ -1021,9 +1052,7 @@ def main() -> None:
     if not args.skip_bar:
         print("\n[5a] Legacy BAR eFP Browser CGI  (per-database URLs in BAR_LEGACY_CGI_VIEWS)")
         print("     (full HTML page render — this is what gave 1000-2000 ms originally)")
-        legacy_cgi_results = benchmark_legacy_efp_cgi(
-            databases, genes_per_db, iterations=args.query_iters
-        )
+        legacy_cgi_results = benchmark_legacy_efp_cgi(databases, genes_per_db, iterations=args.query_iters)
         for db_name, stats in legacy_cgi_results.items():
             rate = stats["success_rate"]
             print(f"  {db_name:15s}  avg={stats['avg_ms']:>8.2f} ms  success={rate}%")
@@ -1069,12 +1098,13 @@ def main() -> None:
         print(f"  {db_name}:")
         print(f"    Local API       : {local_ms:>8.2f} ms  (success={local_rate}%)")
         if ngrok_ms:
-            print(f"    ngrok (internet): {ngrok_ms:>8.2f} ms  (success={ngrok_rate}%  "
-                  f"+{ngrok_ms - local_ms:.2f} ms latency overhead)")
+            print(
+                f"    ngrok (internet): {ngrok_ms:>8.2f} ms  (success={ngrok_rate}%  "
+                f"+{ngrok_ms - local_ms:.2f} ms latency overhead)"
+            )
         if cgi_ms:
             speedup = cgi_ms / max(local_ms, 0.01)
-            print(f"    Legacy CGI      : {cgi_ms:>8.2f} ms  (success={cgi_rate}%  "
-                  f"local is {speedup:.1f}x faster)")
+            print(f"    Legacy CGI      : {cgi_ms:>8.2f} ms  (success={cgi_rate}%  " f"local is {speedup:.1f}x faster)")
     print()
     print(f"  Plots saved to: {RESULTS_DIR}/")
 

@@ -320,62 +320,64 @@ DATABASE_SPECIES: dict[str, str] = {
 # to one of these databases requires a gene→probeset conversion step.
 # ---------------------------------------------------------------------------
 
-PROBESET_DATABASES: frozenset[str] = frozenset({
-    # ── Arabidopsis ATH1 GeneChip ────────────────────────────────────────────
-    "affydb",
-    "arabidopsis_ecotypes",
-    "atgenexp",
-    "atgenexp_hormone",
-    "atgenexp_pathogen",
-    "atgenexp_plus",
-    "atgenexp_stress",
-    "guard_cell",
-    "hnahal",
-    "lateral_root_initiation",
-    "light_series",
-    "meristem_db",
-    "meristem_db_new",
-    "root",
-    "rohan",
-    "rpatel",
-    "seed_db",
-    # ── Other species Affymetrix chips ───────────────────────────────────────
-    # Lookup tables for these are pending; supply probeset directly (e.g. Contig3267_at)
-    "barley_mas",          # Affymetrix Barley1 GeneChip  (AK364622 → Contig3045_at)
-    "barley_rma",          # Affymetrix Barley1 GeneChip
-    "human_developmental",                # CCR5 → 206991_s_at
-    "human_developmental_SpongeLab",
-    "human_diseased",
-    "maize_gdowns",        # Affymetrix Maize GeneChip (gene → Zm.XXXXX probeset IDs)
-    "medicago_mas",        # Affymetrix Medicago GeneChip (Medtr* → Mtr.*_at)
-    "medicago_rma",        # Affymetrix Medicago GeneChip
-    "poplar",              # Affymetrix Poplar GeneChip (grail3.* → PtpAffx.*_at)
-    "rice_mas",            # Affymetrix Rice GeneChip (LOC_Os* → Os.*_at)
-    "rice_rma",            # Affymetrix Rice GeneChip
-    "triticale",           # Affymetrix Wheat/Triticale GeneChip (EU* → Ta.*_at)
-    "triticale_mas",       # Affymetrix Wheat/Triticale GeneChip
-    # ── Non-Affymetrix species with gene ID ≠ probeset ID ────────────────────
-    # Confirmed from eFP browser: input gene ID differs from the stored probeset.
-    # Lookup tables pending for all of these.
-    "grape_developmental",  # VIT_00s0120g00060 → CHRUN_JGVV120_4_T01
-    "potato_dev",          # PGSC0003DMP400000011 → PGSC0003DMG400000005
-    "potato_stress",       # same DMP → DMG gene model conversion
-    "potato_wounding",     # same DMP → DMG gene model conversion
-    "soybean",             # Glyma.06g316600 (new) → Glyma06g47400 (old format)
-    "soybean_embryonic_development",
-    "soybean_heart_cotyledon_globular",
-    "soybean_senescence",
-    "soybean_severin",
-    # ── Cross-species: input is an Arabidopsis AGI, stored as species gene ID ─
-    # See CROSS_SPECIES_DATABASES below for the input validation override.
-    "phelipanche",         # AT1G07890 → OrAeBC5_10.1
-    "striga",              # AT3G11400 → StHeBC3_1.1
-    "thellungiella_db",    # AT2G21470 → Thhalv10000089m.g
-    "triphysaria",         # AT1G11260 → TrVeBC3_1.1
-    # TODO: seedcoat (oat) – has species-specific probeset IDs; add once format confirmed
-    # TODO: strawberry – gene10171 → FvH4_1g00010; lookup table needed
-    # TODO: physcomitrella – Phypa_166136 → Pp1s103_79V6.1; lookup table needed
-})
+PROBESET_DATABASES: frozenset[str] = frozenset(
+    {
+        # ── Arabidopsis ATH1 GeneChip ────────────────────────────────────────────
+        "affydb",
+        "arabidopsis_ecotypes",
+        "atgenexp",
+        "atgenexp_hormone",
+        "atgenexp_pathogen",
+        "atgenexp_plus",
+        "atgenexp_stress",
+        "guard_cell",
+        "hnahal",
+        "lateral_root_initiation",
+        "light_series",
+        "meristem_db",
+        "meristem_db_new",
+        "root",
+        "rohan",
+        "rpatel",
+        "seed_db",
+        # ── Other species Affymetrix chips ───────────────────────────────────────
+        # Lookup tables for these are pending; supply probeset directly (e.g. Contig3267_at)
+        "barley_mas",  # Affymetrix Barley1 GeneChip  (AK364622 → Contig3045_at)
+        "barley_rma",  # Affymetrix Barley1 GeneChip
+        "human_developmental",  # CCR5 → 206991_s_at
+        "human_developmental_SpongeLab",
+        "human_diseased",
+        "maize_gdowns",  # Affymetrix Maize GeneChip (gene → Zm.XXXXX probeset IDs)
+        "medicago_mas",  # Affymetrix Medicago GeneChip (Medtr* → Mtr.*_at)
+        "medicago_rma",  # Affymetrix Medicago GeneChip
+        "poplar",  # Affymetrix Poplar GeneChip (grail3.* → PtpAffx.*_at)
+        "rice_mas",  # Affymetrix Rice GeneChip (LOC_Os* → Os.*_at)
+        "rice_rma",  # Affymetrix Rice GeneChip
+        "triticale",  # Affymetrix Wheat/Triticale GeneChip (EU* → Ta.*_at)
+        "triticale_mas",  # Affymetrix Wheat/Triticale GeneChip
+        # ── Non-Affymetrix species with gene ID ≠ probeset ID ────────────────────
+        # Confirmed from eFP browser: input gene ID differs from the stored probeset.
+        # Lookup tables pending for all of these.
+        "grape_developmental",  # VIT_00s0120g00060 → CHRUN_JGVV120_4_T01
+        "potato_dev",  # PGSC0003DMP400000011 → PGSC0003DMG400000005
+        "potato_stress",  # same DMP → DMG gene model conversion
+        "potato_wounding",  # same DMP → DMG gene model conversion
+        "soybean",  # Glyma.06g316600 (new) → Glyma06g47400 (old format)
+        "soybean_embryonic_development",
+        "soybean_heart_cotyledon_globular",
+        "soybean_senescence",
+        "soybean_severin",
+        # ── Cross-species: input is an Arabidopsis AGI, stored as species gene ID ─
+        # See CROSS_SPECIES_DATABASES below for the input validation override.
+        "phelipanche",  # AT1G07890 → OrAeBC5_10.1
+        "striga",  # AT3G11400 → StHeBC3_1.1
+        "thellungiella_db",  # AT2G21470 → Thhalv10000089m.g
+        "triphysaria",  # AT1G11260 → TrVeBC3_1.1
+        # TODO: seedcoat (oat) – has species-specific probeset IDs; add once format confirmed
+        # TODO: strawberry – gene10171 → FvH4_1g00010; lookup table needed
+        # TODO: physcomitrella – Phypa_166136 → Pp1s103_79V6.1; lookup table needed
+    }
+)
 
 # ---------------------------------------------------------------------------
 # Cross-species input databases
@@ -390,16 +392,17 @@ PROBESET_DATABASES: frozenset[str] = frozenset({
 
 CROSS_SPECIES_DATABASES: dict[str, str] = {
     # database            → species of the expected INPUT gene ID
-    "phelipanche":        "arabidopsis",   # AT* AGI → OrAeBC5_* probeset
-    "striga":             "arabidopsis",   # AT* AGI → StHeBC3_* probeset
-    "thellungiella_db":   "arabidopsis",   # AT* AGI → Thhalv* probeset
-    "triphysaria":        "arabidopsis",   # AT* AGI → TrVeBC3_* probeset
+    "phelipanche": "arabidopsis",  # AT* AGI → OrAeBC5_* probeset
+    "striga": "arabidopsis",  # AT* AGI → StHeBC3_* probeset
+    "thellungiella_db": "arabidopsis",  # AT* AGI → Thhalv* probeset
+    "triphysaria": "arabidopsis",  # AT* AGI → TrVeBC3_* probeset
 }
 
 
 # ---------------------------------------------------------------------------
 # Species detection from gene ID format
 # ---------------------------------------------------------------------------
+
 
 def detect_gene_species(gene_id: str) -> Optional[str]:
     """Infer the species of *gene_id* from its format using regex validators.
@@ -466,25 +469,25 @@ def detect_gene_species(gene_id: str) -> Optional[str]:
 
 # Dispatch table: canonical species key → BARUtils validator
 _VALIDATORS: dict = {
-    "arabidopsis":   BARUtils.is_arabidopsis_gene_valid,
-    "arachis":       BARUtils.is_arachis_gene_valid,
-    "brassica":      BARUtils.is_brassica_rapa_gene_valid,
-    "cannabis":      BARUtils.is_cannabis_gene_valid,
-    "canola":        BARUtils.is_canola_gene_valid,
-    "grape":         BARUtils.is_grape_gene_valid,
-    "kalanchoe":     BARUtils.is_kalanchoe_gene_valid,
-    "maize":         BARUtils.is_maize_gene_valid,
-    "phelipanche":   BARUtils.is_phelipanche_gene_valid,
+    "arabidopsis": BARUtils.is_arabidopsis_gene_valid,
+    "arachis": BARUtils.is_arachis_gene_valid,
+    "brassica": BARUtils.is_brassica_rapa_gene_valid,
+    "cannabis": BARUtils.is_cannabis_gene_valid,
+    "canola": BARUtils.is_canola_gene_valid,
+    "grape": BARUtils.is_grape_gene_valid,
+    "kalanchoe": BARUtils.is_kalanchoe_gene_valid,
+    "maize": BARUtils.is_maize_gene_valid,
+    "phelipanche": BARUtils.is_phelipanche_gene_valid,
     "physcomitrella": BARUtils.is_physcomitrella_gene_valid,
-    "poplar":        BARUtils.is_poplar_gene_valid,
-    "rice":          BARUtils.is_rice_gene_valid,
-    "selaginella":   BARUtils.is_selaginella_gene_valid,
-    "sorghum":       BARUtils.is_sorghum_gene_valid,
-    "soybean":       BARUtils.is_soybean_gene_valid,
-    "strawberry":    BARUtils.is_strawberry_gene_valid,
-    "striga":        BARUtils.is_striga_gene_valid,
-    "tomato":        BARUtils.is_tomato_gene_valid,
-    "triphysaria":   BARUtils.is_triphysaria_gene_valid,
+    "poplar": BARUtils.is_poplar_gene_valid,
+    "rice": BARUtils.is_rice_gene_valid,
+    "selaginella": BARUtils.is_selaginella_gene_valid,
+    "sorghum": BARUtils.is_sorghum_gene_valid,
+    "soybean": BARUtils.is_soybean_gene_valid,
+    "strawberry": BARUtils.is_strawberry_gene_valid,
+    "striga": BARUtils.is_striga_gene_valid,
+    "tomato": BARUtils.is_tomato_gene_valid,
+    "triphysaria": BARUtils.is_triphysaria_gene_valid,
 }
 
 
@@ -550,6 +553,7 @@ def normalize_gene_id(gene_id: str, species: str) -> str:
 # Gene ID → probeset conversion
 # ---------------------------------------------------------------------------
 
+
 def convert_gene_to_probeset(
     gene_id: str,
     species: str,
@@ -607,6 +611,7 @@ def convert_gene_to_probeset(
     if species == "arabidopsis":
         # Lazy import avoids circular dependencies at module load time
         from api.services.efp_data import EFPDataService  # noqa: PLC0415
+
         probeset = EFPDataService.agi_to_probst(gene_id.upper())
         if probeset:
             return probeset, None
