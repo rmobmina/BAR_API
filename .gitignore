@@ -144,3 +144,5 @@ output/*
 
 # Local sqlite mirrors generated from MySQL dumps
 config/databases/*.db
+api/Archive/klepikova_efp_feb_6_2025_dump.sql
+api/Archive/soybean_efp_feb_6_2025_dump.sql

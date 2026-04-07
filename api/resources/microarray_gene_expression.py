@@ -234,7 +234,7 @@ class GetSamples1(Resource):
         view = escape(view)
 
         try:
-            with open("data/efp_info/efp_species_view_info.json") as f:
+            with open("data/efp_info/efp_species_view_info_typed.json") as f:
                 all_species_data = json.load(f)
         except Exception as e:
             return BARUtils.error_exit(f"Data file missing or invalid: {e}")
@@ -252,6 +252,10 @@ class GetSamples1(Resource):
         if view not in species_data["views"]:
             return BARUtils.error_exit("Invalid view for this species")
 
-        return BARUtils.success_exit(
-            {"species": species, "view": view, "groups": species_data["views"][view]["groups"]}
-        )
+        view_data = species_data["views"][view]
+        return BARUtils.success_exit({
+            "species": species,
+            "view": view,
+            "data_type": view_data.get("data_type", "Unknown"),
+            "groups": view_data["groups"]
+        })
