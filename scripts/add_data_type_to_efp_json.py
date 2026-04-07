@@ -156,9 +156,9 @@ def main() -> None:
     print(f"\nTotal views annotated: {sum(len(v['data']['views']) for v in data.values())}")
 
     if unknown:
-        print(f"\n{'='*60}")
+        print(f"\n{'=' * 60}")
         print(f"  {len(unknown)} views still marked 'Unknown' — update the sets above:")
-        print(f"{'='*60}")
+        print(f"{'=' * 60}")
         for species, view, db in sorted(unknown):
             print(f"  {species:25s}  {view:50s}  db={db}")
     else:
