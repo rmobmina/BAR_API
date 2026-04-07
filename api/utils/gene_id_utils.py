@@ -1,4 +1,16 @@
-"""Gene identifier utilities: species detection, validation, and probeset conversion."""
+"""
+Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
+
+Gene identifier utilities: species detection, format validation, and probeset conversion.
+
+Probeset IDs (Affymetrix chips) end in '_at', e.g.:
+  261585_at          (Arabidopsis ATH1)
+  Zm.16588.1.A1_at   (Maize)
+  PtpAffx.224570.1.S1_at  (Poplar)
+
+Only Arabidopsis AGI-to-probeset conversion is fully implemented.
+All other species with pending lookup tables return an actionable error message.
+"""
 
 from __future__ import annotations
 

@@ -1,29 +1,30 @@
 #!/usr/bin/env python3
 """
-Proofread EFP expression values — two modes:
+Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
 
-  Mode A (dump): Compare every sample/value in the SQL dump against the local API.
-    Covers: embryo, klepikova, soybean (full Feb 6 2025 dumps)
-    Checks: exact signal values match between dump and API (tolerance ±1e-4)
+Data integrity validation script for eFP expression databases — two modes:
 
-  Mode B (XML):  Use the BAR eFP Browser XML file for a view to get the canonical
-    list of sample IDs, then verify the local API returns non-null values for each.
-    URL pattern: https://bar.utoronto.ca/efp/data/<View_Name>.xml
-    Covers: every view in the Arabidopsis (and other species) eFP Browser
-    Checks: all expected sample IDs exist in the API response for a given gene
+  Mode A (dump-based): Compare every sample/value in a SQL dump against the local API.
+    Covers: embryo, klepikova, soybean (full Feb 6 2025 dumps).
+    Checks: signal values match within ±1e-4 tolerance.
 
-Note: No SQLite used. All local queries go through the BAR API HTTP endpoint.
+  Mode B (XML-based): Fetch the eFP Browser XML for a view, extract expected
+    sample IDs, and verify the API returns a value for each.
+    Covers: any view listed in bar.utoronto.ca/efp/data/<View>.xml.
+    Checks: all expected sample IDs are present and non-null.
 
-Usage — Mode A (dump-based):
+Note: All local queries go through the BAR API HTTP endpoint (not SQLite directly).
+The Flask server must be running before executing this script.
+
+Usage — Mode A:
     python scripts/proofread_efp_values.py
     python scripts/proofread_efp_values.py --databases embryo,klepikova
     python scripts/proofread_efp_values.py --genes AT1G01010,AT1G01020
-    python scripts/proofread_efp_values.py --all-genes --skip-cgi
 
-Usage — Mode B (XML-based):
+Usage — Mode B:
     python scripts/proofread_efp_values.py --view Embryo --gene AT1G01010
-    python scripts/proofread_efp_values.py --view Guard_Cell --gene AT1G01010
     python scripts/proofread_efp_values.py --view Klepikova_Atlas --gene AT1G01010
+    python scripts/proofread_efp_values.py --all-views --species arabidopsis --gene AT1G01010
 """
 
 from __future__ import annotations
@@ -281,17 +282,25 @@ DEFAULT_GENES: Dict[str, List[str]] = {
 
 
 def _parse_fields(raw: str) -> List[str]:
-    """Split a raw SQL tuple on ',' and strip surrounding quotes from each field."""
+    """Split a raw SQL INSERT tuple on ',' and strip surrounding quotes.
+
+    :param raw: Raw comma-separated string from a SQL INSERT statement.
+    :returns: List of cleaned field values.
+    :rtype: List[str]
+    """
     return [f.strip().strip("'\"") for f in raw.split(",")]
 
 
 def query_local_api(base_url: str, db_name: str, gene_id: str) -> Dict[str, Any]:
-    """GET /gene_expression/expression/{db_name}/{gene_id} from the local BAR API.
+    """Query the local BAR API for expression values.
 
-    :param base_url: Root URL of the running BAR API.
-    :param db_name: EFP database name.
-    :param gene_id: Gene / probeset identifier.
-    :return: Parsed JSON response, or error dict on failure.
+    Calls GET /gene_expression/expression/{db_name}/{gene_id}.
+
+    :param base_url: Root URL of the running BAR API (e.g., 'http://localhost:5000').
+    :param db_name: eFP database name (e.g., 'embryo').
+    :param gene_id: Gene or probeset identifier (e.g., 'AT1G01010').
+    :returns: Parsed JSON response dict, or an error dict on failure.
+    :rtype: Dict[str, Any]
     """
     url = f"{base_url}/gene_expression/expression/{db_name}/{gene_id}"
     try:
@@ -302,12 +311,13 @@ def query_local_api(base_url: str, db_name: str, gene_id: str) -> Dict[str, Any]
 
 
 def query_bar_cgi(db_name: str, gene_id: str, samples: List[str]) -> List[Dict[str, Any]]:
-    """Check sample existence on the BAR production plantefp.cgi for up to 50 samples.
+    """Cross-check sample values against the live BAR production CGI (up to 50 samples).
 
-    :param db_name: EFP database name.
-    :param gene_id: Gene identifier.
-    :param samples: Sample IDs (data_bot_id values) to check.
-    :return: List of {name, value} dicts from the CGI.
+    :param db_name: eFP database name.
+    :param gene_id: Gene identifier to query.
+    :param samples: List of data_bot_id values to verify (max 50 used).
+    :returns: List of dicts with 'name' and 'value' keys from the CGI response.
+    :rtype: List[Dict[str, Any]]
     """
     if not samples:
         return []
@@ -331,10 +341,11 @@ def query_bar_cgi(db_name: str, gene_id: str, samples: List[str]) -> List[Dict[s
 
 
 def extract_all_genes(db_name: str) -> List[str]:
-    """Return all unique gene/probeset IDs found in the dump's sample_data table.
+    """Return all unique gene/probeset IDs from a SQL dump's sample_data table.
 
-    :param db_name: One of 'embryo', 'klepikova', 'soybean'.
-    :return: Sorted list of unique gene IDs.
+    :param db_name: Database name — one of 'embryo', 'klepikova', 'soybean'.
+    :returns: Sorted list of unique gene IDs found in the dump.
+    :rtype: List[str]
     """
     dump_path = DUMP_FILES.get(db_name)
     if not dump_path or not dump_path.exists():
@@ -359,14 +370,15 @@ def extract_all_genes(db_name: str) -> List[str]:
 
 
 def parse_dump_for_gene(db_name: str, gene_id: str) -> Dict[str, float]:
-    """Extract all {sample_id: signal_value} pairs for one gene from the dump.
+    """Extract all sample → signal pairs for one gene from a SQL dump.
 
-    Reads the entire dump file but only retains rows where the probeset column
-    matches ``gene_id`` exactly (case-sensitive, as stored in the dump).
+    Only rows where the probeset column matches gene_id exactly are returned
+    (case-sensitive, matching how IDs are stored in the dump).
 
-    :param db_name: Database name (must be in COLUMN_MAP).
-    :param gene_id: Exact gene / probeset identifier as it appears in the dump.
-    :return: Dict mapping sample_id -> float(signal_value).
+    :param db_name: Database name — must be a key in COLUMN_MAP.
+    :param gene_id: Exact gene/probeset ID as it appears in the dump.
+    :returns: Dict mapping sample_id to signal value.
+    :rtype: Dict[str, float]
     """
     dump_path = DUMP_FILES.get(db_name)
     if not dump_path or not dump_path.exists():

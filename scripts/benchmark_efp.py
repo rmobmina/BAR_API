@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Benchmark: flat-file model definition vs dynamic schema generation for EFP databases.
+Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
 
-Measures (against the FULL Feb 2025 SQL dumps — not 1-5 row samples):
-  1. Model class creation time: static flat definitions vs dynamic type() generation
-  2. Schema catalog build time (unique to dynamic approach)
-  3. RAM usage: peak RSS + tracemalloc for each approach
-  4. HTTP query time: local API / ngrok tunnel / BAR production CGI
-  5. Per-database query timing across all genes found in the dump
+Performance benchmark: flat-file model definition vs dynamic schema generation.
+
+Measures three dimensions:
+  1. Model generation time  — flat type() calls vs registry-based dynamic generation
+  2. Memory overhead        — peak RSS and tracemalloc heap for each approach
+  3. HTTP query latency     — local API, ngrok tunnel, and legacy BAR CGI
 
 All plots are saved to scripts/results/.
 
@@ -15,7 +15,7 @@ Usage:
     python scripts/benchmark_efp.py
     python scripts/benchmark_efp.py --local-url http://localhost:5000
     python scripts/benchmark_efp.py --ngrok-url https://xxxx.ngrok-free.app
-    python scripts/benchmark_efp.py --skip-bar   # skip remote BAR CGI requests
+    python scripts/benchmark_efp.py --skip-bar
     python scripts/benchmark_efp.py --iterations 50 --query-genes 30
 """
 
@@ -96,16 +96,22 @@ _BAR_HEADERS: Dict[str, str] = {
 
 
 def _parse_tuple_fields(raw: str) -> List[str]:
-    """Split a raw SQL tuple string on ',' and strip quotes from each field."""
+    """Split a raw SQL INSERT tuple string on ',' and strip surrounding quotes.
+
+    :param raw: Raw string of comma-separated values from a SQL INSERT statement.
+    :returns: List of field values with quotes stripped.
+    :rtype: List[str]
+    """
     return [f.strip().strip("'\"") for f in raw.split(",")]
 
 
 def extract_genes_from_dump(db_name: str, limit: Optional[int] = None) -> List[str]:
-    """Return all unique probeset/gene IDs found in the dump's sample_data table.
+    """Return unique gene/probeset IDs found in a SQL dump's sample_data table.
 
-    :param db_name: One of 'embryo', 'klepikova', 'soybean'.
-    :param limit: If set, return at most this many gene IDs (random sample).
-    :return: Sorted list of unique gene IDs.
+    :param db_name: Database name — one of 'embryo', 'klepikova', 'soybean'.
+    :param limit: If set, randomly sample this many IDs from the full list.
+    :returns: Sorted list of unique gene IDs.
+    :rtype: List[str]
     """
     dump_path = DUMP_FILES.get(db_name)
     if not dump_path or not dump_path.exists():
@@ -136,7 +142,12 @@ def extract_genes_from_dump(db_name: str, limit: Optional[int] = None) -> List[s
 
 
 def count_dump_samples(db_name: str) -> int:
-    """Count total sample rows in the dump's sample_data table."""
+    """Count total sample rows in a SQL dump's sample_data table.
+
+    :param db_name: Database name — one of 'embryo', 'klepikova', 'soybean'.
+    :returns: Total number of data rows parsed from the dump.
+    :rtype: int
+    """
     dump_path = DUMP_FILES.get(db_name)
     if not dump_path or not dump_path.exists():
         return 0
@@ -162,14 +173,14 @@ def count_dump_samples(db_name: str) -> int:
 
 
 def _simulate_flat_class_creation(db_names: List[str]) -> float:
-    """Time the overhead of defining flat-file model classes via type().
+    """Simulate the cost of importing static flat-file model definitions.
 
-    In a real flat-file approach every class is written out in a .py file.
-    Python's import system runs the body of each class definition exactly once.
-    We replicate that cost by calling type() with the same attribute layout.
+    Calls type() once per database with a pre-built attribute dict, matching
+    what Python's import system does when loading hand-written class bodies.
 
-    :param db_names: List of database names (one class per DB).
-    :return: Elapsed seconds.
+    :param db_names: List of database names to simulate (one class per name).
+    :returns: Elapsed time in seconds.
+    :rtype: float
     """
     t0 = time.perf_counter()
     for db_name in db_names:

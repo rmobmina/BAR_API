@@ -1,5 +1,12 @@
 """
-shared helper utilities for querying efp databases
+Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
+
+Centralised query service for all eFP databases.
+
+Exposes a single entry point query_efp_database_dynamic() that handles:
+  - Engine resolution: live MySQL first, SQLite mirror fallback
+  - AGI-to-probeset lookup for Arabidopsis microarray databases
+  - Parameterised queries to prevent SQL injection
 """
 
 from __future__ import annotations

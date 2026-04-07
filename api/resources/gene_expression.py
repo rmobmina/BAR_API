@@ -1,3 +1,13 @@
+"""
+Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
+
+REST endpoint for gene expression queries across all eFP databases.
+
+Routes: GET /gene_expression/expression/<database>/<gene_id>
+
+All gene IDs are validated by species before reaching the query layer.
+Probeset conversion is applied automatically for microarray databases.
+"""
 from flask_restx import Namespace, Resource
 from markupsafe import escape
 
@@ -36,6 +46,13 @@ gene_expression = Namespace(
 )
 class GeneExpression(Resource):
     def get(self, database, gene_id):
+        """Retrieve expression values for a gene from a given eFP database.
+
+        :param database: Database name (e.g., 'klepikova', 'embryo').
+        :param gene_id: Gene or probeset ID (e.g., 'AT1G01010', '261585_at').
+        :returns: JSON with expression values per sample, or an error message.
+        :rtype: flask.Response
+        """
         database = str(escape(database))
         gene_id = str(escape(gene_id))
 

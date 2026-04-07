@@ -1,13 +1,13 @@
 """
-Script to add 'data_type' field ("Microarray" | "RNA-Seq" | "Unknown") to every
-view entry in efp_species_view_info.json.
+Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
+
+Annotates each eFP view with a data_type field: "Microarray", "RNA-Seq", or "Unknown".
 
 Reads:  data/efp_info/efp_species_view_info.json
 Writes: data/efp_info/efp_species_view_info_typed.json
 
-Classification is based on the database name for each view.
-Entries marked "Unknown" need manual review — search the output file for "Unknown"
-to find them and update this script's MICROARRAY_DBS / RNASEQ_DBS sets accordingly.
+Classification is based on the database name. Views marked "Unknown" need
+manual review — search the output file for "Unknown" and update the sets below.
 """
 
 from __future__ import annotations
@@ -116,6 +116,12 @@ RNASEQ_DBS: set[str] = {
 
 
 def classify(db_name: str) -> str:
+    """Return the data type label for a given database name.
+
+    :param db_name: Database name to classify (e.g., 'embryo', 'klepikova').
+    :returns: 'Microarray', 'RNA-Seq', or 'Unknown'.
+    :rtype: str
+    """
     if db_name in MICROARRAY_DBS:
         return "Microarray"
     if db_name in RNASEQ_DBS:
@@ -124,6 +130,7 @@ def classify(db_name: str) -> str:
 
 
 def main() -> None:
+    """Read the untyped view info JSON, annotate each view with data_type, and write output."""
     repo_root = Path(__file__).resolve().parent.parent
     src = repo_root / "data" / "efp_info" / "efp_species_view_info.json"
     dst = repo_root / "data" / "efp_info" / "efp_species_view_info_typed.json"
