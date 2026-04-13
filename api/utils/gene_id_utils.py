@@ -4,9 +4,13 @@ Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
 Gene identifier utilities: species detection, format validation, and probeset conversion.
 
 Probeset IDs (Affymetrix chips) end in '_at', e.g.:
-  261585_at          (Arabidopsis ATH1)
-  Zm.16588.1.A1_at   (Maize)
+  261585_at               (Arabidopsis ATH1)
+  AB004882_at             (Maize gdowns — GenBank accession probesets)
   PtpAffx.224570.1.S1_at  (Poplar)
+  TU000001                (Tomato Rose Lab Atlas — Tomato Unigene chip, no _at suffix)
+
+Note: not all non-_at IDs are gene IDs. Some databases (e.g. Tomato, Soybean) use gene-model
+IDs as their primary key rather than Affymetrix probe IDs.
 
 Only Arabidopsis AGI-to-probeset conversion is fully implemented.
 All other species with pending lookup tables return an actionable error message.
@@ -160,7 +164,7 @@ DATABASE_SPECIES: dict[str, str] = {
     "maize_ears":                           "maize",
     "maize_embryonic_leaf_development":     "maize",
     "maize_enzyme":                         "maize",
-    "maize_gdowns":                         "maize",         # Affymetrix chip; gene → Zm.XXXXX_at
+    "maize_gdowns":                         "maize",         # Affymetrix chip; GRMZM* → AB*_at (GenBank accession probesets)
     "maize_iplant":                         "maize",
     "maize_kernel_v5":                      "maize",
     "maize_leaf_gradient":                  "maize",
@@ -317,35 +321,39 @@ PROBESET_DATABASES: frozenset[str] = frozenset(
         "human_developmental",  # CCR5 → 206991_s_at
         "human_developmental_SpongeLab",
         "human_diseased",
-        "maize_gdowns",  # Affymetrix Maize GeneChip (gene → Zm.XXXXX probeset IDs)
-        "medicago_mas",  # Affymetrix Medicago GeneChip (Medtr* → Mtr.*_at)
-        "medicago_rma",  # Affymetrix Medicago GeneChip
-        "poplar",  # Affymetrix Poplar GeneChip (grail3.* → PtpAffx.*_at)
-        "rice_mas",  # Affymetrix Rice GeneChip (LOC_Os* → Os.*_at)
-        "rice_rma",  # Affymetrix Rice GeneChip
-        "triticale",  # Affymetrix Wheat/Triticale GeneChip (EU* → Ta.*_at)
-        "triticale_mas",  # Affymetrix Wheat/Triticale GeneChip
-        # ── Non-Affymetrix species with gene ID ≠ probeset ID ────────────────────
-        # Confirmed from eFP browser: input gene ID differs from the stored probeset.
+        "maize_gdowns",    # Affymetrix Maize GeneChip (GRMZM* → AB*_at, GenBank accession probesets)
+        "maize_RMA_linear",  # contig-based probesets (GRMZM* → AC*_FGT* format)
+        "maize_RMA_log",   # same chip as maize_RMA_linear
+        "medicago_mas",    # Affymetrix Medicago GeneChip (Medtr* → Mtr.*_at)
+        "medicago_rma",    # Affymetrix Medicago GeneChip
+        "medicago_seed",   # old genome model (Medtr8g* → Medtr_v1_*); confirmed from sample data
+        "poplar",          # Affymetrix Poplar GeneChip (Potri.* → grail3.* → PtpAffx.*_at)
+        "rice_mas",        # Affymetrix Rice GeneChip (LOC_Os* → Os.*_at)
+        "rice_rma",        # Affymetrix Rice GeneChip
+        "tomato",          # Affymetrix Tomato GeneChip (Solyc* → TU* probesets); confirmed from sample data
+        "triticale",       # Affymetrix Wheat/Triticale GeneChip (EU* → Ta.*_at)
+        "triticale_mas",   # Affymetrix Wheat/Triticale GeneChip
+        # ── Non-Affymetrix species with gene ID ≠ stored key ─────────────────────
+        # Confirmed from eFP browser: input gene ID differs from the stored key.
         # Lookup tables pending for all of these.
         "grape_developmental",  # VIT_00s0120g00060 → CHRUN_JGVV120_4_T01
-        "potato_dev",  # PGSC0003DMP400000011 → PGSC0003DMG400000005
-        "potato_stress",  # same DMP → DMG gene model conversion
-        "potato_wounding",  # same DMP → DMG gene model conversion
-        "soybean",  # Glyma.06g316600 (new) → Glyma06g47400 (old format)
+        "soybean",              # Glyma.XxG* (new Wm82.a4) → GlymaXxg*/GlymaXxs* (old format)
         "soybean_embryonic_development",
         "soybean_heart_cotyledon_globular",
         "soybean_senescence",
         "soybean_severin",
         # ── Cross-species: input is an Arabidopsis AGI, stored as species gene ID ─
         # See CROSS_SPECIES_DATABASES below for the input validation override.
-        "phelipanche",  # AT1G07890 → OrAeBC5_10.1
-        "striga",  # AT3G11400 → StHeBC3_1.1
+        "phelipanche",     # AT1G07890 → OrAeBC5_10.1
+        "striga",          # AT3G11400 → StHeBC3_1.1
         "thellungiella_db",  # AT2G21470 → Thhalv10000089m.g
-        "triphysaria",  # AT1G11260 → TrVeBC3_1.1
-        # TODO: seedcoat (oat) – has species-specific probeset IDs; add once format confirmed
+        "triphysaria",     # AT1G11260 → TrVeBC3_1.1
+        # TODO: seedcoat – AROS chip; A######_## probesets; add once format confirmed
         # TODO: strawberry – gene10171 → FvH4_1g00010; lookup table needed
         # TODO: physcomitrella – Phypa_166136 → Pp1s103_79V6.1; lookup table needed
+        # TODO: willow – SapurV1A.* → comp*_c*_seq* (Trinity); assembly mapping needed
+        # TODO: sunflower – HanXRQChr12g* → Ha1_*; genome version mapping needed
+        # TODO: camelina – Csa01g* (v6) → Csa*s*.* (old assembly); version mapping needed
     }
 )
 
@@ -463,14 +471,31 @@ def get_species_for_database(database: str) -> Optional[str]:
 # before querying eFP databases.
 _MAIZE_TRANSCRIPT_RE = re.compile(r"_T\d{1,3}$", re.IGNORECASE)
 
+# Barley V3 IDs from ePlant use a .V3 suffix (e.g. HORVU.MOREX.r3.1HG0000030.V3)
+# but databases store a .1 suffix (e.g. HORVU.MOREX.r3.1HG0000030.1).
+# Strip any trailing version suffix (.[Vv]\d+ or .\d+) and reattach .1.
+_BARLEY_V3_RE = re.compile(r"\.[Vv]\d+$")
+
 
 def normalize_gene_id(gene_id: str, species: str) -> str:
     """Return the gene ID in the form stored in eFP databases.
 
-    Maize: strips _T## transcript suffix (GRMZM2G083841_T01 → GRMZM2G083841).
+    :param gene_id: Raw gene identifier supplied by the user.
+    :type gene_id: str
+    :param species: Canonical species key (e.g. ``'maize'``, ``'barley'``).
+    :type species: str
+    :returns: Normalised gene ID ready for database lookup.
+    :rtype: str
+
+    Maize: strips ``_T##`` transcript suffix (``GRMZM2G083841_T01`` → ``GRMZM2G083841``).
+
+    Barley V3: replaces ``.V3`` version suffix with ``.1`` to match the stored format
+    (``HORVU.MOREX.r3.1HG0000030.V3`` → ``HORVU.MOREX.r3.1HG0000030.1``).
     """
     if species == "maize":
         return _MAIZE_TRANSCRIPT_RE.sub("", gene_id)
+    if species == "barley" and _BARLEY_V3_RE.search(gene_id):
+        return _BARLEY_V3_RE.sub(".1", gene_id)
     return gene_id
 
 
@@ -502,11 +527,14 @@ def convert_gene_to_probeset(
         pass
 
     if species == "maize":
-        # TODO: gene → Zm.XXXXX_at (maize_gdowns only; other maize DBs use normalize_gene_id)
+        # TODO: maize_gdowns — GRMZM* → AB*_at (GenBank accession probesets; confirmed from sample data)
+        # TODO: maize_RMA_linear — GRMZM* → AC*_FGT* (contig-based probesets; confirmed from sample data)
+        # Other maize databases (maize_buell_lab etc.) store Zm00001d* directly — use normalize_gene_id.
         pass
 
     if species == "medicago":
-        # TODO: Medtr* → Mtr.*_at
+        # TODO: medicago_mas / medicago_rma — Medtr* → Mtr.*_at (Affymetrix chip)
+        # TODO: medicago_seed — Medtr8g* → Medtr_v1_* (old genome model; confirmed from sample data)
         pass
 
     if species == "poplar":
@@ -527,16 +555,20 @@ def convert_gene_to_probeset(
 
     # ── Non-Affymetrix species with differing ID formats (lookup tables pending) ──
 
+    if species == "tomato" and database == "tomato":
+        # TODO: Solyc* → TU* (Tomato Unigene probesets on Affymetrix Tomato GeneChip)
+        # Confirmed from sample data: tomato (Rose Lab Atlas) stores TU000001 format.
+        # tomato_ils / tomato_ils2 store Solyc* directly — no conversion needed for those.
+        pass
+
     if species == "grape":
         # TODO: VIT_* → CHRUN_*
         pass
 
-    if species == "potato":
-        # TODO: PGSC0003DMP* → PGSC0003DMG*
-        pass
-
     if species == "soybean":
-        # TODO: Glyma.* (new format) → Glyma* (old format)
+        # TODO: Glyma.XxG* (new Wm82.a4 format) → GlymaXxg*/GlymaXxs* (old format)
+        # Confirmed from sample data: soybean/soybean_severin store old format (e.g. Glyma0021s00410).
+        # This is a gene model version reconciliation, not just string formatting.
         pass
 
     # ── Cross-species: Arabidopsis AGI input → species probeset (lookup tables pending) ──

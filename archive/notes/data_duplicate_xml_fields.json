@@ -1,0 +1,440 @@
+[
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Bud_Development.xml",
+    "type": "tissue",
+    "name": "bud",
+    "group": "Nov"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Flower_Fruit_Development.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "flower"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "core",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "cortex",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_actinidia/data/Postharvest.xml",
+    "type": "tissue",
+    "name": "flesh",
+    "group": "Postharvest Control"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Development_RMA.xml",
+    "type": "tissue",
+    "name": "Root",
+    "group": "CTRL_7"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Developmental_Map.xml",
+    "type": "tissue",
+    "name": "Root",
+    "group": "CTRL_7"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Lateral_Root_Initiation.xml",
+    "type": "group",
+    "name": "Cortex.0hr.Mean"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Lateral_Root_Initiation.xml",
+    "type": "group",
+    "name": "Pericycle.0hr.Mean"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Lateral_Root_Initiation.xml",
+    "type": "group",
+    "name": "Cortex.0hr.Mean"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Lateral_Root_Initiation.xml",
+    "type": "group",
+    "name": "Pericycle.0hr.Mean"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Regeneration.xml",
+    "type": "group",
+    "name": "bot1330w;bot1517;bot1516"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Regeneration.xml",
+    "type": "group",
+    "name": "bot1334w;bot1521;bot1520"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Tissue_Specific.xml",
+    "type": "group",
+    "name": "ATGE_CTRL_7"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Tissue_Specific.xml",
+    "type": "group",
+    "name": "ATGE_CTRL_7"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Tissue_Specific.xml",
+    "type": "group",
+    "name": "ATGE_CTRL_7"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Tissue_Specific.xml",
+    "type": "group",
+    "name": "ATGE_CTRL_7"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Tissue_Specific.xml",
+    "type": "group",
+    "name": "ATGE_CTRL_7"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Tissue_Specific.xml",
+    "type": "group",
+    "name": "ATGE_CTRL_7"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp/data/Tissue_Specific.xml",
+    "type": "group",
+    "name": "ATGE_CTRL_7"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_seedcoat/data/Seed_Coat.xml",
+    "type": "group",
+    "name": "tt16-1 mutant seed"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efp_grape/data/grape_developmental.xml",
+    "type": "tissue",
+    "name": "Bud - Winter Dormant",
+    "group": "Dev"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efprice/data/rice_leaf_gradient.xml",
+    "type": "tissue",
+    "name": "R7",
+    "group": "Rice"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efprice/data/ricestress_mas.xml",
+    "type": "sample",
+    "name": "RICE_CTRL_STRESS",
+    "tissue": "Control_Shoot",
+    "group": "Control_stress_Seedling"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efprice/data/ricestress_mas.xml",
+    "type": "sample",
+    "name": "RICE_CTRL_STRESS",
+    "tissue": "Control_Shoot",
+    "group": "Control_stress_Seedling"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efprice/data/ricestress_mas.xml",
+    "type": "sample",
+    "name": "RICE_CTRL_STRESS",
+    "tissue": "Control_Root",
+    "group": "Control_stress_Seedling"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efprice/data/ricestress_mas.xml",
+    "type": "sample",
+    "name": "RICE_CTRL_STRESS",
+    "tissue": "Control_Root",
+    "group": "Control_stress_Seedling"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efprice/data/ricestress_rma.xml",
+    "type": "sample",
+    "name": "RICE_CTRL_STRESS",
+    "tissue": "Control_Shoot",
+    "group": "Control_stress_Seedling"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efprice/data/ricestress_rma.xml",
+    "type": "sample",
+    "name": "RICE_CTRL_STRESS",
+    "tissue": "Control_Shoot",
+    "group": "Control_stress_Seedling"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efprice/data/ricestress_rma.xml",
+    "type": "sample",
+    "name": "RICE_CTRL_STRESS",
+    "tissue": "Control_Root",
+    "group": "Control_stress_Seedling"
+  },
+  {
+    "xml": "https://bar.utoronto.ca/efprice/data/ricestress_rma.xml",
+    "type": "sample",
+    "name": "RICE_CTRL_STRESS",
+    "tissue": "Control_Root",
+    "group": "Control_stress_Seedling"
+  }
+]
