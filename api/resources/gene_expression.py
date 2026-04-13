@@ -47,11 +47,6 @@ gene_expression = Namespace(
 class GeneExpression(Resource):
     def get(self, database, gene_id):
         """Retrieve expression values for a gene from a given eFP database.
-
-        :param database: Database name (e.g., 'klepikova', 'embryo').
-        :param gene_id: Gene or probeset ID (e.g., 'AT1G01010', '261585_at').
-        :returns: JSON with expression values per sample, or an error message.
-        :rtype: flask.Response
         """
         database = str(escape(database))
         gene_id = str(escape(gene_id))

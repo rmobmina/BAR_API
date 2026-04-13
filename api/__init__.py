@@ -1,3 +1,7 @@
+import re as _re
+import sqlite3
+import statistics as _statistics
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_restx import Api
@@ -5,9 +9,42 @@ from flask_cors import CORS
 from flask_caching import Cache
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+from sqlalchemy import event
+from sqlalchemy.engine import Engine
 import os
 from pathlib import Path
 import tempfile
+
+
+@event.listens_for(Engine, "connect")
+def _register_sqlite_functions(dbapi_conn, connection_record):
+    """Register MySQL-compatible functions for SQLite (used in CI and local tests)."""
+    if not isinstance(dbapi_conn, sqlite3.Connection):
+        return
+
+    class _PopStdDev:
+        """Population standard deviation aggregate (equivalent to MySQL STD())."""
+
+        def __init__(self):
+            self._vals = []
+
+        def step(self, value):
+            if value is not None:
+                self._vals.append(float(value))
+
+        def finalize(self):
+            if len(self._vals) < 2:
+                return None
+            return _statistics.pstdev(self._vals)
+
+    dbapi_conn.create_aggregate("std", 1, _PopStdDev)
+
+    def _regexp_replace(string, pattern, replacement):
+        if string is None:
+            return None
+        return _re.sub(pattern, replacement, string)
+
+    dbapi_conn.create_function("regexp_replace", 3, _regexp_replace)
 
 
 def create_app():
