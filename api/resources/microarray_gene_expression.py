@@ -5,6 +5,7 @@ from api.models.annotations_lookup import AtAgiLookup
 from api.models.efp_dynamic import SIMPLE_EFP_SAMPLE_MODELS
 from api.utils.bar_utils import BARUtils
 from api.utils.world_efp_utils import WorldeFPUtils
+from sqlalchemy import func
 import json
 
 # Pull the dynamic model so this resource stays in sync with the schema catalog
@@ -33,7 +34,7 @@ class GetWorldeFPExpression(Resource):
             return BARUtils.error_exit("Invalid species")
         subquery = (
             db.select(AtAgiLookup.probeset)
-            .where(AtAgiLookup.agi == gene_id)
+            .where(func.lower(AtAgiLookup.agi) == gene_id.lower())
             .order_by(AtAgiLookup.date.desc())
             .limit(1)
             .subquery()

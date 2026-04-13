@@ -100,11 +100,16 @@ class GeneAliases(Resource):
 
         if len(rows) > 0:
             for row in rows:
-                if row.agi in data_items.keys():
-                    data_items[row.agi].append(row.agi)
+                normalized_agi = BARUtils.normalize_arabidopsis_gene(row.agi)
+                alias_value = row.alias
+                if BARUtils.is_arabidopsis_gene_valid(alias_value):
+                    alias_value = BARUtils.normalize_arabidopsis_gene(alias_value)
+
+                if normalized_agi in data_items.keys():
+                    data_items[normalized_agi].append(normalized_agi)
                 else:
-                    data_items[row.agi] = []
-                    data_items[row.agi].append(row.alias)
+                    data_items[normalized_agi] = []
+                    data_items[normalized_agi].append(alias_value)
 
             for gene in data_items.keys():
                 data.append({"gene": gene, "aliases": data_items[gene]})
