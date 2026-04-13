@@ -1,6 +1,6 @@
 # Duplicate Tissue/Group/Sample Names in XML Files
 
-**Context:** Checked for duplicate names across tissue, group, and sample fields in EFP XML files,
+Checked for duplicate names across tissue, group, and sample fields in EFP XML files,
 as requested by Dr. Provart. Used a web scraper to flag duplicates, then manually verified results.
 Scraper output saved in `data_duplicate_xml_fields.json`.
 

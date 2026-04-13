@@ -165,12 +165,31 @@ RNASEQ_DBS: set[str] = {
     "willow",
     # Sunflower RNA-Seq (Ha1_* gene IDs; confirmed from sample data)
     "sunflower",
+    # Brachypodium RNA-Seq (Bradi* gene IDs; confirmed from sample data)
+    "brachypodium",
+    "brachypodium_grains",
+    "brachypodium_Bd21",
+    "brachypodium_photo_thermocycle",
+    # Brassica rapa RNA-Seq (BraA* gene IDs; confirmed from sample data)
+    "brassica_rapa",
+    # Kalanchoe RNA-Seq (Kaladp* gene IDs; confirmed from sample data)
+    "kalanchoe",
+    # Maize RNA-Seq — confirmed gene model IDs from sample data
+    "maize_early_seed",           # GRMZM5G* gene models
+    "maize_embryonic_leaf_development",  # Zm00001d* gene models (same format as maize_buell_lab)
+    "maize_rice_comparison",      # GRMZM2G* gene models
+    # TODO: maize_root, maize_ears, maize_iplant, maize_leaf_gradient — store AC147602.*_FG*
+    #   IDs; only one sample row in CSV so pattern is unconfirmed. Could be gene models from
+    #   the early BAC-based maize annotation OR an unrecognised probeset format. Needs more
+    #   rows or a reference paper to classify.
+    # Strawberry RNA-Seq (FvH4_1g* gene IDs; confirmed from sample data)
+    "strawberry",
+    # TODO: thellungiella_db — stores nXLOC_* IDs (unusual format, possible RNA-Seq assembly);
+    #   cross-species DB that takes AT* gene IDs as input; needs confirmation before classifying.
+    # TODO: soybean, soybean_embryonic_development, soybean_heart_cotyledon_globular,
+    #   soybean_senescence, soybean_severin — store Glyma0* old gene model IDs (confirmed from
+    #   sample data); original experiment type unclear — early soybean eFP may be microarray-based.
 }
-
-# ---------------------------------------------------------------------------
-# Everything not in either set above will be labelled "Unknown"
-# Run the script, then search for "Unknown" in the output file to find gaps.
-# ---------------------------------------------------------------------------
 
 
 def classify(db_name: str) -> str:
@@ -189,14 +208,14 @@ def classify(db_name: str) -> str:
 
 def main() -> None:
     """Read the untyped view info JSON, annotate each view with data_type, and write output."""
-    repo_root = Path(__file__).resolve().parent.parent
+    repo_root = Path(__file__).resolve().parent.parent.parent
     src = repo_root / "data" / "efp_info" / "efp_species_view_info.json"
     dst = repo_root / "data" / "efp_info" / "efp_species_view_info_typed.json"
 
     with src.open() as f:
         data = json.load(f)
 
-    unknown: list[tuple[str, str, str]] = []  # (species, view, database)
+    unknown: list[tuple[str, str, str]] = []
 
     for species, sp_entry in data.items():
         views = sp_entry["data"]["views"]

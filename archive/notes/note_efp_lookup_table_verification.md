@@ -1,6 +1,6 @@
 # EFP Browser Lookup Table Verification
 
-**Context:** Manual check of lookup tables across all EFP browsers by reading the bottom sentence
+Manual check of lookup tables across all EFP browsers by reading the bottom sentence
 displayed on each eFP browser page (e.g. "X was used as the probe set identifier for your primary
 gene, Y").
 

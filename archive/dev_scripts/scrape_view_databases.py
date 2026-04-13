@@ -14,7 +14,7 @@ import requests
 import xml.etree.ElementTree as ET
 import json
 
-# efp base urls
+# EFP base urls
 EFP_SITES = {
     "actinidia": "https://bar.utoronto.ca/efp_actinidia/cgi-bin/efpWeb.cgi",
     "arabidopsis": "https://bar.utoronto.ca/efp/cgi-bin/efpWeb.cgi",
@@ -95,7 +95,7 @@ def main():
             all_species_databases[species] = views
             print(f"  Found {len(views)} views")
         else:
-            print(f"  No views found")
+            print("  No views found")
 
     out_file = "species_databases.json"
     with open(out_file, "w") as f:

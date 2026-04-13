@@ -169,7 +169,6 @@ def ensure_database(server_url: URL, db_name: str, charset: str) -> None:
 
     server_engine = create_engine(server_url)
     with server_engine.begin() as conn:
-        # Safe to use f-string here since we've validated the inputs above
         conn.execute(text(f"CREATE DATABASE IF NOT EXISTS `{db_name}` DEFAULT CHARACTER SET {charset}"))
 
 

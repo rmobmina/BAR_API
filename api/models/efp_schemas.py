@@ -239,9 +239,7 @@ _SPECS: List[tuple] = [
     ("willow", "willow"),
 ]
 
-# databases that store Affymetrix/microarray probeset IDs instead of gene identifiers.
-# For Arabidopsis databases in this set, the API will auto-convert AGI → probeset
-# via the at_agi_lookup service before querying expression data.
+# Databases that store Affymetrix/microarray probeset IDs instead of gene identifiers.
 _PROBESET_DBS = {
     # Arabidopsis microarray databases (Affymetrix ATH1 chip, need AGI→probeset lookup)
     "affydb",
@@ -277,7 +275,7 @@ _PROBESET_DBS = {
     "triticale_mas",
 }
 
-# databases that use utf8mb4 charset (all others default to latin1)
+# Databases that use utf8mb4 charset (all others default to latin1)
 _UTF8MB4 = {
     "actinidia_bud_development", "actinidia_flower_fruit_development",
     "actinidia_postharvest", "actinidia_vegetative_growth", "apple",

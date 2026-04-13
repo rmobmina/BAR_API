@@ -1,6 +1,6 @@
 # API Endpoint Error Breakdown
 
-**Context:** Summary of current errors occurring in the BAR API, organized by endpoint group,
+Summary of current errors occurring in the BAR API, organized by endpoint group,
 as requested by Dr. Provart. This was all tested manually.
 
 ---

@@ -15,7 +15,7 @@ import requests
 import xml.etree.ElementTree as ET
 import json
 
-# efp base urls
+# EFP base urls
 EFP_SITES = {
     "actinidia": "https://bar.utoronto.ca/efp_actinidia/cgi-bin/efpWeb.cgi",
     "arabidopsis": "https://bar.utoronto.ca/efp/cgi-bin/efpWeb.cgi",
@@ -48,7 +48,7 @@ EFP_SITES = {
     "wheat": "https://bar.utoronto.ca/efp_wheat/cgi-bin/efpWeb.cgi"
 }
 
-# database and view mappings for each species
+# Database and view mappings for each species
 species_databases = {
     "actinidia": {
         "Bud_Development": "actinidia_bud_development",

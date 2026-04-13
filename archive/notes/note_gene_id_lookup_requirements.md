@@ -1,6 +1,6 @@
 # Gene ID Lookup Requirements for ePlant Species
 
-**Context:** Vincent asked us to check what gene IDs ePlant uses for each species, then cross-reference
+Vincent asked us to check what gene IDs ePlant uses for each species, then cross-reference
 them against `sample_data_results.csv` to determine whether the database stores that gene ID directly
 or requires a conversion. The test genes below are the ones used in ePlant (Plant eFP / Gene Info
 Viewer / AtGenExpress eFP).

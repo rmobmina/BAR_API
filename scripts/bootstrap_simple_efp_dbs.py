@@ -19,7 +19,7 @@ from pathlib import Path
 
 from sqlalchemy.exc import SQLAlchemyError
 
-# ensure the repository root is importable when this script is executed standalone
+# Ensure the repository root is importable when this script is executed standalone
 ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
@@ -40,9 +40,6 @@ def _default_host() -> str:
         return os.environ["DB_HOST"]
     if os.environ.get("MYSQL_HOST"):
         return os.environ["MYSQL_HOST"]
-    # GitHub Actions CI uses localhost; Docker Compose uses bar_mysqldb
-    # CI env var is set in GitHub Actions, but not DB_HOST
-    # In Docker, DB_HOST should be explicitly set to BAR_mysqldb
     return "localhost"
 
 
@@ -90,6 +87,5 @@ if __name__ == "__main__":
     try:
         main()
     except SQLAlchemyError as exc:
-        # match init.sh style output to keep ci logs readable
         print(f"failed to initialize simple efp databases: {exc}")
         raise

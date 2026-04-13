@@ -1,7 +1,7 @@
 # Next Steps — A Guide
 
 **Context:** This note is for whoever picks up this project after April 2026. It covers where
-things were left off, what is production-ready, and what still needs to be done — in order
+things were left off, what is production-ready, and what still needs to be done, in order
 of priority.
 
 ---
@@ -130,16 +130,3 @@ The API is ready. The remaining work is on the frontend side: update ePlant3 to 
 World eFP and Tissue eFP visualisation modules at the new endpoint paths instead of the legacy
 CGI calls. Once that is done, ePlant3 users will see the full benefit of the latency improvements
 (sub-6 ms local vs 800 ms+ legacy CGI — see `note_benchmarking_results.md`).
-
----
-
-## Reference Files
-
-| File | What it contains |
-|------|-----------------|
-| `note_efp_lookup_table_verification.md` | Probe set identifiers confirmed per species via eFP browser; potato G→P issue |
-| `note_benchmarking_results.md` | Memory and query time benchmarks; flat-file vs dynamic model comparison |
-| `note_duplicate_xml_fields.md` | Duplicate group/tissue/sample names found in EFP XML files |
-| `archive/test_data/sample_data_results.csv` | Raw sample data export showing `data_probeset_id` format per database |
-| `dev_scripts/audit_efp_xml_duplicates.py` | Re-run to check for new XML duplicates after any site update |
-| `dev_scripts/annotate_efp_data_types.py` | Classifies databases as Microarray / RNA-Seq; update sets if new databases are added |

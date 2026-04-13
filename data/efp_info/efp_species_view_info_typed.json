@@ -9076,7 +9076,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Brachypodium_Grains": {
           "database": "brachypodium_grains",
@@ -9114,7 +9114,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Brachypodium_Spikes": {
           "database": "brachypodium_Bd21",
@@ -9155,7 +9155,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Photo_Thermocycle": {
           "database": "brachypodium_photo_thermocycle",
@@ -9337,7 +9337,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         }
       }
     }
@@ -9403,7 +9403,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         }
       }
     }
@@ -11597,7 +11597,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         }
       }
     }
@@ -12182,7 +12182,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Embryonic_Leaf_Development": {
           "database": "maize_embryonic_leaf_development",
@@ -12240,7 +12240,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Hoopes_et_al_Atlas": {
           "database": "maize_buell_lab",
@@ -12633,7 +12633,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Hoopes_et_al_Stress": {
           "database": "maize_buell_lab",
@@ -12780,7 +12780,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Maize_Kernel": {
           "database": "maize_early_seed",
@@ -12830,7 +12830,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Maize_Root": {
           "database": "maize_root",
@@ -13452,7 +13452,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         }
       }
     }
@@ -14223,7 +14223,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         }
       }
     }
@@ -14563,7 +14563,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Potato_Stress": {
           "database": "potato_stress",
@@ -14660,7 +14660,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         }
       }
     }
@@ -14859,7 +14859,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "rice_leaf_gradient": {
           "database": "rice_leaf_gradient",
@@ -14906,7 +14906,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "rice_maize_comparison": {
           "database": "rice_maize_comparison",
@@ -15005,7 +15005,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "rice_mas": {
           "database": "rice_mas",
@@ -16184,7 +16184,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Strawberry_Green_vs_White_Stage": {
           "database": "strawberry",
@@ -16214,7 +16214,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         }
       }
     }
@@ -16463,7 +16463,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "ILs_Root_Tip_Brady_Lab": {
           "database": "tomato_ils2",
@@ -16714,7 +16714,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "M82_S_pennellii_Atlases_Koenig_et_al": {
           "database": "tomato_s_pennellii",
@@ -16776,7 +16776,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Rose_Lab_Atlas": {
           "database": "tomato",
@@ -16854,7 +16854,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "Microarray"
         },
         "Rose_Lab_Atlas_Renormalized": {
           "database": "tomato_renormalized",
@@ -16932,7 +16932,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "SEED_Lab_Angers": {
           "database": "tomato_seed",
@@ -17086,7 +17086,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Shade_Mutants": {
           "database": "tomato_shade_mutants",
@@ -17321,7 +17321,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Shade_Timecourse_WT": {
           "database": "tomato_shade_timecourse",
@@ -17556,7 +17556,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Tomato_Meristem": {
           "database": "tomato_meristem",
@@ -17639,7 +17639,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         }
       }
     }
@@ -18178,7 +18178,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Wheat_Abiotic_Stress": {
           "database": "wheat_abiotic_stress",
@@ -18243,7 +18243,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Wheat_Embryogenesis": {
           "database": "wheat_embryogenesis",
@@ -18435,7 +18435,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         },
         "Wheat_Meiosis": {
           "database": "wheat_meiosis",
@@ -18504,7 +18504,7 @@
               }
             }
           },
-          "data_type": "Unknown"
+          "data_type": "RNA-Seq"
         }
       }
     }

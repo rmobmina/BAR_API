@@ -15,7 +15,7 @@ import requests
 import xml.etree.ElementTree as ET
 import json
 
-# efp base urls
+# EFP base urls
 EFP_SITES = {
     "actinidia": "https://bar.utoronto.ca/efp_actinidia/cgi-bin/efpWeb.cgi",
     "arabidopsis": "https://bar.utoronto.ca/efp/cgi-bin/efpWeb.cgi",
@@ -227,7 +227,7 @@ species_databases = {
     }
 }
 
-# collect duplicates
+# Collect duplicates
 duplicate_log = []
 
 
@@ -266,10 +266,10 @@ def fetch_view_data(xml_url, db_name, view_name):
                 )
             seen_group_names.add(group_name)
 
-            # collect controls
+            # Collect controls
             controls = [c.get("sample") for c in group.findall("control") if c.get("sample")]
 
-            # dictionary of tissue to samples
+            # Dictionary of tissue to samples
             treatments = {}
             seen_tissues = set()
 
@@ -285,10 +285,10 @@ def fetch_view_data(xml_url, db_name, view_name):
                     )
                 seen_tissues.add(t_key)
 
-                # grab samples for tissue
+                # Grab samples for tissue
                 samples = [s.get("name") for s in tissue.findall("sample") if s.get("name")]
 
-                # check for duplicate samples
+                # Check for duplicate samples
                 seen_samples = set()
                 deduped_samples = []
                 for s in samples:
@@ -343,14 +343,14 @@ def main():
             "data": {"species": species, "views": species_views}
         }
 
-    # save json
+    # Save json
     out_file = "species_controls_samples.json"
     with open(out_file, "w") as f:
         json.dump(all_species_data, f, indent=2)
 
     print(f"Output written to {out_file}")
 
-    # save duplicate log
+    # Save duplicate log
     if duplicate_log:
         with open("duplicate_log.json", "w") as f:
             json.dump(duplicate_log, f, indent=2)

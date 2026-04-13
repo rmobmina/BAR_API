@@ -1,6 +1,6 @@
 # Benchmarking Results — Flat-File vs Dynamic Model Definitions and Query Performance
 
-**Context:** Evaluated two implementation strategies for generating SQLAlchemy models across all
+Evaluated two implementation strategies for generating SQLAlchemy models across all
 191 eFP databases, and measured HTTP response times for gene expression queries against the local
 API, an ngrok internet tunnel, and the legacy BAR eFP Browser CGI.
 
@@ -88,14 +88,6 @@ CGI response time is both slow and inconsistent.
 ---
 
 ## Summary
-
-| Consideration       | Flat-file | Dynamic  | Winner   |
-|---------------------|-----------|----------|----------|
-| Heap allocation     | 436.6 KB  | 481.6 KB | Flat-file (marginal) |
-| RSS delta           | 448.0 KB  | 752.0 KB | Flat-file (marginal) |
-| Model creation time | 0.696 ms  | 0.746 ms | Flat-file (negligible) |
-| Code volume         | High      | Low      | **Dynamic** |
-| Maintainability     | Low       | High     | **Dynamic** |
 
 The dynamic approach is the right choice. The memory and timing differences are well within
 acceptable margins for a startup-time operation, and the maintainability advantage is substantial.

@@ -710,7 +710,7 @@ def parse_efp_xml(xml_content: str) -> Dict[str, Any]:
     all_controls: set[str] = set()
 
     for group_elem in view_elem.findall(".//group"):
-        # collect controls in this group
+        # Collect controls in this group
         group_controls = [ctrl.get("sample", "") for ctrl in group_elem.findall("control") if ctrl.get("sample")]
         all_controls.update(group_controls)
 
@@ -747,7 +747,7 @@ def resolve_db_for_view(view_name: str, species: Optional[str] = None) -> Option
         if db:
             return db
 
-    # flat lookup (warns if ambiguous)
+    # Flat lookup (warns if ambiguous)
     db = VIEW_TO_DB.get(view_name)
     if db:
         if view_name in _AMBIGUOUS_VIEWS:
@@ -797,7 +797,7 @@ def proofread_from_xml(
     if not xml_content:
         if not db_name_from_map:
             return {"status": "XML_FAIL", "view": view_name, "gene_id": gene_id}
-        # we have a db name from the map but no XML — can't get sample IDs
+        # We have a db name from the map but no XML — can't get sample IDs
         print(
             f"  [WARN] Could not fetch XML; db='{db_name_from_map}' from mapping "
             f"but sample list unavailable. Skipping."
@@ -808,7 +808,7 @@ def proofread_from_xml(
     if not xml_data:
         return {"status": "XML_PARSE_FAIL", "view": view_name, "gene_id": gene_id}
 
-    # prefer mapping (already verified), fall back to XML attribute
+    # Prefer mapping (already verified), fall back to XML attribute
     db_name = db_name_from_map or xml_data.get("db", "")
     if not db_name:
         print(f"  [ERROR] Could not determine db name for view '{view_name}'")

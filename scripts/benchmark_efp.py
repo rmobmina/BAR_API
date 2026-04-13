@@ -36,7 +36,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import matplotlib
 
-matplotlib.use("Agg")  # non-interactive — safe in CI and SSH sessions
+matplotlib.use("Agg")
 
 
 # ---------------------------------------------------------------------------
@@ -213,9 +213,9 @@ def _simulate_dynamic_schema_build(db_names: List[str], specs_lookup: Dict[str, 
     t0 = time.perf_counter()
     for db_name in db_names:
         spec = specs_lookup[db_name]
-        # schema dict construction
+        # Schema dict construction
         attrs = {"__bind_key__": db_name, "__tablename__": spec["table_name"]}
-        # attribute dict construction (column mapping loop)
+        # Attribute dict construction (column mapping loop)
         for col in spec["columns"]:
             col_type = col["type"]
             if col_type == "string":
@@ -225,7 +225,7 @@ def _simulate_dynamic_schema_build(db_names: List[str], specs_lookup: Dict[str, 
             else:
                 sqla_type = "String(255)"
             attrs[col["name"]] = sqla_type
-        # class creation (same cost as flat)
+        # Class creation (same cost as flat)
         class_name = "".join(p.capitalize() for p in db_name.split("_")) + "SampleData"
         type(class_name, (), attrs)
     return time.perf_counter() - t0
@@ -296,7 +296,7 @@ def benchmark_memory() -> Dict[str, Any]:
     snap0 = tracemalloc.take_snapshot()
     rss0 = _rss_kb()
 
-    # --- measure flat-file approach ---
+    # --- Measure flat-file approach ---
     flat_models: Dict[str, Any] = {}
     for db_name in db_names:
         class_name = "".join(p.capitalize() for p in db_name.split("_")) + "FlatSD"
@@ -316,7 +316,7 @@ def benchmark_memory() -> Dict[str, Any]:
     rss1 = _rss_kb()
     flat_kb = sum(s.size_diff for s in snap1.compare_to(snap0, "lineno")) / 1024
 
-    # --- measure dynamic approach (schema dict + attr dict + type()) ---
+    # --- Measure dynamic approach (schema dict + attr dict + type()) ---
     dynamic_models: Dict[str, Any] = {}
     schema_catalog: Dict[str, Any] = {}
     for db_name, spec in SIMPLE_EFP_DATABASE_SCHEMAS.items():
@@ -426,9 +426,7 @@ def benchmark_api(
     import time as _time
 
     results: Dict[str, Any] = {}
-    # A single persistent session reuses the TCP+TLS connection across all requests
-    # (HTTP keep-alive). This is especially important for ngrok where each new
-    # connection adds ~150-200 ms of handshake overhead.
+
     with requests.Session() as session:
         for db_name in databases:
             genes = genes_per_db.get(db_name, [])

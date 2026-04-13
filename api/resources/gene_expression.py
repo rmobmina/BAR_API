@@ -75,7 +75,7 @@ class GeneExpression(Resource):
             # 4. Normalise (e.g. strip maize transcript suffix _T##)
             gene_id = normalize_gene_id(gene_id, species)
 
-            # 5. Microarray / non-direct databases need gene ID → probeset conversion
+            # 5. Microarray / non-direct databases need gene ID -> probeset conversion
             if database in PROBESET_DATABASES:
                 probeset, err = convert_gene_to_probeset(gene_id, species, database)
                 if err:
@@ -88,7 +88,13 @@ class GeneExpression(Resource):
 
         if result["success"]:
             return BARUtils.success_exit(result)
-        return BARUtils.error_exit(result["error"]), result.get("error_code", 500)
+
+        error_code = result.get("error_code", 500)
+        if error_code == 404:
+            return BARUtils.error_exit("No data found for the given gene"), 404
+        if error_code == 503:
+            return BARUtils.error_exit("Database not available"), 503
+        return BARUtils.error_exit("An error occurred"), 500
 
 
 gene_expression.add_resource(GeneExpression, "/expression/<string:database>/<string:gene_id>")
