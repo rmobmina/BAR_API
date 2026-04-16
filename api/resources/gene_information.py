@@ -265,14 +265,17 @@ class GeneTair10Gff3(Resource):
 
 @gene_information.route("/gene_query")
 class GeneQueryGene(Resource):
-    @gene_information.expect(query_genes_request_fields)
-    def post(self):
+    @gene_information.param("species", _in="query", default="arabidopsis")
+    @gene_information.param("terms", _in="query", default="AT1G01010,AT1G01020")
+    def get(self):
         """This end point provides gene information for multiple genes given multiple terms."""
 
-        # Escape input
-        data = request.get_json()
-        species = data["species"]
-        terms = [term.upper() for term in data["terms"]]
+        species = escape(request.args.get("species", ""))
+        terms_raw = request.args.get("terms", "")
+        terms = [t.strip().upper() for t in terms_raw.split(",") if t.strip()]
+
+        if not species or not terms:
+            return BARUtils.error_exit("Missing species or terms"), 400
 
         # Species check
         if species == "arabidopsis":
