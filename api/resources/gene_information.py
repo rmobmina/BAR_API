@@ -7,6 +7,7 @@ from api.models.eplant2 import Publications as EPlant2Publications
 from api.models.eplant2 import TAIR10GFF3 as EPlant2TAIR10GFF3
 from api.models.eplant2 import AgiAlias as EPlant2AgiAlias
 from api.models.eplant2 import AgiAnnotation as EPlant2AgiAnnotation
+from api.models.eplant2 import AgiNames as EPlant2AgiNames
 from api.models.eplant_poplar import Isoforms as EPlantPoplarIsoforms
 from api.models.eplant_tomato import Isoforms as EPlantTomatoIsoforms
 from api.models.eplant_soybean import Isoforms as EPlantSoybeanIsoforms
@@ -445,6 +446,88 @@ class SingleGeneQueryGene(Resource):
                     gene["annotation"] = temp[0]
 
         return BARUtils.success_exit(genes_info)
+
+
+@gene_information.route("/id_autocomplete")
+class IdAutocomplete(Resource):
+    @gene_information.param("species", _in="query", default="arabidopsis")
+    @gene_information.param("term", _in="query", default="AT1G010")
+    @gene_information.param("limit", _in="query", default=15)
+    def get(self):
+        """Return autocomplete suggestions for a gene ID or alias search term.
+        """
+        species = escape(request.args.get("species", ""))
+        term = escape(request.args.get("term", ""))
+        limit_raw = request.args.get("limit", "15")
+
+        if not species or not term:
+            return BARUtils.error_exit("Missing species or term"), 400
+
+        if len(term) < 2:
+            return BARUtils.error_exit("term must be at least 2 characters"), 400
+
+        if not BARUtils.is_integer(limit_raw):
+            return BARUtils.error_exit("limit must be a positive integer"), 400
+
+        limit = int(limit_raw)
+        if limit < 1 or limit > 50:
+            return BARUtils.error_exit("limit must be between 1 and 50"), 400
+
+        if species == "arabidopsis":
+            alias_db = EPlant2AgiAlias
+            names_db = EPlant2AgiNames
+            gff3_db = EPlant2TAIR10GFF3
+        else:
+            return BARUtils.error_exit("No data for the given species"), 400
+
+        results = []
+        seen_agis = set()
+
+        # 1. Search agi_alias by AGI or alias
+        alias_query = (
+            db.select(alias_db.agi, alias_db.alias)
+            .where(alias_db.agi.ilike(f"%{term}%") | alias_db.alias.ilike(f"%{term}%"))
+            .limit(limit)
+        )
+        for row in db.session.execute(alias_query).all():
+            if row.agi not in seen_agis:
+                seen_agis.add(row.agi)
+                results.append({"agi": row.agi, "match": row.alias})
+            if len(results) >= limit:
+                break
+
+        # 2. Search agi_names by AGI or name (only if we still have room)
+        if len(results) < limit:
+            names_query = (
+                db.select(names_db.agi, names_db.name)
+                .where(names_db.agi.ilike(f"%{term}%") | names_db.name.ilike(f"%{term}%"))
+                .limit(limit - len(results))
+            )
+            for row in db.session.execute(names_query).all():
+                if row.agi not in seen_agis:
+                    seen_agis.add(row.agi)
+                    results.append({"agi": row.agi, "match": row.name})
+                if len(results) >= limit:
+                    break
+
+        # 3. Fallback: raw gene IDs from tair10_gff3 (only if we still have room)
+        if len(results) < limit:
+            gff3_query = (
+                db.select(gff3_db.geneId)
+                .where(
+                    (gff3_db.Type == "gene") | (gff3_db.Type == "transposable_element_gene"),
+                    gff3_db.geneId.ilike(f"%{term}%"),
+                )
+                .limit(limit - len(results))
+            )
+            for row in db.session.execute(gff3_query).all():
+                if row.geneId not in seen_agis:
+                    seen_agis.add(row.geneId)
+                    results.append({"agi": row.geneId, "match": row.geneId})
+                if len(results) >= limit:
+                    break
+
+        return BARUtils.success_exit(results)
 
 
 @gene_information.route("/gene_isoforms/<string:species>/<string:gene_id>")
