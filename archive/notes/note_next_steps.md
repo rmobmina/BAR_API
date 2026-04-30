@@ -96,24 +96,7 @@ conversion to match eFP behaviour, or follow ePlant and use the gene ID directly
 
 ---
 
-## Priority 3 — Concurrent Load Testing with Locust
-
-The benchmarking in this project only measured **single-user latency**. Before the API is
-recommended for high-traffic use, it should be tested under realistic multi-user load using
-[Locust](https://locust.io/).
-
-Things to check:
-- Does response time degrade under 50 / 100 / 500 concurrent users?
-- Are there database connection pool exhaustion issues (SQLAlchemy pool size tuning)?
-- Which databases are the slowest under load (klepikova was already the slowest in
-  single-user tests)?
-
-A basic Locust script querying a random selection of gene IDs across embryo, klepikova, and
-soybean would give a good baseline.
-
----
-
-## Priority 4 — Automate Mode B XML Validation in GitHub Actions
+## Priority 3 — Automate Mode B XML Validation in GitHub Actions
 
 XML validation (`Mode B` — checking that XML view definitions match the underlying database
 tables) currently has to be run manually. This should be automated as a scheduled GitHub Actions
@@ -124,7 +107,7 @@ annotation or Slack/email alert to the BAR team.
 
 ---
 
-## Priority 5 — Connect to ePlant3 React Frontend
+## Priority 4 — Connect to ePlant3 React Frontend
 
 The API is ready. The remaining work is on the frontend side: update ePlant3 to point its
 World eFP and Tissue eFP visualisation modules at the new endpoint paths instead of the legacy

@@ -1,3 +1,16 @@
+"""
+Reena Obmina | UTEA Project 2026 | University of Toronto
+
+Tests for the gene information endpoints (GET /gene_information/*).
+
+Covers id_autocomplete, gene_aliases, gene_publications, and isoforms,
+including valid requests and all error cases.
+
+Usage::
+
+    python3 -m pytest tests/resources/test_gene_information.py -v
+"""
+
 from api import app
 from unittest import TestCase
 import json
@@ -24,13 +37,6 @@ class TestIntegrations(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response.json["wasSuccessful"])
 
-        # Custom limit
-        response = self.app_client.get("/gene_information/id_autocomplete?species=arabidopsis&term=AT1G&limit=5")
-        self.assertEqual(response.status_code, 200)
-        data = response.json
-        self.assertTrue(data["wasSuccessful"])
-        self.assertLessEqual(len(data["data"]), 5)
-
         # term too short
         response = self.app_client.get("/gene_information/id_autocomplete?species=arabidopsis&term=A")
         self.assertEqual(response.status_code, 400)
@@ -48,16 +54,6 @@ class TestIntegrations(TestCase):
 
         # invalid species
         response = self.app_client.get("/gene_information/id_autocomplete?species=potato&term=AT1G010")
-        self.assertEqual(response.status_code, 400)
-        self.assertFalse(response.json["wasSuccessful"])
-
-        # invalid limit
-        response = self.app_client.get("/gene_information/id_autocomplete?species=arabidopsis&term=AT1G010&limit=abc")
-        self.assertEqual(response.status_code, 400)
-        self.assertFalse(response.json["wasSuccessful"])
-
-        # limit out of range
-        response = self.app_client.get("/gene_information/id_autocomplete?species=arabidopsis&term=AT1G010&limit=100")
         self.assertEqual(response.status_code, 400)
         self.assertFalse(response.json["wasSuccessful"])
 

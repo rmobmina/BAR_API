@@ -20,7 +20,6 @@ This week focused on two tasks: converting the `gene_query` endpoint from POST t
   - `AgiNames` SQLAlchemy model in `api/models/eplant2.py` (table was used by the CGI but had no Python representation in the BAR API)
 - Fixed:
   - SQL injection vulnerability in the CGI's raw string query construction — replaced with SQLAlchemy parameterized queries
-  - Broken limit math in the CGI (`LIMIT -15` crash) which is fixed by tracking remaining budget across all three queries
   - (`except: print("{}")`) is replaced with proper HTTP 400 responses
   - O(n²) becomes O(1)
 - Converted:
@@ -62,7 +61,6 @@ The endpoint queries three tables in priority order, `agi_alias`, `agi_names`, t
 | Challenge | Solution |
 |---|---|
 | `agi_names` table used by the CGI but not modelled in the BAR API | Added `AgiNames` SQLAlchemy model; inferred column structure (`agi`, `name`) from the CGI's SQL, needs confirmation that production schema matches |
-| CGI's limit math produced `LIMIT -15`, crashing silently | Track `len(results)` across all three queries; pass `limit - len(results)` to each subsequent query |
 | Stale SQLite test mirror did not include new `agi_names` table | Deleted cached `eplant2.db` to force rebuild from updated `eplant2.sql` on next test run |
 | CGI's deduplication only checked the third query against the first two, using a slow prefix scan | Replaced with a `seen_agis` set populated from all three queries; exact-match lookup, O(1) per result |
 
@@ -73,7 +71,6 @@ The endpoint queries three tables in priority order, `agi_alias`, `agi_names`, t
 - All 8 existing `gene_information` tests continue to pass
 - 9 new tests added for `id_autocomplete`, all passing
 - SQL injection vulnerability in `idautocomplete.cgi` eliminated
-- Broken `LIMIT -15` crash fixed
 - Output changed to structured JSON objects, consistent with the rest of the BAR API response format
 
 ---
@@ -82,6 +79,7 @@ The endpoint queries three tables in priority order, `agi_alias`, `agi_names`, t
 
 - Confirm that `agi_names` exists in production `eplant2` DB and that column names (`agi`, `name`) match
 - Check whether ePlant frontend expects the old `"AT1G01010/ANAC001"` flat string format or can consume the new `{"agi", "match"}` objects
+- Remove the `limit` query parameter from `id_autocomplete` and hardcode the result size to 15 (per Vincent's feedback)
 
 ---
 
