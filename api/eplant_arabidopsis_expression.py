@@ -8365,6 +8365,7 @@ VIEWS = json.loads(r'''
 # Core logic
 # ---------------------------------------------------------------------------
 
+
 def _fetch_samples(db: str, gene: str, names: list) -> list:
     """Query plantefp.cgi for a chunk of sample names; return [{name, value}]."""
     url = (
@@ -8444,7 +8445,7 @@ def get_expression(gene: str) -> dict:
     # Fan out all CGI requests in parallel, grouped by database
     tasks = []
     for db, names in samples_by_db.items():
-        chunks = [names[i:i+CHUNK_SIZE] for i in range(0, len(names), CHUNK_SIZE)]
+        chunks = [names[i:i + CHUNK_SIZE] for i in range(0, len(names), CHUNK_SIZE)]
         for chunk in chunks:
             tasks.append((db, chunk))
 
