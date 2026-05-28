@@ -80,6 +80,13 @@ class BARUtils:
             return False
 
     @staticmethod
+    def is_thellungiella_gene_valid(gene):
+        """Validates native Thellungiella (Eutrema salsugineum) gene IDs.
+        Accepts Thhalv format (Thhalv10000089m.g) and novel locus IDs (nXLOC_003010).
+        """
+        return bool(re.search(r"^Thhalv\d+m\.g$", gene) or re.search(r"^nXLOC_\d+$", gene))
+
+    @staticmethod
     def is_tomato_gene_valid(gene, isoform_id=False):
         """This function verifies if ITAG Solyc gene is valid
         :param gene:
@@ -88,7 +95,7 @@ class BARUtils:
         """
         if isoform_id and re.search(r"^Solyc\d\dg\d{6}\.\d\.\d$", gene, re.I):
             return True
-        elif isoform_id is False and re.search(r"^Solyc\d\dg\d{6}$", gene, re.I):
+        elif isoform_id is False and re.search(r"^Solyc\d\dg\d{6}(\.\d+)?$", gene, re.I):
             return True
         else:
             return False

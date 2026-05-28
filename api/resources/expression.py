@@ -1,5 +1,5 @@
 """
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
+Reena Obmina | UTEA Project 2026 | University of Toronto
 
 Unified Arabidopsis ePlant expression endpoint.
 
