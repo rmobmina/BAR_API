@@ -4,7 +4,7 @@ Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
 Centralised query service for all eFP databases.
 
 Exposes a single entry point query_efp_database_dynamic() that handles:
-  - Engine resolution: live MySQL first, SQLite mirror fallback
+  - Engine resolution via Flask-SQLAlchemy MySQL binds
   - AGI-to-probeset lookup for Arabidopsis microarray databases
   - Parameterised queries to prevent SQL injection
 """
@@ -13,12 +13,11 @@ from __future__ import annotations
 
 import re
 import traceback
-from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 from types import SimpleNamespace
 
 from flask import has_app_context
-from sqlalchemy import create_engine, text
+from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session
@@ -27,10 +26,6 @@ from api import db
 from api.models.annotations_lookup import AtAgiLookup
 from api.models.bar_utils import BARUtils
 from api.models.efp_schemas import SIMPLE_EFP_DATABASE_SCHEMAS
-
-# Absolute path to the config/databases directory where the sqlite mirrors live
-ROOT_DIR = Path(__file__).resolve().parents[2]
-DATABASE_DIR = ROOT_DIR / "config" / "databases"
 
 DEFAULT_SAMPLE_SCHEMA = {
     "table": "sample_data",
@@ -61,7 +56,6 @@ _MANUAL_DEFAULT_DATABASES = [
 MANUAL_DATABASE_SCHEMAS = {
     name: {
         **DEFAULT_SAMPLE_SCHEMA,
-        "filename": f"{name}.db",
         "identifier_type": "agi",
         "metadata": {},
     }
@@ -70,13 +64,13 @@ MANUAL_DATABASE_SCHEMAS = {
 
 MANUAL_DATABASE_SCHEMAS["sample_data"] = {
     **DEFAULT_SAMPLE_SCHEMA,
-    "filename": "sample_data.db",
     "identifier_type": "probeset",
     "metadata": {"species": "arabidopsis"},
 }
 
-# Minimal seed data for CI environments that don't have local mirrors yet
-# Keys are normalized to uppercase to simplify lookups
+# Minimal seed data for databases that have no MySQL bind configured
+# (e.g. the synthetic "sample_data" test database). Keys are normalized to
+# uppercase to simplify lookups.
 LOCAL_EFP_DATASETS: Dict[str, Dict[str, List[Dict[str, str]]]] = {
     "sample_data": {
         "261585_AT": [
@@ -117,7 +111,6 @@ class EFPDataService:
             schema = dict(DEFAULT_SAMPLE_SCHEMA)
             schema.update(
                 {
-                    "filename": f"{db_name}.db",
                     "identifier_type": spec.get("identifier_type", "agi"),
                     "metadata": spec.get("metadata") or {},
                 }
@@ -136,7 +129,7 @@ class EFPDataService:
         sample_ids: Optional[List[str]],
         sample_case_insensitive: bool,
     ) -> Optional[List[SimpleNamespace]]:
-        """Return seed data rows for databases without sqlite mirrors.
+        """Return seed data rows for databases without a configured MySQL bind.
 
         :param database: Database name
         :type database: str
@@ -212,55 +205,33 @@ class EFPDataService:
             return None
 
     @staticmethod
-    def _iter_engine_candidates(database: str) -> Iterable[Tuple[str, Engine, bool]]:
+    def _iter_engine_candidates(database: str) -> Iterable[Tuple[str, Engine]]:
         """
-        Yield database engine candidates with MySQL priority and SQLite fallback.
-
-        This function enables dual-mode operation:
-        - Production/CI: Uses MySQL via Flask-SQLAlchemy binds
-        - Local development: Falls back to SQLite mirror files
-
-        Priority order:
-        1. Flask-SQLAlchemy bind (MySQL) - if Flask app context exists
-        2. SQLite mirror file - if exists in config/databases/
+        Yield the Flask-SQLAlchemy MySQL bind engine for the given database, if any.
 
         :param database: Database name (e.g., 'cannabis', 'dna_damage')
         :type database: str
-        :yields: Tuples of (engine_type, engine, is_sqlite) where:
-            - engine_type: 'sqlalchemy_bind' or 'sqlite_mirror'
-            - engine: SQLAlchemy Engine object
-            - is_sqlite: True if SQLite, False if MySQL
-        :rtype: Iterator[Tuple[str, sqlalchemy.engine.Engine, bool]]
+        :yields: Tuples of (engine_type, engine) where engine_type is 'sqlalchemy_bind'
+        :rtype: Iterator[Tuple[str, sqlalchemy.engine.Engine]]
 
         Example::
 
-            for engine_type, engine, is_sqlite in EFPDataService._iter_engine_candidates('cannabis'):
+            for engine_type, engine in EFPDataService._iter_engine_candidates('cannabis'):
                 try:
                     result = engine.execute('SELECT * FROM sample_data LIMIT 1')
                     break  # Found working engine
-                except:
+                except Exception:
                     continue  # Try next engine
         """
-        # Prefer live mysql binds but fall back to sqlite mirrors when needed
-        db_path = DATABASE_DIR / DYNAMIC_DATABASE_SCHEMAS[database]["filename"]
-        if has_app_context():
-            try:
-                bound_engine = db.engines.get(database)
-                if bound_engine:
-                    yield ("sqlalchemy_bind", bound_engine, False)
-            except Exception as exc:
-                print(f"[warn] unable to load sqlalchemy bind for {database}: {exc}")
+        if not has_app_context():
+            return
 
-        if db_path.exists():
-            sqlite_engine = create_engine(f"sqlite:///{db_path}")
-            try:
-                with sqlite_engine.begin() as _conn:
-                    _conn.execute(
-                        text("CREATE INDEX IF NOT EXISTS ix_upper_probeset " "ON sample_data (UPPER(data_probeset_id))")
-                    )
-            except Exception:
-                pass
-            yield ("sqlite_mirror", sqlite_engine, True)
+        try:
+            bound_engine = db.engines.get(database)
+            if bound_engine:
+                yield ("sqlalchemy_bind", bound_engine)
+        except Exception as exc:
+            print(f"[warn] unable to load sqlalchemy bind for {database}: {exc}")
 
     @staticmethod
     def query_efp_database_dynamic(
@@ -428,7 +399,7 @@ class EFPDataService:
             last_error = None
 
             if engine_candidates:
-                for source_label, engine, dispose_after in engine_candidates:
+                for source_label, engine in engine_candidates:
                     try:
                         with Session(engine) as session:
                             results = session.execute(query_sql, params).all()
@@ -440,11 +411,8 @@ class EFPDataService:
                     except Exception as exc:
                         last_error = f"{source_label} unexpected failure: {exc}"
                         print(f"[warn] {last_error}")
-                    finally:
-                        if dispose_after:
-                            engine.dispose()
             else:
-                last_error = f"Database {database} is not available (no active bind or sqlite mirror)."
+                last_error = f"Database {database} is not available (no active bind configured)."
 
             local_rows = None
             if results is None or not results:

@@ -1,0 +1,137 @@
+species,view,database,regex,valid_gene_1,valid_gene_2,valid_gene_3,invalid_gene_1_wrong_initially,invalid_gene_2_wrong_finally,invalid_gene_3_other_species
+arabidopsis,Abiotic Stress,atgenexp_stress,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Abiotic Stress II,atgenexp_stress,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Biotic Stress,atgenexp_pathogen,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Biotic Stress II,atgenexp_pathogen,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Chemical,atgenexp_hormone,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,DNA Damage,dna_damage,^At[12345cm]g\d{5}.?\d?$,AT3G29180,AT3G31422,AT4G13990,9T3G29180,AT3G2918X,Solyc04g054700
+arabidopsis,Development RMA,atgenexp,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Developmental Map,atgenexp_plus,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Developmental Mutants,atgenexp_plus,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Embryo,embryo,^At[12345cm]g\d{5}.?\d?$,AT2G12905,AT4G36440,AT2G39851,9T2G12905,AT2G1290X,Solyc04g054700
+arabidopsis,Germination,germination,^At[12345cm]g\d{5}.?\d?$,AT5G38900,AT2G20825,AT3G06410,9T5G38900,AT5G3890X,Solyc04g054700
+arabidopsis,Guard Cell,guard_cell,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Gynoecium,gynoecium,^At[12345cm]g\d{5}.?\d?$,AT1G75750,AT5G26617,AT2G17600,9T1G75750,AT1G7575X,Solyc04g054700
+arabidopsis,Hormone,atgenexp_hormone,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Klepikova Atlas,klepikova,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Lateral Root Initiation,lateral_root_initiation,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Light Series,light_series,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Natural Variation,arabidopsis_ecotypes,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Regeneration,meristem_db,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Root,root,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Root II,root,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Seed,seed_db,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis,Shoot Apex,shoot_apex,^At[12345cm]g\d{5}.?\d?$,At1g13440,At3g03610,At5g25160,9t1g13440,At1g1344X,Solyc04g054700
+arabidopsis,Silique,silique,^At[12345cm]g\d{5}.?\d?$,AT3G43830.1,AT1G20220,AT5G39460,9T3G43830.1,AT3G43830.X,Solyc04g054700
+arabidopsis,Single Cell,single_cell,^At[12345cm]g\d{5}.?\d?$,AT5G48020,AT1G79340,AT5G20220,9T5G48020,AT5G4802X,Solyc04g054700
+arabidopsis,Tissue Specific,atgenexp_plus,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis lipid,Lipid Map,lipid_map,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+arabidopsis cell,Cell Type,single_cell,^At[12345cm]g\d{5}.?\d?$,AT5G48020,AT1G79340,AT5G20220,9T5G48020,AT5G4802X,Solyc04g054700
+arabidopsis seedcoat,Seed Coat,seedcoat,^At[12345cm]g\d{5}.?\d?$,AT2G21130,AT2G30840,AT5G32053,9T2G21130,AT2G2113X,Solyc04g054700
+poplar,Poplar,poplar,"^POTRI\.\d{3}g\d{6}.?\d{0,3}$",Potri.009G096100,Potri.004G151200,Potri.001G041500,9otri.009G096100,Potri.009G09610X,At1g01010
+poplar,PoplarTreatment,poplar,"^POTRI\.\d{3}g\d{6}.?\d{0,3}$",Potri.009G096100,Potri.004G151200,Potri.001G041500,9otri.009G096100,Potri.009G09610X,At1g01010
+medicago,medicago mas,medicago_mas,^(Medtr(\d+[gs]\d+|_v1_\d+)|MtrunA17Chr\dg\d+)$,Medtr3g009740,Medtr0010s0370,Medtr5g066810,9edtr3g009740,Medtr3g00974X,At1g01010
+medicago,medicago rma,medicago_rma,^(Medtr(\d+[gs]\d+|_v1_\d+)|MtrunA17Chr\dg\d+)$,Medtr3g009740,Medtr0010s0370,Medtr5g066810,9edtr3g009740,Medtr3g00974X,At1g01010
+medicago,medicago seed,medicago_seed,^(Medtr(\d+[gs]\d+|_v1_\d+)|MtrunA17Chr\dg\d+)$,Medtr_v1_076551,Medtr_v1_087497,Medtr_v1_079727,9edtr_v1_076551,Medtr_v1_07655X,At1g01010
+soybean,soybean,soybean,"^((Glyma\d{1,3}g\d{1,6}\.?\d?)|(Glyma\.\d{1,3}g\d{1,8}))$",Glyma20g36030,Glyma02g05140,Glyma14g15340,9lyma20g36030,Glyma20g3603X,At1g01010
+soybean,soybean embryonic development,soybean_embryonic_development,"^((Glyma\d{1,3}g\d{1,6}\.?\d?)|(Glyma\.\d{1,3}g\d{1,8}))$",Glyma06g40161,Glyma16g33580,Glyma13g00595,9lyma06g40161,Glyma06g4016X,At1g01010
+soybean,soybean heart cotyledon globular,soybean_heart_cotyledon_globular,"^((Glyma\d{1,3}g\d{1,6}\.?\d?)|(Glyma\.\d{1,3}g\d{1,8}))$",Glyma15g13815,Glyma14g02210,Glyma15g42100,9lyma15g13815,Glyma15g1381X,At1g01010
+soybean,soybean senescence,soybean_senescence,"^((Glyma\d{1,3}g\d{1,6}\.?\d?)|(Glyma\.\d{1,3}g\d{1,8}))$",Glyma08g23970.1,Glyma01g38780.1,Glyma03g01900.1,9lyma08g23970.1,Glyma08g23970.X,At1g01010
+soybean,soybean severin,soybean_severin,"^((Glyma\d{1,3}g\d{1,6}\.?\d?)|(Glyma\.\d{1,3}g\d{1,8}))$",Glyma07g34400,Glyma10g36610,Glyma07g04630,9lyma07g34400,Glyma07g3440X,At1g01010
+potato,Potato Developmental,potato_dev,^(PGSC0003DMG\d+|EPlSTUG\d+)$,PGSC0003DMG400019960,PGSC0003DMG402016244,PGSC0003DMG400025132,9GSC0003DMG400019960,PGSC0003DMG40001996X,At1g01010
+potato,Potato Stress,potato_stress,^(PGSC0003DMG\d+|EPlSTUG\d+)$,PGSC0003DMG400044115,PGSC0003DMG400037252,PGSC0003DMG400046978,9GSC0003DMG400044115,PGSC0003DMG40004411X,At1g01010
+tomato,ILs Leaf Chitwood et al,tomato_ils,^Solyc\d\dg\d{6}(\.\d+)?$,Solyc04g047670.2,Solyc10g049590.1,Solyc02g080880.2,9olyc04g047670.2,Solyc04g047670.X,At1g01010
+tomato,ILs Root Tip Brady Lab,tomato_ils2,^Solyc\d\dg\d{6}(\.\d+)?$,Solyc01g086670.2,Solyc09g055940.2,Solyc01g094190.2,9olyc01g086670.2,Solyc01g086670.X,At1g01010
+tomato,M82 S pennellii Atlases Koenig et al,tomato_s_pennellii,^Solyc\d\dg\d{6}(\.\d+)?$,Solyc05g053470.2,Solyc06g084530.2,Solyc02g079190.2,9olyc05g053470.2,Solyc05g053470.X,At1g01010
+tomato,Rose Lab Atlas,tomato,^Solyc\d\dg\d{6}(\.\d+)?$,Solyc04g054700,Solyc11g006930,Solyc04g039940,9olyc04g054700,Solyc04g05470X,At1g01010
+tomato,Rose Lab Atlas Renormalized,tomato_renormalized,^Solyc\d\dg\d{6}(\.\d+)?$,Solyc11g063670,Solyc06g053250,Solyc08g005360,9olyc11g063670,Solyc11g06367X,At1g01010
+tomato,SEED Lab Angers,tomato_seed,^Solyc\d\dg\d{6}(\.\d+)?$,Solyc11g007840.3,Solyc06g082220.4,Solyc12g044950.3,9olyc11g007840.3,Solyc11g007840.X,At1g01010
+tomato,Shade Mutants,tomato_shade_mutants,^Solyc\d\dg\d{6}(\.\d+)?$,Solyc11g032200,Solyc02g080440,Solyc04g054740,9olyc11g032200,Solyc11g03220X,At1g01010
+tomato,Shade Timecourse WT,tomato_shade_timecourse,^Solyc\d\dg\d{6}(\.\d+)?$,Solyc12g088960,Solyc12g095980,Solyc10g079160,9olyc12g088960,Solyc12g08896X,At1g01010
+tomato,Tomato Meristem,tomato_meristem,^Solyc\d\dg\d{6}(\.\d+)?$,Solyc06g071020,Solyc08g076580,Solyc02g031810,9olyc06g071020,Solyc06g07102X,At1g01010
+eutrema,Eutrema,thellungiella_db,^(Thhalv\d+m\.g|nXLOC_\d+)$,Thhalv10001257m.g,Thhalv10020858m.g,Thhalv10011355m.g,9hhalv10001257m.g,Thhalv10001257m.9,At1g01010
+camelina,Developmental Atlas FPKM,camelina,^Csa\d+[gs]\d+\.\d+$,Csa16g001170.1,Csa08g022810.2,Csa15g047270.1,9sa16g001170.1,Csa16g001170.X,At1g01010
+camelina,Developmental Atlas TPM,camelina_tpm,^Csa\d+[gs]\d+\.\d+$,Csa09g044100.1,Csa12g009120.1,Csa17g019490.1,9sa09g044100.1,Csa09g044100.X,At1g01010
+arachis,Arachis Atlas,arachis,"^Adur\d{1,10}_comp\d{1,3}_\D{1,3}\d{1,3}_seq\d{1,5}$",Adur49706_comp0_c0_seq1,Adur742_comp0_c0_seq1,Adur29850_comp0_c0_seq1,9dur49706_comp0_c0_seq1,Adur49706_comp0_c0_seqX,At1g01010
+grape,grape developmental,grape_developmental,"^(CHR\d+_JGVV\d+_\d+_T\d+|VIT_\d{0,3}\D\d{0,5}g\d{0,6})$",CHR4_JGVV8_367_T01,CHR2_JGVV12_126_T01,CHR9_JGVV2_762_T01,9HR4_JGVV8_367_T01,CHR4_JGVV8_367_T0X,At1g01010
+cannabis,Cannabis Atlas,cannabis,"^AGQN\d{0,10}$",AGQN03004150,AGQN03009541,AGQN03005758,9GQN03004150,AGQN0300415X,At1g01010
+kalanchoe,Light Response,kalanchoe,"^Kaladp\d{1,10}s\d{1,10}$",Kaladp0039s0739,Kaladp0042s0042,Kaladp0061s0086,9aladp0039s0739,Kaladp0039s073X,At1g01010
+actinidia,Bud Development,actinidia_bud_development,^Acc\d{5}\.\d+$,Acc23558.1,Acc27556.1,Acc13569.1,9cc23558.1,Acc23558.X,At1g01010
+actinidia,Flower Fruit Development,actinidia_flower_fruit_development,^Acc\d{5}\.\d+$,Acc09964.1,Acc11080.1,Acc07661.1,9cc09964.1,Acc09964.X,At1g01010
+actinidia,Postharvest,actinidia_postharvest,^Acc\d{5}\.\d+$,Acc27567.1,Acc05462.1,Acc17253.1,9cc27567.1,Acc27567.X,At1g01010
+actinidia,Vegetative Growth,actinidia_vegetative_growth,^Acc\d{5}\.\d+$,Acc04534.1,Acc33484.1,Acc09785.1,9cc04534.1,Acc04534.X,At1g01010
+brassica rapa,Embryogenesis,brassica_rapa,"^(BraA.{1,4}g\d{1,9}|[A-Z]\d{2}[gp]\d+\.\d+_BraROA)$",BraA01g016790,BraA01g034640,BraA01g002990,9raA01g016790,BraA01g01679X,At1g01010
+canola,Canola Seed,canola_seed,^(Bna[AC]\d{2}g\d{5}[A-D]?|Bo[A-Z]+_?\d+g\d+\.\d+V\d+)$,BnaA06g27630D,BnaC05g45610D,BnaC04g50070D,9naA06g27630D,BnaA06g276309,At1g01010
+cacao ccn,Developmental Atlas,cacao_developmental_atlas,^((CCN-51|SCA-6)_Chr\d+v\d+_\d+|Tc\d+v\d+_g\d+)$,CCN-51_Chr9v1_20497,CCN-51_Chr6v1_02694,CCN-51_Chr1v1_08518,9CN-51_Chr9v1_20497,CCN-51_Chr9v1_2049X,At1g01010
+cacao ccn,Drought Diurnal Atlas,cacao_drought_diurnal_atlas,^((CCN-51|SCA-6)_Chr\d+v\d+_\d+|Tc\d+v\d+_g\d+)$,CCN-51_Chr1v1_08611,CCN-51_Chr3v1_15922,CCN-51_Chr1v1_10780,9CN-51_Chr1v1_08611,CCN-51_Chr1v1_0861X,At1g01010
+cacao sca,Developmental Atlas,cacao_developmental_atlas_sca,^((CCN-51|SCA-6)_Chr\d+v\d+_\d+|Tc\d+v\d+_g\d+)$,SCA-6_Chr3v1_09032,SCA-6_Chr1v1_01420,SCA-6_Chr1v1_02105,9CA-6_Chr3v1_09032,SCA-6_Chr3v1_0903X,At1g01010
+cacao sca,Drought Diurnal Atlas,cacao_drought_diurnal_atlas_sca,^((CCN-51|SCA-6)_Chr\d+v\d+_\d+|Tc\d+v\d+_g\d+)$,SCA-6_Chr5v1_16745,SCA-6_Chr9v1_24745,SCA-6_Chr4v1_10563,9CA-6_Chr5v1_16745,SCA-6_Chr5v1_1674X,At1g01010
+cacao sca,Meristem Atlas,cacao_meristem_atlas_sca,^((CCN-51|SCA-6)_Chr\d+v\d+_\d+|Tc\d+v\d+_g\d+)$,SCA-6_Chr8v1_21653,SCA-6_Chr2v1_05120,SCA-6_Chr3v1_10195,9CA-6_Chr8v1_21653,SCA-6_Chr8v1_2165X,At1g01010
+cacao sca,Seed Atlas,cacao_seed_atlas_sca,^((CCN-51|SCA-6)_Chr\d+v\d+_\d+|Tc\d+v\d+_g\d+)$,SCA-6_Chr2v1_07409,SCA-6_Chr5v1_15222,SCA-6_Chr10v1_28086,9CA-6_Chr2v1_07409,SCA-6_Chr2v1_0740X,At1g01010
+cacao tc,Cacao Infection,cacao_infection,^((CCN-51|SCA-6)_Chr\d+v\d+_\d+|Tc\d+v\d+_g\d+)$,Tc03v2_g004820,Tc10v2_g010460,Tc08v2_g006490,9c03v2_g004820,Tc03v2_g00482X,At1g01010
+cacao tc,Cacao Leaf,cacao_leaf,^((CCN-51|SCA-6)_Chr\d+v\d+_\d+|Tc\d+v\d+_g\d+)$,Tc09v2_g023490,Tc03v2_g003310,Tc04v2_g014600,9c09v2_g023490,Tc09v2_g02349X,At1g01010
+mangosteen,Aril vs Rind,mangosteen_aril_vs_rind,^DN\d+$,DN262622,DN179132,DN249773,9N262622,DN26262X,At1g01010
+mangosteen,Callus,mangosteen_callus,^DN\d+$,DN19495,DN238836,DN249645,9N19495,DN1949X,At1g01010
+mangosteen,Diseased vs Normal,mangosteen_diseased_vs_normal,^DN\d+$,DN74541,DN28494,DN226522,9N74541,DN7454X,At1g01010
+mangosteen,Fruit Ripening,mangosteen_fruit_ripening,^DN\d+$,DN251080,DN143919,DN197434,9N251080,DN25108X,At1g01010
+mangosteen,Seed Development,mangosteen_seed_development,^DN\d+$,DN74814,DN130288,DN165419,9N74814,DN7481X,At1g01010
+mangosteen,Seed Germination,mangosteen_seed_germination,^DN\d+$,DN190021,DN216941,DN97611,9N190021,DN19002X,At1g01010
+lupin,LCM Leaf,lupin_lcm_leaf,^Luan_Oskar_(PB\d+|Trin)_\d+$,Luan_Oskar_Trin_251756,Luan_Oskar_Trin_263271,Luan_Oskar_Trin_111463,9uan_Oskar_Trin_251756,Luan_Oskar_Trin_25175X,At1g01010
+lupin,LCM Pod,lupin_lcm_pod,^Luan_Oskar_(PB\d+|Trin)_\d+$,Luan_Oskar_PB36_107187,Luan_Oskar_PB36_108688,Luan_Oskar_Trin_213667,9uan_Oskar_PB36_107187,Luan_Oskar_PB36_10718X,At1g01010
+lupin,LCM Stem,lupin_lcm_stem,^Luan_Oskar_(PB\d+|Trin)_\d+$,Luan_Oskar_Trin_150940,Luan_Oskar_Trin_207827,Luan_Oskar_PB12_100123,9uan_Oskar_Trin_150940,Luan_Oskar_Trin_15094X,At1g01010
+lupin,Whole Plant,lupin_whole_plant,^Luan_Oskar_(PB\d+|Trin)_\d+$,Luan_Oskar_Trin_266976,Luan_Oskar_Trin_179317,Luan_Oskar_Trin_271300,9uan_Oskar_Trin_266976,Luan_Oskar_Trin_26697X,At1g01010
+strawberry,Developmental Map Strawberry Flower and Fruit,strawberry,"^FvH4_\d{1,3}g\d{1,8}$",FvH4_3g12720,FvH4_2g02112,FvH4_7g13001,9vH4_3g12720,FvH4_3g1272X,At1g01010
+strawberry,Strawberry Green vs White Stage,strawberry,"^FvH4_\d{1,3}g\d{1,8}$",FvH4_3g12720,FvH4_2g02112,FvH4_7g13001,9vH4_3g12720,FvH4_3g1272X,At1g01010
+maize,Downs et al Atlas,maize_gdowns,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,GRMZM2G078638,GRMZM2G434597,GRMZM2G478876,9RMZM2G078638,GRMZM2G07863X,At1g01010
+maize,Early Seed,maize_early_seed,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,Zm00001d044622,Zm00001d025452,Zm00001d024093,9m00001d044622,Zm00001d04462X,At1g01010
+maize,Embryonic Leaf Development,maize_embryonic_leaf_development,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,Zm00001d013079,Zm00001d013945,Zm00001d043096,9m00001d013079,Zm00001d01307X,At1g01010
+maize,Hoopes et al Atlas,maize_buell_lab,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,Zm00001d045181,Zm00001d025390,Zm00001d050140,9m00001d045181,Zm00001d04518X,At1g01010
+maize,Hoopes et al Atlas V5,maize_atlas_v5,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,Zm00001eb246010,Zm00001eb067920,Zm00001eb300760,9m00001eb246010,Zm00001eb24601X,At1g01010
+maize,Hoopes et al Stress,maize_buell_lab,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,Zm00001d045181,Zm00001d025390,Zm00001d050140,9m00001d045181,Zm00001d04518X,At1g01010
+maize,Hoopes et al Stress V5,maize_stress_v5,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,Zm00001eb290340,Zm00001eb180050,Zm00001eb320020,9m00001eb290340,Zm00001eb29034X,At1g01010
+maize,Maize Kernel,maize_early_seed,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,Zm00001d044622,Zm00001d025452,Zm00001d024093,9m00001d044622,Zm00001d04462X,At1g01010
+maize,Maize Kernel V5,maize_kernel_v5,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,Zm00001eb256100,Zm00001eb180780,Zm00001eb359010,9m00001eb256100,Zm00001eb25610X,At1g01010
+maize,Maize Root,maize_root,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,GRMZM2G030403,GRMZM2G104418,GRMZM2G011483,9RMZM2G030403,GRMZM2G03040X,At1g01010
+maize,Sekhon et al Atlas,maize_RMA_linear,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,AC194605.2_FGT001,GRMZM2G030436_T01,GRMZM2G048294_T01,9C194605.2_FGT001,AC194605.2_FGT00X,At1g01010
+maize,Tassel and Ear Primordia,maize_ears,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,GRMZM2G427932,GRMZM2G165433,GRMZM2G075122,9RMZM2G427932,GRMZM2G42793X,At1g01010
+maize,maize iplant,maize_iplant,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,GRMZM2G030636,GRMZM2G001272,AC234165.1_FG001,9RMZM2G030636,GRMZM2G03063X,At1g01010
+maize,maize leaf gradient,maize_leaf_gradient,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,GRMZM2G133624,AC216724.3_FG004,GRMZM2G027856,9RMZM2G133624,GRMZM2G13362X,At1g01010
+maize,maize rice comparison,maize_rice_comparison,^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$,GRMZM2G032154,GRMZM2G100913,GRMZM2G137566,9RMZM2G032154,GRMZM2G03215X,At1g01010
+rice,rice drought heat stress,rice_drought_heat_stress,^(LOC_Os\d{2}g\d{5}|Os\d{2}g\d+)$,LOC_Os10g35640,LOC_Os08g08690,LOC_Os12g29980,9OC_Os10g35640,LOC_Os10g3564X,At1g01010
+rice,rice leaf gradient,rice_leaf_gradient,^(LOC_Os\d{2}g\d{5}|Os\d{2}g\d+)$,LOC_Os05g27180,LOC_Os02g19620,LOC_Os01g66320,9OC_Os05g27180,LOC_Os05g2718X,At1g01010
+rice,rice maize comparison,rice_maize_comparison,^(LOC_Os\d{2}g\d{5}|Os\d{2}g\d+)$,LOC_Os09g25390,LOC_Os10g11340,LOC_Os05g04070,9OC_Os09g25390,LOC_Os09g2539X,At1g01010
+rice,rice mas,rice_mas,^(LOC_Os\d{2}g\d{5}|Os\d{2}g\d+)$,LOC_Os10g35640,LOC_Os08g08690,LOC_Os12g29980,9OC_Os10g35640,LOC_Os10g3564X,At1g01010
+rice,rice rma,rice_rma,^(LOC_Os\d{2}g\d{5}|Os\d{2}g\d+)$,LOC_Os10g35640,LOC_Os08g08690,LOC_Os12g29980,9OC_Os10g35640,LOC_Os10g3564X,At1g01010
+rice,riceanoxia mas,rice_mas,^(LOC_Os\d{2}g\d{5}|Os\d{2}g\d+)$,LOC_Os10g35640,LOC_Os08g08690,LOC_Os12g29980,9OC_Os10g35640,LOC_Os10g3564X,At1g01010
+rice,riceanoxia rma,rice_rma,^(LOC_Os\d{2}g\d{5}|Os\d{2}g\d+)$,LOC_Os10g35640,LOC_Os08g08690,LOC_Os12g29980,9OC_Os10g35640,LOC_Os10g3564X,At1g01010
+rice,ricestigma mas,rice_mas,^(LOC_Os\d{2}g\d{5}|Os\d{2}g\d+)$,LOC_Os10g35640,LOC_Os08g08690,LOC_Os12g29980,9OC_Os10g35640,LOC_Os10g3564X,At1g01010
+rice,ricestigma rma,rice_rma,^(LOC_Os\d{2}g\d{5}|Os\d{2}g\d+)$,LOC_Os10g35640,LOC_Os08g08690,LOC_Os12g29980,9OC_Os10g35640,LOC_Os10g3564X,At1g01010
+rice,ricestress mas,rice_mas,^(LOC_Os\d{2}g\d{5}|Os\d{2}g\d+)$,LOC_Os10g35640,LOC_Os08g08690,LOC_Os12g29980,9OC_Os10g35640,LOC_Os10g3564X,At1g01010
+rice,ricestress rma,rice_rma,^(LOC_Os\d{2}g\d{5}|Os\d{2}g\d+)$,LOC_Os10g35640,LOC_Os08g08690,LOC_Os12g29980,9OC_Os10g35640,LOC_Os10g3564X,At1g01010
+barley,barley mas,barley_mas,^HORVU(\d+Hr\d+G\d+|\.MOREX\.r\d+\.\dHG\d+\.\d+)$,HORVU.MOREX.r3.7HG0668320.1,HORVU.MOREX.r3.3HG0298320.1,HORVU.MOREX.r3.1HG0084540.1,9ORVU.MOREX.r3.7HG0668320.1,HORVU.MOREX.r3.7HG0668320.X,At1g01010
+barley,barley rma,barley_rma,^HORVU(\d+Hr\d+G\d+|\.MOREX\.r\d+\.\dHG\d+\.\d+)$,HORVU.MOREX.r3.7HG0668320.1,HORVU.MOREX.r3.3HG0298320.1,HORVU.MOREX.r3.1HG0084540.1,9ORVU.MOREX.r3.7HG0668320.1,HORVU.MOREX.r3.7HG0668320.X,At1g01010
+triticale,triticale,triticale,^(TraesCS[0-9A-Z]+(\.\d+)?|TrturSVE[0-9A-Z]+G\d+)$,TraesCS4B01G209800LC,TraesCS7B01G048200,TraesCS7B01G743500LC,9raesCS4B01G209800LC,TraesCS4B01G209800L9,At1g01010
+triticale,triticale mas,triticale_mas,^(TraesCS[0-9A-Z]+(\.\d+)?|TrturSVE[0-9A-Z]+G\d+)$,TraesCS4B01G209800LC,TraesCS7B01G048200,TraesCS7B01G743500LC,9raesCS4B01G209800LC,TraesCS4B01G209800L9,At1g01010
+brachypodium,Brachypodium Atlas,brachypodium,^Bradi\d+g\d+\.\d+$,Bradi4g04730.1,Bradi1g75960.1,Bradi3g37340.1,9radi4g04730.1,Bradi4g04730.X,At1g01010
+brachypodium,Brachypodium Grains,brachypodium_grains,^Bradi\d+g\d+\.\d+$,Bradi4g02220.1,Bradi5g15790.1,Bradi5g04030.1,9radi4g02220.1,Bradi4g02220.X,At1g01010
+brachypodium,Brachypodium Spikes,brachypodium_Bd21,^Bradi\d+g\d+\.\d+$,Bradi2g45102.1,Bradi1g51357.1,Bradi4g16740.1,9radi2g45102.1,Bradi2g45102.X,At1g01010
+brachypodium,Photo Thermocycle,brachypodium_photo_thermocycle,^Bradi\d+g\d+\.\d+$,Bradi5g10117.3,Bradi4g00450.1,Bradi3g10930.2,9radi5g10117.3,Bradi5g10117.X,At1g01010
+wheat,Developmental Atlas,wheat,^(TraesCS[0-9A-Z]+(\.\d+)?|TrturSVE[0-9A-Z]+G\d+)$,TraesCS4B01G209800LC,TraesCS7B01G048200,TraesCS7B01G743500LC,9raesCS4B01G209800LC,TraesCS4B01G209800L9,At1g01010
+wheat,Wheat Abiotic Stress,wheat_abiotic_stress,^(TraesCS[0-9A-Z]+(\.\d+)?|TrturSVE[0-9A-Z]+G\d+)$,TraesCS5D02G520000LC.1,TraesCSU02G239800.1,TraesCS4D02G138100LC.1,9raesCS5D02G520000LC.1,TraesCS5D02G520000LC.X,At1g01010
+wheat,Wheat Embryogenesis,wheat_embryogenesis,^(TraesCS[0-9A-Z]+(\.\d+)?|TrturSVE[0-9A-Z]+G\d+)$,TraesCS7A01G559800,TraesCS2A01G193400,TraesCS6A01G302800,9raesCS7A01G559800,TraesCS7A01G55980X,At1g01010
+wheat,Wheat Meiosis,wheat_meiosis,^(TraesCS[0-9A-Z]+(\.\d+)?|TrturSVE[0-9A-Z]+G\d+)$,TraesCS4D02G295000.3,TraesCS3B02G671100LC.1,TraesCS7B02G520700LC.1,9raesCS4D02G295000.3,TraesCS4D02G295000.X,At1g01010
+little millet,Life Cycle,little_millet,^TRINITY_DN\d+_c\d+_g\d+_i\d+$,TRINITY_DN94554_c0_g1_i1,TRINITY_DN48636_c0_g1_i1,TRINITY_DN2290_c0_g1_i1,9RINITY_DN94554_c0_g1_i1,TRINITY_DN94554_c0_g1_iX,At1g01010
+oat,Oat,oat,^AV[A-Z]{3}\.\d{5}[a-z]\.r\d+\.\d[A-Z]{2}\d{8}$,AVESA.00009a.r1.7DG05343670,AVESA.00015a.r1.4CG03041530,AVESA.00002a.r1.2AG01069750,9VESA.00009a.r1.7DG05343670,AVESA.00009a.r1.7DG0534367X,At1g01010
+physcomitrella,Physcomitrella,physcomitrella_db,"^Pp1s\d{1,8}_\d{1,8}V6\.\d{1,3}$",Pp1s2_288V6.1,Pp1s65_249V6.1,Pp1s9_312V6.1,9p1s2_288V6.1,Pp1s2_288V6.X,At1g01010
+selaginella,Selaginella Atlas,selaginella,"^Smo\d{1,8}$",Smo412712,Smo421235,Smo143777,9mo412712,Smo41271X,At1g01010
+mouse,Mouse,mouse_db,^XM_\d+\.\d+$,XM_150850.1,XM_140546.1,XM_123395.1,9M_150850.1,XM_150850.X,At1g01010
+human,Circulatory Respiratory,human_developmental,"^\d{1,10}$",440295,8228,112464,Z40295,44029X,At1g01010
+human,Illumina Body Map 2 - FPKM,human_body_map_2,"^\d{1,10}$",440295,8228,112464,Z40295,44029X,At1g01010
+human,Nervous,human_developmental,"^\d{1,10}$",440295,8228,112464,Z40295,44029X,At1g01010
+human,Reproductive,human_developmental,"^\d{1,10}$",440295,8228,112464,Z40295,44029X,At1g01010
+human,Skeletal Immune Digestive,human_developmental,"^\d{1,10}$",440295,8228,112464,Z40295,44029X,At1g01010
+phelipanche,Phelipanche,phelipanche,"^OrAeBC5_\d{1,6}\.\d{1,3}$",OrAeBC5_6445.5,OrAeBC5_6200.9,OrAeBC5_34295.1,9rAeBC5_6445.5,OrAeBC5_6445.X,At1g01010
+striga,Striga Atlas,striga,"^StHeBC3_\d{1,6}\.\d{1,5}$",StHeBC3_16256.6,StHeBC3_18240.1,StHeBC3_8510.14,9tHeBC3_16256.6,StHeBC3_16256.X,At1g01010
+triphysaria,Triphysaria,triphysaria,"^TrVeBC3_\d{1,6}\.\d{1,3}$",TrVeBC3_13732.15,TrVeBC3_18165.14,TrVeBC3_1179.2,9rVeBC3_13732.15,TrVeBC3_13732.1X,At1g01010
+
+triphysaria,Triphysaria,triphysaria,"^TrVeBC3_\d{1,6}\.\d{1,3}$",TrVeBC3_13732.15 ✓,TrVeBC3_18165.14 ✓,TrVeBC3_1179.2 ✗,9rVeBC3_13732.15 ✗,TrVeBC3_13732.1X,At1g01010

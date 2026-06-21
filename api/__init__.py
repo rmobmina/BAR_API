@@ -1,7 +1,3 @@
-import re as _re
-import sqlite3
-import statistics as _statistics
-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_restx import Api
@@ -9,42 +5,7 @@ from flask_cors import CORS
 from flask_caching import Cache
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-from sqlalchemy import event
-from sqlalchemy.engine import Engine
 import os
-from pathlib import Path
-import tempfile
-
-
-@event.listens_for(Engine, "connect")
-def _register_sqlite_functions(dbapi_conn, connection_record):
-    """Register MySQL-compatible functions for SQLite (used in CI and local tests)."""
-    if not isinstance(dbapi_conn, sqlite3.Connection):
-        return
-
-    class _PopStdDev:
-        """Population standard deviation aggregate (equivalent to MySQL STD())."""
-
-        def __init__(self):
-            self._vals = []
-
-        def step(self, value):
-            if value is not None:
-                self._vals.append(float(value))
-
-        def finalize(self):
-            if len(self._vals) < 2:
-                return None
-            return _statistics.pstdev(self._vals)
-
-    dbapi_conn.create_aggregate("std", 1, _PopStdDev)
-
-    def _regexp_replace(string, pattern, replacement):
-        if string is None:
-            return None
-        return _re.sub(pattern, replacement, string)
-
-    dbapi_conn.create_function("regexp_replace", 3, _regexp_replace)
 
 
 def create_app():
@@ -61,7 +22,6 @@ def create_app():
     if is_bar:
         # --- BAR server ---
         # Uses MySQL databases via SQLALCHEMY_BINDS defined in the server config.
-        # SQLite mirrors are never built in this environment.
         bar_app.config.from_pyfile(os.environ.get("BAR_API_PATH"), silent=True)
 
         # Load environment variables on the BAR
@@ -88,71 +48,17 @@ def create_app():
             bar_app.config["SQLALCHEMY_BINDS"] = binds
 
     elif is_ci:
-        # --- GitHub CI (Travis / GitHub Actions) ---
+        # --- GitHub CI (GitHub Actions) ---
         # Loads the repo's committed config which sets TESTING=True and MySQL SQLALCHEMY_BINDS.
-        # SQLite mirrors are then built from the SQL files in config/databases/ and override
-        # the MySQL binds so tests run without a real MySQL instance.
+        # config/init.sh seeds a real MySQL instance before the test suite runs.
         print("We are now loading configuration.")
         bar_app.config.from_pyfile(os.getcwd() + "/config/BAR_API.cfg", silent=True)
 
     else:
         # --- Local development ---
-        # Loads the developer's personal config from ~/.config/BAR_API.cfg (if it exists).
-        # If no SQLALCHEMY_BINDS are configured, falls back to pre-built SQLite mirrors
-        # in config/databases/ or auto-builds them from SQL files.
+        # Loads the developer's personal config from ~/.config/BAR_API.cfg (if it exists),
+        # which points SQLALCHEMY_BINDS at the developer's local MySQL instance.
         bar_app.config.from_pyfile(os.path.expanduser("~") + "/.config/BAR_API.cfg", silent=True)
-
-    repo_root = Path(__file__).resolve().parents[1]
-    db_dir = repo_root / "config" / "databases"
-    if db_dir.exists() and not is_bar:
-        # On BAR, MySQL binds come from the server config — never build SQLite mirrors there.
-        # For CI and local dev, determine whether to build SQLite mirrors.
-        needs_sqlite_mirrors = (
-            is_ci  # always build on CI
-            or bar_app.config.get("TESTING")  # config requests test mode
-            or "pytest" in os.sys.modules  # running under pytest
-            or os.environ.get("BAR_API_AUTO_SQLITE_MIRRORS") == "1"  # explicit override
-        )
-
-        if needs_sqlite_mirrors:
-            # Build SQLite mirrors in a temp directory from the SQL schema/seed files.
-            # These override any MySQL SQLALCHEMY_BINDS so tests run without MySQL.
-            from api.utils.sqlite_mirror_utils import build_sqlite_db
-
-            tmp_root = Path(tempfile.gettempdir()) / "bar_api_sqlite"
-            tmp_root.mkdir(parents=True, exist_ok=True)
-
-            bind_names = set()
-            if bar_app.config.get("SQLALCHEMY_BINDS"):
-                bind_names.update(bar_app.config["SQLALCHEMY_BINDS"].keys())
-            else:
-                bind_names.update(p.stem for p in db_dir.glob("*.sql") if p.stem)
-
-            sqlite_binds = {}
-            for name in sorted(bind_names):
-                sql_path = db_dir / f"{name}.sql"
-                if not sql_path.exists():
-                    continue
-                db_path = tmp_root / f"{name}.db"
-                if (
-                    os.environ.get("BAR_API_AUTO_SQLITE_MIRRORS") == "1"
-                    or not db_path.exists()
-                    or db_path.stat().st_size == 0
-                ):
-                    build_sqlite_db(sql_path, db_path)
-                sqlite_binds[name] = f"sqlite:///{db_path}"
-
-            bar_app.config["SQLALCHEMY_BINDS"] = sqlite_binds
-
-        # Local dev fallback: if no binds are configured yet, use pre-built SQLite files
-        # from config/databases/ (populated by scripts/build_sqlite_mirrors.py).
-        if not bar_app.config.get("SQLALCHEMY_BINDS"):
-            binds = {}
-            for db_path in db_dir.glob("*.db"):
-                if not db_path.stem:
-                    continue
-                binds[db_path.stem] = f"sqlite:///{db_path}"
-            bar_app.config["SQLALCHEMY_BINDS"] = binds
 
     # Initialize the databases
     db.init_app(bar_app)

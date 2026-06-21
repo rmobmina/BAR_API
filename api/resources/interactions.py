@@ -31,7 +31,7 @@ def _normalize_cyjs_layout(value):
     if value is None:
         return None
     if isinstance(value, str):
-        # SQLite imports may keep escaped quotes from MySQL dumps; normalize for API output.
+        # MySQL dumps may keep escaped quotes; normalize for API output.
         return value.replace('\\"', '"').replace("\\'", "'")
     return value
 

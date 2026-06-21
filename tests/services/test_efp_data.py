@@ -116,7 +116,7 @@ class TestProbesetConversion(TestCase):
     queries an arabidopsis probeset database with the AGI, and checks that:
       - the call succeeds (conversion didn't 404)
       - probset_id in the response matches a real Affymetrix probeset pattern
-    allow_empty_results=True because the sqlite mirrors may not contain AT1G01010 rows;
+    allow_empty_results=True because some local databases may not contain AT1G01010 rows;
     we only care that the conversion step ran, not that expression data was found.
     """
 
