@@ -60,3 +60,22 @@ class Figures(db.Model):
     img_name: db.Mapped[str] = db.mapped_column(db.String(64), nullable=False)
     caption: db.Mapped[str] = db.mapped_column(db.Text, nullable=True)
     img_url: db.Mapped[str] = db.mapped_column(db.String(256), nullable=True)
+
+
+class AuthorList(db.Model):
+    __bind_key__ = "gaia"
+    __tablename__ = "author_list"
+
+    id: db.Mapped[int] = db.mapped_column(db.Integer, nullable=False, primary_key=True)
+    publication_figures_id: db.Mapped[int] = db.mapped_column(
+        ForeignKey("publication_figures.id", ondelete="CASCADE"), nullable=False
+    )
+    author: db.Mapped[str] = db.mapped_column(db.String(128), nullable=False)
+
+
+class FigureModels(db.Model):
+    __bind_key__ = "gaia"
+    __tablename__ = "figure_models"
+
+    id: db.Mapped[int] = db.mapped_column(db.Integer, nullable=False, primary_key=True)
+    data: db.Mapped[dict] = db.mapped_column(db.JSON, nullable=True)
