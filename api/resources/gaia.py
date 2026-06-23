@@ -182,16 +182,19 @@ class GaiaPublicationFigures(Resource):
 class GaiaPublicationFiguresByGene(Resource):
     @gaia.param("identifier", _in="path", default="ABI3")
     def get(self, identifier=""):
-        # Escape input and validate
+
+        # Escape input
         identifier = escape(identifier)
+
+        # Is it valid
         if not BARUtils.is_gaia_alias(identifier):
             return BARUtils.error_exit("Invalid identifier"), 400
 
-        # --- Resolve identifier -> gene id(s) -> the gene's full alias set ---
+        # Resolve to gene ids: try alias first, then locus / ncbi id
         rows = db.session.execute(db.select(Aliases.genes_id).filter(Aliases.alias == identifier)).fetchall()
         gene_ids = [r.genes_id for r in rows]
 
-        if not gene_ids:  # not an alias - try locus / ncbi geneid
+        if not gene_ids:
             rows = db.session.execute(
                 db.select(Genes.id).filter(or_(Genes.locus == identifier, Genes.geneid == identifier))
             ).fetchall()
@@ -200,22 +203,20 @@ class GaiaPublicationFiguresByGene(Resource):
         if not gene_ids:
             return BARUtils.error_exit("Nothing found"), 404
 
+        # Get the gene's full alias set
         aliases = [
             r.alias.lower()
             for r in db.session.execute(db.select(Aliases.alias).filter(Aliases.genes_id.in_(gene_ids))).fetchall()
         ]
 
-        # --- Build the OCR word-boundary match (V1-resolved policy, no gene:true filter) ---
-        # Aliases >= 4 chars: whole-token regex match (catches "abi3/vp1", rejects "gabi390_r").
-        # Aliases <= 3 chars: exact IN(...) - a boundary match on a short token over-matches.
+        # Match OCR words: word-boundary regex for long aliases, exact match for short ones
         long_aliases = sorted({re.escape(a) for a in aliases if len(a) >= 4})
         short_aliases = sorted({a for a in aliases if len(a) < 4})
 
-        # Gene resolved but no usable aliases -> empty payload (frontend falls back to PubMed feed).
+        # No usable aliases, nothing to match on
         if not long_aliases and not short_aliases:
             return BARUtils.success_exit({"figures": {}, "allImageWords": {}})
 
-        # --- Step 1: match on the scalar OCR word (pure Core; no array explosion) ---
         word_expr = func.lower(func.json_unquote(func.json_extract(FigureModels.data, "$.word")))
         match_conds = []
         if long_aliases:
@@ -228,26 +229,31 @@ class GaiaPublicationFiguresByGene(Resource):
         if not matched_rows:
             return BARUtils.success_exit({"figures": {}, "allImageWords": {}})
 
-        # --- Step 2: unpack matched rows' image[] in Python -> name -> [bbox] (data: dict or str) ---
+        # Collect each matched image and its boxes (keep the image even if a box is missing)
         bbox_by_name = {}
         for row in matched_rows:
             d = row.data if isinstance(row.data, dict) else json.loads(row.data)
             for img in d.get("image", []):
                 name = (img.get("imageName") or "").lstrip("/")
-                if name:
-                    bbox_by_name.setdefault(name, []).append(img.get("bbox"))
+                if not name:
+                    continue
+                bbox_list = bbox_by_name.setdefault(name, [])
+                bbox = img.get("bbox")
+                if bbox is not None:
+                    bbox_list.append(bbox)
 
         stripped_names = list(bbox_by_name.keys())
         if not stripped_names:
             return BARUtils.success_exit({"figures": {}, "allImageWords": {}})
 
-        # --- Step 3: figures + publication metadata (pure Core; bbox now comes from Python) ---
-        # Bare-name guard: exclude any img_name mapping to >1 publication (un-attributable detections).
+        # Drop image names used by more than one publication, we can't attribute those
         collision = (
             db.select(Figures.img_name)
             .group_by(Figures.img_name)
             .having(func.count(func.distinct(Figures.publication_figures_id)) > 1)
         )
+
+        # Pull the figures and their publication info, skip null urls, newest pubmed first
         core_stmt = (
             db.select(
                 PubIds.pmc,
@@ -269,21 +275,16 @@ class GaiaPublicationFiguresByGene(Resource):
         )
         fig_rows = db.session.execute(core_stmt).fetchall()
 
-        # Valid gene, but no OCR-matched figures -> empty payload (NOT 404).
         if not fig_rows:
             return BARUtils.success_exit({"figures": {}, "allImageWords": {}})
 
-        # --- Step 4: group by PMC; dedupe figures by img_name; attach the full accumulated bbox list ---
-        # Dedup guard: the collision guard only excludes names spanning >1 publication, so two figures
-        # rows with the same name under one pf_id could still duplicate. Surviving img_name -> pmc is
-        # 1:1, so a seen-set on img_name is sufficient; bbox_by_name[name] already holds the full list.
+        # Group figures by PMC, one entry per image name
         figures_by_pmc, pmc_to_pf, pf_ids, seen_names = {}, {}, set(), set()
         for r in fig_rows:
-            pmc = r.pmc
             pf_ids.add(r.pf_id)
-            pmc_to_pf[pmc] = r.pf_id
-            if pmc not in figures_by_pmc:
-                figures_by_pmc[pmc] = {
+            pmc_to_pf[r.pmc] = r.pf_id
+            if r.pmc not in figures_by_pmc:
+                figures_by_pmc[r.pmc] = {
                     "title": r.title,
                     "abstract": r.abstract,
                     "authors": [],
@@ -293,7 +294,7 @@ class GaiaPublicationFiguresByGene(Resource):
             if r.img_name in seen_names:
                 continue
             seen_names.add(r.img_name)
-            figures_by_pmc[pmc]["figures"].append(
+            figures_by_pmc[r.pmc]["figures"].append(
                 {
                     "img_name": r.img_name,
                     "img_url": r.img_url,
@@ -302,7 +303,7 @@ class GaiaPublicationFiguresByGene(Resource):
                 }
             )
 
-        # --- Step 5: authors per publication (one bulk query; db.select infers the gaia bind) ---
+        # Attach authors to each publication
         authors_by_pf = {}
         for r in db.session.execute(
             db.select(AuthorList.publication_figures_id, AuthorList.author).filter(
@@ -313,13 +314,11 @@ class GaiaPublicationFiguresByGene(Resource):
         for pmc, pf_id in pmc_to_pf.items():
             figures_by_pmc[pmc]["authors"] = authors_by_pf.get(pf_id, [])
 
-        # --- Step 6: allImageWords (pure Core JSON_OVERLAPS pre-filter + Python unpack) ---
-        # gene:true words detected on the displayed figures. JSON_OVERLAPS pre-filters rows that share
-        # any displayed image; the Python pass keeps only the displayed names. All gaia-bound -> bind inferred.
+        # allImageWords: gene words detected on the shown figures, for the gene-name filter
         displayed_names = list({r.img_name for r in fig_rows})
         all_image_words = {}
         if displayed_names:
-            displayed_slashed = json.dumps(["/" + n for n in displayed_names])  # re-add slash to match stored
+            displayed_slashed = json.dumps(["/" + n for n in displayed_names])  # stored names keep a leading /
             words_rows = db.session.execute(
                 db.select(FigureModels.data)
                 .where(func.json_unquote(func.json_extract(FigureModels.data, "$.gene")) == "true")
@@ -337,6 +336,8 @@ class GaiaPublicationFiguresByGene(Resource):
                 for img in d.get("image", []):
                     name = (img.get("imageName") or "").lstrip("/")
                     if name in displayed_set:
-                        all_image_words.setdefault(word, {})[name] = img.get("bbox")
+                        bbox = img.get("bbox")
+                        all_image_words.setdefault(word, {})[name] = bbox if bbox is not None else []
 
+        # Return final data
         return BARUtils.success_exit({"figures": figures_by_pmc, "allImageWords": all_image_words})

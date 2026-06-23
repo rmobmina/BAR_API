@@ -72,6 +72,45 @@ class TestGaiaPublicationFiguresByGene(TestCase):
         expected = {"wasSuccessful": True, "data": {"figures": {}, "allImageWords": {}}}
         self.assertEqual(response.json, expected)
 
+    def test_publication_figures_by_gene_short_alias_34g(self):
+        """A short (<=3 char) alias uses EXACT-IN matching, not the word-boundary regex.
+        34G must match the OCR word '34g' exactly and reject the boundary-delimited decoy
+        '34g/x' and the substring decoy 'x34gy'. Also covers the malformed (no-bbox) OCR
+        entry -> the figure still returns with a clean bbox list (no None).
+        :return:
+        """
+        self._require_mysql()
+        response = self.app_client.get("/gaia/publication_figures_by_gene/34G")
+        self.assertEqual(response.status_code, 200)
+
+        body = response.json
+        self.assertTrue(body["wasSuccessful"])
+        figures = body["data"]["figures"]
+
+        self.assertIn("PMC7000001", figures)
+        names = {f["img_name"] for f in figures["PMC7000001"]["figures"]}
+
+        # Exact match on '34g' returns its real figure (g002) and the malformed-bbox figure (g003).
+        self.assertIn("fpls-11-01234-g002.jpg", names)
+        self.assertIn("fpls-11-01234-g003.jpg", names)
+
+        # Exact-IN must NOT match the boundary decoy '34g/x' (the regex WOULD have) nor the
+        # substring decoy 'x34gy' (a LIKE would have) -> both figures absent.
+        self.assertNotIn("fpls-11-01234-g005.jpg", names)
+        self.assertNotIn("fpls-11-01234-g009.jpg", names)
+
+        # Malformed OCR entry (imageName but no bbox) -> figure returns with a clean, None-free
+        # bbox list (here empty, since its only OCR entry had no box).
+        by_name = {f["img_name"]: f for f in figures["PMC7000001"]["figures"]}
+        self.assertEqual(by_name["fpls-11-01234-g003.jpg"]["bbox"], [])
+        for fig in figures["PMC7000001"]["figures"]:
+            self.assertNotIn(None, fig["bbox"])
+
+        # allImageWords keeps the malformed image's key but maps it to [] (not null, not absent),
+        # so the gene-name filter still lists it without the frontend choking on a null box.
+        words_34g = body["data"]["allImageWords"]["34g"]
+        self.assertEqual(words_34g["fpls-11-01234-g003.jpg"], [])
+
     def test_publication_figures_by_gene_invalid_identifier(self):
         """An identifier failing the gaia alias check returns a 400 error.
         :return:
