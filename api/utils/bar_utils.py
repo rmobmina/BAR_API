@@ -34,6 +34,16 @@ class BARUtils:
             return False
 
     @staticmethod
+    def normalize_arabidopsis_gene(gene):
+        """Return Arabidopsis gene in canonical case (At1g01010)."""
+        if not gene:
+            return gene
+        lowered = gene.lower()
+        if re.search(r"^at[12345cm]g\d{5}.?\d?$", lowered):
+            return "At" + lowered[2:]
+        return gene
+
+    @staticmethod
     def is_grape_gene_valid(gene):
         """This function verifies if grape gene is valid: VIT_00s0120g00060
         :param gene:

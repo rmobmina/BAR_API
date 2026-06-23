@@ -96,7 +96,13 @@ class eFPImage(Resource):
             )
             # This is important to fix the eFP Url which as &amp; instead of &
             efp_url = re.sub(r"amp;", "", efp_url)
-            efp_html = requests.get(efp_url)
+            try:
+                efp_html = requests.get(efp_url, timeout=10)
+            except requests.exceptions.RequestException:
+                return (
+                    BARUtils.error_exit("Failed to retrieve image. The eFP image service is unavailable."),
+                    503,
+                )
 
             # Now search for something like <img src=\"../output/efp-2nBNhe.png\"
             # This is the eFP output image
@@ -114,7 +120,13 @@ class eFPImage(Resource):
             efp_file_link = "https://bar.utoronto.ca/" + efp + "/output/" + path
 
             # Download and serve that image
-            response = requests.get(efp_file_link)
+            try:
+                response = requests.get(efp_file_link, timeout=10)
+            except requests.exceptions.RequestException:
+                return (
+                    BARUtils.error_exit("Failed to retrieve image. The eFP image service is unavailable."),
+                    503,
+                )
             img_data = response.content
             img_length = int(response.headers.get("Content-Length"))
 
