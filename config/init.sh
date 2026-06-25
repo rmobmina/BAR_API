@@ -1,10 +1,11 @@
 #!/bin/sh
 # This script initialized the GitHub environment
 
-# To use locally, set up DB Password below
-# The password below is for GitHub Actions. Please do not change.
-DB_USER="root"
-DB_PASS="root"
+# To use locally, set DB_USER/DB_PASS/DB_HOST as environment variables.
+# Defaults below are for GitHub Actions — do not change the defaults.
+DB_USER=${DB_USER:-"root"}
+DB_PASS=${DB_PASS:-"root"}
+DB_HOST=${DB_HOST:-"localhost"}
 
 # Load the data
 echo "Welcome to the BAR API. Running init!"
@@ -18,36 +19,59 @@ if [ $? -ne 0 ]; then
 fi
 echo "Successfully bootstrapped simple eFP databases"
 
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/annotations_lookup.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_ecotypes.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/arachis.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/canola_nssnp.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant2.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant_poplar.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant_rice.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant_soybean.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant_tomato.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/fastpheno.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/germination.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/homologs_db.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/interactions_vincent_v2.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/kalanchoe.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/klepikova.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/llama3.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/phelipanche.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/physcomitrella_db.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/poplar_nssnp.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/rice_interactions.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/selaginella.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/shoot_apex.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/silique.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/single_cell.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/soybean_nssnp.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/strawberry.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/striga.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/tomato_nssnp.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/tomato_sequence.sql
-mysql -u $DB_USER -p$DB_PASS < ./config/databases/triphysaria.sql
+db_exists() {
+    mysql -h $DB_HOST -u $DB_USER -p$DB_PASS -e "SELECT SCHEMA_NAME FROM information_schema.SCHEMATA WHERE SCHEMA_NAME='$1';" 2>/dev/null | grep -q "$1"
+}
+
+import_if_missing() {
+    DB_NAME=$1
+    SQL_FILE=$2
+    if db_exists "$DB_NAME"; then
+        echo "[skip] $DB_NAME already exists"
+    else
+        echo "[load] importing $DB_NAME..."
+        mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < "$SQL_FILE"
+    fi
+}
+
+import_if_missing annotations_lookup    ./config/databases/annotations_lookup.sql
+import_if_missing arabidopsis_ecotypes  ./config/databases/arabidopsis_ecotypes.sql
+import_if_missing arachis               ./config/databases/arachis.sql
+import_if_missing canola_nssnp          ./config/databases/canola_nssnp.sql
+import_if_missing eplant2               ./config/databases/eplant2.sql
+import_if_missing eplant_poplar         ./config/databases/eplant_poplar.sql
+import_if_missing eplant_rice           ./config/databases/eplant_rice.sql
+import_if_missing eplant_soybean        ./config/databases/eplant_soybean.sql
+import_if_missing eplant_tomato         ./config/databases/eplant_tomato.sql
+import_if_missing fastpheno             ./config/databases/fastpheno.sql
+import_if_missing germination           ./config/databases/germination.sql
+import_if_missing homologs_db           ./config/databases/homologs_db.sql
+import_if_missing interactions_vincent_v2 ./config/databases/interactions_vincent_v2.sql
+import_if_missing kalanchoe             ./config/databases/kalanchoe.sql
+import_if_missing klepikova             ./config/databases/klepikova.sql
+import_if_missing llama3                ./config/databases/llama3.sql
+import_if_missing phelipanche           ./config/databases/phelipanche.sql
+import_if_missing physcomitrella_db     ./config/databases/physcomitrella_db.sql
+import_if_missing poplar_nssnp          ./config/databases/poplar_nssnp.sql
+import_if_missing rice_interactions     ./config/databases/rice_interactions.sql
+import_if_missing selaginella           ./config/databases/selaginella.sql
+import_if_missing shoot_apex            ./config/databases/shoot_apex.sql
+import_if_missing silique               ./config/databases/silique.sql
+import_if_missing single_cell           ./config/databases/single_cell.sql
+import_if_missing soybean_nssnp         ./config/databases/soybean_nssnp.sql
+import_if_missing strawberry            ./config/databases/strawberry.sql
+import_if_missing striga                ./config/databases/striga.sql
+import_if_missing tomato_nssnp          ./config/databases/tomato_nssnp.sql
+import_if_missing tomato_sequence       ./config/databases/tomato_sequence.sql
+import_if_missing triphysaria           ./config/databases/triphysaria.sql
+import_if_missing light_series          ./config/databases/light_series.sql
+import_if_missing maize_RMA_linear      ./config/databases/maize_RMA_linear.sql
+import_if_missing meristem_db           ./config/databases/meristem_db.sql
+import_if_missing potato_stress         ./config/databases/potato_stress.sql
+import_if_missing seedcoat              ./config/databases/seedcoat.sql
+import_if_missing soybean               ./config/databases/soybean.sql
+import_if_missing soybean_severin       ./config/databases/soybean_severin.sql
+import_if_missing tomato_ils            ./config/databases/tomato_ils.sql
 
 echo "Data are now loaded. Preparing API config"
 echo "Please manually edit config file!"

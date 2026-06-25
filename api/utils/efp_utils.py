@@ -57,12 +57,12 @@ class eFPUtils:
 
         # Maybe this part could be improved
         if efp == "efp_arabidopsis":
-            # Validate gene ids
-            if not BARUtils.is_arabidopsis_gene_valid(gene_1):
+            # Accept AGI format (AT1G01010) or microarray probeset IDs (267643_at)
+            if not BARUtils.is_efp_gene_valid(gene_1, "efp_arabidopsis"):
                 return False, "Gene 1 is invalid."
 
             if mode == "Compare":
-                if not BARUtils.is_arabidopsis_gene_valid(gene_2):
+                if not BARUtils.is_efp_gene_valid(gene_2, "efp_arabidopsis"):
                     return False, "Gene 2 is invalid."
 
         if efp == "efp_arachis":

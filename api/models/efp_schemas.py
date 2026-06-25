@@ -181,7 +181,7 @@ _SPECS: List[tuple] = [
     ("root_Schaefer_lab", "root Schaefer lab"),
     ("rpatel", "rpatel"),
     ("seed_db", "seed db"),
-    ("seedcoat", "oat"),
+    ("seedcoat", "arabidopsis seedcoat"),
     ("selaginella", "selaginella"),
     ("shoot_apex", "arabidopsis"),
     ("silique", "arabidopsis"),

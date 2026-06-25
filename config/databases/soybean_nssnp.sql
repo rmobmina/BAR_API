@@ -60,8 +60,7 @@ CREATE TABLE `sample_lookup` (
   `sample_id` varchar(45) NOT NULL,
   `dataset` varchar(45) DEFAULT NULL,
   `dataset_sample` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`sample_id`),
-  CONSTRAINT `sample_id` FOREIGN KEY (`sample_id`) REFERENCES `snps_reference` (`sample_id`)
+  PRIMARY KEY (`sample_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
