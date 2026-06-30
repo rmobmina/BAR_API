@@ -75,6 +75,7 @@ DATABASE_SPECIES: dict[str, str] = {
     "shoot_apex":                           "arabidopsis",
     "silique":                              "arabidopsis",
     "single_cell":                          "arabidopsis",
+    'arabidopsis_NIE_pseudobulk':           'arabidopsis',
     # Actinidia (kiwifruit)
     "actinidia_bud_development":            "actinidia",
     "actinidia_flower_fruit_development":   "actinidia",

@@ -21,6 +21,7 @@ echo "Successfully bootstrapped simple eFP databases"
 mysql -u $DB_USER -p$DB_PASS < ./config/databases/annotations_lookup.sql
 mysql -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_ecotypes.sql
 mysql -u $DB_USER -p$DB_PASS < ./config/databases/arachis.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_NIE_pseudobulk.sql
 mysql -u $DB_USER -p$DB_PASS < ./config/databases/canola_nssnp.sql
 mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant2.sql
 mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant_poplar.sql

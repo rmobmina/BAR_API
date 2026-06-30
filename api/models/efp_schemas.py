@@ -54,6 +54,7 @@ _SPECS: List[tuple] = [
     ("apple", "apple"),
     ("arabidopsis_ecotypes", "arabidopsis"),
     ("arachis", "arachis"),
+    ("arabidopsis_NIE_pseudobulk", "arabidopsis"),
     ("atgenexp", "arabidopsis"),
     ("atgenexp_hormone", "arabidopsis"),
     ("atgenexp_pathogen", "arabidopsis"),
