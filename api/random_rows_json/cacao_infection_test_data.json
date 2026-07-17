@@ -1,0 +1,242 @@
+[
+  {
+    "db": "cacao_infection",
+    "sample_id": 41,
+    "proj_id": "1",
+    "data_probeset_id": "Tc03v2_g004820",
+    "data_signal": 44.0799,
+    "data_bot_id": "SCA6_Control_24hr_rep2"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "Tc10v2_g010460",
+    "data_signal": 2.33748,
+    "data_bot_id": "basal_NA32_rep2"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 59,
+    "proj_id": "1",
+    "data_probeset_id": "Tc08v2_g006490",
+    "data_signal": 0.392064,
+    "data_bot_id": "SCA6_Control_72hr_rep4"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "Tc01v2_g007840",
+    "data_signal": 23.9066,
+    "data_bot_id": "basal_SCA6_rep7"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 60,
+    "proj_id": "1",
+    "data_probeset_id": "Tc04v2_g006830",
+    "data_signal": 0.0,
+    "data_bot_id": "SCA6_Pathogen_72hr_rep1"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 43,
+    "proj_id": "1",
+    "data_probeset_id": "Tc04v2_g008060",
+    "data_signal": 2.62465,
+    "data_bot_id": "SCA6_Control_24hr_rep4"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 58,
+    "proj_id": "1",
+    "data_probeset_id": "Tc04v2_g016360",
+    "data_signal": 0.603305,
+    "data_bot_id": "SCA6_Control_72hr_rep3"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "Tc01v2_g002690",
+    "data_signal": 6.89748,
+    "data_bot_id": "basal_NA32_rep5"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 32,
+    "proj_id": "1",
+    "data_probeset_id": "Tc02v2_g009210",
+    "data_signal": 0.994598,
+    "data_bot_id": "NA32_Control_24hr_rep1"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 14,
+    "proj_id": "1",
+    "data_probeset_id": "Tc01v2_g026100",
+    "data_signal": 15.7914,
+    "data_bot_id": "basal_SCA6_rep6"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "Tc10v2_g000220",
+    "data_signal": 14.1516,
+    "data_bot_id": "basal_NA32_rep2"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 9,
+    "proj_id": "1",
+    "data_probeset_id": "Tc09v2_g008430",
+    "data_signal": 0.0,
+    "data_bot_id": "basal_SCA6_rep1"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "Tc10v2_g004160",
+    "data_signal": 0.0566933,
+    "data_bot_id": "basal_SCA6_rep4"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "Tc01v2_g023350",
+    "data_signal": 0.0726014,
+    "data_bot_id": "basal_SCA6_rep3"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 60,
+    "proj_id": "1",
+    "data_probeset_id": "Tc06v2_g013690",
+    "data_signal": 47.6608,
+    "data_bot_id": "SCA6_Pathogen_72hr_rep1"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 29,
+    "proj_id": "1",
+    "data_probeset_id": "Tc07v2_g002000",
+    "data_signal": 39.5743,
+    "data_bot_id": "SCA6_Pathogen_6hr_rep2"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 39,
+    "proj_id": "1",
+    "data_probeset_id": "Tc10v2_g002140",
+    "data_signal": 25.877,
+    "data_bot_id": "NA32_Pathogen_24hr_rep4"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 29,
+    "proj_id": "1",
+    "data_probeset_id": "Tc02v2_g006740",
+    "data_signal": 62.7156,
+    "data_bot_id": "SCA6_Pathogen_6hr_rep2"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 52,
+    "proj_id": "1",
+    "data_probeset_id": "Tc07v2_g006220",
+    "data_signal": 0.0,
+    "data_bot_id": "NA32_Pathogen_72hr_rep1"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 20,
+    "proj_id": "1",
+    "data_probeset_id": "Tc07v2_g011700",
+    "data_signal": 14.7858,
+    "data_bot_id": "NA32_Pathogen_6hr_rep1"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 43,
+    "proj_id": "1",
+    "data_probeset_id": "Tc04v2_g001360",
+    "data_signal": 1.45211,
+    "data_bot_id": "SCA6_Control_24hr_rep4"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 1,
+    "proj_id": "1",
+    "data_probeset_id": "Tc04v2_g005850",
+    "data_signal": 1.32857,
+    "data_bot_id": "basal_NA32_rep1"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 48,
+    "proj_id": "1",
+    "data_probeset_id": "Tc03v2_g010680",
+    "data_signal": 65.0007,
+    "data_bot_id": "NA32_Control_72hr_rep1"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "Tc09v2_g028600",
+    "data_signal": 11.2965,
+    "data_bot_id": "basal_NA32_rep6"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 27,
+    "proj_id": "1",
+    "data_probeset_id": "Tc04v2_g023520",
+    "data_signal": 7.05851,
+    "data_bot_id": "SCA6_Control_6hr_rep4"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 63,
+    "proj_id": "1",
+    "data_probeset_id": "Tc07v2_g011310",
+    "data_signal": 1.73335,
+    "data_bot_id": "SCA6_Pathogen_72hr_rep4"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 36,
+    "proj_id": "1",
+    "data_probeset_id": "Tc01v2_g006800",
+    "data_signal": 0.534565,
+    "data_bot_id": "NA32_Pathogen_24hr_rep1"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "Tc03v2_g010440",
+    "data_signal": 0.0937021,
+    "data_bot_id": "basal_NA32_rep5"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "Tc09v2_g021070",
+    "data_signal": 5.33714,
+    "data_bot_id": "basal_SCA6_rep7"
+  },
+  {
+    "db": "cacao_infection",
+    "sample_id": 59,
+    "proj_id": "1",
+    "data_probeset_id": "Tc01v2_g004600",
+    "data_signal": 20.1258,
+    "data_bot_id": "SCA6_Control_72hr_rep4"
+  }
+]

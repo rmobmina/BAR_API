@@ -1,0 +1,242 @@
+[
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "Sobic.003G167000",
+    "data_signal": 6.96993,
+    "data_bot_id": "SRR1161670_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Sobic.009G008100",
+    "data_signal": 36.0034,
+    "data_bot_id": "SRR1161660_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 28,
+    "data_probeset_id": "Sobic.004G298200",
+    "data_signal": 6.0022,
+    "data_bot_id": "SRR1161687_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.005G008600",
+    "data_signal": 1.01339,
+    "data_bot_id": "SRR1161664_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.010G140800",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1161663_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Sobic.005G083550",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1161669_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 25,
+    "data_probeset_id": "Sobic.007G114000",
+    "data_signal": 4.79848,
+    "data_bot_id": "SRR1161684_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 29,
+    "data_probeset_id": "Sobic.008G000800",
+    "data_signal": 1.65282,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 18,
+    "data_probeset_id": "Sobic.005G150400",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1161677_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Sobic.001G099600",
+    "data_signal": 0.556767,
+    "data_bot_id": "SRR1161661_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.001G002700",
+    "data_signal": 1.12969,
+    "data_bot_id": "SRR1161662_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Sobic.009G133300",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1161669_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "Sobic.010G100000",
+    "data_signal": 66.7264,
+    "data_bot_id": "SRR1161673_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.001G255700",
+    "data_signal": 1.22377,
+    "data_bot_id": "SRR1161663_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Sobic.010G277100",
+    "data_signal": 165.972,
+    "data_bot_id": "SRR1161660_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Sobic.001G123201",
+    "data_signal": 21.5112,
+    "data_bot_id": "SRR1161671_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 26,
+    "data_probeset_id": "Sobic.003G325200",
+    "data_signal": 4.23393,
+    "data_bot_id": "SRR1161685_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Sobic.007G019100",
+    "data_signal": 38.5317,
+    "data_bot_id": "SRR1161666_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "Sobic.009G196001",
+    "data_signal": 2.77985,
+    "data_bot_id": "SRR1161670_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "Sobic.004G187400",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1161676_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "Sobic.008G045600",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1161681_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 16,
+    "data_probeset_id": "Sobic.007G162300",
+    "data_signal": 19.5603,
+    "data_bot_id": "SRR1161675_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 25,
+    "data_probeset_id": "Sobic.001G052350",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1161684_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Sobic.009G259300",
+    "data_signal": 0.107773,
+    "data_bot_id": "SRR1161671_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 26,
+    "data_probeset_id": "Sobic.003G391200",
+    "data_signal": 35.3393,
+    "data_bot_id": "SRR1161685_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "Sobic.009G091200",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1161676_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Sobic.010G189700",
+    "data_signal": 12.9535,
+    "data_bot_id": "SRR1161661_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "Sobic.008G145000",
+    "data_signal": 0.56629,
+    "data_bot_id": "SRR1161681_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Sobic.010G184100",
+    "data_signal": 48.6672,
+    "data_bot_id": "SRR1161660_TPM"
+  },
+  {
+    "db": "sorghum_nitrogen_stress",
+    "proj_id": "1",
+    "sample_id": 18,
+    "data_probeset_id": "Sobic.002G409300",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1161677_TPM"
+  }
+]

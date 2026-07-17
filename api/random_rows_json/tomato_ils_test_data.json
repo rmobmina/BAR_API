@@ -1,0 +1,272 @@
+[
+  {
+    "db": "tomato_ils",
+    "sample_id": 55,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc04g047670.2",
+    "data_signal": 12.8285,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL7.3"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 55,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc10g049590.1",
+    "data_signal": 1.7516,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL7.3"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 37,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc02g080880.2",
+    "data_signal": 16.2083,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL4.1.1"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 60,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc11g051020.1",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL8.1.5"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc02g005270.1",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL1.4"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 75,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc08g074830.2",
+    "data_signal": 9.12961,
+    "data_p_value": 0.0,
+    "data_bot_id": "SLY"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 64,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc08g060830.2",
+    "data_signal": 18.6309,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL8.3.1"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 22,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc07g044860.2",
+    "data_signal": 2304.06,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL12.3"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 66,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc06g048840.2",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL9.1.2"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 71,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc02g062430.2",
+    "data_signal": 7.68288,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL9.2"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc04g007420.2",
+    "data_signal": 3.802,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL11.3"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 18,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc06g075030.1",
+    "data_signal": 2.78199,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL12.1.1"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 29,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc12g099010.1",
+    "data_signal": 3.31753,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL2.5"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 53,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc04g081270.1",
+    "data_signal": 0.807189,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL7.1"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 66,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc06g064590.1",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL9.1.2"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc01g014030.1",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL11.3"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 44,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc02g081390.2",
+    "data_signal": 34.8243,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL5.2"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 18,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc09g005460.1",
+    "data_signal": 5.84365,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL12.1.1"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc04g057910.2",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL10.2"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 1,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc03g112460.2",
+    "data_signal": 4.31779,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL1.1.2"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 54,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc08g065730.1",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL7.2"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 55,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc09g064410.1",
+    "data_signal": 13.4392,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL7.3"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc11g006440.1",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL1.3"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 67,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc10g006110.2",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL9.1.3"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 34,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc01g098540.2",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL3.3"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 51,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc10g083690.2",
+    "data_signal": 0.347542,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL6.3"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 37,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc10g007170.1",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL4.1.1"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 20,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc06g061070.2",
+    "data_signal": 833.889,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL12.2"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 40,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc01g021610.1",
+    "data_signal": 0.0,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL4.3.2"
+  },
+  {
+    "db": "tomato_ils",
+    "sample_id": 16,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc08g082910.1",
+    "data_signal": 10.6075,
+    "data_p_value": 0.0,
+    "data_bot_id": "IL11.4.1"
+  }
+]

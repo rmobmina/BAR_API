@@ -1,0 +1,242 @@
+[
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Manes.11G109300.v8.1",
+    "data_signal": 443.865,
+    "data_bot_id": "mock_50hpi_RepB"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Manes.05G041300.v8.1",
+    "data_signal": 493.855,
+    "data_bot_id": "mock_24hpi_RepC"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Manes.14G102400.v8.1",
+    "data_signal": 163.247,
+    "data_bot_id": "mock_24hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Manes.09G165400.v8.1",
+    "data_signal": 71.7595,
+    "data_bot_id": "mock_24hpi_RepB"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Manes.13G106200.v8.1",
+    "data_signal": 569.129,
+    "data_bot_id": "mock_50hpi_RepC"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "Manes.01G120800.v8.1",
+    "data_signal": 69.66,
+    "data_bot_id": "Xpm_50hpi_RepB"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Manes.05G176900.v8.1",
+    "data_signal": 20.4168,
+    "data_bot_id": "Xpm_24hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Manes.14G071000.v8.1",
+    "data_signal": 163.831,
+    "data_bot_id": "Xpm_24hpi_RepC"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "Manes.15G181600.v8.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "Manes.12G031900.v8.1",
+    "data_signal": 717.181,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Manes.01G189100.v8.1",
+    "data_signal": 0.0,
+    "data_bot_id": "mock_50hpi_RepB"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Manes.08G014900.v8.1",
+    "data_signal": 658.877,
+    "data_bot_id": "mock_24hpi_RepC"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Manes.08G095400.v8.1",
+    "data_signal": 0.0,
+    "data_bot_id": "mock_24hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Manes.17G051800.v8.1",
+    "data_signal": 154.945,
+    "data_bot_id": "mock_50hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Manes.03G165300.v8.1",
+    "data_signal": 0.0,
+    "data_bot_id": "mock_24hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Manes.08G016800.v8.1",
+    "data_signal": 0.991554,
+    "data_bot_id": "mock_50hpi_RepC"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Manes.10G056200.v8.1",
+    "data_signal": 427.987,
+    "data_bot_id": "Xpm_50hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Manes.07G029200.v8.1",
+    "data_signal": 52.8553,
+    "data_bot_id": "mock_24hpi_RepB"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Manes.10G113500.v8.1",
+    "data_signal": 1177.78,
+    "data_bot_id": "Xpm_24hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Manes.03G190800.v8.1",
+    "data_signal": 57.1041,
+    "data_bot_id": "Xpm_24hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Manes.07G081100.v8.1",
+    "data_signal": 289.154,
+    "data_bot_id": "Xpm_50hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "Manes.17G109100.v8.1",
+    "data_signal": 386.92,
+    "data_bot_id": "Xpm_50hpi_RepB"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Manes.12G095400.v8.1",
+    "data_signal": 19.0802,
+    "data_bot_id": "mock_24hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Manes.02G010000.v8.1",
+    "data_signal": 0.734365,
+    "data_bot_id": "mock_50hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Manes.06G111300.v8.1",
+    "data_signal": 0.762743,
+    "data_bot_id": "mock_50hpi_RepA"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Manes.14G117900.v8.1",
+    "data_signal": 107.45,
+    "data_bot_id": "mock_24hpi_RepC"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Manes.01G085400.v8.1",
+    "data_signal": 11.9275,
+    "data_bot_id": "mock_50hpi_RepC"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Manes.09G045700.v8.1",
+    "data_signal": 59.2568,
+    "data_bot_id": "Xpm_24hpi_RepB"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Manes.01G236800.v8.1",
+    "data_signal": 825.511,
+    "data_bot_id": "mock_50hpi_RepC"
+  },
+  {
+    "db": "cassava_cbb",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Manes.09G124100.v8.1",
+    "data_signal": 268.522,
+    "data_bot_id": "Xpm_50hpi_RepC"
+  }
+]

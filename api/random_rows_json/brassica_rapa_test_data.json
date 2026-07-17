@@ -1,0 +1,242 @@
+[
+  {
+    "db": "brassica_rapa",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "BraA01g016790",
+    "data_signal": 1.0397,
+    "data_bot_id": "S4"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 16,
+    "proj_id": "1",
+    "data_probeset_id": "BraA01g034640",
+    "data_signal": 793.352,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 1,
+    "proj_id": "1",
+    "data_probeset_id": "BraA01g002990",
+    "data_signal": 2.76247,
+    "data_bot_id": "UO"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "BraA02g039650",
+    "data_signal": 326.237,
+    "data_bot_id": "E1"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "BraA03g010590",
+    "data_signal": 0.0,
+    "data_bot_id": "E1"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 8,
+    "proj_id": "1",
+    "data_probeset_id": "BraA07g018060",
+    "data_signal": 193.928,
+    "data_bot_id": "E7"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "BraA01g001840",
+    "data_signal": 0.0,
+    "data_bot_id": "E5"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 14,
+    "proj_id": "1",
+    "data_probeset_id": "BraAnng001180",
+    "data_signal": 0.0,
+    "data_bot_id": "S6"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "BraA08g033990",
+    "data_signal": 1.46484,
+    "data_bot_id": "S4"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "BraA09g039960",
+    "data_signal": 11.3479,
+    "data_bot_id": "E6"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "BraA07g004900",
+    "data_signal": 591.698,
+    "data_bot_id": "E1"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "BraA01g032650",
+    "data_signal": 26.1996,
+    "data_bot_id": "S7"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 16,
+    "proj_id": "1",
+    "data_probeset_id": "BraA01g031660",
+    "data_signal": 1.67584,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 8,
+    "proj_id": "1",
+    "data_probeset_id": "BraA09g049680",
+    "data_signal": 34.1495,
+    "data_bot_id": "E7"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 1,
+    "proj_id": "1",
+    "data_probeset_id": "BraA10g013590",
+    "data_signal": 435.168,
+    "data_bot_id": "UO"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "BraA06g019730",
+    "data_signal": 154.295,
+    "data_bot_id": "E6"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "BraA03g065480",
+    "data_signal": 0.0,
+    "data_bot_id": "E5"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "BraA02g027730",
+    "data_signal": 0.0,
+    "data_bot_id": "S5"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "BraA07g025170",
+    "data_signal": 180.658,
+    "data_bot_id": "S5"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "BraA04g008970",
+    "data_signal": 316.795,
+    "data_bot_id": "S2"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 9,
+    "proj_id": "1",
+    "data_probeset_id": "BraA04g010750",
+    "data_signal": 22.8694,
+    "data_bot_id": "S1"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 14,
+    "proj_id": "1",
+    "data_probeset_id": "BraA04g003590",
+    "data_signal": 19.6568,
+    "data_bot_id": "S6"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "BraAnng004950",
+    "data_signal": 0.0,
+    "data_bot_id": "E2"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 8,
+    "proj_id": "1",
+    "data_probeset_id": "BraA03g018450",
+    "data_signal": 123.989,
+    "data_bot_id": "E7"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "BraA02g043690",
+    "data_signal": 1609.74,
+    "data_bot_id": "E3"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "BraA09g046790",
+    "data_signal": 593.198,
+    "data_bot_id": "S3"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "BraA04g029380",
+    "data_signal": 0.0,
+    "data_bot_id": "E3"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "BraA03g037990",
+    "data_signal": 4.70876,
+    "data_bot_id": "E3"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 8,
+    "proj_id": "1",
+    "data_probeset_id": "BraA04g000100",
+    "data_signal": 32.1951,
+    "data_bot_id": "E7"
+  },
+  {
+    "db": "brassica_rapa",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "BraA07g001240",
+    "data_signal": 18.2827,
+    "data_bot_id": "E5"
+  }
+]

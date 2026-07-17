@@ -1,0 +1,242 @@
+[
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Bradi2g45102.1",
+    "data_signal": 0.9,
+    "data_bot_id": "plant_embryo"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Bradi1g51357.1",
+    "data_signal": 1013.0,
+    "data_bot_id": "plant_embryo"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Bradi4g16740.1",
+    "data_signal": 71.0,
+    "data_bot_id": "pistil"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Bradi4g09380.1",
+    "data_signal": 0.0,
+    "data_bot_id": "leaf"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Bradi3g39722.1",
+    "data_signal": 15.0,
+    "data_bot_id": "seed_5_days_after_pollination"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Bradi3g07440.1",
+    "data_signal": 7.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Bradi1g52625.1",
+    "data_signal": 0.1,
+    "data_bot_id": "plant_embryo"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Bradi5g12285.1",
+    "data_signal": 0.0,
+    "data_bot_id": "seed_10_days_after_pollination"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Bradi5g17123.1",
+    "data_signal": 0.0,
+    "data_bot_id": "emerging_inflorescence"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Bradi5g09592.1",
+    "data_signal": 0.0,
+    "data_bot_id": "endosperm"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Bradi2g59310.1",
+    "data_signal": 1.0,
+    "data_bot_id": "anther"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Bradi1g76700.1",
+    "data_signal": 41.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Bradi5g21890.1",
+    "data_signal": 6.0,
+    "data_bot_id": "plant_embryo"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Bradi3g22115.1",
+    "data_signal": 0.0,
+    "data_bot_id": "seed_10_days_after_pollination"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Bradi4g19470.1",
+    "data_signal": 297.0,
+    "data_bot_id": "pistil"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Bradi2g17908.1",
+    "data_signal": 0.8,
+    "data_bot_id": "leaf"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Bradi2g23860.1",
+    "data_signal": 11.0,
+    "data_bot_id": "pistil"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Bradi2g53140.1",
+    "data_signal": 2.0,
+    "data_bot_id": "pistil"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Bradi1g48747.1",
+    "data_signal": 5.0,
+    "data_bot_id": "early_inflorescence"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Bradi5g11820.1",
+    "data_signal": 1.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Bradi3g40320.1",
+    "data_signal": 35.0,
+    "data_bot_id": "pistil"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Bradi5g22902.1",
+    "data_signal": 0.0,
+    "data_bot_id": "seed_10_days_after_pollination"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Bradi1g04710.1",
+    "data_signal": 14.0,
+    "data_bot_id": "plant_embryo"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Bradi1g07565.1",
+    "data_signal": 0.3,
+    "data_bot_id": "seed_10_days_after_pollination"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Bradi4g19525.1",
+    "data_signal": 6.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Bradi2g61458.1",
+    "data_signal": 0.3,
+    "data_bot_id": "pistil"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Bradi3g08180.1",
+    "data_signal": 22.0,
+    "data_bot_id": "plant_embryo"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Bradi4g43117.1",
+    "data_signal": 0.9,
+    "data_bot_id": "plant_embryo"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Bradi2g34940.1",
+    "data_signal": 0.1,
+    "data_bot_id": "leaf"
+  },
+  {
+    "db": "brachypodium_Bd21",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Bradi3g56995.1",
+    "data_signal": 4.0,
+    "data_bot_id": "early_inflorescence"
+  }
+]

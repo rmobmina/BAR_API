@@ -1,0 +1,242 @@
+[
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Sobic.009G103201.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.001G370000.1",
+    "data_signal": 7.3987,
+    "data_bot_id": "S500_rep3_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.009G053800.2",
+    "data_signal": 0.72228,
+    "data_bot_id": "S10_rep2_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.001G050900.1",
+    "data_signal": 0.443201,
+    "data_bot_id": "S10_rep2_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.002G059300.1",
+    "data_signal": 5.51559,
+    "data_bot_id": "S10_rep2_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.005G045100.1",
+    "data_signal": 7.98415,
+    "data_bot_id": "S10_rep3_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.003G293500.1",
+    "data_signal": 0.0237991,
+    "data_bot_id": "S10_rep3_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.007G170400.1",
+    "data_signal": 1.21995,
+    "data_bot_id": "S10_rep3_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Sobic.002G010000.1",
+    "data_signal": 1.52995,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Sobic.004G307100.1",
+    "data_signal": 240.631,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Sobic.010G112100.1",
+    "data_signal": 8.87883,
+    "data_bot_id": "S500_rep2_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.007G053300.1",
+    "data_signal": 342.517,
+    "data_bot_id": "S10_rep3_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.004G063000.1",
+    "data_signal": 19.4523,
+    "data_bot_id": "S10_rep3_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.005G160801.1",
+    "data_signal": 0.0,
+    "data_bot_id": "S10_rep2_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.001G001800.2",
+    "data_signal": 0.0,
+    "data_bot_id": "S10_rep1_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.003G307200.1",
+    "data_signal": 2.61378,
+    "data_bot_id": "S10_rep2_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.002G035900.1",
+    "data_signal": 109.216,
+    "data_bot_id": "S500_rep3_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.002G077400.1",
+    "data_signal": 0.0,
+    "data_bot_id": "S10_rep3_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Sobic.003G112001.1",
+    "data_signal": 17.4734,
+    "data_bot_id": "S500_rep2_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.003G348100.1",
+    "data_signal": 4.61015,
+    "data_bot_id": "S10_rep1_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Sobic.001G301300.1",
+    "data_signal": 0.0760417,
+    "data_bot_id": "S500_rep2_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.001G196900.1",
+    "data_signal": 19.8905,
+    "data_bot_id": "S10_rep3_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Sobic.002G234300.1",
+    "data_signal": 13.7032,
+    "data_bot_id": "S500_rep2_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Sobic.004G169000.1",
+    "data_signal": 21.1743,
+    "data_bot_id": "S500_rep1_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Sobic.010G068400.1",
+    "data_signal": 118.333,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.009G231800.1",
+    "data_signal": 18.8295,
+    "data_bot_id": "S10_rep2_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Sobic.009G060300.1",
+    "data_signal": 17.6388,
+    "data_bot_id": "S500_rep1_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.004G303150.1",
+    "data_signal": 0.0,
+    "data_bot_id": "S10_rep1_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.005G135566.1",
+    "data_signal": 0.0,
+    "data_bot_id": "S10_rep2_TPM"
+  },
+  {
+    "db": "sorghum_sulfur_stress",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.008G139700.1",
+    "data_signal": 5.90575,
+    "data_bot_id": "S10_rep2_TPM"
+  }
+]

@@ -872,6 +872,20 @@
           }
         }
       }
+    },
+    "heterodera_schachtii": {
+      "source": "eplant",
+      "platform": "rna_seq",
+      "views": {
+        "eplant_arabidopsis": [
+          "Heterodera schachtii"
+        ]
+      },
+      "validation": {
+        "n_samples": 30,
+        "n_pass": 30,
+        "n_fail": 0
+      }
     }
   },
   "arachis": {
@@ -1483,22 +1497,6 @@
       "views": {
         "efp_grape": [
           "grape developmental"
-        ]
-      },
-      "validation": {
-        "n_samples": 30,
-        "n_pass": 30,
-        "n_fail": 0
-      }
-    }
-  },
-  "heterodera": {
-    "heterodera_schachtii": {
-      "source": "eplant",
-      "platform": "rna_seq",
-      "views": {
-        "eplant_arabidopsis": [
-          "Heterodera schachtii"
         ]
       },
       "validation": {

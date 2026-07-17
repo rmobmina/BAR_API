@@ -1,0 +1,242 @@
+[
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "Sh04_g025480",
+    "data_signal": 1.43469,
+    "data_bot_id": "SRR1979662_SC_138M"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Sh_209L02_contig-1_g000020",
+    "data_signal": 40.6012,
+    "data_bot_id": "SRR1979668_SC_234B0"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 1,
+    "proj_id": "1",
+    "data_probeset_id": "Sh01_g039680",
+    "data_signal": 0.422801,
+    "data_bot_id": "SRR1979665_SC_163M"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "Sh07_g013730",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1979666_SC_163P"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 18,
+    "proj_id": "1",
+    "data_probeset_id": "Sh02_g014410",
+    "data_signal": 0.254522,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "Sh10_g017520",
+    "data_signal": 0.405473,
+    "data_bot_id": "SRR1979658_SC_234P"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "Sh03_g023940",
+    "data_signal": 0.301919,
+    "data_bot_id": "SRR1979669_SC_234M"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "Sh01_g043650",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1974519_DP3"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 14,
+    "proj_id": "1",
+    "data_probeset_id": "Sh01_g009760",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1979656_SC_138B"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "Sh01_g030560",
+    "data_signal": 0.932196,
+    "data_bot_id": "SRR1239363_DP1"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "Sh06_g006340",
+    "data_signal": 9.90172,
+    "data_bot_id": "SRR1979660_SC_235M"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 14,
+    "proj_id": "1",
+    "data_probeset_id": "Sh06_g008140",
+    "data_signal": 0.838576,
+    "data_bot_id": "SRR1979656_SC_138B"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "Sh03_g006280",
+    "data_signal": 0.525906,
+    "data_bot_id": "SRR1979658_SC_234P"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 16,
+    "proj_id": "1",
+    "data_probeset_id": "Sh08_g000580",
+    "data_signal": 3.07395,
+    "data_bot_id": "SRR1979661_SC_235P"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 9,
+    "proj_id": "1",
+    "data_probeset_id": "Sh05_g010570",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1979663_SC_138P"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 18,
+    "proj_id": "1",
+    "data_probeset_id": "Sh10_g002700",
+    "data_signal": 6.11005,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 16,
+    "proj_id": "1",
+    "data_probeset_id": "Sh01_g009340",
+    "data_signal": 3.69063,
+    "data_bot_id": "SRR1979661_SC_235P"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 14,
+    "proj_id": "1",
+    "data_probeset_id": "Sh10_g007660",
+    "data_signal": 25.3884,
+    "data_bot_id": "SRR1979656_SC_138B"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "Sh06_g010600",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1979662_SC_138M"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "Sh_135M16_g000010",
+    "data_signal": 14.8191,
+    "data_bot_id": "SRR1979662_SC_138M"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "Sh08_g004460",
+    "data_signal": 0.657204,
+    "data_bot_id": "SRR1979660_SC_235M"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 17,
+    "proj_id": "1",
+    "data_probeset_id": "Sh10_g019370",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1979667_SC_234B"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 14,
+    "proj_id": "1",
+    "data_probeset_id": "Sh02_g009050",
+    "data_signal": 4.59932,
+    "data_bot_id": "SRR1979656_SC_138B"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "Sh09_g006640",
+    "data_signal": 185.665,
+    "data_bot_id": "SRR1979659_SC_235B0"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "Sh05_g010660",
+    "data_signal": 55.6109,
+    "data_bot_id": "SRR1239364_DP2"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "Sh05_g007420",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR1979658_SC_234P"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 16,
+    "proj_id": "1",
+    "data_probeset_id": "Sh02_g017370",
+    "data_signal": 3.44303,
+    "data_bot_id": "SRR1979661_SC_235P"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "Sh04_g014090",
+    "data_signal": 83.8514,
+    "data_bot_id": "SRR1979664_SC_163B"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "Sh04_g026390",
+    "data_signal": 10.0471,
+    "data_bot_id": "SRR1239364_DP2"
+  },
+  {
+    "db": "sugarcane_leaf",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Sh01_g004820",
+    "data_signal": 6.77226,
+    "data_bot_id": "SRR1979668_SC_234B0"
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 58,
+    "data_probeset_id": "LOC_Os10g35640",
+    "data_signal": 0.123039,
+    "data_bot_id": "W40_s4_r4"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 61,
+    "data_probeset_id": "LOC_Os08g08690",
+    "data_signal": 2.0669,
+    "data_bot_id": "D40_s2_r1"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 28,
+    "data_probeset_id": "LOC_Os12g29980",
+    "data_signal": 0.0,
+    "data_bot_id": "D30_s4_r2"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 54,
+    "data_probeset_id": "LOC_Os07g04220",
+    "data_signal": 0.391056,
+    "data_bot_id": "W40_s5_r3"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 52,
+    "data_probeset_id": "LOC_Os09g37870",
+    "data_signal": 0.0,
+    "data_bot_id": "W40_s3_r3"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 37,
+    "data_probeset_id": "LOC_Os02g43050",
+    "data_signal": 0.0223112,
+    "data_bot_id": "D30_s3_r4"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 68,
+    "data_probeset_id": "LOC_Os02g55370",
+    "data_signal": 25.0523,
+    "data_bot_id": "D40_s4_r2"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "LOC_Os01g66130",
+    "data_signal": 0.329494,
+    "data_bot_id": "W30_s3_r1"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 35,
+    "data_probeset_id": "LOC_Os02g46560",
+    "data_signal": 0.0,
+    "data_bot_id": "D30_s6_r3"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 29,
+    "data_probeset_id": "LOC_Os10g41870",
+    "data_signal": 2.10287,
+    "data_bot_id": "D30_s5_r2"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "LOC_Os02g18510",
+    "data_signal": 0.109893,
+    "data_bot_id": "W30_s3_r1"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "LOC_Os04g52074",
+    "data_signal": 1.33509,
+    "data_bot_id": "W30_s4_r3"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 73,
+    "data_probeset_id": "LOC_Os06g44900",
+    "data_signal": 0.267707,
+    "data_bot_id": "D40_s4_r3"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "LOC_Os08g01910",
+    "data_signal": 1.61719,
+    "data_bot_id": "D30_s3_r1"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 68,
+    "data_probeset_id": "LOC_Os11g41260",
+    "data_signal": 0.190051,
+    "data_bot_id": "D40_s4_r2"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "LOC_Os01g51040",
+    "data_signal": 0.559654,
+    "data_bot_id": "W30_s3_r2"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 54,
+    "data_probeset_id": "LOC_Os09g24810",
+    "data_signal": 0.0,
+    "data_bot_id": "W40_s5_r3"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 16,
+    "data_probeset_id": "LOC_Os08g25240",
+    "data_signal": 0.0,
+    "data_bot_id": "W30_s2_r4"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "LOC_Os01g26410",
+    "data_signal": 0.0,
+    "data_bot_id": "W30_s4_r1"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 63,
+    "data_probeset_id": "LOC_Os07g04650",
+    "data_signal": 0.0,
+    "data_bot_id": "D40_s4_r1"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 74,
+    "data_probeset_id": "LOC_Os01g01430",
+    "data_signal": 0.0501257,
+    "data_bot_id": "D40_s5_r3"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 59,
+    "data_probeset_id": "LOC_Os10g41800",
+    "data_signal": 1.81028,
+    "data_bot_id": "W40_s5_r4"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 80,
+    "data_probeset_id": "LOC_Os03g13640",
+    "data_signal": 5.81029,
+    "data_bot_id": "D40_s6_r4"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "LOC_Os05g40050",
+    "data_signal": 0.0544421,
+    "data_bot_id": "W30_s4_r3"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 40,
+    "data_probeset_id": "LOC_Os01g38680",
+    "data_signal": 0.0,
+    "data_bot_id": "D30_s6_r4"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 16,
+    "data_probeset_id": "LOC_Os02g01350",
+    "data_signal": 2.22424,
+    "data_bot_id": "W30_s2_r4"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 55,
+    "data_probeset_id": "LOC_Os07g39720",
+    "data_signal": 1.90473,
+    "data_bot_id": "W40_s6_r3"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 63,
+    "data_probeset_id": "LOC_Os04g51100",
+    "data_signal": 0.0693737,
+    "data_bot_id": "D40_s4_r1"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 67,
+    "data_probeset_id": "LOC_Os11g47820",
+    "data_signal": 6.63739,
+    "data_bot_id": "D40_s3_r2"
+  },
+  {
+    "db": "rice_drought_heat_stress",
+    "proj_id": "1",
+    "sample_id": 62,
+    "data_probeset_id": "LOC_Os03g51910",
+    "data_signal": 0.142532,
+    "data_bot_id": "D40_s3_r1"
+  }
+]

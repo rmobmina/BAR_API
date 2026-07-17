@@ -1,0 +1,242 @@
+[
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Luan_Oskar_Trin_266976",
+    "data_signal": 0.653,
+    "data_bot_id": "Flowers"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Luan_Oskar_Trin_179317",
+    "data_signal": 0.284,
+    "data_bot_id": "Big_pod"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Luan_Oskar_Trin_271300",
+    "data_signal": 0.57,
+    "data_bot_id": "Pedicels"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Luan_Oskar_PB23_104876",
+    "data_signal": 9.898,
+    "data_bot_id": "Small_pod_with_seeds"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Luan_Oskar_Trin_270848",
+    "data_signal": 0.0,
+    "data_bot_id": "Leaves"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Luan_Oskar_Trin_175465",
+    "data_signal": 48.064,
+    "data_bot_id": "Leaves"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Luan_Oskar_Trin_116725",
+    "data_signal": 6.233,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Luan_Oskar_Trin_127693",
+    "data_signal": 40.878,
+    "data_bot_id": "Stem"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Luan_Oskar_Trin_114028",
+    "data_signal": 0.0,
+    "data_bot_id": "Roots"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Luan_Oskar_Trin_174492",
+    "data_signal": 0.0,
+    "data_bot_id": "Small_pod_with_seeds"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Luan_Oskar_Trin_145357",
+    "data_signal": 1.832,
+    "data_bot_id": "Pedicels"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Luan_Oskar_Trin_173154",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Luan_Oskar_Trin_165318",
+    "data_signal": 2.624,
+    "data_bot_id": "Big_pod"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Luan_Oskar_Trin_122248",
+    "data_signal": 7.674,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Luan_Oskar_Trin_222043",
+    "data_signal": 0.0,
+    "data_bot_id": "Roots"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Luan_Oskar_Trin_122182",
+    "data_signal": 0.149,
+    "data_bot_id": "Small_pod_with_seeds"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Luan_Oskar_Trin_121931",
+    "data_signal": 19.019,
+    "data_bot_id": "Leaves"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Luan_Oskar_Trin_204402",
+    "data_signal": 4.369,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Luan_Oskar_Trin_143078",
+    "data_signal": 0.554,
+    "data_bot_id": "Flowers"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Luan_Oskar_Trin_263196",
+    "data_signal": 0.0,
+    "data_bot_id": "Big_pod"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Luan_Oskar_Trin_184672",
+    "data_signal": 24.7945,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Luan_Oskar_Trin_135846",
+    "data_signal": 0.0,
+    "data_bot_id": "Big_pod"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Luan_Oskar_Trin_167498",
+    "data_signal": 35.436,
+    "data_bot_id": "Pedicels"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Luan_Oskar_Trin_131507",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Luan_Oskar_Trin_196582",
+    "data_signal": 0.355,
+    "data_bot_id": "Flowers"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Luan_Oskar_Trin_205006",
+    "data_signal": 14.8015,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Luan_Oskar_Trin_277049",
+    "data_signal": 0.199,
+    "data_bot_id": "Flowers"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Luan_Oskar_Trin_123811",
+    "data_signal": 0.0,
+    "data_bot_id": "Roots"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Luan_Oskar_Trin_144828",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "lupin_whole_plant",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Luan_Oskar_Trin_174593",
+    "data_signal": 0.131,
+    "data_bot_id": "Stem"
+  }
+]

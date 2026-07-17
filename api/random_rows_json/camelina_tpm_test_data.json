@@ -1,0 +1,272 @@
+[
+  {
+    "db": "camelina_tpm",
+    "sample_id": "3",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa09g044100.1",
+    "data_signal": 10.7,
+    "data_bot_id": "cotyledon_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "29",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa12g009120.1",
+    "data_signal": 10.862,
+    "data_bot_id": "root_2"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "19",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa17g019490.1",
+    "data_signal": 0.26,
+    "data_bot_id": "late_seed_development_1"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "28",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa19g020940.1",
+    "data_signal": 0.0,
+    "data_bot_id": "root_1"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "7",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa11g092980.1",
+    "data_signal": 2.714,
+    "data_bot_id": "early_seed_development_1"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "9",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa16g053610.1",
+    "data_signal": 0.591,
+    "data_bot_id": "early_seed_development_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "13",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa11g093490.2",
+    "data_signal": 0.114,
+    "data_bot_id": "germinating_seed_1"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "11",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa01g035330.1",
+    "data_signal": 7.999,
+    "data_bot_id": "flower_2"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "36",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa12g055600.1",
+    "data_signal": 1.787,
+    "data_bot_id": "young_leaf_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "1",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa06g018520.1",
+    "data_signal": 19.781,
+    "data_bot_id": "cotyledon_1"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "14",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa19g021430.1",
+    "data_signal": 0.441,
+    "data_bot_id": "germinating_seed_2"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "21",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa08g051730.1",
+    "data_signal": 0.0,
+    "data_bot_id": "late_seed_development_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "35",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa04g061960.1",
+    "data_signal": 0.384,
+    "data_bot_id": "young_leaf_2"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "3",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa08g027540.1",
+    "data_signal": 3.829,
+    "data_bot_id": "cotyledon_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "2",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa09g051370.1",
+    "data_signal": 2.923,
+    "data_bot_id": "cotyledon_2"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "36",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa20g021790.1",
+    "data_signal": 0.0,
+    "data_bot_id": "young_leaf_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "29",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa06g018540.1",
+    "data_signal": 0.0,
+    "data_bot_id": "root_2"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "27",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa20g005740.1",
+    "data_signal": 0.668,
+    "data_bot_id": "senescing_leaf_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "3",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa11g064400.1",
+    "data_signal": 0.539,
+    "data_bot_id": "cotyledon_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "30",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa10g007790.1",
+    "data_signal": 2.079,
+    "data_bot_id": "root_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "5",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa19g033720.1",
+    "data_signal": 2.426,
+    "data_bot_id": "early_mid_seed_development_2"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "30",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa11g071980.1",
+    "data_signal": 16.894,
+    "data_bot_id": "root_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "11",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa01g006350.1",
+    "data_signal": 36.212,
+    "data_bot_id": "flower_2"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "18",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa14g059220.1",
+    "data_signal": 0.0,
+    "data_bot_id": "bud_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "31",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa12g005100.1",
+    "data_signal": 3.622,
+    "data_bot_id": "stem_1"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "36",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa06g004850.1",
+    "data_signal": 0.0,
+    "data_bot_id": "young_leaf_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "30",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa09g018590.1",
+    "data_signal": 0.0,
+    "data_bot_id": "root_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "30",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa06g040750.1",
+    "data_signal": 6.187,
+    "data_bot_id": "root_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "30",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa07g012040.1",
+    "data_signal": 0.0,
+    "data_bot_id": "root_3"
+  },
+  {
+    "db": "camelina_tpm",
+    "sample_id": "33",
+    "proj_id": "1",
+    "sample_file_name": null,
+    "data_probeset_id": "Csa11g013230.1",
+    "data_signal": 2.485,
+    "data_bot_id": "stem_3"
+  }
+]

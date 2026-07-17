@@ -1,0 +1,242 @@
+[
+  {
+    "db": "poplar_xylem",
+    "sample_id": 74,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.001G016500",
+    "data_signal": 0.0,
+    "data_bot_id": "JEFF303"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 143,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.001G095000",
+    "data_signal": 2.4834,
+    "data_bot_id": "SHEL151"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 106,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.005G158800",
+    "data_signal": 0.0,
+    "data_bot_id": "LONG295"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 136,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.012G144200",
+    "data_signal": 5.4953,
+    "data_bot_id": "QCTN161"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 65,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.003G212900",
+    "data_signal": 0.0,
+    "data_bot_id": "HRSO274"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 100,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.006G007600",
+    "data_signal": 0.9779,
+    "data_bot_id": "LILC265"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 49,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.T174200",
+    "data_signal": 1.7773,
+    "data_bot_id": "HOMA212"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 171,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.014G191300",
+    "data_signal": 1.708,
+    "data_bot_id": "STHA212"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 120,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.010G013200",
+    "data_signal": 14.675,
+    "data_bot_id": "NBON291"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 111,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.002G023700",
+    "data_signal": 9.4127,
+    "data_bot_id": "MCHA194"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 150,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.004G235300",
+    "data_signal": 11.8075,
+    "data_bot_id": "SKNP109"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 86,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.007G130700",
+    "data_signal": 0.0354,
+    "data_bot_id": "KLNG203"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 176,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.019G113100",
+    "data_signal": 0.0,
+    "data_bot_id": "TLKH115"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 51,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.009G111700",
+    "data_signal": 0.0,
+    "data_bot_id": "HOMA215"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 186,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.009G158500",
+    "data_signal": 0.0929,
+    "data_bot_id": "WHTE282"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 185,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.017G132700",
+    "data_signal": 0.0,
+    "data_bot_id": "WHTE281"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 93,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.017G002400",
+    "data_signal": 0.4081,
+    "data_bot_id": "LAFY301"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 19,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.008G166700",
+    "data_signal": 0.0,
+    "data_bot_id": "CNYH281"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 94,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.010G167000",
+    "data_signal": 0.0,
+    "data_bot_id": "LAFY302"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 49,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.011G098500",
+    "data_signal": 1.9403,
+    "data_bot_id": "HOMA212"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 59,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.005G217300",
+    "data_signal": 5.9086,
+    "data_bot_id": "HOMD215"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 45,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.009G038600",
+    "data_signal": 13.0072,
+    "data_bot_id": "HAZH102"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 148,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.017G075200",
+    "data_signal": 26.912,
+    "data_bot_id": "SKNP103"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 185,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.004G078800",
+    "data_signal": 12.2706,
+    "data_bot_id": "WHTE281"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 35,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.002G117400",
+    "data_signal": 1.8996,
+    "data_bot_id": "GLCB261"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 50,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.T085100",
+    "data_signal": 0.0,
+    "data_bot_id": "HOMA214"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 186,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.016G141600",
+    "data_signal": 8.3853,
+    "data_bot_id": "WHTE282"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 150,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.013G081800",
+    "data_signal": 6.0514,
+    "data_bot_id": "SKNP109"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 195,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.010G203300",
+    "data_signal": 0.2339,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "poplar_xylem",
+    "sample_id": 71,
+    "proj_id": "1",
+    "data_probeset_id": "Potri.T113300",
+    "data_signal": 0.5381,
+    "data_bot_id": "JASP304"
+  }
+]

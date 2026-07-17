@@ -1,0 +1,242 @@
+[
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "AGQN03004150",
+    "data_signal": 0.0156964,
+    "data_bot_id": "PK-MFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "AGQN03009541",
+    "data_signal": 0.118407,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "AGQN03005758",
+    "data_signal": 0.0,
+    "data_bot_id": "PK-SHT"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "AGQN03001977",
+    "data_signal": 0.599033,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "AGQN03009379",
+    "data_signal": 0.0,
+    "data_bot_id": "PK-STM"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "AGQN03009140",
+    "data_signal": 0.0,
+    "data_bot_id": "PK-EFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "AGQN03002339",
+    "data_signal": 0.0142278,
+    "data_bot_id": "PK-EFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "AGQN03006710",
+    "data_signal": 1.55451,
+    "data_bot_id": "PK-PFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "AGQN03012316",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "AGQN03000624",
+    "data_signal": 0.337807,
+    "data_bot_id": "PK-SHT"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "AGQN03002212",
+    "data_signal": 3.17381,
+    "data_bot_id": "PK-PFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "AGQN03007794",
+    "data_signal": 0.862595,
+    "data_bot_id": "PK-SHT"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "AGQN03006971",
+    "data_signal": 0.000819831,
+    "data_bot_id": "PK-EFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "AGQN03006037",
+    "data_signal": 1.30377,
+    "data_bot_id": "PK-STM"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "AGQN03005361",
+    "data_signal": 0.0498407,
+    "data_bot_id": "PK-EFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "AGQN03010614",
+    "data_signal": 0.0,
+    "data_bot_id": "PK-SHT"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "AGQN03010558",
+    "data_signal": 0.0,
+    "data_bot_id": "PK-EFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "AGQN03005548",
+    "data_signal": 0.366673,
+    "data_bot_id": "PK-PFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "AGQN03008741",
+    "data_signal": 0.0,
+    "data_bot_id": "PK-STM"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "AGQN03005340",
+    "data_signal": 0.48973,
+    "data_bot_id": "PK-PFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "AGQN03006589",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "AGQN03006854",
+    "data_signal": 2.44684,
+    "data_bot_id": "PK-PFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "AGQN03003491",
+    "data_signal": 0.333253,
+    "data_bot_id": "PK-MFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "AGQN03008687",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "AGQN03003215",
+    "data_signal": 0.55925,
+    "data_bot_id": "PK-EFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "AGQN03006517",
+    "data_signal": 0.0,
+    "data_bot_id": "PK-RT"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "AGQN03000783",
+    "data_signal": 0.586351,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "AGQN03008870",
+    "data_signal": 0.000515319,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "AGQN03000827",
+    "data_signal": 0.00557755,
+    "data_bot_id": "PK-MFLW"
+  },
+  {
+    "db": "cannabis",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "AGQN03007767",
+    "data_signal": 1.16058,
+    "data_bot_id": "PK-SHT"
+  }
+]

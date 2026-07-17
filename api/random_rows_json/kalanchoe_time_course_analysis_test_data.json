@@ -1,0 +1,242 @@
+[
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 24,
+    "data_probeset_id": "Kaladp0070s0059",
+    "data_signal": 0.1875,
+    "data_bot_id": "Kd_LD_16h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 123,
+    "data_probeset_id": "Kaladp0508s0001",
+    "data_signal": 4.6872,
+    "data_bot_id": "Kd_LL_34h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 111,
+    "data_probeset_id": "Kaladp0037s0182",
+    "data_signal": 0.2932,
+    "data_bot_id": "Kd_LL_26h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 121,
+    "data_probeset_id": "Kaladp0094s0148",
+    "data_signal": 175.365,
+    "data_bot_id": "Kd_LL_34h_1"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 142,
+    "data_probeset_id": "Kaladp0096s0006",
+    "data_signal": 16.1724,
+    "data_bot_id": "Kd_LL_48h_1"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 47,
+    "data_probeset_id": "Kaladp0011s0884",
+    "data_signal": 63.8507,
+    "data_bot_id": "Kd_LD_32h_2"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 131,
+    "data_probeset_id": "Kaladp0008s0005",
+    "data_signal": 1.345,
+    "data_bot_id": "Kd_LL_40h_2"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Kaladp0064s0057",
+    "data_signal": 15.6036,
+    "data_bot_id": "Kd_LD_2h_1"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 101,
+    "data_probeset_id": "Kaladp0095s0675",
+    "data_signal": 0.0,
+    "data_bot_id": "Kd_LL_20h_2"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 74,
+    "data_probeset_id": "Kaladp0039s0373",
+    "data_signal": 37.9467,
+    "data_bot_id": "Kd_LL_2h_2"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 82,
+    "data_probeset_id": "Kaladp0095s0181",
+    "data_signal": 86.6188,
+    "data_bot_id": "Kd_LL_8h_1"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 110,
+    "data_probeset_id": "Kaladp0079s0106",
+    "data_signal": 0.0,
+    "data_bot_id": "Kd_LL_26h_2"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 36,
+    "data_probeset_id": "Kaladp0058s0642",
+    "data_signal": 13.4183,
+    "data_bot_id": "Kd_LD_24h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 60,
+    "data_probeset_id": "Kaladp0048s0249",
+    "data_signal": 18.396,
+    "data_bot_id": "Kd_LD_40h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 111,
+    "data_probeset_id": "Kaladp0095s0130",
+    "data_signal": 23.2571,
+    "data_bot_id": "Kd_LL_26h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 112,
+    "data_probeset_id": "Kaladp0292s0006",
+    "data_signal": 12.8344,
+    "data_bot_id": "Kd_LL_28h_1"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 95,
+    "data_probeset_id": "Kaladp0030s0150",
+    "data_signal": 1.9144,
+    "data_bot_id": "Kd_LL_16h_2"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 18,
+    "data_probeset_id": "Kaladp0062s0044",
+    "data_signal": 15.4122,
+    "data_bot_id": "Kd_LD_12h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Kaladp0098s0166",
+    "data_signal": 0.0,
+    "data_bot_id": "Kd_LD_6h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 95,
+    "data_probeset_id": "Kaladp0001s0082",
+    "data_signal": 17.7985,
+    "data_bot_id": "Kd_LL_16h_2"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 57,
+    "data_probeset_id": "Kaladp0091s0172",
+    "data_signal": 55.0436,
+    "data_bot_id": "Kd_LD_38h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 57,
+    "data_probeset_id": "Kaladp0579s0001",
+    "data_signal": 30.6048,
+    "data_bot_id": "Kd_LD_38h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 93,
+    "data_probeset_id": "Kaladp1077s0007",
+    "data_signal": 1.3093,
+    "data_bot_id": "Kd_LL_14h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 128,
+    "data_probeset_id": "Kaladp0024s0334",
+    "data_signal": 0.0329,
+    "data_bot_id": "Kd_LL_38h_2"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Kaladp0048s0031",
+    "data_signal": 78.9057,
+    "data_bot_id": "Kd_LD_8h_1"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 46,
+    "data_probeset_id": "Kaladp0040s0445",
+    "data_signal": 3.5647,
+    "data_bot_id": "Kd_LD_32h_1"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 96,
+    "data_probeset_id": "Kaladp0018s0171",
+    "data_signal": 188.711,
+    "data_bot_id": "Kd_LL_16h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 66,
+    "data_probeset_id": "Kaladp0095s0371",
+    "data_signal": 4.8584,
+    "data_bot_id": "Kd_LD_44h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Kaladp0072s0069",
+    "data_signal": 0.0,
+    "data_bot_id": "Kd_LD_2h_3"
+  },
+  {
+    "db": "kalanchoe_time_course_analysis",
+    "proj_id": "1",
+    "sample_id": 26,
+    "data_probeset_id": "Kaladp0024s0341",
+    "data_signal": 1.2103,
+    "data_bot_id": "Kd_LD_18h_2"
+  }
+]

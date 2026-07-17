@@ -1,0 +1,242 @@
+[
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 21,
+    "data_probeset_id": "Glyma08g23970.1",
+    "data_signal": 116.933,
+    "data_bot_id": "L_IV-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 21,
+    "data_probeset_id": "Glyma01g38780.1",
+    "data_signal": 2.94788,
+    "data_bot_id": "L_IV-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Glyma03g01900.1",
+    "data_signal": 2.65638,
+    "data_bot_id": "C_II-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Glyma03g32191.1",
+    "data_signal": 0.0,
+    "data_bot_id": "L_I-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "Glyma09g00346.2",
+    "data_signal": 4.45432,
+    "data_bot_id": "L_V-1"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 21,
+    "data_probeset_id": "Glyma13g06811.1",
+    "data_signal": 323.284,
+    "data_bot_id": "L_IV-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Glyma03g24110.7",
+    "data_signal": 0.410427,
+    "data_bot_id": "C_II-2"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Glyma07g15720.1",
+    "data_signal": 7.10627,
+    "data_bot_id": "C_III-1"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "Glyma14g05311.1",
+    "data_signal": 4.77663,
+    "data_bot_id": "L_II-2"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "Glyma16g02980.1",
+    "data_signal": 0.570203,
+    "data_bot_id": "L_III-2"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 15,
+    "data_probeset_id": "Glyma06g23447.2",
+    "data_signal": 2.20861,
+    "data_bot_id": "L_II-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "Glyma05g35490.1",
+    "data_signal": 225.05,
+    "data_bot_id": "L_IV-1"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 18,
+    "data_probeset_id": "Glyma08g27794.1",
+    "data_signal": 0.0,
+    "data_bot_id": "L_III-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Glyma03g30930.1",
+    "data_signal": 0.0,
+    "data_bot_id": "C_III-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 15,
+    "data_probeset_id": "Glyma02g47840.1",
+    "data_signal": 0.0,
+    "data_bot_id": "L_II-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Glyma15g03110.1",
+    "data_signal": 6.15173,
+    "data_bot_id": "C_I-2"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Glyma20g13798.1",
+    "data_signal": 0.0,
+    "data_bot_id": "C_II-2"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "Glyma17g15830.1",
+    "data_signal": 2.24475,
+    "data_bot_id": "L_II-1"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Glyma19g45090.2",
+    "data_signal": 18.0588,
+    "data_bot_id": "C_II-2"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "Glyma17g05870.1",
+    "data_signal": 7.85662,
+    "data_bot_id": "L_II-1"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Glyma10g43250.2",
+    "data_signal": 11.3662,
+    "data_bot_id": "L_I-1"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Glyma11g37450.1",
+    "data_signal": 255.299,
+    "data_bot_id": "C_I-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "Glyma03g26850.2",
+    "data_signal": 0.0,
+    "data_bot_id": "L_IV-2"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Glyma13g29660.1",
+    "data_signal": 89.5152,
+    "data_bot_id": "C_I-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "Glyma17g14450.1",
+    "data_signal": 52.2504,
+    "data_bot_id": "L_I-2"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Glyma08g30716.1",
+    "data_signal": 2.84155,
+    "data_bot_id": "L_I-1"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "Glyma07g02820.1",
+    "data_signal": 34.7936,
+    "data_bot_id": "L_II-1"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Glyma04g32390.3",
+    "data_signal": 3.98457,
+    "data_bot_id": "C_II-3"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Glyma11g14271.1",
+    "data_signal": 0.0,
+    "data_bot_id": "C_III-1"
+  },
+  {
+    "db": "soybean_senescence",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Glyma09g15257.1",
+    "data_signal": 0.0,
+    "data_bot_id": "C_III-2"
+  }
+]

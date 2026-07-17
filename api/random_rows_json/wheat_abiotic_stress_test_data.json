@@ -1,0 +1,242 @@
+[
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "TraesCS5D02G520000LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "S1"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "TraesCSU02G239800.1",
+    "data_signal": 0.0,
+    "data_bot_id": "SD5"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 25,
+    "data_probeset_id": "TraesCS4D02G138100LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "SH2"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "TraesCS1D02G096200.1",
+    "data_signal": 0.0,
+    "data_bot_id": "C8"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 32,
+    "data_probeset_id": "TraesCS4D02G288600LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "SHD7"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "TraesCS5A02G143000.1",
+    "data_signal": 58.51,
+    "data_bot_id": "S8"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "TraesCS7D02G063300.1",
+    "data_signal": 0.0,
+    "data_bot_id": "HD4"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "TraesCS7A02G769400LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "S8"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 31,
+    "data_probeset_id": "TraesCS7A02G492900LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "SHD6"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "TraesCS7B02G230400.1",
+    "data_signal": 4.35,
+    "data_bot_id": "D1"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "TraesCS7B02G053100LC.1",
+    "data_signal": 1.68,
+    "data_bot_id": "S8"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "TraesCS6D02G205400.1",
+    "data_signal": 8.13,
+    "data_bot_id": "C4"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 27,
+    "data_probeset_id": "TraesCS2B02G533800LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "SH4"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 27,
+    "data_probeset_id": "TraesCS5A02G272700LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "SH4"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 27,
+    "data_probeset_id": "TraesCS5A02G231000.1",
+    "data_signal": 0.0,
+    "data_bot_id": "SH4"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "TraesCS5A02G291100.2",
+    "data_signal": 0.0,
+    "data_bot_id": "S5"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 31,
+    "data_probeset_id": "TraesCS2D02G095200LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "SHD6"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "TraesCS7A02G204500.1",
+    "data_signal": 0.0,
+    "data_bot_id": "SD5"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 33,
+    "data_probeset_id": "TraesCS2B02G392400.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "TraesCS7D02G410900.1",
+    "data_signal": 0.0,
+    "data_bot_id": "S8"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 26,
+    "data_probeset_id": "TraesCS1A02G311600LC.1",
+    "data_signal": 0.83,
+    "data_bot_id": "SH3"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "TraesCS2B02G339000LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "D1"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "TraesCS2A02G560300LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "H2"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 28,
+    "data_probeset_id": "TraesCS6D02G033000.1",
+    "data_signal": 0.86,
+    "data_bot_id": "SH8"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "TraesCS4A02G353900LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "S5"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "TraesCS2A02G210300LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "S8"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 30,
+    "data_probeset_id": "TraesCS2D02G067200LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "SHD5"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "TraesCS7A02G235200.4",
+    "data_signal": 1.96,
+    "data_bot_id": "C4"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 30,
+    "data_probeset_id": "TraesCS3B02G715700LC.1",
+    "data_signal": 1.06,
+    "data_bot_id": "SHD5"
+  },
+  {
+    "db": "wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "TraesCS4A02G463400LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "HD3"
+  }
+]

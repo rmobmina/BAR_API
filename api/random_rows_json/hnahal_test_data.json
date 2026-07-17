@@ -1,0 +1,302 @@
+[
+  {
+    "db": "hnahal",
+    "sample_id": 2,
+    "proj_id": "GEO:GSE9996",
+    "sample_file_name": null,
+    "data_probeset_id": "263727_at",
+    "data_signal": 252.955,
+    "data_bot_id": "GSM252664",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 1,
+    "proj_id": "1",
+    "sample_file_name": "bot1516.txt",
+    "data_probeset_id": "251053_at",
+    "data_signal": 23.167,
+    "data_bot_id": "bot1516",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 5,
+    "proj_id": "GEO:GSE9996",
+    "sample_file_name": null,
+    "data_probeset_id": "253790_at",
+    "data_signal": 72.0619,
+    "data_bot_id": "GSM252667",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 22,
+    "proj_id": "1",
+    "sample_file_name": "bot1527.txt",
+    "data_probeset_id": "258780_at",
+    "data_signal": 236.614,
+    "data_bot_id": "bot1527",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 11,
+    "proj_id": "1",
+    "sample_file_name": "bot1523.txt",
+    "data_probeset_id": "259913_at",
+    "data_signal": 12.6182,
+    "data_bot_id": "bot1523",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 2,
+    "proj_id": "GEO:GSE19863",
+    "sample_file_name": "GSM496071.txt",
+    "data_probeset_id": "250888_at",
+    "data_signal": 21.78,
+    "data_bot_id": "GSM496071_d0",
+    "channel": "Cy5"
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 8,
+    "proj_id": "GEO:GSE19863",
+    "sample_file_name": "GSM496080_d0.txt",
+    "data_probeset_id": "AFFX-BioDn-5_at",
+    "data_signal": 0.1,
+    "data_bot_id": "GSM496080_d0",
+    "channel": "Cy5"
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 11,
+    "proj_id": "1",
+    "sample_file_name": "bot1523.txt",
+    "data_probeset_id": "265273_at",
+    "data_signal": 179.564,
+    "data_bot_id": "bot1523",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 9,
+    "proj_id": "GEO:GSE9996",
+    "sample_file_name": null,
+    "data_probeset_id": "262291_at",
+    "data_signal": 48.1913,
+    "data_bot_id": "GSM252671",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 12,
+    "proj_id": "GEO:GSE19863",
+    "sample_file_name": "GSM496084.txt",
+    "data_probeset_id": "255569_at",
+    "data_signal": 151.46,
+    "data_bot_id": "GSM496084_d0",
+    "channel": "Cy5"
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 2,
+    "proj_id": "2",
+    "sample_file_name": "2d_CIM_rep2.txt",
+    "data_probeset_id": "250386_at",
+    "data_signal": 58.1182,
+    "data_bot_id": "2d_CIM_rep2",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 17,
+    "proj_id": "GEO:GSE9996",
+    "sample_file_name": null,
+    "data_probeset_id": "266146_at",
+    "data_signal": 47.9298,
+    "data_bot_id": "GSM252679",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 10,
+    "proj_id": "GEO:GSE19863",
+    "sample_file_name": "GSM496082_d0.txt",
+    "data_probeset_id": "257463_at",
+    "data_signal": 0.1,
+    "data_bot_id": "GSM496082_d0",
+    "channel": "Cy5"
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 14,
+    "proj_id": "2",
+    "sample_file_name": "10d_SIM_rep2.txt",
+    "data_probeset_id": "252492_at",
+    "data_signal": 371.621,
+    "data_bot_id": "10d_SIM_rep2",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 2,
+    "proj_id": "GEO:GSE9996",
+    "sample_file_name": null,
+    "data_probeset_id": "253894_at",
+    "data_signal": 4.50286,
+    "data_bot_id": "GSM252664",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 8,
+    "proj_id": "1",
+    "sample_file_name": "bot1521.txt",
+    "data_probeset_id": "256889_at",
+    "data_signal": 101.561,
+    "data_bot_id": "bot1521",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 1,
+    "proj_id": "2",
+    "sample_file_name": "2d_CIM_rep1.txt",
+    "data_probeset_id": "265854_at",
+    "data_signal": 12.4405,
+    "data_bot_id": "2d_CIM_rep1",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 5,
+    "proj_id": "GEO:GSE13596",
+    "sample_file_name": "GSM342142.txt",
+    "data_probeset_id": "244986_at",
+    "data_signal": 850.432,
+    "data_bot_id": "GSM342142",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 4,
+    "proj_id": "GEO:GSE9996",
+    "sample_file_name": null,
+    "data_probeset_id": "259896_at",
+    "data_signal": 69.4017,
+    "data_bot_id": "GSM252666",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 15,
+    "proj_id": "1",
+    "sample_file_name": "bot1331w.txt",
+    "data_probeset_id": "254700_at",
+    "data_signal": 13.1457,
+    "data_bot_id": "bot1331w",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 18,
+    "proj_id": "2",
+    "sample_file_name": "0d_rep1.txt",
+    "data_probeset_id": "255358_at",
+    "data_signal": 1.79789,
+    "data_bot_id": "0d_rep1",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 9,
+    "proj_id": "1",
+    "sample_file_name": "bot1334w.txt",
+    "data_probeset_id": "249356_at",
+    "data_signal": 29.798,
+    "data_bot_id": "bot1334w",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 7,
+    "proj_id": "GEO:GSE19863",
+    "sample_file_name": "GSM496079.txt",
+    "data_probeset_id": "259102_at",
+    "data_signal": 68.35,
+    "data_bot_id": "GSM496079",
+    "channel": "Cy5"
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 15,
+    "proj_id": "2",
+    "sample_file_name": "10d_SIM_rep3.txt",
+    "data_probeset_id": "253166_at",
+    "data_signal": 27.6425,
+    "data_bot_id": "10d_SIM_rep3",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 23,
+    "proj_id": "1",
+    "sample_file_name": "bot1528.txt",
+    "data_probeset_id": "257091_at",
+    "data_signal": 2.34715,
+    "data_bot_id": "bot1528",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 16,
+    "proj_id": "GEO:GSE9996",
+    "sample_file_name": null,
+    "data_probeset_id": "264864_at",
+    "data_signal": 108.906,
+    "data_bot_id": "GSM252678",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 14,
+    "proj_id": "2",
+    "sample_file_name": "10d_SIM_rep2.txt",
+    "data_probeset_id": "252797_at",
+    "data_signal": 3.04836,
+    "data_bot_id": "10d_SIM_rep2",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 10,
+    "proj_id": "GEO:GSE19863",
+    "sample_file_name": "GSM496082_d0.txt",
+    "data_probeset_id": "260050_at",
+    "data_signal": 0.1,
+    "data_bot_id": "GSM496082_d0",
+    "channel": "Cy5"
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 7,
+    "proj_id": "GEO:GSE13596",
+    "sample_file_name": "GSM342148.txt",
+    "data_probeset_id": "258892_at",
+    "data_signal": 909.008,
+    "data_bot_id": "GSM342148",
+    "channel": null
+  },
+  {
+    "db": "hnahal",
+    "sample_id": 17,
+    "proj_id": "1",
+    "sample_file_name": "bot1601.txt",
+    "data_probeset_id": "251758_at",
+    "data_signal": 863.502,
+    "data_bot_id": "bot1601",
+    "channel": null
+  }
+]

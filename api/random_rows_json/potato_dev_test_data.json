@@ -1,0 +1,242 @@
+[
+  {
+    "db": "potato_dev",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400019960",
+    "data_signal": 19.3851,
+    "data_bot_id": "BV_P_P"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG402016244",
+    "data_signal": 5.69737,
+    "data_bot_id": "BV_T"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 37,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400025132",
+    "data_signal": 30.0836,
+    "data_bot_id": "S16"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 9,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400031122",
+    "data_signal": 5.20384,
+    "data_bot_id": "BV_Q"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400023333",
+    "data_signal": 7.61453,
+    "data_bot_id": "BV_P_R"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 34,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400002268",
+    "data_signal": 0.0,
+    "data_bot_id": "S13"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400029676",
+    "data_signal": 0.0,
+    "data_bot_id": "BV_P_S"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 1,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400003217",
+    "data_signal": 0.0,
+    "data_bot_id": "BV_L"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 16,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400010389",
+    "data_signal": 1.21475,
+    "data_bot_id": "PE_P_N"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 37,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG402024509",
+    "data_signal": 22.0473,
+    "data_bot_id": "S16"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400006642",
+    "data_signal": 15.7793,
+    "data_bot_id": "BV_P_R"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400018651",
+    "data_signal": 11.2933,
+    "data_bot_id": "BV_P_V"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 23,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400023097",
+    "data_signal": 10.7533,
+    "data_bot_id": "S1"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 22,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400030779",
+    "data_signal": 0.0,
+    "data_bot_id": "STD_AH"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400016829",
+    "data_signal": 3.91727,
+    "data_bot_id": "BV_P_R"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 9,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400045285",
+    "data_signal": 0.0,
+    "data_bot_id": "BV_Q"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400031214",
+    "data_signal": 0.0,
+    "data_bot_id": "BV_P_R"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 23,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400016621",
+    "data_signal": 0.0,
+    "data_bot_id": "S1"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 33,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400040808",
+    "data_signal": 0.0,
+    "data_bot_id": "S12"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 9,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400009096",
+    "data_signal": 2.35714,
+    "data_bot_id": "BV_Q"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400011109",
+    "data_signal": 0.0,
+    "data_bot_id": "BV_P_R"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400025414",
+    "data_signal": 10.1856,
+    "data_bot_id": "PE_BV_P_S"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 26,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400003495",
+    "data_signal": 197.069,
+    "data_bot_id": "S4"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 20,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG404014059",
+    "data_signal": 0.0,
+    "data_bot_id": "STD_AE"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 31,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400043015",
+    "data_signal": 0.0,
+    "data_bot_id": "S9"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 27,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400016423",
+    "data_signal": 12.2844,
+    "data_bot_id": "S5"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 9,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400001801",
+    "data_signal": 19.796,
+    "data_bot_id": "BV_Q"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 8,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400023592",
+    "data_signal": 1.28692,
+    "data_bot_id": "BV_P_X"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 31,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400032530",
+    "data_signal": 7.43722,
+    "data_bot_id": "S9"
+  },
+  {
+    "db": "potato_dev",
+    "sample_id": 30,
+    "proj_id": "1",
+    "data_probeset_id": "PGSC0003DMG400046684",
+    "data_signal": 0.0,
+    "data_bot_id": "S8"
+  }
+]

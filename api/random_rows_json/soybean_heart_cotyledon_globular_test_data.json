@@ -1,0 +1,242 @@
+[
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "Glyma15g13815",
+    "data_signal": 17.5,
+    "data_bot_id": "globular_seedcoatendothelium"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "Glyma14g02210",
+    "data_signal": 0.07,
+    "data_bot_id": "heart_embryo"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 21,
+    "data_probeset_id": "Glyma15g42100",
+    "data_signal": 4.33,
+    "data_bot_id": "heart_seedcoatendothelium"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "Glyma17g07190",
+    "data_signal": 0.0,
+    "data_bot_id": "globular_embryo"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "Glyma10g09340",
+    "data_signal": 0.03,
+    "data_bot_id": "globular_seedcoatouterintegument"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 16,
+    "data_probeset_id": "Glyma09g31820",
+    "data_signal": 3.7,
+    "data_bot_id": "globular_seedcoatinnerintegument"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 21,
+    "data_probeset_id": "Glyma04g08960",
+    "data_signal": 1.2,
+    "data_bot_id": "heart_seedcoatendothelium"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Glyma20g39191",
+    "data_signal": 0.14,
+    "data_bot_id": "cotyledon_seedcoatepidermis"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Glyma01g38720",
+    "data_signal": 0.81,
+    "data_bot_id": "globular_endosperm"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "Glyma11g31596",
+    "data_signal": 0.0,
+    "data_bot_id": "globular_seedcoatouterintegument"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Glyma17g33075",
+    "data_signal": 2.51,
+    "data_bot_id": "cotyledon_seedcoatouterintegument"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 27,
+    "data_probeset_id": "Glyma09g03860",
+    "data_signal": 6.815,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "Glyma09g21060",
+    "data_signal": 0.0,
+    "data_bot_id": "globular_seedcoatepidermis"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 15,
+    "data_probeset_id": "Glyma08g42045",
+    "data_signal": 0.06,
+    "data_bot_id": "globular_seedcoathilum"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Glyma19g29210",
+    "data_signal": 65.25,
+    "data_bot_id": "cotyledon_seedcoatepidermis"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Glyma12g09445",
+    "data_signal": 8.72,
+    "data_bot_id": "cotyledon_seedcoatepidermis"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Glyma08g21410",
+    "data_signal": 0.0,
+    "data_bot_id": "cotyledon_seedcoatendothelium"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "Glyma13g38050",
+    "data_signal": 0.05,
+    "data_bot_id": "globular_seedcoatepidermis"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 15,
+    "data_probeset_id": "Glyma03g00890",
+    "data_signal": 11.89,
+    "data_bot_id": "globular_seedcoathilum"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Glyma03g164",
+    "data_signal": 1.38,
+    "data_bot_id": "globular_endosperm"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Glyma02g09620",
+    "data_signal": 0.0,
+    "data_bot_id": "cotyledon_seedcoatendothelium"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "Glyma10g26990",
+    "data_signal": 0.0,
+    "data_bot_id": "heart_seedcoatepidermis"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "Glyma07g09700",
+    "data_signal": 0.0,
+    "data_bot_id": "globular_seedcoatepidermis"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Glyma13g23000",
+    "data_signal": 0.06,
+    "data_bot_id": "cotyledon_embryo"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "Glyma09g36290",
+    "data_signal": 38.95,
+    "data_bot_id": "heart_embryo"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "Glyma15g09090",
+    "data_signal": 35.85,
+    "data_bot_id": "heart_seedcoatepidermis"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 24,
+    "data_probeset_id": "Glyma05g06330",
+    "data_signal": 0.07,
+    "data_bot_id": "heart_seedcoatinnerintegument"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 21,
+    "data_probeset_id": "Glyma07g27410",
+    "data_signal": 39.84,
+    "data_bot_id": "heart_seedcoatendothelium"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "Glyma20g36490",
+    "data_signal": 10.88,
+    "data_bot_id": "globular_seedcoatepidermis"
+  },
+  {
+    "db": "soybean_heart_cotyledon_globular",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "Glyma18g40521",
+    "data_signal": 0.0,
+    "data_bot_id": "heart_seedcoatepidermis"
+  }
+]

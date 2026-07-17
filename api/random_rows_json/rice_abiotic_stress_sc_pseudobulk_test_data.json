@@ -1,0 +1,242 @@
+[
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 50,
+    "data_probeset_id": "Os10g0552800",
+    "data_signal": 0.0128858,
+    "data_bot_id": "MildSalt_Bundle_Sheath"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 69,
+    "data_probeset_id": "Os11g0586100",
+    "data_signal": 0.481522,
+    "data_bot_id": "ModerateSalt_Phloem_CC"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 71,
+    "data_probeset_id": "Os02g0748300",
+    "data_signal": 0.244176,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Os03g0265800",
+    "data_signal": 0.071307,
+    "data_bot_id": "WW_Procambium"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 23,
+    "data_probeset_id": "Os08g0296900",
+    "data_signal": 0.551475,
+    "data_bot_id": "MildDr_Mestome_Sheath"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Os07g0639600",
+    "data_signal": 0.372958,
+    "data_bot_id": "WW_Mesophyll_Precursor"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 26,
+    "data_probeset_id": "Os02g0588300",
+    "data_signal": 0.0967221,
+    "data_bot_id": "MildDr_Phloem_SE"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 68,
+    "data_probeset_id": "Os09g0309100",
+    "data_signal": 0.0639205,
+    "data_bot_id": "ModerateSalt_Phloem_SE"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 45,
+    "data_probeset_id": "Os03g0247000",
+    "data_signal": 0.403797,
+    "data_bot_id": "MildSalt_Epidermis"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 16,
+    "data_probeset_id": "Os02g0720200",
+    "data_signal": 0.371137,
+    "data_bot_id": "MildDr_Epidermal_Precursor"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 31,
+    "data_probeset_id": "Os03g0763000",
+    "data_signal": 0.279727,
+    "data_bot_id": "ModerateDr_Epidermis"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 57,
+    "data_probeset_id": "Os01g0721000",
+    "data_signal": 0.0490824,
+    "data_bot_id": "ModerateSalt_Meristem"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 64,
+    "data_probeset_id": "Os08g0549300",
+    "data_signal": 0.786289,
+    "data_bot_id": "ModerateSalt_Bundle_Sheath"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 66,
+    "data_probeset_id": "Os06g0142050",
+    "data_signal": 0.121411,
+    "data_bot_id": "ModerateSalt_Xylem"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "Os01g0683550",
+    "data_signal": 0.0440795,
+    "data_bot_id": "MildDr_Large_Parenchyma"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 57,
+    "data_probeset_id": "Os08g0266600",
+    "data_signal": 0.364237,
+    "data_bot_id": "ModerateSalt_Meristem"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 59,
+    "data_probeset_id": "Os09g0512950",
+    "data_signal": 0.0166783,
+    "data_bot_id": "ModerateSalt_Epidermis"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "Os11g0307500",
+    "data_signal": 0.0199688,
+    "data_bot_id": "MildDr_Mesophyll"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 41,
+    "data_probeset_id": "Os04g0547900",
+    "data_signal": 0.450416,
+    "data_bot_id": "ModerateDr_Phloem_CC"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 53,
+    "data_probeset_id": "Os01g0138100",
+    "data_signal": 0.0,
+    "data_bot_id": "MildSalt_Xylem_Parenchyma"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 64,
+    "data_probeset_id": "Os07g0642600",
+    "data_signal": 0.533307,
+    "data_bot_id": "ModerateSalt_Bundle_Sheath"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Os01g0377700",
+    "data_signal": 0.1369,
+    "data_bot_id": "WW_Mesophyll"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 61,
+    "data_probeset_id": "Os11g0294600",
+    "data_signal": 0.356865,
+    "data_bot_id": "ModerateSalt_Mesophyll"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Os02g0690800",
+    "data_signal": 0.263323,
+    "data_bot_id": "WW_Xylem"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 48,
+    "data_probeset_id": "Os05g0497675",
+    "data_signal": 0.138228,
+    "data_bot_id": "MildSalt_Large_Parenchyma"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Os11g0465200",
+    "data_signal": 0.015817,
+    "data_bot_id": "WW_Mesophyll_Precursor"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 68,
+    "data_probeset_id": "Os10g0155400",
+    "data_signal": 0.0741877,
+    "data_bot_id": "ModerateSalt_Phloem_SE"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Os03g0646300",
+    "data_signal": 0.0549463,
+    "data_bot_id": "WW_Xylem"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 50,
+    "data_probeset_id": "Os03g0100900",
+    "data_signal": 2.13809,
+    "data_bot_id": "MildSalt_Bundle_Sheath"
+  },
+  {
+    "db": "rice_abiotic_stress_sc_pseudobulk",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Os04g0442100",
+    "data_signal": 0.185238,
+    "data_bot_id": "WW_Mesophyll_Precursor"
+  }
+]

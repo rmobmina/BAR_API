@@ -1,0 +1,242 @@
+[
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "DN74541",
+    "data_signal": 0.0,
+    "data_bot_id": "RNC_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "DN28494",
+    "data_signal": 0.0,
+    "data_bot_id": "ANT_3"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 25,
+    "data_probeset_id": "DN226522",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "DN242215",
+    "data_signal": 0.0,
+    "data_bot_id": "RNC_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "DN253390",
+    "data_signal": 0.0,
+    "data_bot_id": "TFDA_AC_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "DN147843",
+    "data_signal": 0.0,
+    "data_bot_id": "TFDA_AC_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "DN239882",
+    "data_signal": 0.0,
+    "data_bot_id": "GDA_RT_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "DN227872",
+    "data_signal": 0.0,
+    "data_bot_id": "TFDA_AC_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "DN126533",
+    "data_signal": 0.0,
+    "data_bot_id": "TFDA_AT_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "DN8482",
+    "data_signal": 0.0,
+    "data_bot_id": "ANT_3"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 23,
+    "data_probeset_id": "DN76609",
+    "data_signal": 0.0,
+    "data_bot_id": "RNC_2"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 16,
+    "data_probeset_id": "DN232254",
+    "data_signal": 0.20682,
+    "data_bot_id": "GDA_RC_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "DN159062",
+    "data_signal": 0.0,
+    "data_bot_id": "GDA_RC_2"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "DN33241",
+    "data_signal": 0.0,
+    "data_bot_id": "RNT_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "DN129260",
+    "data_signal": 0.528333,
+    "data_bot_id": "RNC_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "DN229874",
+    "data_signal": 0.0,
+    "data_bot_id": "RNT_2"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "DN177164",
+    "data_signal": 0.0,
+    "data_bot_id": "ANT_3"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "DN82215",
+    "data_signal": 0.0,
+    "data_bot_id": "ANT_3"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "DN160562",
+    "data_signal": 0.134024,
+    "data_bot_id": "TFDA_AC_2"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "DN179953",
+    "data_signal": 0.0,
+    "data_bot_id": "TFDA_AC_3"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 15,
+    "data_probeset_id": "DN126471",
+    "data_signal": 0.0,
+    "data_bot_id": "GDA_RT_3"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "DN190229",
+    "data_signal": 0.110876,
+    "data_bot_id": "TFDA_AT_3"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "DN224254",
+    "data_signal": 0.0,
+    "data_bot_id": "TFDA_AT_3"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 25,
+    "data_probeset_id": "DN12315",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "DN18050",
+    "data_signal": 0.0,
+    "data_bot_id": "ANC_3"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "DN60520",
+    "data_signal": 0.0,
+    "data_bot_id": "RNC_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 18,
+    "data_probeset_id": "DN117635",
+    "data_signal": 0.0,
+    "data_bot_id": "GDA_RC_3"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 18,
+    "data_probeset_id": "DN29057",
+    "data_signal": 0.0,
+    "data_bot_id": "GDA_RC_3"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "DN202601",
+    "data_signal": 0.685919,
+    "data_bot_id": "RNC_1"
+  },
+  {
+    "db": "mangosteen_diseased_vs_normal",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "DN255382",
+    "data_signal": 0.0,
+    "data_bot_id": "RNT_1"
+  }
+]

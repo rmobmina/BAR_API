@@ -1,0 +1,242 @@
+[
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "TraesCS4D02G295000.3",
+    "data_signal": 0.0,
+    "data_bot_id": "Leptotene_rep2"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 33,
+    "data_probeset_id": "TraesCS3B02G671100LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Pollen_rep3"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "TraesCS7B02G520700LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Leptotene_rep3"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "TraesCS5D02G615400LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "FlagLeaf_rep1"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "TraesCS6A02G187000.1",
+    "data_signal": 19.83,
+    "data_bot_id": "Diplotene_rep1"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 30,
+    "data_probeset_id": "TraesCS4A02G107900LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Anther_rep3"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "TraesCS4A02G468500.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Zygotene_rep2"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 34,
+    "data_probeset_id": "TraesCSU02G397100LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 34,
+    "data_probeset_id": "TraesCS1A02G438800.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "TraesCS5D02G482100LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Diplotene_rep2"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 34,
+    "data_probeset_id": "TraesCS3A02G111000LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "TraesCS5D02G430500.1",
+    "data_signal": 0.69,
+    "data_bot_id": "Leaf_rep2"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "TraesCS1A02G564900LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Metaphase-I_rep1"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 34,
+    "data_probeset_id": "TraesCS3D02G287900.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 25,
+    "data_probeset_id": "TraesCS3D02G344500LC.2",
+    "data_signal": 0.0,
+    "data_bot_id": "Metaphase-II_rep1"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "TraesCS2B02G663800LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Leptotene_rep3"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "TraesCS3A02G634300LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Diplotene_rep1"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 15,
+    "data_probeset_id": "TraesCS4A02G301600.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Zygotene_rep3"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 31,
+    "data_probeset_id": "TraesCS5D02G343100LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Pollen_rep1"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 21,
+    "data_probeset_id": "TraesCS3B02G265700LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Diplotene_rep3"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "TraesCS2A02G314700LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Leptotene_rep1"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 26,
+    "data_probeset_id": "TraesCS6B02G385800.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Metaphase-II_rep2"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "TraesCS5D02G350500.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Leaf_rep1"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 18,
+    "data_probeset_id": "TraesCS4A02G315000.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Pachytene_rep3"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 18,
+    "data_probeset_id": "TraesCS7A02G252300.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Pachytene_rep3"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "TraesCS7B02G281500.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Metaphase-I_rep1"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 30,
+    "data_probeset_id": "TraesCS4D02G271700LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Anther_rep3"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "TraesCS3D02G213800LC.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Zygotene_rep2"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 26,
+    "data_probeset_id": "TraesCS1D02G295400.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Metaphase-II_rep2"
+  },
+  {
+    "db": "wheat_meiosis",
+    "proj_id": "1",
+    "sample_id": 23,
+    "data_probeset_id": "TraesCS2B02G565200.1",
+    "data_signal": 13.62,
+    "data_bot_id": "Metaphase-I_rep2"
+  }
+]

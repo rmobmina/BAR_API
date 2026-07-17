@@ -1,0 +1,242 @@
+[
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 56,
+    "data_probeset_id": "TrturSVE3B02G00969500",
+    "data_signal": 0.0,
+    "data_bot_id": "NH4NO3_application_shoots_4h_R2"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 37,
+    "data_probeset_id": "TrturSVE2A02G00300570",
+    "data_signal": 0.0,
+    "data_bot_id": "Salinity_stress_root_4h_R1"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "TrturSVE4B02G01174960",
+    "data_signal": 10.11,
+    "data_bot_id": "Control_root_4h_R3"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 52,
+    "data_probeset_id": "TrturSVE7A02G01853110",
+    "data_signal": 0.0,
+    "data_bot_id": "NH4NO3_application_root_24h_R1"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 33,
+    "data_probeset_id": "TrturSVE4A02G01013650",
+    "data_signal": 0.0,
+    "data_bot_id": "Water_stress_shoots_4h_R3"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 61,
+    "data_probeset_id": "TrturSVE3A02G00761740",
+    "data_signal": 1.65,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "TrturSVE2A02G00436990",
+    "data_signal": 0.0,
+    "data_bot_id": "Control_shoots_24h_R3"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 58,
+    "data_probeset_id": "TrturSVE3A02G00647910",
+    "data_signal": 0.0,
+    "data_bot_id": "NH4NO3_application_shoots_24h_R1"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "TrturSVE4A02G01010880",
+    "data_signal": 0.0,
+    "data_bot_id": "Control_root_24h_R3"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 30,
+    "data_probeset_id": "TrturSVE7B02G02015910",
+    "data_signal": 0.0,
+    "data_bot_id": "Water_stress_root_24h_R3"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 55,
+    "data_probeset_id": "TrturSVE3B02G00843170",
+    "data_signal": 0.0,
+    "data_bot_id": "NH4NO3_application_shoots_4h_R1"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 55,
+    "data_probeset_id": "TrturSVE4A02G01113260",
+    "data_signal": 0.0,
+    "data_bot_id": "NH4NO3_application_shoots_4h_R1"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 48,
+    "data_probeset_id": "TrturSVE2B02G00597600",
+    "data_signal": 1.48,
+    "data_bot_id": "Salinity_stress_shoots_24h_R3"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "TrturSVE6B02G01727080",
+    "data_signal": 0.0,
+    "data_bot_id": "Control_root_24h_R3"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "TrturSVE6B02G01798630",
+    "data_signal": 0.0,
+    "data_bot_id": "Heat_stress_shoots_4h_R1"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 43,
+    "data_probeset_id": "TrturSVE4B02G01150100",
+    "data_signal": 0.2,
+    "data_bot_id": "Salinity_stress_shoots_4h_R1"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "TrturSVE5B02G01450200",
+    "data_signal": 0.0,
+    "data_bot_id": "Control_shoots_24h_R1"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "TrturSVE2B02G00580080",
+    "data_signal": 0.0,
+    "data_bot_id": "Heat_stress_shoots_4h_R2"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "TrturSVE7A02G01911390",
+    "data_signal": 0.0,
+    "data_bot_id": "Control_root_4h_R2"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 49,
+    "data_probeset_id": "TrturSVE1A02G00066260",
+    "data_signal": 0.14,
+    "data_bot_id": "NH4NO3_application_root_4h_R1"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 55,
+    "data_probeset_id": "TrturSVE2B02G00633330",
+    "data_signal": 0.0,
+    "data_bot_id": "NH4NO3_application_shoots_4h_R1"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 59,
+    "data_probeset_id": "TrturSVE3B02G00886630",
+    "data_signal": 0.0,
+    "data_bot_id": "NH4NO3_application_shoots_24h_R2"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 21,
+    "data_probeset_id": "TrturSVE7B02G02057240",
+    "data_signal": 0.0,
+    "data_bot_id": "Heat_stress_shoots_4h_R3"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 26,
+    "data_probeset_id": "TrturSVE1B02G00273180",
+    "data_signal": 10.32,
+    "data_bot_id": "Water_stress_root_4h_R2"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 57,
+    "data_probeset_id": "TrturSVE1B02G00184390",
+    "data_signal": 0.0,
+    "data_bot_id": "NH4NO3_application_shoots_4h_R3"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 44,
+    "data_probeset_id": "TrturSVE5A02G01348760",
+    "data_signal": 0.0,
+    "data_bot_id": "Salinity_stress_shoots_4h_R2"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 34,
+    "data_probeset_id": "TrturSVE7A02G01934240",
+    "data_signal": 0.0,
+    "data_bot_id": "Water_stress_shoots_24h_R1"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "TrturSVE6B02G01774430",
+    "data_signal": 49.27,
+    "data_bot_id": "Control_root_24h_R3"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 38,
+    "data_probeset_id": "TrturSVE7A02G01958690",
+    "data_signal": 0.0,
+    "data_bot_id": "Salinity_stress_root_4h_R2"
+  },
+  {
+    "db": "durum_wheat_abiotic_stress",
+    "proj_id": "1",
+    "sample_id": 18,
+    "data_probeset_id": "TrturSVE7A02G01899590",
+    "data_signal": 0.11,
+    "data_bot_id": "Heat_stress_root_24h_R3"
+  }
+]

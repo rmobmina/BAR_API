@@ -1,0 +1,242 @@
+[
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Zm00001eb396390",
+    "data_signal": 0.108109,
+    "data_bot_id": "root-3hrs"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Zm00001eb004140",
+    "data_signal": 5.1933,
+    "data_bot_id": "shoot-2d"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Zm00001eb248130",
+    "data_signal": 0.0,
+    "data_bot_id": "shoot-30"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Zm00001eb343190",
+    "data_signal": 16.3756,
+    "data_bot_id": "root-30"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Zm00001eb002510",
+    "data_signal": 460.623,
+    "data_bot_id": "shoot-3hrs"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Zm00001eb055120",
+    "data_signal": 0.366637,
+    "data_bot_id": "root-1d"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Zm00001eb077780",
+    "data_signal": 18.6497,
+    "data_bot_id": "shoot-0"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Zm00001eb316560",
+    "data_signal": 0.00653467,
+    "data_bot_id": "root-0"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Zm00001eb103520",
+    "data_signal": 0.0,
+    "data_bot_id": "root-3hrs"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Zm00001eb183400",
+    "data_signal": 17.1237,
+    "data_bot_id": "shoot-3hrs"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Zm00001eb432520",
+    "data_signal": 0.0,
+    "data_bot_id": "shoot-30"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Zm00001eb338090",
+    "data_signal": 0.0,
+    "data_bot_id": "root-1d"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Zm00001eb283890",
+    "data_signal": 0.80245,
+    "data_bot_id": "shoot-3hrs"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Zm00001eb423570",
+    "data_signal": 481.007,
+    "data_bot_id": "shoot-0"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "Zm00001eb162070",
+    "data_signal": 4.46041,
+    "data_bot_id": "root-1d30m"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Zm00001eb067920",
+    "data_signal": 18.9015,
+    "data_bot_id": "shoot-0"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Zm00001eb112780",
+    "data_signal": 4.67884,
+    "data_bot_id": "shoot-1d"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Zm00001eb240030",
+    "data_signal": 0.0,
+    "data_bot_id": "root-1d"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Zm00001eb182870",
+    "data_signal": 2.49715,
+    "data_bot_id": "root-0"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Zm00001eb316530",
+    "data_signal": 11.097,
+    "data_bot_id": "root-2d"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Zm00001eb226020",
+    "data_signal": 25.6669,
+    "data_bot_id": "root-1d"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Zm00001eb006060",
+    "data_signal": 0.0,
+    "data_bot_id": "root-3hrs"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Zm00001eb091910",
+    "data_signal": 0.0,
+    "data_bot_id": "shoot-3hrs"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Zm00001eb006430",
+    "data_signal": 0.418971,
+    "data_bot_id": "root-0"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Zm00001eb288470",
+    "data_signal": 0.0,
+    "data_bot_id": "root-2d"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Zm00001eb295480",
+    "data_signal": 29.9132,
+    "data_bot_id": "shoot-1d"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Zm00001eb136880",
+    "data_signal": 132.949,
+    "data_bot_id": "root-2d"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Zm00001eb046470",
+    "data_signal": 0.102051,
+    "data_bot_id": "root-1d"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Zm00001eb393670",
+    "data_signal": 7.02735,
+    "data_bot_id": "shoot-30"
+  },
+  {
+    "db": "maize_nitrogen_use_efficiency",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Zm00001eb344670",
+    "data_signal": 0.0,
+    "data_bot_id": "root-30"
+  }
+]

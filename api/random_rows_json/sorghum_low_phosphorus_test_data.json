@@ -1,0 +1,242 @@
+[
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.001G119800",
+    "data_signal": 10.1349,
+    "data_bot_id": "G3BHR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Sobic.009G154900",
+    "data_signal": 15.6818,
+    "data_bot_id": "G3AHR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.002G311000",
+    "data_signal": 8.12496,
+    "data_bot_id": "G3BHR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Sobic.003G152400",
+    "data_signal": 6.26844,
+    "data_bot_id": "G3ALR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.005G024400",
+    "data_signal": 0.368586,
+    "data_bot_id": "G3CHR2-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.008G058400",
+    "data_signal": 1.18557,
+    "data_bot_id": "G3BLR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.001G162233",
+    "data_signal": 5.3138,
+    "data_bot_id": "G3CLR1-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.009G023600",
+    "data_signal": 0.797525,
+    "data_bot_id": "G3BLR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Sobic.008G007800",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.008G140200",
+    "data_signal": 2.91829,
+    "data_bot_id": "G3CLR1-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.002G123800",
+    "data_signal": 0.0,
+    "data_bot_id": "G3CHR2-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.007G052800",
+    "data_signal": 9.65681,
+    "data_bot_id": "G3BLR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.004G000100",
+    "data_signal": 0.0353678,
+    "data_bot_id": "G3CLR1-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.004G320200",
+    "data_signal": 0.0982862,
+    "data_bot_id": "G3BLR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.003G238000",
+    "data_signal": 1.44604,
+    "data_bot_id": "G3BHR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Sobic.010G073600",
+    "data_signal": 21.0329,
+    "data_bot_id": "G3ALR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.003G405500",
+    "data_signal": 12.5077,
+    "data_bot_id": "G3BLR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.007G069101",
+    "data_signal": 0.526192,
+    "data_bot_id": "G3BLR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Sobic.009G118300",
+    "data_signal": 4.40827,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Sobic.006G246900",
+    "data_signal": 30.987,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.001G226200",
+    "data_signal": 0.303649,
+    "data_bot_id": "G3BHR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Sobic.008G056500",
+    "data_signal": 0.0,
+    "data_bot_id": "G3ALR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Sobic.001G322400",
+    "data_signal": 7.45126,
+    "data_bot_id": "G3ALR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.002G346100",
+    "data_signal": 17.3743,
+    "data_bot_id": "G3BHR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.002G315800",
+    "data_signal": 10.6939,
+    "data_bot_id": "G3BHR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Sobic.002G240100",
+    "data_signal": 0.0,
+    "data_bot_id": "G3AHR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.008G078966",
+    "data_signal": 0.0,
+    "data_bot_id": "G3BHR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Sobic.006G036900",
+    "data_signal": 0.0,
+    "data_bot_id": "G3ALR-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.004G053300",
+    "data_signal": 28.5966,
+    "data_bot_id": "G3CLR1-tpm"
+  },
+  {
+    "db": "sorghum_low_phosphorus",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.006G140500",
+    "data_signal": 0.0,
+    "data_bot_id": "G3BLR-tpm"
+  }
+]

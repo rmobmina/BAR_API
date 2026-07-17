@@ -1,0 +1,242 @@
+[
+  {
+    "db": "tomato_root",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc08g006025",
+    "data_signal": 0.0,
+    "data_bot_id": "AtWER_4"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc06g050250",
+    "data_signal": 15.456,
+    "data_bot_id": "AtPEP_3"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 43,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc01g110880",
+    "data_signal": 0.0,
+    "data_bot_id": "SlWOX5_3"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 43,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc01g080430",
+    "data_signal": 3.49709,
+    "data_bot_id": "SlWOX5_3"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 46,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc07g055280",
+    "data_signal": 6.56241,
+    "data_bot_id": "SlSHR_2"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 23,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc06g076070",
+    "data_signal": 0.0,
+    "data_bot_id": "S18_3"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc00g008110",
+    "data_signal": 0.0,
+    "data_bot_id": "AtPEP_3"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 28,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc10g007770",
+    "data_signal": 11.1143,
+    "data_bot_id": "SlCO2_4"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 43,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc05g016260",
+    "data_signal": 0.0,
+    "data_bot_id": "SlWOX5_3"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc00g013160",
+    "data_signal": 0.677387,
+    "data_bot_id": "AtWER_4"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 38,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc07g022920",
+    "data_signal": 0.765864,
+    "data_bot_id": "S32_2"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 29,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc01g017700",
+    "data_signal": 0.0,
+    "data_bot_id": "SlRPL11C_1"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 21,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc01g090590",
+    "data_signal": 1.13075,
+    "data_bot_id": "S18_1"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc12g035860",
+    "data_signal": 0.0,
+    "data_bot_id": "SlPEP_2"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc04g053070",
+    "data_signal": 0.0,
+    "data_bot_id": "SlPEP_3"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 26,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc05g050990",
+    "data_signal": 0.274613,
+    "data_bot_id": "SlCO2_2"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 20,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc05g024245",
+    "data_signal": 0.873449,
+    "data_bot_id": "35S_4"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc08g082320",
+    "data_signal": 2.58219,
+    "data_bot_id": "SlPEP_3"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc02g081070",
+    "data_signal": 16.7501,
+    "data_bot_id": "AtWER_2"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 33,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc02g072330",
+    "data_signal": 0.0,
+    "data_bot_id": "SlACT2_1"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc09g063010",
+    "data_signal": 0.284461,
+    "data_bot_id": "SlPEP_3"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 43,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc09g065900",
+    "data_signal": 0.0,
+    "data_bot_id": "SlWOX5_3"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 21,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc08g014120",
+    "data_signal": 5.81403,
+    "data_bot_id": "S18_1"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 43,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc09g098240",
+    "data_signal": 7.81001,
+    "data_bot_id": "SlWOX5_3"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 22,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc02g021600",
+    "data_signal": 5.4112,
+    "data_bot_id": "S18_2"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 44,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc06g059830",
+    "data_signal": 0.0,
+    "data_bot_id": "SlWOX5_4"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 18,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc09g098225",
+    "data_signal": 0.289837,
+    "data_bot_id": "35S_2"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 18,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc05g013840",
+    "data_signal": 0.0,
+    "data_bot_id": "35S_2"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 29,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc01g107960",
+    "data_signal": 0.0,
+    "data_bot_id": "SlRPL11C_1"
+  },
+  {
+    "db": "tomato_root",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Solyc05g006860",
+    "data_signal": 0.0271108,
+    "data_bot_id": "SlPEP_3"
+  }
+]

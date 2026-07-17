@@ -1,0 +1,242 @@
+[
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 60,
+    "data_probeset_id": "CquiG00000001214",
+    "data_signal": 0.0,
+    "data_bot_id": "Ca_R_4"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 69,
+    "data_probeset_id": "CquiG00000032614",
+    "data_signal": 2.94634,
+    "data_bot_id": "Fe_R_1"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 66,
+    "data_probeset_id": "CquiG00000027208",
+    "data_signal": 11.0648,
+    "data_bot_id": "Cu_R_2"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 97,
+    "data_probeset_id": "CquiG00000027403",
+    "data_signal": 12.9112,
+    "data_bot_id": "S_R_1"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 73,
+    "data_probeset_id": "CquiG00000044438",
+    "data_signal": 10.9534,
+    "data_bot_id": "K_R_1"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 47,
+    "data_probeset_id": "CquiG00000027240",
+    "data_signal": 0.0,
+    "data_bot_id": "S_L_3"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 62,
+    "data_probeset_id": "CquiG00000028978",
+    "data_signal": 0.0,
+    "data_bot_id": "Ctrl_R_2"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "CquiG00000018344",
+    "data_signal": 0.539588,
+    "data_bot_id": "Ctrl_L_1"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 96,
+    "data_probeset_id": "CquiG00000030045",
+    "data_signal": 0.689781,
+    "data_bot_id": "P_R_4"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 30,
+    "data_probeset_id": "CquiG00000039633",
+    "data_signal": 0.0,
+    "data_bot_id": "Mn_L_2"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 42,
+    "data_probeset_id": "CquiG00000036525",
+    "data_signal": 7.56029,
+    "data_bot_id": "P_L_2"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 89,
+    "data_probeset_id": "CquiG00000015924",
+    "data_signal": 8.77026,
+    "data_bot_id": "N_R_1"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 58,
+    "data_probeset_id": "CquiG00000044716",
+    "data_signal": 8.52032,
+    "data_bot_id": "Ca_R_2"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 84,
+    "data_probeset_id": "CquiG00000039967",
+    "data_signal": 0.0,
+    "data_bot_id": "Mn_R_4"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 74,
+    "data_probeset_id": "CquiG00000038506",
+    "data_signal": 37.2126,
+    "data_bot_id": "K_R_2"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 36,
+    "data_probeset_id": "CquiG00000001659",
+    "data_signal": 3.54292,
+    "data_bot_id": "Mo_L_4"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 105,
+    "data_probeset_id": "CquiG00000030878",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 63,
+    "data_probeset_id": "CquiG00000030243",
+    "data_signal": 13.3512,
+    "data_bot_id": "Ctrl_R_3"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 30,
+    "data_probeset_id": "CquiG00000005220",
+    "data_signal": 32.1294,
+    "data_bot_id": "Mn_L_2"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 16,
+    "data_probeset_id": "CquiG00000000055",
+    "data_signal": 1.57549,
+    "data_bot_id": "Cu_L_4"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 33,
+    "data_probeset_id": "CquiG00000006398",
+    "data_signal": 2.7077,
+    "data_bot_id": "Mo_L_1"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 80,
+    "data_probeset_id": "CquiG00000034069",
+    "data_signal": 6.02443,
+    "data_bot_id": "Mg_R_4"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "CquiG00000039611",
+    "data_signal": 0.0,
+    "data_bot_id": "Fe_L_4"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "CquiG00000035458",
+    "data_signal": 9.54106,
+    "data_bot_id": "B_L_3"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 80,
+    "data_probeset_id": "CquiG00000024498",
+    "data_signal": 8.53043,
+    "data_bot_id": "Mg_R_4"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 66,
+    "data_probeset_id": "CquiG00000030483",
+    "data_signal": 17.7862,
+    "data_bot_id": "Cu_R_2"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 66,
+    "data_probeset_id": "CquiG00000018322",
+    "data_signal": 0.904455,
+    "data_bot_id": "Cu_R_2"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 81,
+    "data_probeset_id": "CquiG00000007899",
+    "data_signal": 5.19146,
+    "data_bot_id": "Mn_R_1"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 82,
+    "data_probeset_id": "CquiG00000048216",
+    "data_signal": 27.124,
+    "data_bot_id": "Mn_R_2"
+  },
+  {
+    "db": "quinoa_nutrient",
+    "proj_id": "1",
+    "sample_id": 79,
+    "data_probeset_id": "CquiG00000040985",
+    "data_signal": 9.36944,
+    "data_bot_id": "Mg_R_3"
+  }
+]

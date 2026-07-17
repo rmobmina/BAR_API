@@ -1,0 +1,272 @@
+[
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 103,
+    "data_probeset_id": "AT2G21130",
+    "data_signal": 154.238,
+    "data_bot_id": "SRR3581864",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 96,
+    "data_probeset_id": "AT2G30840",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR3581857",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 103,
+    "data_probeset_id": "AT5G32053",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR3581864",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 46,
+    "data_probeset_id": "AT4G22050",
+    "data_signal": 0.404493,
+    "data_bot_id": "SRR3581710",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 89,
+    "data_probeset_id": "AT5G45260",
+    "data_signal": 0.433273,
+    "data_bot_id": "SRR3581850",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "AT3G28180",
+    "data_signal": 33.2012,
+    "data_bot_id": "SRR3581347",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 61,
+    "data_probeset_id": "AT5G09310",
+    "data_signal": 9.02967,
+    "data_bot_id": "SRR3581730",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "AT5G39450",
+    "data_signal": 4.81514,
+    "data_bot_id": "SRR3581672",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 115,
+    "data_probeset_id": "AT1G78635",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR3581876",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 80,
+    "data_probeset_id": "AT3G47021",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR3581841",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 26,
+    "data_probeset_id": "AT4G33090",
+    "data_signal": 27.846,
+    "data_bot_id": "SRR3581690",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 93,
+    "data_probeset_id": "AT2G18790",
+    "data_signal": 18.3925,
+    "data_bot_id": "SRR3581854",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 53,
+    "data_probeset_id": "AT1G72275",
+    "data_signal": 3.34384,
+    "data_bot_id": "SRR3581717",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 34,
+    "data_probeset_id": "AT5G20790",
+    "data_signal": 10.8814,
+    "data_bot_id": "SRR3581698",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 67,
+    "data_probeset_id": "AT3G45600",
+    "data_signal": 5.56928,
+    "data_bot_id": "SRR3581736",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 116,
+    "data_probeset_id": "AT1G32220",
+    "data_signal": 12.9842,
+    "data_bot_id": "SRR3581877",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 138,
+    "data_probeset_id": "AT4G34415",
+    "data_signal": 3.69594,
+    "data_bot_id": "SRR3581899",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 61,
+    "data_probeset_id": "AT5G17250",
+    "data_signal": 2.82873,
+    "data_bot_id": "SRR3581730",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "AT4G35905",
+    "data_signal": 6.94356,
+    "data_bot_id": "SRR3581676",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 101,
+    "data_probeset_id": "AT1G59940",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR3581862",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "AT5G25754",
+    "data_signal": 25.7353,
+    "data_bot_id": "SRR3581676",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 121,
+    "data_probeset_id": "AT3G45510",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR3581882",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 89,
+    "data_probeset_id": "AT3G26742",
+    "data_signal": 0.0832845,
+    "data_bot_id": "SRR3581850",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 103,
+    "data_probeset_id": "AT5G46080",
+    "data_signal": 1.21644,
+    "data_bot_id": "SRR3581864",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 48,
+    "data_probeset_id": "AT3G03345",
+    "data_signal": 0.0,
+    "data_bot_id": "SRR3581712",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 51,
+    "data_probeset_id": "AT2G04350",
+    "data_signal": 19.0417,
+    "data_bot_id": "SRR3581715",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "AT5G05150",
+    "data_signal": 0.0482109,
+    "data_bot_id": "SRR3581672",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "AT5G06610",
+    "data_signal": 1.5747,
+    "data_bot_id": "SRR3581683",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 27,
+    "data_probeset_id": "AT2G24040",
+    "data_signal": 3.07419,
+    "data_bot_id": "SRR3581691",
+    "data_call": null
+  },
+  {
+    "db": "klepikova",
+    "proj_id": "1",
+    "sample_id": 139,
+    "data_probeset_id": "AT4G37320",
+    "data_signal": 4.87875,
+    "data_bot_id": "Med_CTRL",
+    "data_call": null
+  }
+]

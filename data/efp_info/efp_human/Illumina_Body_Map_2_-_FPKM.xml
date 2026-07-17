@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE specimen SYSTEM "http://www.bar.utoronto.ca/efp/cgi-bin/data/efp_config.dtd">
+<specimen name="Human">
+    <view name="all" class="" db="human_body_map_2" dbGroup="FPKM" img="Illumina_Body_Map_2_-_FPKM_image.png">
+        <extra name="BioGPS paper" link="http://www.pnas.org/content/101/16/6062.long" parameters="No"
+               coords="767,737,831,737,831,751,767,751"/>
+        <extra name="Link to data and processing protocol"
+               link="http://www.cureffi.org/2013/07/11/tissue-specific-gene-expression-data-based-on-human-bodymap-2-0/"
+               parameters="No" coords="146,754,881,754,881,770,146,770"/>
+        <extra name="Link to Creative Commons license" link="http://creativecommons.org/licenses/by-sa/4.0/" parameters="No"
+               coords="715,717,1011,716,1011,732,715,732"/>
+        <lookup db="None" table="None" geneid_col="None"/>
+        <coords graphX="56" graphY="182" graphWidth="171" graphHeight="99" legendX="0" legendY="512"/>
+        <group name="Illumina">
+            <control sample="CTRL_ILLUMINA"/>
+            <tissue colorKey="#00a79d" name="Adrenal Gland (male)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="63,251,140,251,140,282,63,282"/>
+                <sample name="adrenal"/>
+            </tissue>
+            <tissue colorKey="#00adee" name="Liver (male)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="49,337,154,337,154,399,49,399"/>
+                <sample name="liver"/>
+            </tissue>
+            <tissue colorKey="#a1fc48" name="White Blood Cells (male)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="65,433,141,432,141,497,65,497"/>
+                <sample name="blood"/>
+            </tissue>
+            <tissue colorKey="#eb008b" name="Skeletal Muscle (male)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="67,540,139,540,139,612,67,612"/>
+                <sample name="skeletal_muscle"/>
+            </tissue>
+            <tissue colorKey="#52fb30" name="Lung (male)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="317,223,369,185,373,225,364,263"/>
+                <area coords="363,259,336,276,325,270,326,235"/>
+                <area coords="384,188,418,190,426,257,384,228"/>
+                <area coords="399,236,426,246,423,273,395,260"/>
+                <sample name="lung"/>
+            </tissue>
+            <tissue colorKey="#a246cf" name="Heart (male)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="379,223,398,236,400,283,363,282"/>
+                <sample name="heart"/>
+            </tissue>
+            <tissue colorKey="#2b388f" name="Prostate (male)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="368,415,386,416,386,428,368,428"/>
+                <sample name="prostate"/>
+            </tissue>
+            <tissue colorKey="#2240c0" name="Testes (male)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="364,431,372,431,371,451,364,450"/>
+                <area coords="383,432,390,431,391,449,383,449"/>
+                <sample name="testes"/>
+            </tissue>
+            <tissue colorKey="#41f1c5" name="Thyroid (female)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="648,165,673,165,673,189,648,189"/>
+                <sample name="thyroid"/>
+            </tissue>
+            <tissue colorKey="#ffff00" name="Breast (female)">99
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="611,222,714,222,714,265,611,265"/>
+                <sample name="breast"/>
+            </tissue>
+            <tissue colorKey="#fa3a68" name="Ovary (female)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="633,356,651,357,651,370,633,370"/>
+                <area coords="692,350,713,350,712,364,692,364"/>
+                <sample name="ovary"/>
+            </tissue>
+            <tissue colorKey="#0098ff" name="Brain (female)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="880,81,966,81,966,137,880,137"/>
+                <sample name="brain"/>
+            </tissue>
+            <tissue colorKey="#fbb041" name="Lymph (female)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="917,215,931,215,931,226,917,226"/>
+                <sample name="lymph"/>
+            </tissue>
+            <tissue colorKey="#0c00ff" name="Kidney (female)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="907,283,939,283,940,335,907,335"/>
+                <sample name="kidney"/>
+            </tissue>
+            <tissue colorKey="#966efb" name="Colon (female)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="874,362,971,362,971,506,874,506"/>
+                <sample name="colon"/>
+            </tissue>
+            <tissue colorKey="#f7931d" name="Adipose (female)">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30611"/>
+                <area coords="890,543,957,542,957,610,890,610"/>
+                <sample name="adipose"/>
+            </tissue>
+        </group>
+
+    </view>
+</specimen>

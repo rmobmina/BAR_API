@@ -1,0 +1,242 @@
+[
+  {
+    "db": "selaginella",
+    "sample_id": 42,
+    "proj_id": "1",
+    "data_probeset_id": "Smo412712",
+    "data_signal": 0.0,
+    "data_bot_id": "Aerial-parts_light_7h1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 21,
+    "proj_id": "1",
+    "data_probeset_id": "Smo421235",
+    "data_signal": 0.0,
+    "data_bot_id": "Aerial-parts_dark_7h1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "Smo143777",
+    "data_signal": 17.5401,
+    "data_bot_id": "Aerial-parts_dark_1h2"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 20,
+    "proj_id": "1",
+    "data_probeset_id": "Smo409545",
+    "data_signal": 8.21896,
+    "data_bot_id": "Aerial-parts_dark_5h3"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 36,
+    "proj_id": "1",
+    "data_probeset_id": "Smo131182",
+    "data_signal": 27.0961,
+    "data_bot_id": "Aerial-parts_light_3h1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 35,
+    "proj_id": "1",
+    "data_probeset_id": "Smo437764",
+    "data_signal": 18.5896,
+    "data_bot_id": "Aerial-parts_light_1h6"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 63,
+    "proj_id": "1",
+    "data_probeset_id": "Smo136248",
+    "data_signal": 0.0,
+    "data_bot_id": "Root_edz3"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "Smo439993",
+    "data_signal": 40.7066,
+    "data_bot_id": "Aerial-parts_dark_1h1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 76,
+    "proj_id": "1",
+    "data_probeset_id": "Smo91571",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_top1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 25,
+    "proj_id": "1",
+    "data_probeset_id": "Smo76693",
+    "data_signal": 3.686,
+    "data_bot_id": "Aerial-parts_dark_9h2"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 49,
+    "proj_id": "1",
+    "data_probeset_id": "Smo406519",
+    "data_signal": 0.373891,
+    "data_bot_id": "Aerial-parts_stress_dark1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 76,
+    "proj_id": "1",
+    "data_probeset_id": "Smo430860",
+    "data_signal": 0.202984,
+    "data_bot_id": "Stem_top1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 67,
+    "proj_id": "1",
+    "data_probeset_id": "Smo428769",
+    "data_signal": 0.0,
+    "data_bot_id": "Shoot_meristem_AC1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 67,
+    "proj_id": "1",
+    "data_probeset_id": "Smo137550",
+    "data_signal": 0.0,
+    "data_bot_id": "Shoot_meristem_AC1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "Smo7735",
+    "data_signal": 96.4079,
+    "data_bot_id": "Aerial-parts_dark_1h1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 76,
+    "proj_id": "1",
+    "data_probeset_id": "Smo426567",
+    "data_signal": 0.68255,
+    "data_bot_id": "Stem_top1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 25,
+    "proj_id": "1",
+    "data_probeset_id": "Smo409724",
+    "data_signal": 21.6859,
+    "data_bot_id": "Aerial-parts_dark_9h2"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 69,
+    "proj_id": "1",
+    "data_probeset_id": "Smo90708",
+    "data_signal": 14.4552,
+    "data_bot_id": "Shoot_meristem_AC3"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 81,
+    "proj_id": "1",
+    "data_probeset_id": "Smo84056",
+    "data_signal": 25.7742,
+    "data_bot_id": "Whole_plant2"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 53,
+    "proj_id": "1",
+    "data_probeset_id": "Smo127198",
+    "data_signal": 28.2656,
+    "data_bot_id": "Lateral1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 74,
+    "proj_id": "1",
+    "data_probeset_id": "Smo408705",
+    "data_signal": 125.848,
+    "data_bot_id": "Stem_bottom1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 32,
+    "proj_id": "1",
+    "data_probeset_id": "Smo98177",
+    "data_signal": 1.84195,
+    "data_bot_id": "Aerial-parts_light_1h3"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 30,
+    "proj_id": "1",
+    "data_probeset_id": "Smo270651",
+    "data_signal": 617.932,
+    "data_bot_id": "Aerial-parts_light_1h1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 44,
+    "proj_id": "1",
+    "data_probeset_id": "Smo439521",
+    "data_signal": 48.134,
+    "data_bot_id": "Aerial-parts_light_7h3"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 66,
+    "proj_id": "1",
+    "data_probeset_id": "Smo65833",
+    "data_signal": 4.62316,
+    "data_bot_id": "Root_mz_3"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 75,
+    "proj_id": "1",
+    "data_probeset_id": "Smo34237",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_bottom2"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "Smo115401",
+    "data_signal": 7.99811,
+    "data_bot_id": "Aerial-parts_dark_1h1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "Smo233281",
+    "data_signal": 64.1979,
+    "data_bot_id": "Aerial-parts_dark_3h1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 42,
+    "proj_id": "1",
+    "data_probeset_id": "Smo115478",
+    "data_signal": 0.0,
+    "data_bot_id": "Aerial-parts_light_7h1"
+  },
+  {
+    "db": "selaginella",
+    "sample_id": 64,
+    "proj_id": "1",
+    "data_probeset_id": "Smo232963",
+    "data_signal": 1.30508,
+    "data_bot_id": "Root_mz_1"
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "db": "dna_damage",
+    "sample_id": 23,
+    "proj_id": "1",
+    "data_probeset_id": "AT3G29180",
+    "data_signal": 521.0,
+    "data_bot_id": "col-0_rep2_90min_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 25,
+    "proj_id": "1",
+    "data_probeset_id": "AT3G31422",
+    "data_signal": 0.0,
+    "data_bot_id": "sog1-1_rep1_12hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 29,
+    "proj_id": "1",
+    "data_probeset_id": "AT4G13990",
+    "data_signal": 114.0,
+    "data_bot_id": "sog1-1_rep1_24hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 30,
+    "proj_id": "1",
+    "data_probeset_id": "AT3G43686",
+    "data_signal": 0.0,
+    "data_bot_id": "sog1-1_rep1_24hr_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 32,
+    "proj_id": "1",
+    "data_probeset_id": "AT5G59370",
+    "data_signal": 2.0,
+    "data_bot_id": "sog1-1_rep1_3hr_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 40,
+    "proj_id": "1",
+    "data_probeset_id": "AT5G18085",
+    "data_signal": 0.0,
+    "data_bot_id": "sog1-1_rep2_20min_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 31,
+    "proj_id": "1",
+    "data_probeset_id": "AT3G06910",
+    "data_signal": 93.0,
+    "data_bot_id": "sog1-1_rep1_3hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "AT1G67195",
+    "data_signal": 154.0,
+    "data_bot_id": "col-0_rep2_12hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 17,
+    "proj_id": "1",
+    "data_probeset_id": "AT2G01930",
+    "data_signal": 194.0,
+    "data_bot_id": "col-0_rep2_24hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 29,
+    "proj_id": "1",
+    "data_probeset_id": "AT1G19290",
+    "data_signal": 158.0,
+    "data_bot_id": "sog1-1_rep1_24hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 20,
+    "proj_id": "1",
+    "data_probeset_id": "AT5G28465",
+    "data_signal": 0.0,
+    "data_bot_id": "col-0_rep2_3hr_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 29,
+    "proj_id": "1",
+    "data_probeset_id": "AT4G21213",
+    "data_signal": 0.0,
+    "data_bot_id": "sog1-1_rep1_24hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "AT2G28850",
+    "data_signal": 0.0,
+    "data_bot_id": "col-0_rep2_20min_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 45,
+    "proj_id": "1",
+    "data_probeset_id": "AT3G21940",
+    "data_signal": 0.0,
+    "data_bot_id": "sog1-1_rep2_6hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "AT1G78160",
+    "data_signal": 0.0,
+    "data_bot_id": "col-0_rep1_12hr_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 22,
+    "proj_id": "1",
+    "data_probeset_id": "AT2G35420",
+    "data_signal": 27.0,
+    "data_bot_id": "col-0_rep2_6hr_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 9,
+    "proj_id": "1",
+    "data_probeset_id": "AT3G18630",
+    "data_signal": 39.0,
+    "data_bot_id": "col-0_rep1_6hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 24,
+    "proj_id": "1",
+    "data_probeset_id": "AT1G62301",
+    "data_signal": 0.0,
+    "data_bot_id": "col-0_rep2_90min_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "AT1G51350",
+    "data_signal": 367.0,
+    "data_bot_id": "col-0_rep1_90min_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 27,
+    "proj_id": "1",
+    "data_probeset_id": "AT1G04870",
+    "data_signal": 272.0,
+    "data_bot_id": "sog1-1_rep1_20min_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 40,
+    "proj_id": "1",
+    "data_probeset_id": "AT5G38490",
+    "data_signal": 0.0,
+    "data_bot_id": "sog1-1_rep2_20min_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 38,
+    "proj_id": "1",
+    "data_probeset_id": "AT3G28611",
+    "data_signal": 1.0,
+    "data_bot_id": "sog1-1_rep2_12hr_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 24,
+    "proj_id": "1",
+    "data_probeset_id": "AT3G21945",
+    "data_signal": 0.0,
+    "data_bot_id": "col-0_rep2_90min_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 25,
+    "proj_id": "1",
+    "data_probeset_id": "AT3G13370",
+    "data_signal": 0.0,
+    "data_bot_id": "sog1-1_rep1_12hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 43,
+    "proj_id": "1",
+    "data_probeset_id": "AT3G03040",
+    "data_signal": 205.0,
+    "data_bot_id": "sog1-1_rep2_3hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 25,
+    "proj_id": "1",
+    "data_probeset_id": "AT1G63290",
+    "data_signal": 515.0,
+    "data_bot_id": "sog1-1_rep1_12hr_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "AT1G66860",
+    "data_signal": 0.0,
+    "data_bot_id": "col-0_rep1_12hr_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "AT1G22110",
+    "data_signal": 9.0,
+    "data_bot_id": "col-0_rep2_20min_minus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 32,
+    "proj_id": "1",
+    "data_probeset_id": "AT2G42870",
+    "data_signal": 33.0,
+    "data_bot_id": "sog1-1_rep1_3hr_plus_Y"
+  },
+  {
+    "db": "dna_damage",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "AT1G17710",
+    "data_signal": 6.0,
+    "data_bot_id": "col-0_rep1_20min_minus_Y"
+  }
+]

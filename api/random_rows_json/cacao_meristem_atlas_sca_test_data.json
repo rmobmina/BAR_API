@@ -1,0 +1,242 @@
+[
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 22,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr8v1_21653",
+    "data_signal": 0.0,
+    "data_bot_id": "MA-PTA-Sca6-S4_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 16,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr2v1_05120",
+    "data_signal": 28.0895,
+    "data_bot_id": "MA-PTA-Sca6-S2_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr3v1_10195",
+    "data_signal": 68.498,
+    "data_bot_id": "MA-PTA-Sca6-S1_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr9v1_26105",
+    "data_signal": 0.0,
+    "data_bot_id": "MA-PTA-Sca6-S1_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 22,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr3v1_10026",
+    "data_signal": 5.89596,
+    "data_bot_id": "MA-PTA-Sca6-S4_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr5v1_14492",
+    "data_signal": 0.0,
+    "data_bot_id": "MA-OTA-Sca6-S1_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 17,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr4v1_12987",
+    "data_signal": 0.0,
+    "data_bot_id": "MA-PTA-Sca6-S2_R2"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr9v1_26503",
+    "data_signal": 0.0,
+    "data_bot_id": "MA-OTA-Sca6-S4_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 22,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr7v1_19573",
+    "data_signal": 45.7445,
+    "data_bot_id": "MA-PTA-Sca6-S4_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 17,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr2v1_06953",
+    "data_signal": 0.0,
+    "data_bot_id": "MA-PTA-Sca6-S2_R2"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr7v1_19123",
+    "data_signal": 26.5376,
+    "data_bot_id": "MA-OTA-Sca6-S2_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 9,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr6v1_18812",
+    "data_signal": 1.52809,
+    "data_bot_id": "MA-OTA-Sca6-S3_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr9v1_23529",
+    "data_signal": 2.74864,
+    "data_bot_id": "MA-OTA-Sca6-S4_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr2v1_07316",
+    "data_signal": 36.146,
+    "data_bot_id": "MA-OTA-Sca6-S1_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 18,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr1v1_02934",
+    "data_signal": 18.7439,
+    "data_bot_id": "MA-PTA-Sca6-S2_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr5v1_13643",
+    "data_signal": 0.723263,
+    "data_bot_id": "MA-OTA-Sca6-S4_R2"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr3v1_08094",
+    "data_signal": 0.0,
+    "data_bot_id": "MA-PTA-Sca6-S1_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 19,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr7v1_19701",
+    "data_signal": 8.41308,
+    "data_bot_id": "MA-PTA-Sca6-S3_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 20,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr5v1_14856",
+    "data_signal": 33.4809,
+    "data_bot_id": "MA-PTA-Sca6-S3_R2"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 22,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr1v1_02338",
+    "data_signal": 0.0,
+    "data_bot_id": "MA-PTA-Sca6-S4_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr3v1_10454",
+    "data_signal": 0.0,
+    "data_bot_id": "MA-PTA-Sca6-S1_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 18,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr9v1_23327",
+    "data_signal": 10.1217,
+    "data_bot_id": "MA-PTA-Sca6-S2_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 21,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr8v1_22104",
+    "data_signal": 1.3613,
+    "data_bot_id": "MA-PTA-Sca6-S3_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr5v1_15785",
+    "data_signal": 67.7834,
+    "data_bot_id": "MA-OTA-Sca6-S3_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 22,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr5v1_16170",
+    "data_signal": 0.0,
+    "data_bot_id": "MA-PTA-Sca6-S4_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 19,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr3v1_08346",
+    "data_signal": 16.5925,
+    "data_bot_id": "MA-PTA-Sca6-S3_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr1v1_03123",
+    "data_signal": 0.0,
+    "data_bot_id": "MA-OTA-Sca6-S4_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr4v1_10772",
+    "data_signal": 7.4983,
+    "data_bot_id": "MA-PTA-Sca6-S1_R3"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 19,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr3v1_09591",
+    "data_signal": 49.31,
+    "data_bot_id": "MA-PTA-Sca6-S3_R1"
+  },
+  {
+    "db": "cacao_meristem_atlas_sca",
+    "sample_id": 24,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr3v1_08305",
+    "data_signal": 30.2985,
+    "data_bot_id": "MA-PTA-Sca6-S4_R3"
+  }
+]

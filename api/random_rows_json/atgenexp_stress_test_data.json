@@ -1,0 +1,302 @@
+[
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 214,
+    "proj_id": "8",
+    "data_probeset_id": "253910_at",
+    "data_signal": 8.17,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_8715"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 120,
+    "proj_id": "4",
+    "data_probeset_id": "249404_at",
+    "data_signal": 39.74,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_4222"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 211,
+    "proj_id": "7",
+    "data_probeset_id": "263735_s_at",
+    "data_signal": 16.88,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_7621"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 166,
+    "proj_id": "6",
+    "data_probeset_id": "253147_at",
+    "data_signal": 61.08,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_6212"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 208,
+    "proj_id": "7",
+    "data_probeset_id": "257727_at",
+    "data_signal": 102.47,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_7522"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 344,
+    "proj_id": "GEO:GSE19700",
+    "data_probeset_id": "262696_at",
+    "data_signal": 11.7933,
+    "data_call": null,
+    "data_p_val": 0.0,
+    "data_bot_id": "GSM491689"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 119,
+    "proj_id": "4",
+    "data_probeset_id": "263955_at",
+    "data_signal": 34.94,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_4221"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 100,
+    "proj_id": "3",
+    "data_probeset_id": "266983_at",
+    "data_signal": 849.24,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_3422"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 95,
+    "proj_id": "3",
+    "data_probeset_id": "261525_at",
+    "data_signal": 210.46,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_3321"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 280,
+    "proj_id": "GEO:GSE15680",
+    "data_probeset_id": "253338_at",
+    "data_signal": 244.264,
+    "data_call": null,
+    "data_p_val": 0.0,
+    "data_bot_id": "GSM392495"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 59,
+    "proj_id": "1",
+    "data_probeset_id": "252654_at",
+    "data_signal": 37.81,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_1621"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 39,
+    "proj_id": "1",
+    "data_probeset_id": "250253_at",
+    "data_signal": 132.72,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_1121"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 327,
+    "proj_id": "GEO:GSE19700",
+    "data_probeset_id": "263201_at",
+    "data_signal": 7.57726,
+    "data_call": null,
+    "data_p_val": 0.0,
+    "data_bot_id": "GSM491672"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 264,
+    "proj_id": "9",
+    "data_probeset_id": "246167_at",
+    "data_signal": 37.37,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_9422"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 335,
+    "proj_id": "GEO:GSE19700",
+    "data_probeset_id": "259142_at",
+    "data_signal": 8.19603,
+    "data_call": null,
+    "data_p_val": 0.0,
+    "data_bot_id": "GSM491680"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 302,
+    "proj_id": "GEO:GSE22274",
+    "data_probeset_id": "261470_at",
+    "data_signal": 22.3541,
+    "data_call": null,
+    "data_p_val": 0.0,
+    "data_bot_id": "GSM554317_rpp4_Emwa1_0.5dpi_rep2"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 84,
+    "proj_id": "2",
+    "data_probeset_id": "246501_at",
+    "data_signal": 83.72,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_2622"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 6,
+    "proj_id": "0",
+    "data_probeset_id": "258378_at",
+    "data_signal": 9.38,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_0712"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 287,
+    "proj_id": "GEO:GSE15680",
+    "data_probeset_id": "246675_at",
+    "data_signal": 55.7354,
+    "data_call": null,
+    "data_p_val": 0.0,
+    "data_bot_id": "GSM392502"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 7,
+    "proj_id": "0",
+    "data_probeset_id": "257051_at",
+    "data_signal": 1.65,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_0721"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 305,
+    "proj_id": "GEO:GSE22274",
+    "data_probeset_id": "251108_at",
+    "data_signal": 31.0465,
+    "data_call": null,
+    "data_p_val": 0.0,
+    "data_bot_id": "GSM554319_rpp4_Emwa1_4dpi_rep1"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 341,
+    "proj_id": "GEO:GSE19700",
+    "data_probeset_id": "246260_at",
+    "data_signal": 92.5512,
+    "data_call": null,
+    "data_p_val": 0.0,
+    "data_bot_id": "GSM491686"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 58,
+    "proj_id": "1",
+    "data_probeset_id": "257611_at",
+    "data_signal": 276.2,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_1612"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 110,
+    "proj_id": "4",
+    "data_probeset_id": "250510_at",
+    "data_signal": 141.13,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_4712"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 140,
+    "proj_id": "5",
+    "data_probeset_id": "252026_at",
+    "data_signal": 94.0,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_5122"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 278,
+    "proj_id": "GEO:GSE15680",
+    "data_probeset_id": "258608_at",
+    "data_signal": 48.8654,
+    "data_call": null,
+    "data_p_val": 0.0,
+    "data_bot_id": "GSM392493"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 68,
+    "proj_id": "2",
+    "data_probeset_id": "265586_at",
+    "data_signal": 73.34,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_2222"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 130,
+    "proj_id": "4",
+    "data_probeset_id": "262134_at",
+    "data_signal": 76.26,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_4512"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 244,
+    "proj_id": "9",
+    "data_probeset_id": "258131_at",
+    "data_signal": 1.99,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_9722"
+  },
+  {
+    "db": "atgenexp_stress",
+    "sample_id": 122,
+    "proj_id": "4",
+    "data_probeset_id": "248070_at",
+    "data_signal": 112.62,
+    "data_call": "",
+    "data_p_val": 0.0,
+    "data_bot_id": "AtGen_6_4312"
+  }
+]

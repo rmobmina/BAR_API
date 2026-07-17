@@ -1,0 +1,242 @@
+[
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 33,
+    "data_probeset_id": "HORVU1Hr1G085840",
+    "data_signal": 0.0,
+    "data_bot_id": "AP_IM_4_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 120,
+    "data_probeset_id": "HORVU7Hr1G087370",
+    "data_signal": 0.0,
+    "data_bot_id": "SP_CS_3_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 205,
+    "data_probeset_id": "HORVU1Hr1G093020",
+    "data_signal": 0.0,
+    "data_bot_id": "WA_IM_stress_4_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 68,
+    "data_probeset_id": "HORVU2Hr1G114100",
+    "data_signal": 0.0,
+    "data_bot_id": "GP_REF2_3_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 150,
+    "data_probeset_id": "HORVU4Hr1G006040",
+    "data_signal": 0.0,
+    "data_bot_id": "SP_IM_stress_1_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 36,
+    "data_probeset_id": "HORVU0Hr1G025310",
+    "data_signal": 0.0,
+    "data_bot_id": "WA_IM_3_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 122,
+    "data_probeset_id": "HORVU2Hr1G076630",
+    "data_signal": 0.0,
+    "data_bot_id": "SP_CS_5_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 72,
+    "data_probeset_id": "HORVU2Hr1G124200",
+    "data_signal": 0.0,
+    "data_bot_id": "LP_REF1_3_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 188,
+    "data_probeset_id": "HORVU5Hr1G049230",
+    "data_signal": 0.0,
+    "data_bot_id": "SP_LS_stress_3_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 79,
+    "data_probeset_id": "HORVU0Hr1G000320",
+    "data_signal": 31.4,
+    "data_bot_id": "SP_REF1_2_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 212,
+    "data_probeset_id": "HORVU5Hr1G031980",
+    "data_signal": 18.65,
+    "data_bot_id": "SP_IM_stress_4_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 26,
+    "data_probeset_id": "HORVU4Hr1G038550",
+    "data_signal": 0.0,
+    "data_bot_id": "SP_IM_1_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 204,
+    "data_probeset_id": "HORVU0Hr1G006550",
+    "data_signal": 0.0,
+    "data_bot_id": "WA_IM_stress_3_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 115,
+    "data_probeset_id": "HORVU3Hr1G072820",
+    "data_signal": 0.0,
+    "data_bot_id": "LP_LS_2_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 151,
+    "data_probeset_id": "HORVU7Hr1G056280",
+    "data_signal": 0.9,
+    "data_bot_id": "SP_CS_stress_1_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 191,
+    "data_probeset_id": "HORVU2Hr1G034710",
+    "data_signal": 114.41,
+    "data_bot_id": "AP_LS_stress_3_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "HORVU2Hr1G099350",
+    "data_signal": 0.0,
+    "data_bot_id": "RAM_2_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 84,
+    "data_probeset_id": "HORVU7Hr1G062500",
+    "data_signal": 0.0,
+    "data_bot_id": "SP_REF2_3_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 86,
+    "data_probeset_id": "HORVU3Hr1G033520",
+    "data_signal": 31.76,
+    "data_bot_id": "AP_REF1_1_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 172,
+    "data_probeset_id": "HORVU5Hr1G013920",
+    "data_signal": 3.49,
+    "data_bot_id": "AP_CS_stress_2_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "HORVU6Hr1G073470",
+    "data_signal": 0.0,
+    "data_bot_id": "LB_2_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 49,
+    "data_probeset_id": "HORVU3Hr1G066190",
+    "data_signal": 40.38,
+    "data_bot_id": "DR_REF1_4_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 85,
+    "data_probeset_id": "HORVU3Hr1G070490",
+    "data_signal": 0.26,
+    "data_bot_id": "SP_REF2_4_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 104,
+    "data_probeset_id": "HORVU7Hr1G064760",
+    "data_signal": 0.12,
+    "data_bot_id": "GP_CS_3_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 160,
+    "data_probeset_id": "HORVU6Hr1G024570",
+    "data_signal": 0.0,
+    "data_bot_id": "TM_CS_stress_2_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 155,
+    "data_probeset_id": "HORVU4Hr1G078360",
+    "data_signal": 0.0,
+    "data_bot_id": "AP_LS_stress_1_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 134,
+    "data_probeset_id": "HORVU4Hr1G066430",
+    "data_signal": 6.96,
+    "data_bot_id": "AP_LS_1_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 185,
+    "data_probeset_id": "HORVU3Hr1G086950",
+    "data_signal": 25.15,
+    "data_bot_id": "LP_LS_stress_3_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 115,
+    "data_probeset_id": "HORVU3Hr1G104150",
+    "data_signal": 0.0,
+    "data_bot_id": "LP_LS_2_tpm"
+  },
+  {
+    "db": "barley_spike_meristem",
+    "proj_id": "1",
+    "sample_id": 93,
+    "data_probeset_id": "HORVU3Hr1G050400",
+    "data_signal": 3.51,
+    "data_bot_id": "AP_REF2_4_tpm"
+  }
+]

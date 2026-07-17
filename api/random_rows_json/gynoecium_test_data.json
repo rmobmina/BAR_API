@@ -1,0 +1,242 @@
+[
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "AT1G75750",
+    "data_signal": 7.69058,
+    "data_bot_id": "spt-12_VV_R1"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "AT5G26617",
+    "data_signal": 3.66628,
+    "data_bot_id": "Col-0_CMM_R1"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "AT2G17600",
+    "data_signal": 0.247897,
+    "data_bot_id": "spt-12_CMM_R1"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "AT3G62040",
+    "data_signal": 1.92606,
+    "data_bot_id": "Col-0_PC_R1"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "AT2G17380",
+    "data_signal": 91.5273,
+    "data_bot_id": "Col-0_CMM_R1"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "AT5G65495",
+    "data_signal": 117.104,
+    "data_bot_id": "Col-0_CMM_R3"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "AT4G13810",
+    "data_signal": 1.5923,
+    "data_bot_id": "spt-12_SEP_R2"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "AT2G24681",
+    "data_signal": 12.5527,
+    "data_bot_id": "Col-0_CMM_R2"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 24,
+    "data_probeset_id": "AT5G01090",
+    "data_signal": 39.4671,
+    "data_bot_id": "spt-12_VV_R3"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "AT4G01010",
+    "data_signal": 0.564154,
+    "data_bot_id": "Col-0_VV_R3"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 24,
+    "data_probeset_id": "AT3G29590",
+    "data_signal": 0.167658,
+    "data_bot_id": "spt-12_VV_R3"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "AT3G55750",
+    "data_signal": 1079.34,
+    "data_bot_id": "Col-0_CMM_R1"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 24,
+    "data_probeset_id": "AT5G46520",
+    "data_signal": 0.654102,
+    "data_bot_id": "spt-12_VV_R3"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "AT2G07633",
+    "data_signal": 46.6821,
+    "data_bot_id": "Col-0_CMM_R2"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "AT5G47700",
+    "data_signal": 2256.44,
+    "data_bot_id": "spt-12_CMM_R1"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "AT2G45730",
+    "data_signal": 16.7889,
+    "data_bot_id": "spt-12_PC_R2"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "AT1G67170",
+    "data_signal": 16.5425,
+    "data_bot_id": "Col-0_SEP_R1"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 15,
+    "data_probeset_id": "AT1G77655",
+    "data_signal": 0.0,
+    "data_bot_id": "spt-12_CMM_R3"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "AT4G28650",
+    "data_signal": 1.87223,
+    "data_bot_id": "spt-12_PC_R2"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 25,
+    "data_probeset_id": "ATMG00470",
+    "data_signal": 15.3372,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "AT1G70880",
+    "data_signal": 0.911143,
+    "data_bot_id": "Col-0_VV_R2"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "AT5G41401",
+    "data_signal": 2.74899,
+    "data_bot_id": "Col-0_CMM_R3"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "AT3G11650",
+    "data_signal": 21.1935,
+    "data_bot_id": "Col-0_PC_R2"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "AT2G46290",
+    "data_signal": 14.5049,
+    "data_bot_id": "Col-0_VV_R1"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "AT3G29230",
+    "data_signal": 4.283,
+    "data_bot_id": "spt-12_SEP_R2"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "AT3G18580",
+    "data_signal": 47.9576,
+    "data_bot_id": "Col-0_SEP_R3"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "AT1G58430",
+    "data_signal": 3.22757,
+    "data_bot_id": "Col-0_CMM_R3"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "AT1G69840",
+    "data_signal": 52.8826,
+    "data_bot_id": "spt-12_SEP_R1"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 23,
+    "data_probeset_id": "AT2G27535",
+    "data_signal": 1.31163,
+    "data_bot_id": "spt-12_VV_R2"
+  },
+  {
+    "db": "gynoecium",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "AT2G34630",
+    "data_signal": 28.3823,
+    "data_bot_id": "Col-0_SEP_R2"
+  }
+]

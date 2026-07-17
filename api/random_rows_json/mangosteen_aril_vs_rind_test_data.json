@@ -1,0 +1,242 @@
+[
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "DN262622",
+    "data_signal": 0.0,
+    "data_bot_id": "R_6"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "DN179132",
+    "data_signal": 0.0,
+    "data_bot_id": "A_1"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "DN249773",
+    "data_signal": 0.0,
+    "data_bot_id": "R_5"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "DN22476",
+    "data_signal": 1.71372,
+    "data_bot_id": "R_5"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "DN186399",
+    "data_signal": 0.0,
+    "data_bot_id": "R_5"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "DN93501",
+    "data_signal": 0.0,
+    "data_bot_id": "R_2"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "DN124548",
+    "data_signal": 0.0,
+    "data_bot_id": "A_2"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "DN19026",
+    "data_signal": 1.32855,
+    "data_bot_id": "A_2"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "DN53963",
+    "data_signal": 5.06853,
+    "data_bot_id": "A_2"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "DN68209",
+    "data_signal": 0.0,
+    "data_bot_id": "R_2"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "DN225386",
+    "data_signal": 0.0,
+    "data_bot_id": "R_6"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "DN142684",
+    "data_signal": 0.0,
+    "data_bot_id": "R_5"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "DN234211",
+    "data_signal": 0.0,
+    "data_bot_id": "A_5"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "DN70461",
+    "data_signal": 0.0,
+    "data_bot_id": "A_5"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "DN223946",
+    "data_signal": 0.0,
+    "data_bot_id": "R_2"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "DN131111",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "DN134885",
+    "data_signal": 0.0,
+    "data_bot_id": "A_2"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "DN23739",
+    "data_signal": 6.247,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "DN3355",
+    "data_signal": 1.71328,
+    "data_bot_id": "A_3"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "DN158389",
+    "data_signal": 0.0,
+    "data_bot_id": "A_1"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "DN2433",
+    "data_signal": 0.0,
+    "data_bot_id": "A_5"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "DN214215",
+    "data_signal": 0.0,
+    "data_bot_id": "R_5"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "DN123836",
+    "data_signal": 0.244755,
+    "data_bot_id": "R_5"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "DN179425",
+    "data_signal": 0.0,
+    "data_bot_id": "R_2"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "DN258878",
+    "data_signal": 0.0,
+    "data_bot_id": "A_3"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "DN121943",
+    "data_signal": 0.0,
+    "data_bot_id": "R_1"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "DN176061",
+    "data_signal": 0.0,
+    "data_bot_id": "R_1"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "DN118788",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "DN5264",
+    "data_signal": 0.0,
+    "data_bot_id": "R_2"
+  },
+  {
+    "db": "mangosteen_aril_vs_rind",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "DN199680",
+    "data_signal": 0.0,
+    "data_bot_id": "A_3"
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 52,
+    "data_probeset_id": "AT2G47930",
+    "data_signal": 60.6216,
+    "data_bot_id": "ZT17_prr7prr9_1"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "AT3G49650",
+    "data_signal": 0.358939,
+    "data_bot_id": "ZT13_lhycca1_4"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "AT4G15040",
+    "data_signal": 0.0,
+    "data_bot_id": "ZT13_lhycca1_4"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 69,
+    "data_probeset_id": "AT3G52310",
+    "data_signal": 0.165564,
+    "data_bot_id": "ZT19_prr7prr9_2"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 81,
+    "data_probeset_id": "AT4G17010",
+    "data_signal": 0.986893,
+    "data_bot_id": "ZT1_lhycca1_2"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 76,
+    "data_probeset_id": "AT2G36695",
+    "data_signal": 0.0,
+    "data_bot_id": "ZT19_wt_1"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 171,
+    "data_probeset_id": "AT1G54920",
+    "data_signal": 2.66203,
+    "data_bot_id": "ZT7_wt_2"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 34,
+    "data_probeset_id": "AT1G77420",
+    "data_signal": 3.69107,
+    "data_bot_id": "ZT15_lhycca1_3"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 87,
+    "data_probeset_id": "AT5G40910",
+    "data_signal": 0.130484,
+    "data_bot_id": "ZT1_prr7prr9_4"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 47,
+    "data_probeset_id": "AT1G71750",
+    "data_signal": 3.55952,
+    "data_bot_id": "ZT15_wt_4"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 119,
+    "data_probeset_id": "AT2G46050",
+    "data_signal": 0.0,
+    "data_bot_id": "ZT23_toc1_1"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 45,
+    "data_probeset_id": "AT5G13790",
+    "data_signal": 0.0,
+    "data_bot_id": "ZT15_wt_2"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 43,
+    "data_probeset_id": "AT1G62300",
+    "data_signal": 0.733667,
+    "data_bot_id": "ZT15_toc1_4"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 65,
+    "data_probeset_id": "AT2G40630",
+    "data_signal": 0.128996,
+    "data_bot_id": "ZT19_lhycca1_2"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 123,
+    "data_probeset_id": "AT5G16030",
+    "data_signal": 41.3437,
+    "data_bot_id": "ZT23_wt_1"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 175,
+    "data_probeset_id": "AT5G65690",
+    "data_signal": 0.0,
+    "data_bot_id": "ZT9_lhycca1_2"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 119,
+    "data_probeset_id": "AT5G06130",
+    "data_signal": 23.9254,
+    "data_bot_id": "ZT23_toc1_1"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 70,
+    "data_probeset_id": "AT4G20640",
+    "data_signal": 0.0,
+    "data_bot_id": "ZT19_prr7prr9_3"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 65,
+    "data_probeset_id": "AT1G65180",
+    "data_signal": 0.098683,
+    "data_bot_id": "ZT19_lhycca1_2"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 69,
+    "data_probeset_id": "AT1G35660",
+    "data_signal": 0.235565,
+    "data_bot_id": "ZT19_prr7prr9_2"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 188,
+    "data_probeset_id": "AT3G13280",
+    "data_signal": 0.0,
+    "data_bot_id": "ZT9_wt_3"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 20,
+    "data_probeset_id": "AT4G21190",
+    "data_signal": 3.68021,
+    "data_bot_id": "ZT13_prr7prr9_1"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 190,
+    "data_probeset_id": "AT2G31083",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 79,
+    "data_probeset_id": "AT3G45530",
+    "data_signal": 0.0,
+    "data_bot_id": "ZT19_wt_4"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 79,
+    "data_probeset_id": "AT5G67430",
+    "data_signal": 0.0,
+    "data_bot_id": "ZT19_wt_4"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 79,
+    "data_probeset_id": "AT4G36810",
+    "data_signal": 12.53,
+    "data_bot_id": "ZT19_wt_4"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 135,
+    "data_probeset_id": "AT1G65350",
+    "data_signal": 0.0,
+    "data_bot_id": "ZT3_toc1_1"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 183,
+    "data_probeset_id": "AT2G43350",
+    "data_signal": 9.64377,
+    "data_bot_id": "ZT9_toc1_2"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 67,
+    "data_probeset_id": "AT5G23360",
+    "data_signal": 0.340998,
+    "data_bot_id": "ZT19_lhycca1_4"
+  },
+  {
+    "db": "circadian_mutants",
+    "proj_id": "1",
+    "sample_id": 182,
+    "data_probeset_id": "AT1G69170",
+    "data_signal": 0.792545,
+    "data_bot_id": "ZT9_toc1_1"
+  }
+]

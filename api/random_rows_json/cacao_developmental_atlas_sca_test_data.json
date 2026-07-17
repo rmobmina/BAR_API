@@ -1,0 +1,242 @@
+[
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 143,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr3v1_09032",
+    "data_signal": 0.0,
+    "data_bot_id": "DA-SE-MS-SC_R1"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 71,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr1v1_01420",
+    "data_signal": 0.462684,
+    "data_bot_id": "DA-PD-LS-PS_R2"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 58,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr1v1_02105",
+    "data_signal": 57.6949,
+    "data_bot_id": "DA-PD-LS-PEN_R4"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 195,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr8v1_21417",
+    "data_signal": 845.826,
+    "data_bot_id": "CGA-SBA-1_R1"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 85,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr4v1_12694",
+    "data_signal": 0.0,
+    "data_bot_id": "DA-PD-MLS-PEX_R3"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 165,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr1v1_01060",
+    "data_signal": 7.06985,
+    "data_bot_id": "CGA-LGFL_R3"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 145,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr6v1_18368",
+    "data_signal": 0.157252,
+    "data_bot_id": "DA-SE-MS-SC_R3"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 49,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr9v1_23603",
+    "data_signal": 50.259,
+    "data_bot_id": "DA-OTL-E2_R5"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 77,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr1v1_00894",
+    "data_signal": 6.48139,
+    "data_bot_id": "DA-PD-LS-SM_R3"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 112,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr6v1_17020",
+    "data_signal": 9.18075,
+    "data_bot_id": "DA-PSA_R3"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 167,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr5v1_16551",
+    "data_signal": 0.0,
+    "data_bot_id": "CGA-ML-C_2"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 180,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr1v1_00610",
+    "data_signal": 0.0,
+    "data_bot_id": "CGA-OF_R4"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 203,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr10v1_27029",
+    "data_signal": 0.0,
+    "data_bot_id": "CGA-SBA-2_R4"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr6v1_17979",
+    "data_signal": 0.0,
+    "data_bot_id": "DA-MLS-SC_R3"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 224,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr1v1_00632",
+    "data_signal": 0.442748,
+    "data_bot_id": "CGA-YL-A_R5"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 155,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr9v1_24778",
+    "data_signal": 16.686,
+    "data_bot_id": "CGA-GS-RO_R3"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 81,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr3v1_08292",
+    "data_signal": 96.9653,
+    "data_bot_id": "DA-PD-MLS-PEN_R2"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 51,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr2v1_05913",
+    "data_signal": 0.0,
+    "data_bot_id": "DA-OTL-E3_R2"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 75,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr8v1_21418",
+    "data_signal": 0.0,
+    "data_bot_id": "DA-PD-LS-SM_R1"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 121,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr8v1_21715",
+    "data_signal": 7.17993,
+    "data_bot_id": "DA-PTL-C_R3"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 119,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr7v1_19174",
+    "data_signal": 59.3061,
+    "data_bot_id": "DA-PTL-A_R5"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 96,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr7v1_19462",
+    "data_signal": 0.0,
+    "data_bot_id": "DA-PD-MS-PEN_R2"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 41,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr9v1_23001",
+    "data_signal": 1.08755,
+    "data_bot_id": "DA-OTL-E1_R2"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 55,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr10v1_27595",
+    "data_signal": 0.0,
+    "data_bot_id": "DA-PD-LS-PEN_R1"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 66,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr2v1_06615",
+    "data_signal": 1.21177,
+    "data_bot_id": "DA-PD-LS-PMC_R2"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 106,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr4v1_13339",
+    "data_signal": 26.8439,
+    "data_bot_id": "DA-PD-MS-PS_R3"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 104,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr5v1_14307",
+    "data_signal": 7.27886,
+    "data_bot_id": "DA-PD-MS-PS_R1"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 184,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr4v1_11531",
+    "data_signal": 15.4085,
+    "data_bot_id": "CGA-OL-E2_R4"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 136,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr1v1_01670",
+    "data_signal": 15.6851,
+    "data_bot_id": "DA-SE-MLS-E_R4"
+  },
+  {
+    "db": "cacao_developmental_atlas_sca",
+    "sample_id": 126,
+    "proj_id": "1",
+    "data_probeset_id": "SCA-6_Chr5v1_16519",
+    "data_signal": 0.0,
+    "data_bot_id": "DA-PTL-E_R4"
+  }
+]

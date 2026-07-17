@@ -1,0 +1,242 @@
+[
+  {
+    "db": "tung_tree",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "Vf08G0389",
+    "data_signal": 73.3808,
+    "data_bot_id": "VF-Root"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 8,
+    "proj_id": "1",
+    "data_probeset_id": "Vf10G0062",
+    "data_signal": 20.3906,
+    "data_bot_id": "30 WAF-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 17,
+    "proj_id": "1",
+    "data_probeset_id": "Vf04G1090",
+    "data_signal": 63.2692,
+    "data_bot_id": "CX-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 9,
+    "proj_id": "1",
+    "data_probeset_id": "Vf04G0157",
+    "data_signal": 17.1294,
+    "data_bot_id": "C1-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "Vf08G0042",
+    "data_signal": 8.6806,
+    "data_bot_id": "C4-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "Vf10G0950",
+    "data_signal": 1.92974,
+    "data_bot_id": "10 WAF-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "Vf06G1057",
+    "data_signal": 75.7137,
+    "data_bot_id": "15 WAF-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "Vf08G1647",
+    "data_signal": 2.43314,
+    "data_bot_id": "C2-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 17,
+    "proj_id": "1",
+    "data_probeset_id": "Vf00G0675",
+    "data_signal": 0.0,
+    "data_bot_id": "CX-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "Vf01G1548",
+    "data_signal": 0.0,
+    "data_bot_id": "C2-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "Vf06G2096",
+    "data_signal": 0.0,
+    "data_bot_id": "15 WAF-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 14,
+    "proj_id": "1",
+    "data_probeset_id": "Vf06G2421",
+    "data_signal": 0.0583955,
+    "data_bot_id": "X2-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "Vf09G1865",
+    "data_signal": 19.9969,
+    "data_bot_id": "VF-Root"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 8,
+    "proj_id": "1",
+    "data_probeset_id": "Vf08G1331",
+    "data_signal": 21.055,
+    "data_bot_id": "30 WAF-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "Vf01G0169",
+    "data_signal": 19.7773,
+    "data_bot_id": "X1-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 1,
+    "proj_id": "1",
+    "data_probeset_id": "Vf03G0762",
+    "data_signal": 1.03981,
+    "data_bot_id": "VF-Stem"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "Vf05G0613",
+    "data_signal": 16.8938,
+    "data_bot_id": "VF-Leaf"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "Vf10G1688",
+    "data_signal": 0.0,
+    "data_bot_id": "15 WAF-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 17,
+    "proj_id": "1",
+    "data_probeset_id": "Vf11G1942",
+    "data_signal": 22.4441,
+    "data_bot_id": "CX-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "Vf08G1913",
+    "data_signal": 57.2625,
+    "data_bot_id": "15 WAF-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 14,
+    "proj_id": "1",
+    "data_probeset_id": "Vf02G0969",
+    "data_signal": 1.77234,
+    "data_bot_id": "X2-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Vf11G0265",
+    "data_signal": 11.412,
+    "data_bot_id": "25 WAF-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "Vf03G0590",
+    "data_signal": 2.55962,
+    "data_bot_id": "VF-Leaf"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 18,
+    "proj_id": "1",
+    "data_probeset_id": "Vf02G2527",
+    "data_signal": 1.05195,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "Vf10G0695",
+    "data_signal": 142.054,
+    "data_bot_id": "C2-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 8,
+    "proj_id": "1",
+    "data_probeset_id": "Vf03G0611",
+    "data_signal": 12.3092,
+    "data_bot_id": "30 WAF-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "Vf01G0116",
+    "data_signal": 0.0803287,
+    "data_bot_id": "15 WAF-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "Vf01G0217",
+    "data_signal": 0.0,
+    "data_bot_id": "X1-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 14,
+    "proj_id": "1",
+    "data_probeset_id": "Vf04G1255",
+    "data_signal": 47.396,
+    "data_bot_id": "X2-Mean"
+  },
+  {
+    "db": "tung_tree",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "Vf07G0208",
+    "data_signal": 0.951011,
+    "data_bot_id": "C2-Mean"
+  }
+]

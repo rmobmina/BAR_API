@@ -1,0 +1,242 @@
+[
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "TrVeBC3_13732.15",
+    "data_signal": 0.0,
+    "data_bot_id": "Reproductive_Structures"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "TrVeBC3_18165.14",
+    "data_signal": 0.29,
+    "data_bot_id": "Roots_in_Late_Post_Attachment"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "TrVeBC3_1179.2",
+    "data_signal": 34.37,
+    "data_bot_id": "Germinated_Seed"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "TrVeBC3_10913.5",
+    "data_signal": 14.07,
+    "data_bot_id": "Germinated_Seed"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "TrVeBC3_45666.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "TrVeBC3_6356.20",
+    "data_signal": 24.015,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "TrVeBC3_15273.3",
+    "data_signal": 1.67,
+    "data_bot_id": "Roots_in_Late_Post_Attachment"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "TrVeBC3_8372.7",
+    "data_signal": 0.0,
+    "data_bot_id": "Seedling_Exposed_to_HIFs"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "TrVeBC3_5886.1",
+    "data_signal": 23.36,
+    "data_bot_id": "Germinated_Seed"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "TrVeBC3_1198.7",
+    "data_signal": 0.0,
+    "data_bot_id": "Reproductive_Structures"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "TrVeBC3_28575.2",
+    "data_signal": 0.0,
+    "data_bot_id": "Haustoria_Attached"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "TrVeBC3_3342.4",
+    "data_signal": 159.82,
+    "data_bot_id": "Early_Established_Parasite"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "TrVeBC3_2148.3",
+    "data_signal": 1.76,
+    "data_bot_id": "Roots_in_Late_Post_Attachment"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "TrVeBC3_20377.18",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "TrVeBC3_11062.1",
+    "data_signal": 0.28,
+    "data_bot_id": "Reproductive_Structures"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "TrVeBC3_48572.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Seedling_Exposed_to_HIFs"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "TrVeBC3_31817.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Haustoria_Attached"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "TrVeBC3_10122.1",
+    "data_signal": 1.56,
+    "data_bot_id": "Early_Established_Parasite"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "TrVeBC3_37967.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Seedling_Exposed_to_HIFs"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "TrVeBC3_7558.2",
+    "data_signal": 5.25,
+    "data_bot_id": "Seedling_Exposed_to_HIFs"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "TrVeBC3_22646.3",
+    "data_signal": 2.18,
+    "data_bot_id": "Roots_in_Late_Post_Attachment"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "TrVeBC3_25065.4",
+    "data_signal": 1.79,
+    "data_bot_id": "Reproductive_Structures"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "TrVeBC3_13388.2",
+    "data_signal": 3.73,
+    "data_bot_id": "Early_Established_Parasite"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "TrVeBC3_37669.1",
+    "data_signal": 0.65,
+    "data_bot_id": "Seed_Germination"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "TrVeBC3_21345.1",
+    "data_signal": 6.6,
+    "data_bot_id": "Germinated_Seed"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "TrVeBC3_13814.2",
+    "data_signal": 0.57,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "TrVeBC3_8213.2",
+    "data_signal": 16.5,
+    "data_bot_id": "Seedling_Exposed_to_HIFs"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "TrVeBC3_8500.10",
+    "data_signal": 0.84,
+    "data_bot_id": "Haustoria_Attached"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "TrVeBC3_35027.1",
+    "data_signal": 0.0,
+    "data_bot_id": "Roots_in_Late_Post_Attachment"
+  },
+  {
+    "db": "triphysaria",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "TrVeBC3_12434.3",
+    "data_signal": 6.565,
+    "data_bot_id": "Med_CTRL"
+  }
+]

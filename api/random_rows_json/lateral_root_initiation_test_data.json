@@ -1,0 +1,272 @@
+[
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "19",
+    "project_id": "GEO:GSE42007",
+    "sample_file_name": null,
+    "data_probeset_id": "252704_at",
+    "data_signal": 0.371145,
+    "data_bot_id": "GSM1030564"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "Oku_nph4arf19_1",
+    "project_id": "Oku_exprs_GCOS",
+    "sample_file_name": null,
+    "data_probeset_id": "262798_at",
+    "data_signal": 190.87,
+    "data_bot_id": "GSM9589.cel"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "96",
+    "project_id": "Gifford",
+    "sample_file_name": null,
+    "data_probeset_id": "265052_at",
+    "data_signal": 1.36355,
+    "data_bot_id": "Cortex.Rhizobium.16hr.Mean"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "25",
+    "project_id": "GEO:GSE42007",
+    "sample_file_name": null,
+    "data_probeset_id": "259714_at",
+    "data_signal": 0.266093,
+    "data_bot_id": "GSM1030570"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "146",
+    "project_id": "E-MTAB-2565",
+    "sample_file_name": null,
+    "data_probeset_id": "262783_at",
+    "data_signal": 54.2543,
+    "data_bot_id": "Voss_1-14_42h_after-lateral-root-initiation_Rep1"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "113",
+    "project_id": "Gifford",
+    "sample_file_name": null,
+    "data_probeset_id": "251454_at",
+    "data_signal": 177.192,
+    "data_bot_id": "Pericycle.Untreated.36hr.Mean"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "81",
+    "project_id": "Gifford",
+    "sample_file_name": null,
+    "data_probeset_id": "249694_at",
+    "data_signal": 1.08105,
+    "data_bot_id": "Cortex.Nitrogen.12hr.Mean"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "140",
+    "project_id": "Gifford",
+    "sample_file_name": null,
+    "data_probeset_id": "258979_at",
+    "data_signal": 784.97,
+    "data_bot_id": "Pericycle.Rhizobium.48hr.Mean"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "144",
+    "project_id": "E-MTAB-2565",
+    "sample_file_name": null,
+    "data_probeset_id": "258939_at",
+    "data_signal": 485.56,
+    "data_bot_id": "Voss_1-12_36h_after-lateral-root-initiation_Rep1"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "59",
+    "project_id": "GEO:GSE42007",
+    "sample_file_name": null,
+    "data_probeset_id": "257963_at",
+    "data_signal": 46.6915,
+    "data_bot_id": "GSM1030604"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "49",
+    "project_id": "GEO:GSE42007",
+    "sample_file_name": null,
+    "data_probeset_id": "255476_at",
+    "data_signal": 1.26809,
+    "data_bot_id": "GSM1030594"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "172",
+    "project_id": "E-MTAB-2565",
+    "sample_file_name": null,
+    "data_probeset_id": "265977_at",
+    "data_signal": 0.491836,
+    "data_bot_id": "Voss_1-38_6h_after-lateral-root-initiation_Rep3"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "158",
+    "project_id": "E-MTAB-2565",
+    "sample_file_name": null,
+    "data_probeset_id": "266137_at",
+    "data_signal": 102.548,
+    "data_bot_id": "Voss_1-25_21h_after-lateral-root-initiation_Rep2"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "127",
+    "project_id": "Gifford",
+    "sample_file_name": null,
+    "data_probeset_id": "266477_at",
+    "data_signal": 3.46908,
+    "data_bot_id": "Pericycle.Nitrogen.48hr.Mean"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "Ryb_NAA_6h-2",
+    "project_id": "Ryb_exprs_GCOS",
+    "sample_file_name": null,
+    "data_probeset_id": "253432_at",
+    "data_signal": 32.8177,
+    "data_bot_id": "hyb4651.CEL"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "135",
+    "project_id": "Gifford",
+    "sample_file_name": null,
+    "data_probeset_id": "253288_at",
+    "data_signal": 119.76,
+    "data_bot_id": "Pericycle.Rhizobium.14hr.Mean"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "54",
+    "project_id": "GEO:GSE42007",
+    "sample_file_name": null,
+    "data_probeset_id": "260436_at",
+    "data_signal": 180.28,
+    "data_bot_id": "GSM1030599"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "9",
+    "project_id": "Xuan_exprs_GCOS",
+    "sample_file_name": "hyb12697.CEL.txt",
+    "data_probeset_id": "250978_at",
+    "data_signal": 297.649,
+    "data_bot_id": "hyb12697.CEL"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "49",
+    "project_id": "GEO:GSE42007",
+    "sample_file_name": null,
+    "data_probeset_id": "245819_at",
+    "data_signal": 6.15246,
+    "data_bot_id": "GSM1030594"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "196",
+    "project_id": "E-MTAB-2565",
+    "sample_file_name": null,
+    "data_probeset_id": "255483_at",
+    "data_signal": 304.762,
+    "data_bot_id": "Voss_1-6_18h_after-lateral-root-initiation_Rep1"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "161",
+    "project_id": "E-MTAB-2565",
+    "sample_file_name": null,
+    "data_probeset_id": "245783_s_at",
+    "data_signal": 17.6336,
+    "data_bot_id": "Voss_1-28_30h_after-lateral-root-initiation_Rep2"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "91",
+    "project_id": "Gifford",
+    "sample_file_name": null,
+    "data_probeset_id": "260369_at",
+    "data_signal": 693.154,
+    "data_bot_id": "Cortex.Rhizobium.6hr.Mean"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "144",
+    "project_id": "E-MTAB-2565",
+    "sample_file_name": null,
+    "data_probeset_id": "256464_at",
+    "data_signal": 1.21827,
+    "data_bot_id": "Voss_1-12_36h_after-lateral-root-initiation_Rep1"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "171",
+    "project_id": "E-MTAB-2565",
+    "sample_file_name": null,
+    "data_probeset_id": "247421_at",
+    "data_signal": 3.90772,
+    "data_bot_id": "Voss_1-37_0h_after-lateral-root-initiation_Rep3"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "11",
+    "project_id": "Xuan_exprs_GCOS",
+    "sample_file_name": "hyb12699.CEL.txt",
+    "data_probeset_id": "254632_at",
+    "data_signal": 18.2926,
+    "data_bot_id": "hyb12699.CEL"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "Van_Col_2h_NAA_1",
+    "project_id": "Van_exprs_GCOS",
+    "sample_file_name": null,
+    "data_probeset_id": "252152_at",
+    "data_signal": 50.8675,
+    "data_bot_id": "GSM75509.CEL"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "156",
+    "project_id": "E-MTAB-2565",
+    "sample_file_name": null,
+    "data_probeset_id": "264537_at",
+    "data_signal": 35.724,
+    "data_bot_id": "Voss_1-23_15h_after-lateral-root-initiation_Rep2"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "66",
+    "project_id": "Gifford",
+    "sample_file_name": null,
+    "data_probeset_id": "250438_at",
+    "data_signal": 2.22124,
+    "data_bot_id": "Cortex.Untreated.8hr.Mean"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "91",
+    "project_id": "Gifford",
+    "sample_file_name": null,
+    "data_probeset_id": "258139_at",
+    "data_signal": 302.325,
+    "data_bot_id": "Cortex.Rhizobium.6hr.Mean"
+  },
+  {
+    "db": "lateral_root_initiation",
+    "sample_id": "113",
+    "project_id": "Gifford",
+    "sample_file_name": null,
+    "data_probeset_id": "264572_at",
+    "data_signal": 0.1,
+    "data_bot_id": "Pericycle.Untreated.36hr.Mean"
+  }
+]

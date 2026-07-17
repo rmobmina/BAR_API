@@ -1,0 +1,242 @@
+[
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "DN190021",
+    "data_signal": 3.52702,
+    "data_bot_id": "GSS7"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "DN216941",
+    "data_signal": 0.0,
+    "data_bot_id": "GSS0"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "DN97611",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "DN89394",
+    "data_signal": 0.154011,
+    "data_bot_id": "GSS0"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "DN181980",
+    "data_signal": 0.0602425,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "DN84475",
+    "data_signal": 0.446584,
+    "data_bot_id": "GSS5"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "DN86184",
+    "data_signal": 0.353585,
+    "data_bot_id": "GSS7"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "DN4626",
+    "data_signal": 0.824423,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "DN230398",
+    "data_signal": 0.88376,
+    "data_bot_id": "GSS5"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "DN58037",
+    "data_signal": 0.698188,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "DN192926",
+    "data_signal": 8.03851,
+    "data_bot_id": "GSS5"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "DN246880",
+    "data_signal": 0.145129,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "DN218875",
+    "data_signal": 0.441454,
+    "data_bot_id": "GSS3"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "DN42439",
+    "data_signal": 0.924642,
+    "data_bot_id": "GSS3"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "DN196181",
+    "data_signal": 3.56532,
+    "data_bot_id": "GSS5"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "DN157790",
+    "data_signal": 0.071695,
+    "data_bot_id": "GSS7"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "DN225680",
+    "data_signal": 0.133708,
+    "data_bot_id": "GSS5"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "DN58485",
+    "data_signal": 0.737322,
+    "data_bot_id": "GSS0"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "DN206609",
+    "data_signal": 0.253146,
+    "data_bot_id": "GSS7"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "DN28132",
+    "data_signal": 16.9836,
+    "data_bot_id": "GSS0"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "DN191456",
+    "data_signal": 0.847385,
+    "data_bot_id": "GSS0"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "DN13335",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "DN4460",
+    "data_signal": 1.36898,
+    "data_bot_id": "GSS3"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "DN166407",
+    "data_signal": 14.9943,
+    "data_bot_id": "GSS7"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "DN57279",
+    "data_signal": 0.0,
+    "data_bot_id": "GSS3"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "DN232508",
+    "data_signal": 0.039728,
+    "data_bot_id": "GSS7"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "DN116819",
+    "data_signal": 3.42824,
+    "data_bot_id": "GSS3"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "DN91449",
+    "data_signal": 1.05937,
+    "data_bot_id": "GSS7"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "DN62608",
+    "data_signal": 2.62598,
+    "data_bot_id": "GSS5"
+  },
+  {
+    "db": "mangosteen_seed_germination",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "DN256222",
+    "data_signal": 0.227183,
+    "data_bot_id": "GSS5"
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 50,
+    "data_probeset_id": "TraesCS4B01G209800LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_143A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 170,
+    "data_probeset_id": "TraesCS7B01G048200",
+    "data_signal": 0.160554,
+    "data_bot_id": "Sample_64A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 185,
+    "data_probeset_id": "TraesCS7B01G743500LC",
+    "data_signal": 0.855438,
+    "data_bot_id": "Sample_78A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "TraesCS3B01G165700",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_103A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 36,
+    "data_probeset_id": "TraesCS2D01G526900",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_130A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 126,
+    "data_probeset_id": "TraesCS3B01G538900",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_22B"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 177,
+    "data_probeset_id": "TraesCS6B01G097300",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_70A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 87,
+    "data_probeset_id": "TraesCS7D01G125000",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_18A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 81,
+    "data_probeset_id": "TraesCS6D01G232300",
+    "data_signal": 8.37542,
+    "data_bot_id": "Sample_183A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 141,
+    "data_probeset_id": "TraesCS2D01G017300LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_33A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 98,
+    "data_probeset_id": "TraesCS2D01G508200LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_19A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 134,
+    "data_probeset_id": "TraesCS4B01G246200",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_28A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "TraesCS7B01G149700LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_110A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "TraesCS4A01G065200LC",
+    "data_signal": 0.186497,
+    "data_bot_id": "Sample_110A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 68,
+    "data_probeset_id": "TraesCS2A01G517300LC",
+    "data_signal": 0.812004,
+    "data_bot_id": "Sample_171A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 37,
+    "data_probeset_id": "TraesCS2D01G266300LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_131A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "TraesCS4D01G322900",
+    "data_signal": 2.40963,
+    "data_bot_id": "Sample_105B"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 37,
+    "data_probeset_id": "TraesCS5A01G633300LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_131A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 123,
+    "data_probeset_id": "TraesCS1A01G268900LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_223B"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 183,
+    "data_probeset_id": "TraesCS6D01G097100LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_76A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 63,
+    "data_probeset_id": "TraesCS4A01G332200",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_166A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 97,
+    "data_probeset_id": "TraesCS7B01G603100LC",
+    "data_signal": 2.69567,
+    "data_bot_id": "Sample_199A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 35,
+    "data_probeset_id": "TraesCS2D01G493400",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_13"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 185,
+    "data_probeset_id": "TraesCS7A01G242700",
+    "data_signal": 3.52889,
+    "data_bot_id": "Sample_78A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 71,
+    "data_probeset_id": "TraesCS7D01G354800LC",
+    "data_signal": 0.884343,
+    "data_bot_id": "Sample_174A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 161,
+    "data_probeset_id": "TraesCS1D01G089500LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_55B"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "TraesCS3D01G306300LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_109A"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 131,
+    "data_probeset_id": "TraesCS3A01G535000LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_26"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 131,
+    "data_probeset_id": "TraesCS4D01G133800LC",
+    "data_signal": 0.0,
+    "data_bot_id": "Sample_26"
+  },
+  {
+    "db": "wheat",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "TraesCS5B01G668700LC",
+    "data_signal": 1.47097,
+    "data_bot_id": "Sample_10"
+  }
+]

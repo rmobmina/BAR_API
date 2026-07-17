@@ -1,0 +1,242 @@
+[
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.003G320700",
+    "data_signal": 9.0,
+    "data_bot_id": "Inflorescence_1_10mm"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Sobic.007G056300",
+    "data_signal": 4.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Sobic.001G225100",
+    "data_signal": 0.2,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.003G001550",
+    "data_signal": 7.0,
+    "data_bot_id": "Inflorescence_1_10mm"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.002G062000",
+    "data_signal": 3.0,
+    "data_bot_id": "Inflorescence_1_10mm"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.004G006400",
+    "data_signal": 0.0,
+    "data_bot_id": "Pollen"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Sobic.001G458900",
+    "data_signal": 14.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Sobic.002G296100",
+    "data_signal": 15.0,
+    "data_bot_id": "Inflorescence_1_5_mm"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Sobic.010G271501",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.009G154300",
+    "data_signal": 0.0,
+    "data_bot_id": "PlantEmbryo_20d"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Sobic.004G131100",
+    "data_signal": 7.0,
+    "data_bot_id": "Root_SDS"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.001G084100",
+    "data_signal": 36.0,
+    "data_bot_id": "Pollen"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Sobic.009G191400",
+    "data_signal": 113.0,
+    "data_bot_id": "Root_SDS"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Sobic.008G135800",
+    "data_signal": 0.0,
+    "data_bot_id": "Root_SDS"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.006G092300",
+    "data_signal": 0.0,
+    "data_bot_id": "PlantEmbryo_20d"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.004G180301",
+    "data_signal": 2.0,
+    "data_bot_id": "Pollen"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "Sobic.006G248450",
+    "data_signal": 0.0,
+    "data_bot_id": "WholeOrganism_SDS"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Sobic.004G282301",
+    "data_signal": 0.0,
+    "data_bot_id": "Inflorescence_1_10mm"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Sobic.003G046700",
+    "data_signal": 0.1,
+    "data_bot_id": "Shoot_SDS"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Sobic.002G361300",
+    "data_signal": 32.0,
+    "data_bot_id": "Shoot_SDS"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Sobic.004G146150",
+    "data_signal": 10.0,
+    "data_bot_id": "Leaf_SDS"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Sobic.004G319000",
+    "data_signal": 4.0,
+    "data_bot_id": "Pollen"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Sobic.001G448200",
+    "data_signal": 41.0,
+    "data_bot_id": "Shoot_SDS"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.005G056800",
+    "data_signal": 5.0,
+    "data_bot_id": "PlantEmbryo_20d"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Sobic.010G004701",
+    "data_signal": 23.0,
+    "data_bot_id": "PlantEmbryo_20d"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Sobic.002G259700",
+    "data_signal": 76.0,
+    "data_bot_id": "Inflorescence_1_2cm"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Sobic.006G155700",
+    "data_signal": 86.0,
+    "data_bot_id": "Shoot_SDS"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Sobic.003G240700",
+    "data_signal": 63.0,
+    "data_bot_id": "Root_SDS"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Sobic.004G091000",
+    "data_signal": 0.2,
+    "data_bot_id": "Endosperm_20d"
+  },
+  {
+    "db": "sorghum_developmental_2",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Sobic.010G110901",
+    "data_signal": 0.8,
+    "data_bot_id": "Inflorescence_1_5_mm"
+  }
+]

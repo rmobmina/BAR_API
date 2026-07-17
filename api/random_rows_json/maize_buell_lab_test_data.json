@@ -1,0 +1,242 @@
+[
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 84,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d045181",
+    "data_signal": 2.72304,
+    "data_bot_id": "SK063__V9_Eighth_Leaf_R3"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 45,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d025390",
+    "data_signal": 0.0,
+    "data_bot_id": "SK006__6_DAS_GH_Coleoptile_R3"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 196,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d050140",
+    "data_signal": 6.65007,
+    "data_bot_id": "SS.27__Mz.Ez_3d_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 74,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d005652",
+    "data_signal": 0.0,
+    "data_bot_id": "SK053__V7_Tip_of_transition_leaf_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 252,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d045012",
+    "data_signal": 0.0,
+    "data_bot_id": "drght_0.8_24h_R4"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 240,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d043044",
+    "data_signal": 0.990851,
+    "data_bot_id": "drght_ctrl_24h_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 132,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d042539",
+    "data_signal": 0.0,
+    "data_bot_id": "SK120__10DAP_Whole_seed_R3"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 31,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d010652",
+    "data_signal": 0.0,
+    "data_bot_id": "RA.20__TapRoot_Z3_7d_R3"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 196,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d026606",
+    "data_signal": 0.0520194,
+    "data_bot_id": "SS.27__Mz.Ez_3d_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 162,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d001842",
+    "data_signal": 1.56032,
+    "data_bot_id": "SK150__18DAP_Embryo_R3"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 180,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d023335",
+    "data_signal": 0.0,
+    "data_bot_id": "SK168__22DAP_Endosperm_R3"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 68,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d003840",
+    "data_signal": 0.0,
+    "data_bot_id": "SK044__V5_Tip_of_Stage_2_Leaf_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 109,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d038546",
+    "data_signal": 29.8202,
+    "data_bot_id": "SK088__R1_Silks_R1"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 248,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d036475",
+    "data_signal": 11.5725,
+    "data_bot_id": "drght_0.8_6h_R3"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 196,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d007320",
+    "data_signal": 7.13093,
+    "data_bot_id": "SS.27__Mz.Ez_3d_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 274,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d011843",
+    "data_signal": 4.27901,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 151,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d008179",
+    "data_signal": 1.42876,
+    "data_bot_id": "SK139__16DAP_Embryo_R1"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 239,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d003136",
+    "data_signal": 0.0,
+    "data_bot_id": "drght_0.2_6h_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 125,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d008883",
+    "data_signal": 6.8331,
+    "data_bot_id": "SK113__6DAP_Whole_seed_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 19,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d006939",
+    "data_signal": 34.8249,
+    "data_bot_id": "PP_33__24_POL_INT_R1"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 144,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d002545",
+    "data_signal": 7.05995,
+    "data_bot_id": "SK132__14DAP_Endopsperm_R3"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 192,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d023952",
+    "data_signal": 0.0,
+    "data_bot_id": "SK180__24DAP_Embryo_R3"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d010227",
+    "data_signal": 161.332,
+    "data_bot_id": "PP.38__24_DAP_POL_LEAF_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 116,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d041383",
+    "data_signal": 2.41155,
+    "data_bot_id": "SK098__R2_Thirteenth_Leaf_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 159,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d032790",
+    "data_signal": 7.48839,
+    "data_bot_id": "SK147__18DAP_Whole_Seed_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 188,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d032897",
+    "data_signal": 0.105774,
+    "data_bot_id": "SK176__24DAP_Endosperm_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 72,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d029140",
+    "data_signal": 3.30674,
+    "data_bot_id": "SK048__V5_Bottom_of_transition_leaf_R3"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d038435",
+    "data_signal": 0.708964,
+    "data_bot_id": "PP1__0_POL_INT_R1"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 92,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d025885",
+    "data_signal": 0.0,
+    "data_bot_id": "SK071__V9_Papery_Leaves_R2"
+  },
+  {
+    "db": "maize_buell_lab",
+    "sample_id": 171,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d044142",
+    "data_signal": 0.126853,
+    "data_bot_id": "SK159__20DAP_Endosperm_R3"
+  }
+]

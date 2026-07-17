@@ -1,0 +1,242 @@
+[
+  {
+    "db": "maize_root",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G030403",
+    "data_signal": 0.0,
+    "data_bot_id": "6h_-0.8_MPa_(severe_stress):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G104418",
+    "data_signal": 61.1139,
+    "data_bot_id": "24h_-0.2_MPa_(mild_stress):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 9,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G011483",
+    "data_signal": 16.7565,
+    "data_bot_id": "6h_-0.2_MPa_(mild_stress):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM5G817854",
+    "data_signal": 0.0,
+    "data_bot_id": "24h_-0.8_MPa_(severe_stress):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G052869",
+    "data_signal": 13.2326,
+    "data_bot_id": "Meristematic_zone_(control):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 14,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G448104",
+    "data_signal": 1.54186,
+    "data_bot_id": "Root_hair_FPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G123119",
+    "data_signal": 10.2992,
+    "data_bot_id": "root_FPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G150503",
+    "data_signal": 5.78115,
+    "data_bot_id": "Seminal_root_FPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM5G849243",
+    "data_signal": 2.58731,
+    "data_bot_id": "Elongation_zone_(control):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G010804",
+    "data_signal": 2.15287,
+    "data_bot_id": "Crown_root_FPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 15,
+    "proj_id": "1",
+    "data_probeset_id": "AC217415.3_FG001",
+    "data_signal": 0.0,
+    "data_bot_id": "root_FPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G527017",
+    "data_signal": 0.0,
+    "data_bot_id": "24h_-0.8_MPa_(severe_stress):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "AC216867.3_FG003",
+    "data_signal": 0.0,
+    "data_bot_id": "Stele_(control):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G435380",
+    "data_signal": 0.0,
+    "data_bot_id": "Elongation_zone_(control):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G392700",
+    "data_signal": 28.1342,
+    "data_bot_id": "6h_-0.8_MPa_(severe_stress):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G327349",
+    "data_signal": 3.74096,
+    "data_bot_id": "Cortex_(control):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 5,
+    "proj_id": "1",
+    "data_probeset_id": "AC194180.3_FG004",
+    "data_signal": 0.0,
+    "data_bot_id": "Elongation_zone_(control):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "AC211513.3_FG002",
+    "data_signal": 0.0,
+    "data_bot_id": "Crown_root_FPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G317487",
+    "data_signal": 0.408711,
+    "data_bot_id": "24h_-0.8_MPa_(severe_stress):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 8,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G157120",
+    "data_signal": 0.0,
+    "data_bot_id": "6h_control:_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G158555",
+    "data_signal": 0.0,
+    "data_bot_id": "Meristematic_zone_(control):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G176301",
+    "data_signal": 1.43073,
+    "data_bot_id": "Cortex_(control):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM5G896748",
+    "data_signal": 0.0,
+    "data_bot_id": "6h_-0.8_MPa_(severe_stress):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 8,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G334041",
+    "data_signal": 2.32957,
+    "data_bot_id": "6h_control:_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G401026",
+    "data_signal": 3.42711,
+    "data_bot_id": "6h_-0.8_MPa_(severe_stress):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G082931",
+    "data_signal": 23.6111,
+    "data_bot_id": "Meristematic_zone_(control):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G450163",
+    "data_signal": 30.2217,
+    "data_bot_id": "24h_control:_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "AC205500.3_FG002",
+    "data_signal": 2.34388,
+    "data_bot_id": "24h_-0.8_MPa_(severe_stress):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G048200",
+    "data_signal": 12.4044,
+    "data_bot_id": "24h_-0.2_MPa_(mild_stress):_mean_RPKM"
+  },
+  {
+    "db": "maize_root",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "GRMZM2G103270",
+    "data_signal": 21.0789,
+    "data_bot_id": "6h_-0.8_MPa_(severe_stress):_mean_RPKM"
+  }
+]

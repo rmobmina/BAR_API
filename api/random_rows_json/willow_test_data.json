@@ -1,0 +1,242 @@
+[
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "comp1891_c0_seq1",
+    "data_signal": 1.5,
+    "data_bot_id": "RAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "comp93643_c0_seq19",
+    "data_signal": 0.0,
+    "data_bot_id": "RAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "comp92792_c0_seq13",
+    "data_signal": 0.0,
+    "data_bot_id": "LAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "comp9394_c0_seq1",
+    "data_signal": 0.0,
+    "data_bot_id": "LAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "comp90848_c0_seq26",
+    "data_signal": 0.5,
+    "data_bot_id": "LAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "comp93063_c1_seq25",
+    "data_signal": 0.75,
+    "data_bot_id": "SAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "comp94484_c1_seq61",
+    "data_signal": 36.5,
+    "data_bot_id": "RAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "comp85527_c0_seq4",
+    "data_signal": 96.75,
+    "data_bot_id": "RAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "comp93051_c1_seq36",
+    "data_signal": 0.0,
+    "data_bot_id": "RAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "comp82104_c0_seq11",
+    "data_signal": 0.0,
+    "data_bot_id": "SAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "comp88279_c0_seq39",
+    "data_signal": 10.5,
+    "data_bot_id": "SAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "comp86294_c2_seq4",
+    "data_signal": 0.75,
+    "data_bot_id": "RAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "comp91338_c0_seq14",
+    "data_signal": 111.25,
+    "data_bot_id": "SAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "comp92416_c0_seq5",
+    "data_signal": 606.5,
+    "data_bot_id": "LAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "comp93569_c0_seq122",
+    "data_signal": 11.0,
+    "data_bot_id": "RAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "comp81875_c0_seq5",
+    "data_signal": 52.25,
+    "data_bot_id": "RAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "comp87661_c0_seq21",
+    "data_signal": 0.0,
+    "data_bot_id": "RAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "comp84136_c0_seq13",
+    "data_signal": 1.0,
+    "data_bot_id": "LAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "comp92903_c0_seq51",
+    "data_signal": 0.0,
+    "data_bot_id": "LAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "comp170315_c0_seq1",
+    "data_signal": 0.0,
+    "data_bot_id": "SAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "comp95134_c0_seq4",
+    "data_signal": 6.75,
+    "data_bot_id": "LAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "comp94811_c0_seq56",
+    "data_signal": 0.0,
+    "data_bot_id": "SAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "comp91622_c0_seq96",
+    "data_signal": 0.0,
+    "data_bot_id": "LAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "comp94021_c2_seq48",
+    "data_signal": 52.25,
+    "data_bot_id": "RAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "comp89554_c0_seq7",
+    "data_signal": 0.75,
+    "data_bot_id": "RAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "comp90145_c0_seq8",
+    "data_signal": 0.0,
+    "data_bot_id": "LAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "comp95471_c0_seq28",
+    "data_signal": 79.5,
+    "data_bot_id": "SAVG_CTL"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "comp93299_c0_seq25",
+    "data_signal": 7.25,
+    "data_bot_id": "RAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "comp87549_c2_seq29",
+    "data_signal": 0.0,
+    "data_bot_id": "LAVG_TREAT"
+  },
+  {
+    "db": "willow",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "comp89046_c0_seq24",
+    "data_signal": 2051.25,
+    "data_bot_id": "SAVG_TREAT"
+  }
+]

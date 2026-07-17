@@ -105,7 +105,7 @@ _SPECS: List[tuple] = [
     ("grape_developmental", "grape"),
     ("guard_cell", "guard cell"),
     ("gynoecium", "gynoecium"),
-    ("heterodera_schachtii", "heterodera"),
+    ("heterodera_schachtii", "arabidopsis"),
     ("hnahal", "hnahal"),
     ("human_body_map_2", "human"),
     ("human_developmental", "human"),

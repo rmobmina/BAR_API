@@ -1,0 +1,242 @@
+[
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr4g0076511",
+    "data_signal": 0.0,
+    "data_bot_id": "JFED48B"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 78,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr8g0384371",
+    "data_signal": 0.0,
+    "data_bot_id": "JFVS72"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 31,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr8g0374771",
+    "data_signal": 0.0,
+    "data_bot_id": "JFICB0B"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 46,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr6g0452671",
+    "data_signal": 0.0,
+    "data_bot_id": "JFNOD48B"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr6g0460461",
+    "data_signal": 0.0,
+    "data_bot_id": "JFED24"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 50,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr6g0460901",
+    "data_signal": 0.0,
+    "data_bot_id": "JFNOD72C"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 30,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr2g0322091",
+    "data_signal": 0.0,
+    "data_bot_id": "JFICB0"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr8g0346841",
+    "data_signal": 0.0716648,
+    "data_bot_id": "JFED24"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 36,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr3g0106821",
+    "data_signal": 0.0,
+    "data_bot_id": "JFICB24"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 24,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr4g0007621",
+    "data_signal": 0.0,
+    "data_bot_id": "JFICA48"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 27,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr8g0345371",
+    "data_signal": 0.0,
+    "data_bot_id": "JFICA72"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 63,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr5g0394081",
+    "data_signal": 0.0,
+    "data_bot_id": "JFOC72"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 18,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr3g0079401",
+    "data_signal": 524.791,
+    "data_bot_id": "JFICA12"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 59,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr6g0448891",
+    "data_signal": 36.4345,
+    "data_bot_id": "JFOC24C"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 43,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr8g1036695",
+    "data_signal": 0.0657554,
+    "data_bot_id": "JFICB72B"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr4g0036191",
+    "data_signal": 0.0,
+    "data_bot_id": "JFED72"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 37,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr3g0088441",
+    "data_signal": 10.2175,
+    "data_bot_id": "JFICB24B"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 23,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr5g0412841",
+    "data_signal": 12.6118,
+    "data_bot_id": "JFICA24C"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 30,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr2g0311211",
+    "data_signal": 39.3273,
+    "data_bot_id": "JFICB0"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 24,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr5g0425691",
+    "data_signal": 0.176007,
+    "data_bot_id": "JFICA48"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 54,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr1g0153991",
+    "data_signal": 3.55267,
+    "data_bot_id": "JFOC12"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 69,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr6g0479252",
+    "data_signal": 0.0,
+    "data_bot_id": "JFVS12"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 52,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr2g0302991",
+    "data_signal": 0.0,
+    "data_bot_id": "JFOC0B"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr1g0155711",
+    "data_signal": 0.0,
+    "data_bot_id": "JFED48B"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 68,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr1g0167061",
+    "data_signal": 0.0,
+    "data_bot_id": "JFVS0C"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 66,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr5g0419471",
+    "data_signal": 472.373,
+    "data_bot_id": "JFVS0"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 69,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr2g0277661",
+    "data_signal": 0.0,
+    "data_bot_id": "JFVS12"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 27,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr8g0391221",
+    "data_signal": 25.419,
+    "data_bot_id": "JFICA72"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 20,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr7g0244911",
+    "data_signal": 0.0,
+    "data_bot_id": "JFICA12C"
+  },
+  {
+    "db": "medicago_root_v5",
+    "sample_id": 75,
+    "proj_id": "1",
+    "data_probeset_id": "MtrunA17Chr3g0115891",
+    "data_signal": 2.88189,
+    "data_bot_id": "JFVS48"
+  }
+]

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE specimen SYSTEM "http://www.bar.utoronto.ca/efp/cgi-bin/data/efp_config.dtd">
+<specimen name="Human">
+    <view name="all" class="" db="human_developmental" dbGroup="group1" img="Skeletal_Immune_Digestive_image.png">
+        <extra name="BioGPS paper" link="http://www.pnas.org/content/101/16/6062.long" parameters="No"
+               coords="391,733,454,733,454,746,391,746"/>
+        <extra name="Roth et al. paper" link="http://link.springer.com/article/10.1007%2Fs10048-006-0032-6" parameters="No"
+               coords="565,732,632,733,631,749,565,749"/>
+        <extra name="Ge et al. paper" link="http://www.sciencedirect.com/science/article/pii/S0888754305001114"
+               parameters="No" coords="638,731,703,731,704,747,638,747"/>
+        <extra name="Hiraoka et al. paper" link="http://www.sciencedirect.com/science/article/pii/S0016508510014976"
+               parameters="No" coords="711,731,786,731,786,747,711,747"/>
+        <extra name="Johnson et al. paper" link="http://europepmc.org/abstract/MED/17116732" parameters="No"
+               coords="792,731,888,731,888,747,792,747"/>
+        <extra name="Kalogeropoulos et al. paper" link="http://europepmc.org/abstract/MED/20354137" parameters="No"
+               coords="895,730,991,731,991,750,895,750"/>
+
+        <lookup db="None" table="None" geneid_col="None"/>
+        <coords graphX="1" graphY="116" graphWidth="113" graphHeight="58" legendX="0" legendY="490"/>
+        <group name="GSE1133_CTRL">
+            <control sample="GSE1133_CTRL"/>
+            <tissue colorKey="#ff66ff" name="Adipocyte-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="943,585,986,586,986,645,943,645"/>
+                <sample name="GSM18975"/>
+                <sample name="GSM18976"/>
+
+            </tissue>
+            <tissue colorKey="#ff3399" name="Smooth Muscle-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="599,576,668,577,668,647,599,647"/>
+                <sample name="GSM18971"/>
+                <sample name="GSM18972"/>
+
+            </tissue>
+            <tissue colorKey="#ff33ff" name="Psoas Muscle-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="208,464,236,402,238,465,220,521"/>
+                <sample name="GSM19013"/>
+                <sample name="GSM19014"/>
+
+            </tissue>
+            <tissue colorKey="#00ffff" name="Salivary Gland-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="459,115,494,131,503,112,468,97"/>
+                <area coords="502,87,521,105,511,114,498,105"/>
+                <sample name="GSM18991"/>
+                <sample name="GSM18992"/>
+
+            </tissue>
+            <tissue colorKey="#ffff66" name="CD56+ NK Cells-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="218,118,288,118,288,191,218,191"/>
+                <sample name="GSM18875"/>
+                <sample name="GSM18876"/>
+
+            </tissue>
+            <tissue colorKey="#ccff99" name="CD19+ B Cells-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="136,273,184,273,184,349,136,349"/>
+                <sample name="GSM18881"/>
+                <sample name="GSM18882"/>
+
+            </tissue>
+            <tissue colorKey="#ccff00" name="CD4+ T Cells-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="5,272,47,272,47,349,5,349"/>
+                <sample name="GSM18877"/>
+                <sample name="GSM18878"/>
+
+            </tissue>
+            <tissue colorKey="#ffff33" name="BDCA4+ Dendritic Cells-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="105,119,184,119,184,195,105,195"/>
+                <sample name="GSM18873"/>
+                <sample name="GSM18874"/>
+
+            </tissue>
+            <tissue colorKey="#ffff00" name="CD14+ Monocytes-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="13,128,91,128,91,197,13,197"/>
+                <sample name="GSM18871"/>
+                <sample name="GSM18872"/>
+
+            </tissue>
+            <tissue colorKey="#99ff66" name="CD105+ Endothelial Cells-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="206,278,274,278,274,347,206,347"/>
+                <sample name="GSM18883"/>
+                <sample name="GSM18884"/>
+
+            </tissue>
+            <tissue colorKey="#ff00ff" name="Appendix-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="474,380,486,394,492,392,482,374"/>
+                <sample name="GSM18999"/>
+                <sample name="GSM19000"/>
+
+            </tissue>
+            <tissue colorKey="#ff3333" name="Bone Marrow-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="452,455,471,455,471,481,452,481"/>
+                <sample name="GSM18909"/>
+                <sample name="GSM18910"/>
+
+            </tissue>
+            <tissue colorKey="#ccff33" name="CD8+ T Cells-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="74,271,116,271,116,351,74,351"/>
+                <sample name="GSM18879"/>
+                <sample name="GSM18880"/>
+
+            </tissue>
+            <tissue colorKey="#99ff33" name="721 B Lymphocytes-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="29,403,104,403,104,461,29,461"/>
+                <sample name="GSM18889"/>
+                <sample name="GSM18890"/>
+
+            </tissue>
+            <tissue colorKey="#0099ff" name="Pancreas-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="485,307,488,296,508,302,508,311"/>
+                <area coords="538,299,528,294,510,302,510,312"/>
+                <sample name="GSM18977"/>
+                <sample name="GSM18978"/>
+
+            </tissue>
+            <tissue colorKey="#ffcc00" name="Lymph Node-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="452,177,479,184,466,190,452,185"/>
+                <sample name="GSM18903"/>
+                <sample name="GSM18904"/>
+
+            </tissue>
+            <tissue colorKey="#33ff66" name="Thymus-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="510,177,522,156,519,205,487,209,493,155"/>
+                <sample name="GSM18899"/>
+                <sample name="GSM18900"/>
+
+            </tissue>
+            <tissue colorKey="#99ff99" name="CD34+-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="291,277,362,277,362,349,291,349"/>
+                <sample name="GSM18885"/>
+                <sample name="GSM18886"/>
+
+            </tissue>
+            <tissue colorKey="#33ffcc" name="Tonsil-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="610,3,645,3,645,39,610,39"/>
+                <sample name="GSM18901"/>
+                <sample name="GSM18902"/>
+
+            </tissue>
+            <tissue colorKey="#66ff99" name="Tongue-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="702,93,756,93,756,125,702,125"/>
+                <sample name="GSM19017"/>
+                <sample name="GSM19018"/>
+
+            </tissue>
+            <tissue colorKey="#6699ff" name="Islet Cell-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="841,220,914,220,914,290,841,290"/>
+                <sample name="GSM18979"/>
+                <sample name="GSM18980"/>
+
+            </tissue>
+            <tissue colorKey="#33ccff" name="Liver-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="715,329,827,331,827,391,715,391"/>
+                <sample name="GSM18953"/>
+                <sample name="GSM18954"/>
+
+            </tissue>
+            <tissue colorKey="#99ccff" name="Fetal Liver-[1]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133"/>
+                <area coords="759,398,825,398,825,432,759,432"/>
+                <sample name="GSM18905"/>
+                <sample name="GSM18906"/>
+
+            </tissue>
+        </group>
+        <group name="GSE3526_CTRL">
+            <control sample="GSE3526_CTRL"/>
+            <tissue colorKey="#cc66ff" name="Adipose Tissue Omental-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="865,578,940,578,939,651,865,651"/>
+                <sample name="GSM80561"/>
+                <sample name="GSM80562"/>
+                <sample name="GSM80563"/>
+                <sample name="GSM80564"/>
+            </tissue>
+            <tissue colorKey="#cc33ff" name="Adipose Tissue Subcutaneous-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="775,575,849,574,849,649,775,649"/>
+                <sample name="GSM80584"/>
+                <sample name="GSM80589"/>
+                <sample name="GSM80590"/>
+
+            </tissue>
+            <tissue colorKey="#ff00cc" name="Adipose Tissue-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="687,577,759,576,759,649,687,649"/>
+                <sample name="GSM80580"/>
+                <sample name="GSM80583"/>
+                <sample name="GSM80588"/>
+
+            </tissue>
+            <tissue colorKey="#ff0066" name="Skeletal Muscle-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="805,456,874,457,875,529,805,529"/>
+                <sample name="GSM80797"/>
+                <sample name="GSM80790"/>
+                <sample name="GSM80791"/>
+                <sample name="GSM80792"/>
+                <sample name="GSM80796"/>
+            </tissue>
+            <tissue colorKey="#ff6666" name="Bone Marrow-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="646,489,677,490,677,528,646,528"/>
+                <sample name="GSM80576"/>
+                <sample name="GSM80604"/>
+                <sample name="GSM80577"/>
+                <sample name="GSM80602"/>
+                <sample name="GSM80603"/>
+            </tissue>
+            <tissue colorKey="#66ffff" name="Salivary Gland-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="185,43,220,43,220,92,185,92"/>
+                <sample name="GSM80823"/>
+                <sample name="GSM80822"/>
+                <sample name="GSM80821"/>
+                <sample name="GSM80820"/>
+            </tissue>
+            <tissue colorKey="#ccff66" name="Esophagus-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="498,135,517,135,510,177,500,166"/>
+                <area coords="482,195,505,210,505,239,488,239"/>
+                <sample name="GSM80697"/>
+                <sample name="GSM80696"/>
+                <sample name="GSM80695"/>
+                <sample name="GSM80694"/>
+            </tissue>
+            <tissue colorKey="#0000ff" name="Cardiac Stomach-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="296,568,297,540,265,565,280,577"/>
+                <sample name="GSM80783"/>
+                <sample name="GSM80782"/>
+                <sample name="GSM80781"/>
+            </tissue>
+            <tissue colorKey="#00ccff" name="Liver-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="452,238,559,240,502,277,464,291"/>
+                <sample name="GSM80730"/>
+                <sample name="GSM80729"/>
+                <sample name="GSM80728"/>
+                <sample name="GSM80739"/>
+            </tissue>
+            <tissue colorKey="#6666ff" name="Spleen-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="539,259,534,295,553,295,553,259"/>
+                <sample name="GSM80826"/>
+                <sample name="GSM80825"/>
+                <sample name="GSM80808"/>
+                <sample name="GSM80807"/>
+            </tissue>
+            <tissue colorKey="#00cccc" name="Pharyngeal Mucosa-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="499,113,514,117,514,129,504,130"/>
+                <sample name="GSM80748"/>
+                <sample name="GSM80749"/>
+                <sample name="GSM80751"/>
+                <sample name="GSM80750"/>
+            </tissue>
+            <tissue colorKey="#3300ff" name="Fundus-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="294,569,294,537,338,552,321,575"/>
+                <sample name="GSM80812"/>
+                <sample name="GSM80811"/>
+                <sample name="GSM80810"/>
+                <sample name="GSM80809"/>
+            </tissue>
+            <tissue colorKey="#3333ff" name="Pylorus-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="242,585,246,623,288,633,284,587"/>
+                <sample name="GSM80816"/>
+                <sample name="GSM80815"/>
+                <sample name="GSM80814"/>
+                <sample name="GSM80813"/>
+            </tissue>
+            <tissue colorKey="#ffcc33" name="Lymph Node-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="561,181,544,192,540,181,552,171"/>
+                <sample name="GSM80735"/>
+                <sample name="GSM80738"/>
+                <sample name="GSM80737"/>
+                <sample name="GSM80736"/>
+            </tissue>
+            <tissue colorKey="#9900ff" name="Cecum-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="457,356,480,354,486,373,472,382"/>
+                <sample name="GSM80624"/>
+                <sample name="GSM80632"/>
+                <sample name="GSM80625"/>
+            </tissue>
+            <tissue colorKey="#66ffcc" name="Tonsil-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="612,59,646,59,646,100,612,100"/>
+                <sample name="GSM80901"/>
+                <sample name="GSM80886"/>
+                <sample name="GSM80889"/>
+            </tissue>
+            <tissue colorKey="#99ffff" name="Oral Mucosa-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="835,72,890,99,870,97,847,116"/>
+                <sample name="GSM80779"/>
+                <sample name="GSM80778"/>
+                <sample name="GSM80777"/>
+                <sample name="GSM80776"/>
+            </tissue>
+            <tissue colorKey="#33ff99" name="Tongue-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="890,102,868,97,845,121,872,132"/>
+                <sample name="GSM80845"/>
+                <sample name="GSM80843"/>
+                <sample name="GSM80842"/>
+                <sample name="GSM80844"/>
+            </tissue>
+            <tissue colorKey="#00ff99" name="Tongue superior-[3]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE3526"/>
+                <area coords="961,90,988,101,963,139,942,113"/>
+                <sample name="GSM80885"/>
+                <sample name="GSM80884"/>
+                <sample name="GSM80883"/>
+                <sample name="GSM80882"/>
+            </tissue>
+        </group>
+        <group name="GSE2361_CTRL">
+            <control sample="GSE2361_CTRL"/>
+            <tissue colorKey="#ff0099" name="Skeletal Muscle-[4]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2361"/>
+                <area coords="916,457,982,457,981,531,916,531"/>
+                <sample name="GSM44676"/>
+            </tissue>
+            <tissue colorKey="#ff3366" name="Bone Marrow-[4]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2361"/>
+                <area coords="720,490,758,489,758,527,720,527"/>
+                <sample name="GSM44693"/>
+            </tissue>
+            <tissue colorKey="#66ccff" name="Liver-[4]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2361"/>
+                <area coords="839,333,946,333,946,394,839,394"/>
+                <sample name="GSM44702"/>
+            </tissue>
+            <tissue colorKey="#ccccff" name="Fetal Liver-[4]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2361"/>
+                <area coords="885,397,943,399,943,432,885,432"/>
+                <sample name="GSM44706"/>
+            </tissue>
+            <tissue colorKey="#33ffff" name="Salivary Gland-[4]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2361"/>
+                <area coords="291,40,328,40,328,94,291,94"/>
+                <sample name="GSM44687"/>
+            </tissue>
+            <tissue colorKey="#3333ff" name="Stomach-[4]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2361"/>
+                <area coords="453,304,538,254,534,294,512,302"/>
+                <sample name="GSM44703"/>
+            </tissue>
+            <tissue colorKey="#cc00ff" name="Colon-[4]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2361"/>
+                <area coords="478,323,533,324,533,374,488,373"/>
+                <area coords="500,396,490,395,483,377,504,374"/>
+                <sample name="GSM44680"/>
+            </tissue>
+            <tissue colorKey="#9966ff" name="Small Intestine-[4]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2361"/>
+                <area coords="461,354,462,296,475,300,478,353"/>
+                <area coords="552,318,479,324,475,304,514,314"/>
+                <area coords="546,293,520,310,552,318,554,300"/>
+                <area coords="544,378,550,320,533,321,535,374"/>
+                <area coords="520,399,542,378,534,374,518,382"/>
+                <area coords="514,423,516,377,502,380,504,420"/>
+                <sample name="GSM44679"/>
+            </tissue>
+            <tissue colorKey="#00ff66" name="Thymus-[4]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2361"/>
+                <area coords="657,146,681,146,681,183,657,183"/>
+                <sample name="GSM44672"/>
+            </tissue>
+            <tissue colorKey="#3399ff" name="Pancreas-[4]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2361"/>
+                <area coords="727,284,823,260,817,287,734,296"/>
+                <area coords="730,268,740,274,727,280,724,270"/>
+                <area coords="728,256,821,256,748,269"/>
+                <sample name="GSM44677"/>
+            </tissue>
+            <tissue colorKey="#9999ff" name="Spleen-[4]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2361"/>
+                <area coords="959,233,982,233,982,278,959,278"/>
+                <sample name="GSM44673"/>
+            </tissue>
+        </group>
+        <group name="PV_CTRL">
+            <control sample="PV_CTRL"/>
+            <tissue colorKey="#ff0000" name="Pelvis-[7]">
+                <link url="http://www.ebi.ac.uk/arrayexpress/experiments/E-MEXP-2219/"/>
+                <area coords="447,360,462,355,466,379,454,390"/>
+                <area coords="506,422,479,384,468,380,454,391"/>
+                <area coords="492,434,505,423,484,410,482,427"/>
+                <area coords="520,434,568,368,552,354,542,390"/>
+                <area coords="518,394,542,382,519,432,512,422"/>
+                <sample name="OST1-1"/>
+                <sample name="OST1-1pr2"/>
+                <sample name="OST19"/>
+                <sample name="OST37"/>
+                <sample name="OST38"/>
+            </tissue>
+            <tissue colorKey="#ff0033" name="Vertebral Column-[7]">
+                <link url="http://www.ebi.ac.uk/arrayexpress/experiments/E-MEXP-2219/"/>
+                <area coords="234,401,260,400,267,516,232,506"/>
+                <sample name="OST12"/>
+                <sample name="OST29"/>
+                <sample name="OST31"/>
+                <sample name="OST33"/>
+                <sample name="OST34"/>
+                <sample name="OST35"/>
+                <sample name="OST39"/>
+                <sample name="OST3l41"/>
+                <sample name="OST40"/>
+                <sample name="OST16"/>
+                <sample name="OST17"/>
+                <sample name="OST2-1"/>
+                <sample name="OST2-2"/>
+                <sample name="OST21"/>
+                <sample name="OST23"/>
+                <sample name="OST26"/>
+                <sample name="OST27"/>
+            </tissue>
+        </group>
+        <group name="COLON_CTRL">
+            <control sample="COLON_CTRL"/>
+            <tissue colorKey="#9933ff" name="Large Intestine-[2]">
+                <link url="http://www.ebi.ac.uk/arrayexpress/experiments/E-GEOD-7307/"/>
+                <area coords="62,509,170,509,170,651,62,651"/>
+                <sample name="GSE7307GSM175905"/>
+                <sample name="GSE7307GSM175983"/>
+                <sample name="GSE7307GSM175984"/>
+                <sample name="GSE7307GSM176123"/>
+            </tissue>
+        </group>
+        <group name="LYMPH_VESSELS_CTRL">
+            <control sample="LYMPH_VESSELS_CTRL"/>
+            <tissue colorKey="#ffffcc" name="Lymph Vessels-[6]">
+                <link url="http://www.ebi.ac.uk/arrayexpress/experiments/E-GEOD-6257/"/>
+                <area coords="446,183,466,192,458,206,441,197"/>
+                <area coords="560,181,546,193,554,203,572,194"/>
+                <sample name="GSE6257GSM143717"/>
+                <sample name="GSE6257GSM143898"/>
+                <sample name="GSE6257GSM143900"/>
+            </tissue>
+        </group>
+        <group name="PANC_DUCT_CTRL">
+            <control sample="PANC_DUCT_CTRL"/>
+            <tissue colorKey="#6600ff" name="Pancreatic Duct-[5]">
+                <link url="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE19650"/>
+                <area coords="732,269,742,275,745,269,731,261"/>
+                <area coords="806,265,736,279,735,275,794,263"/>
+                <sample name="GSM490138"/>
+                <sample name="GSM490139"/>
+                <sample name="GSM490140"/>
+                <sample name="GSM490141"/>
+                <sample name="GSM490142"/>
+                <sample name="GSM490143"/>
+                <sample name="GSM490144"/>
+            </tissue>
+        </group>
+    </view>
+</specimen>

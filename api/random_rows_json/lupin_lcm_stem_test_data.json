@@ -1,0 +1,242 @@
+[
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Luan_Oskar_Trin_150940",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_parenchyma_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Luan_Oskar_Trin_207827",
+    "data_signal": 0.172,
+    "data_bot_id": "Stem_xylem_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Luan_Oskar_PB12_100123",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_parenchyma_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Luan_Oskar_Trin_149386",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Luan_Oskar_PB12_100445",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Luan_Oskar_Trin_192046",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_parenchyma_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Luan_Oskar_Trin_279104",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Luan_Oskar_Trin_113161",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_xylem_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Luan_Oskar_Trin_290431",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Luan_Oskar_Trin_176449",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_parenchyma_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Luan_Oskar_Trin_270383",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Luan_Oskar_Trin_151175",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Luan_Oskar_Trin_180578",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_parenchyma_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Luan_Oskar_Trin_133112",
+    "data_signal": 20.438,
+    "data_bot_id": "Stem_xylem_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Luan_Oskar_Trin_187509",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Luan_Oskar_Trin_172915",
+    "data_signal": 10.476,
+    "data_bot_id": "Stem_xylem_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Luan_Oskar_Trin_233820",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_parenchyma_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Luan_Oskar_Trin_112760",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_parenchyma_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Luan_Oskar_Trin_191740",
+    "data_signal": 11.878,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Luan_Oskar_Trin_111986",
+    "data_signal": 557.441,
+    "data_bot_id": "Stem_epidermis_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Luan_Oskar_PB12_102034",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Luan_Oskar_Trin_263072",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Luan_Oskar_Trin_135081",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Luan_Oskar_Trin_137319",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Luan_Oskar_PB12_101663",
+    "data_signal": 22.468,
+    "data_bot_id": "Stem_parenchyma_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Luan_Oskar_PB36_109780",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Luan_Oskar_Trin_206002",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_parenchyma_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Luan_Oskar_Trin_247250",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_phloem_1"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Luan_Oskar_Trin_161862",
+    "data_signal": 0.0,
+    "data_bot_id": "Stem_parenchyma_2"
+  },
+  {
+    "db": "lupin_lcm_stem",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Luan_Oskar_PB12_102662",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  }
+]

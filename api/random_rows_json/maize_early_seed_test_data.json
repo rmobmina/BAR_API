@@ -1,0 +1,242 @@
+[
+  {
+    "db": "maize_early_seed",
+    "sample_id": 27,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d044622",
+    "data_signal": 32.68,
+    "data_bot_id": "NU120"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 31,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d025452",
+    "data_signal": 21.67,
+    "data_bot_id": "NU144"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 30,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d024093",
+    "data_signal": 6.35,
+    "data_bot_id": "NU138"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 25,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d018292",
+    "data_signal": 0.360873,
+    "data_bot_id": "Med_CTRL_WIDIEZ"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 22,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d002382",
+    "data_signal": 6.09732,
+    "data_bot_id": "SAL_2"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 4,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d047320",
+    "data_signal": 0.347128,
+    "data_bot_id": "AS_4"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 24,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d013018",
+    "data_signal": 0.0,
+    "data_bot_id": "SAL_4"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 17,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d037038",
+    "data_signal": 1.43232,
+    "data_bot_id": "Per_1"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 18,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d022457",
+    "data_signal": 0.103262,
+    "data_bot_id": "Per_2"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d049053",
+    "data_signal": 0.11,
+    "data_bot_id": "NU4"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 25,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d040620",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL_WIDIEZ"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 12,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d007984",
+    "data_signal": 0.0,
+    "data_bot_id": "NU44"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 2,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d038449",
+    "data_signal": 8.47573,
+    "data_bot_id": "AS_2"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 31,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d012229",
+    "data_signal": 129.83,
+    "data_bot_id": "NU144"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d032189",
+    "data_signal": 0.0,
+    "data_bot_id": "NU4"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 16,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d017504",
+    "data_signal": 1.41,
+    "data_bot_id": "NU60"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 20,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d023309",
+    "data_signal": 12.7798,
+    "data_bot_id": "Per_4"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 17,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d034968",
+    "data_signal": 5.51,
+    "data_bot_id": "NU64"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d028404",
+    "data_signal": 0.1,
+    "data_bot_id": "NU20"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 7,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d021473",
+    "data_signal": 16.2389,
+    "data_bot_id": "EAS_3"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 27,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d044455",
+    "data_signal": 4.16,
+    "data_bot_id": "NU120"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 2,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d036817",
+    "data_signal": 0.0,
+    "data_bot_id": "NU4"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 17,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d012688",
+    "data_signal": 5.97,
+    "data_bot_id": "NU64"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 12,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d028272",
+    "data_signal": 11.0733,
+    "data_bot_id": "Emb_4"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 8,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d052483",
+    "data_signal": 0.0300111,
+    "data_bot_id": "EAS_4"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d009454",
+    "data_signal": 0.0,
+    "data_bot_id": "NU12"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 4,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d034536",
+    "data_signal": 1.84,
+    "data_bot_id": "NU12"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d026580",
+    "data_signal": 10.26,
+    "data_bot_id": "NU24"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Zm00001d021871",
+    "data_signal": 2.71,
+    "data_bot_id": "NU24"
+  },
+  {
+    "db": "maize_early_seed",
+    "sample_id": 13,
+    "proj_id": "2",
+    "data_probeset_id": "Zm00001d034698",
+    "data_signal": 84.2359,
+    "data_bot_id": "End_1"
+  }
+]

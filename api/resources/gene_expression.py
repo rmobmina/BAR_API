@@ -40,6 +40,9 @@ class GeneExpression(Resource):
         if species is None:
             return BARUtils.error_exit(f"Unknown database '{database}'"), 400
 
+        if BARUtils.is_injection_attempt(gene_id):
+            return BARUtils.error_exit(f"Invalid gene ID for {database}: '{gene_id}'"), 400
+
         if GeneIdUtils.is_probeset_id(gene_id):
             query_id = gene_id
         else:

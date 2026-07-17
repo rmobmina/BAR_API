@@ -2,187 +2,45 @@ import re
 import redis
 import os
 
-# fmt: off
-# Per-eFP-project input validation regexes sourced from efpWeb.cgi.
-# Each pattern covers canonical gene IDs AND (where applicable) microarray probeset IDs.
-EFP_PROJECT_REGEXES: dict = {
-    "efp": (
-        r"^([Aa][Tt][12345CM][Gg][0-9]{5})$"
-        r"|^([0-9]{6}(_[xsfi])?_at)$"
-        r"|^([0-9]{6,9})$"
-        # ATH1 Affymetrix bacterial/control spike-in probes, shared by all Affy platforms
-        r"|^(AFFX-(BioB|BioC|BioDn|CreX|DapX|LysX|PheX|ThrX|TrpnX)-(3|5|M)_at)$"
-        r"|^(AFFX-r2-(Bs|Ec|P1)-(dap|lys|phe|thr|bioB|bioC|bioD|cre)-(3|5|M)(_|_x_|_s_)at)$"
-    ),
-    "efp_arabidopsis": (
-        r"^([Aa][Tt][12345CM][Gg][0-9]{5})$"
-        r"|^([0-9]{6}(_[xsfi])?_at)$"
-        r"|^([0-9]{6,9})$"
-        r"|^(AFFX-(BioB|BioC|BioDn|CreX|DapX|LysX|PheX|ThrX|TrpnX)-(3|5|M)_at)$"
-        r"|^(AFFX-r2-(Bs|Ec|P1)-(dap|lys|phe|thr|bioB|bioC|bioD|cre)-(3|5|M)(_|_x_|_s_)at)$"
-    ),
-    # Seedcoat uses CATMA probes (At\d{8}) and AROS probes (\D\d+_\d+) in addition to ATH1
-    "efp_seedcoat": (
-        r"^(At[12345CM]g[0-9]{5})$"
-        r"|^([0-9]{6}(_[xsfi])?_at)$"
-        r"|^([0-9]{6,9})$"
-        r"|^(\D\d+_\d+)$"
-        r"|^(At\d{8})$"
-    ),
-    "efp_barley": (
-        r"^((HM|HV).*)$|^(HV.*_at)$"
-        r"|^(([0-9]{4,7})_(Reg|R)_([0-9]{2,4})-([0-9]{4})_at)$"
-        r"|^([0-9]{4,5}\.AF[0-9]{5}(_|_x_)at)$"
-        r"|^(A[0-9]{5}\.[0-9]{1}(_|_x_|_s_)at)$"
-        r"|^(([A-Z]{2}[0-9]{6}|[A-Z]{2}[0-9]{6}\.1)(_|_x_|_s_|_CDS-[0-9]{1,2}_|_CDS-[0-9]{1,2}_s_)at)$"
-        r"|^(AFFX-(BioB|BioC|BioDn|CreX|DapX|LysX|PheX|ThrX|TrpnX)-(3|5|M)_at)$"
-        r"|^(AFFX-r2-(Bs|Ec|P1)-(dap|lys|phe|thr|bioB|bioC|bioD|cre)-(3|5|M)(_|_x_|_s_)at)$"
-        r"|^(ChlorContig[0-9]{1,2}(_|_x_|_s_)at)$"
-        r"|^(((MitoContig|Contig)[0-9]{1,6})(_|_x_|_s_)at)$"
-        r"|^(D[0-9]{5}_at)$"
-        r"|^(Dhn[0-9]{2}\(Morex\)(_|_s_)at)$"
-        r"|^(E(Ban|Bca|Bed|Bem|Bes|Bma|Bpi|Bro)[0-9]{2}_SQ[0-9]{3}_[A-Z]{1}[0-9]{2}(_|_s_|_x_)at)$"
-        r"|^(Franka(_|_b_)3pri[0-9]{1,2}(_|_s_|_x_)at)$"
-        r"|^(HVSME[a-z]{1}[0-9]{4}[A-Z]{1}[0-9]{2}(r2|f)(_|_x_|_s_)at)$"
-        r"|^(HV_CEa[0-9]{4}[A-Z]{1}[0-9]{2}(r2|f)(_|_x_|_s_)at)$"
-        r"|^(H[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{2}[ru](_|_x_|_s_)at)$"
-        r"|^(S[0-9]{10}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{1}(_|_x_|_s_)at)$"
-        r"|^((b|rb)(aak|aal|ags|ah|asd)[0-9]{1,2}[a-z]{1}[0-9]{2}(_|_x_|_s_)at)$"
-        r"|^(([0-9]{4,7})_(Reg|R)_([0-9]{2,4})-([0-9]{4}))$"
-        r"|^([0-9]{4,5}\.AF[0-9]{5})$"
-        r"|^(A[0-9]{5}\.[0-9]{1})$"
-        r"|^([A-Z]{2}[0-9]{6}|[A-Z]{2}[0-9]{6}\.1)$"
-        r"|^(AFFX-(BioB|BioC|BioDn|CreX|DapX|LysX|PheX|ThrX|TrpnX))$"
-        r"|^(AFFX-r2-(Bs|Ec|P1)-(dap|lys|phe|thr|bioB|bioC|bioD|cre))$"
-        r"|^(ChlorContig[0-9]{1,2})$"
-        r"|^((MitoContig|Contig)[0-9]{1,6})$"
-        r"|^(D[0-9]{5})$"
-        r"|^(Dhn[0-9]{2}\(Morex\))$"
-        r"|^(E(Ban|Bca|Bed|Bem|Bes|Bma|Bpi|Bro)[0-9]{2}_SQ[0-9]{3}_[A-Z]{1}[0-9]{2})$"
-        r"|^(Franka(_|_b_)3pri[0-9]{1,2})$"
-        r"|^(HVSME[a-z]{1}[0-9]{4}[A-Z]{1}[0-9]{2}(r2|f))$"
-        r"|^(HV_CEa[0-9]{4}[A-Z]{1}[0-9]{2}(r2|f))$"
-        r"|^(H[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{2}[ru])$"
-        r"|^(S[0-9]{10}[A-Z]{1}[0-9]{2}[A-Z]{1}[0-9]{1})$"
-        r"|^((b|rb)(aak|aal|ags|ah|asd)[0-9]{1,2}[a-z]{1}[0-9]{2})$"
-        r"|^(HO)$"
-        r"|^(MLOC\.[0-9]{4,6}\.[0-9]{1,2})$"
-        r"|^(AK[0-9]{6}\.1)$"
-        r"|^(AJ[0-9]{6}\.1)$"
-    ),
-    "efp_rice": (
-        r"^(LOC_Os[0-9]{2}g[0-9]{5})$"
-        r"|^((AFFX|AFFX-Os)(-|_)(Ubiquitin|Actin|Cyph|Gapdh|BioB|BioC|BioDn|CreX|DapX|LysX|PheX|ThrX|TrpnX|ef1a|gapdh)(-|_)(3|5|M)_(at|x_at|s_at))$"
-        r"|^(AFFX-OS-(18SrRNA|25SrRNA|5\.8SrRNA)_(s_at|at))$"
-        r"|^((AFFX-Mgr-(actin|ef1a|gapdh)-(3|5|M))_(at|x_at|s_at))$"
-        r"|^(AFFX-r2-Tag(A|B|C|D|E|F|G|H)_at)$"
-        r"|^(AFFX-r2-Tag(IN|I|J|O|Q)-(3|5|M)_at)$"
-        r"|^((AFFX|AFFX-Os)-r2-(Bs|Ec|P1)-(dap|lys|phe|thr|bioB|bioC|bioD|cre)-(3|5|M)(_|_x_|_s_)at)$"
-        r"|^((Os|OsAffx)\.[0-9]{1,5}\.[0-9]{1}\.(S1|A1|S2)_(at|x_at|s_at|a_at))$"
-    ),
-    "efp_medicago": (
-        r"^(Medtr\d{1}g\d{6})$"
-        r"|^(Medtr\d{1}g\d{6}\.[0-9]{1})$"
-        # Medicago array probesets: Mtr/Msa/Sme prefix, any Affymetrix suffix variant
-        r"|^(Mtr\.\d{4,5}\.\d+\.(S1|A1|S2)_(at|s_at|x_at|a_at))$"
-        r"|^(Msa\.\d+\.\d+\.(S1|A1|S2)_(at|s_at|x_at|a_at))$"
-        r"|^(Sme\.\d+\.\d+\.(S1|A1|S2)_(at|s_at|x_at|a_at))$"
-        r"|^(AFFX-(Bio|Cre|Dap|Lys|Phe|Thr|Trpn)(B|C|Dn|X)-(3|5|M)_at)$"
-        r"|^(AFFX-(Msa|Mtr)-(actin|gapc|gsta|ubq11|TrpnX)-(3|5|M)_(at|x_at|s_at))$"
-        r"|^(AFFX-r2-(Bs|Ec|P1)-(cre|dap|lys|phe|thr|bioB|bioC|bioD)-(3|5|M)_(at|s_at|x_at))$"
-        r"|^(AFFX-Mtr-ubq11-(3|5|M)_(at|s_at|x_at))$"
-        r"|^(AFFX-r2-Tag[A-Z]{1,2}_at)$"
-        r"|^(Medtr_v1_\d{6})$"
-    ),
-    "efp_poplar": (
-        r"^(Ptp(Affx)?\.\d{1,6}\.\d{1,6}\.(A1|A2|S1|S2)_(x_at|s_at|at|a_at))$"
-        r"|^((eugene3)\.\d{6,12})$"
-        r"|^((estExt_)(Genewise|fgenesh)(1|4)\_(v1|kg|pg|pm)(\.|\_v1\.)C_LG_\w{6,10})$"
-        r"|^((grail3\.)\d{8,12})$"
-        r"|^((fgenesh)(1|4)\_(kg|pg|pm)\.C\_(scaffold|LG)\_\w{7,12})$"
-        r"|^((gw1)\.\w{1,6}\.\w{1,4}\.1)$"
-        r"|^((POPTR)\_[0-9]{4}s[0-9]{5}\.*[1-5]{0,1})$"
-        # poplar_hormone's real sample IDs omit the transcript suffix entirely
-        r"|^(Potri\.[0-9]{3}G[0-9]{6}(\.[0-9]{1})?)$"
-    ),
-    "efp_soybean": (
-        r"^((Glyma\d{1,3}g\d{1,6}\.?\d?)$"
-        r"|^(Glyma\.\d{1,3}g\d{1,8}))$"
-    ),
-    "efp_maize": (
-        r"^(AC[0-9]{6}\.[0-9]{1}_FG[0-9]{3})$"
-        r"|^(AC[0-9]{6}\.[0-9]{1}_FGT[0-9]{3})$"
-        r"|^(GRMZM(2|5)G[0-9]{6})$"
-        r"|^(GRMZM(2|5)G[0-9]{6}_T[0-9]{2})$"
-        r"|^(Zm\d+d\d+)$"
-        r"|^(Zm\d{1,10}eb\d{1,10})$"
-        # Maize Affymetrix probeset IDs, e.g. Zm011368_at, Zm039842_s_at
-        r"|^(Zm\d{6}(_[xsa])?_at)$"
-    ),
-    # TaAffx.* probes occur alongside Ta.* — handle both prefixes
-    "efp_triticale": r"^((Ta|TaAffx)\.\d+\.\d+\.[A-Z]\d+_(at|s_at|x_at|a_at))$",
-    # Affymetrix human probeset IDs (1557575_at, 202019_s_at) plus a loose fallback
-    "efp_human": r"^(\d{6,7}(_[xsa])?_at)$|^(\D{0,12}\d{0,12})$|^(\d{1,12})$",
-    # Remaining eFP projects, sourced verbatim from Vincent's efp_regex_audit_prod.csv
-    "efp_Eutrema": r"^(Thhalv\d{8}m\.g)$|^(XLOC_\d{6})$|^(nXLOC\d{6})$|^(At\dg\d{5})$",
-    "efp_actinidia": r"^(Acc\d+\.\d{0,3})$",
-    "efp_apple": r"^(MfusH1_\d\dg\d{1,8})$",
-    # CSV pattern is lowercase-only; lipid species names use mixed case (e.g. "TG 54:5; ...")
-    "efp_arabidopsis_lipid": r"(?i)^[a-z0-9\s:;\/\[\]_\+\-]{1,64}$",
-    "efp_arachis": r"^(Adur\d+_comp\d+_c\d+_seq\d+)$|^(Gyn_Aipa_c\d+_g\d+_i\d+)$|^(Aipa\d+_comp\d+_c\d+_seq\d+)$|^(Gyn_Adur_c\d+_g\d+_i\d+)$",
-    "efp_brachypodium": r"^(Bradi\d+g\d+.\d)$|^(Bradi\d+s\d+.\d)$|^(Bradi\d+.g\d+)$",
-    "efp_brachypodium_metabolites": r"(?i)^[a-z\s\-]{1,60}$",
-    "efp_brassica_rapa": r"^(Bra.\d+g\d{0,10})$",
-    "efp_cacao_ccn": r"^(CCN-51_Chr\d{1,3}v\d{1,3}_\d{1,9})$",
-    "efp_cacao_sca": r"^(SCA-6_Chr\d{1,3}v\d{1,3}_\d{1,9})$",
-    "efp_cacao_tc": r"^(Tc\d+v2_g\d+)$",
-    "efp_camelina": r"^(Csa\d{0,5}[gs]\d{0,6}.\d{0,3})$|^(At\d[cgm]\d{0,6})$",
-    "efp_cannabis": r"(^C\d+$)|(^scaffold\d+$)|(^AGQN\d+$)",
-    "efp_canola": r"^(Bna\D\d{1,3}g\d{1,8}\D)$|^(Bna\Dnng\d{1,8}\D)$",
-    "efp_durum_wheat": r"^(TrturSVE\d\D\d{1,3}G\d{1,12})$|^(TrturSVE\d\D\d{1,3}G\d{1,12}_ncBOCREA)$",
-    "efp_euphorbia": r"^(Ep_chr\d_g\d{1,8})$",
-    "efp_eutrema": r"^(Thhalv\d{8}m\.g)$|^(XLOC_\d{6})$|^(nXLOC\d{6})$|^(At\dg\d{5})$",
-    "efp_grape": r"^(VIT_\d{1,2}s\d{4}g\d{5})$|^CHRUN[a-z0-9_]{1,20}$|^CHR\d{1,2}[a-z0-9_]{1,2}$",
-    "efp_kalanchoe": r"^(Kaladp\d+s\d+)$",
-    "efp_little_millet": r"^(TRINITY_DN\d+_c\d+_g\d+_i\d+)$",
-    "efp_lupin": r"^(Luan_Oskar_.{1,12}_\d{1,12})$",
-    # is_efp_gene_valid matches without re.IGNORECASE, so these freeform-text
-    # patterns (enzyme/metabolite/category NAMES, not gene IDs) need an explicit
-    # (?i) -- real sample data is mixed-case ("GAPDH (NAD)", "Citric Acid").
-    "efp_maize_enzyme": r"(?i)^[a-z0-9\s\-\(\)]{1,50}$",
-    "efp_maize_metabolite": r"(?i)^[a-z0-9\s,\.\-\(\)_'\+]{1,60}$",
-    # Lipid species names (TG_52_1, MGDG_38_6), same freeform style as efp_arabidopsis_lipid
-    "efp_maize_lipid_map": r"(?i)^[a-z0-9\s:;\/\[\]_\+\-]{1,64}$",
-    # tomato_trait stores root-architecture trait descriptions, not gene IDs
-    "efp_tomato_trait": r"^[A-Za-z][A-Za-z0-9\s\.,\-\(\)]{1,100}$",
-    "efp_maize_transcriptomics": r"^(AC[0-9]{6}\.[0-9]{1}_FG[0-9]{3})$|^(AC[0-9]{6}\.[0-9]{1}_FGT[0-9]{3})$|^(GRMZM(2|5)G[0-9]{6})$|^(GRMZM(2|5)G[0-9]{6}_T[0-9]{2})$|^(Zm\d+d\d+)$|^(Zm\d{1,10}eb\d{1,10})$|^(Zm\d{6}(_[xsa])?_at)$",
-    "efp_mangosteen": r"^(DN\d{1,10})$",
-    "efp_marchantia": r"^(Mp.{1,3}g\d{1,7}\.?\d{1,3}?)$",
-    "efp_oat": r"(^N0\.HOG\d{1,10}$|^\D{1,10}\.*\d{1,10}.{1,10}\d{1,10}$)",
-    "efp_phelipanche": r"^(OrAeBC\d+_\d+\.\d{1,5})|(At\d[gcm]\d{1,6})$",
-    "efp_physcomitrella": r"^(Pp)\d+s\d+_\d+V\d\.\d$|^Phypa_\d+$",
-    "efp_potato": r"^(PGSC0003DMG4\d{8})$",
-    "efp_rice_metabolite": r"(?i)^[a-z0-9,\s\.\-]{1,40}$",
-    "efp_rice_transcriptomics": r"^(LOC_Os[0-9]{2}g[0-9]{5})$|^((AFFX|AFFX-Os)(-|_)(Ubiquitin|Actin|Cyph|Gapdh|BioB|BioC|BioDn|CreX|DapX|LysX|PheX|ThrX|TrpnX|ef1a|gapdh)(-|_)(3|5|M)_(at|x_at|s_at))$|^(AFFX-OS-(18SrRNA|25SrRNA|5.8SrRNA)_(s_at|at))$|^((AFFX-Mgr-(actin|ef1a|gapdh)-(3|5|M))_(at|x_at|s_at))$|^(AFFX-r2-Tag(A|B|C|D|E|F|G|H)_at)$|^(AFFX-r2-Tag(IN|I|J|O|Q)-(3|5|M)_at)$|^((AFFX|AFFX-Os)-r2-(Bs|Ec|P1)-(dap|lys|phe|thr|bioB|bioC|bioD|cre)-(3|5|M)(_|_x_|_s_)at)$|^((Os|OsAffx)\.[0-9]{1,5}\.[0-9]{1}\.(S1|A1|S2)_(at|x_at|s_at|a_at))$",
-    "efp_selaginella": r"^(Smo\d+)$",
-    "efp_sorghum": r"^(Sobic.\d{0,5}G\d{0,10}$|^Sobic.K\d{0,10}$|^ENSRNA\d{0,12}$|^SORBI_\d{1,6}G\d{1,10})$",
-    "efp_strawberry": r"^(FvH4_c?\d{1,3}g\d{1,7})$|^(gene\d{1,10})$",
-    "efp_striga": r"^(StHeBC3\_\d+\.\d{1,5})$|^(At\d[gcm]\d{1,6})$",
-    "efp_tomato": r"^(Solyc\d{2}g\d{6}\.?\d{0,3})$|^(TU\d{6})$",
-    "efp_triphysaria": r"^(TrVeBC\d+_\d+\.\d{1,5})$|^(At\d[gcm]\d{1,6})$",
-    "efp_tung_tree": r"^(Vf\d+G\d+)$",
-    "efp_wheat": r"^(TraesCS\d\D\d{0,2}[G]\d{0,6}L*C*\.*\d*)$|^(TraesCSU\d+G\d+L*C*\.*\d*)$",
-    "efpconfig": r".{0,16}",
-    "mouse_efp": r"^(XM_\d{0,8}\.\d{0,3})$|^(\d{1,10}\D\d{0,4}\D{0,4})$|^(\D{1,8}\d{0,8}\D{0,8})$|^(ENSMUSG\d{1,15})$|^(NM_\d{0,12}\d.\d{0,3})$",
-}
-# Aliases for alternate eFP project key spellings used by the BAR
+from api.utils.master_data_utils import load_combined_master
+
+# Per-eFP-project input validation regexes. Sourced from Vincent's
+# regex_master_list_efp_eplant registry (tested at 99%+ coverage against real
+# probeset/gene ID sample data) and embedded into combined_master.json at
+# build time by build_combined_master_json.py -- see get_validation_patterns().
+# Each pattern covers canonical gene IDs AND (where applicable) microarray
+# probeset IDs. Copied (not aliased) so the aliases added below don't mutate
+# the shared cached master JSON other modules also read.
+EFP_PROJECT_REGEXES: dict = dict(load_combined_master()["validation_patterns"])
+
+# Aliases for alternate eFP project key spellings used by the BAR (not present
+# in Vincent's registry, which is keyed by canonical eFP project name only).
 EFP_PROJECT_REGEXES["efpbarley"] = EFP_PROJECT_REGEXES["efp_barley"]
 EFP_PROJECT_REGEXES["efprice"] = EFP_PROJECT_REGEXES["efp_rice"]
 EFP_PROJECT_REGEXES["efpmedicago"] = EFP_PROJECT_REGEXES["efp_medicago"]
 EFP_PROJECT_REGEXES["efppop"] = EFP_PROJECT_REGEXES["efp_poplar"]
 EFP_PROJECT_REGEXES["efpsoybean"] = EFP_PROJECT_REGEXES["efp_soybean"]
 EFP_PROJECT_REGEXES["maizeefp"] = EFP_PROJECT_REGEXES["efp_maize"]
-# fmt: on
+
+# General injection guard, run before any per-project/probeset format check.
+# A handful of eFP projects accept loose freeform text (metabolite/enzyme/trait
+# names, e.g. "TG 54:5; 16:0_20:1_18:4" or "efpconfig"'s near-unrestricted
+# `.{0,16}`), so this can't blacklist individual characters like ';' or "'" --
+# those are legitimate in real sample data. Instead it looks for actual attack
+# syntax: SQL comment/statement-chaining sequences, tautologies, UNION SELECT,
+# script tags, and null bytes.
+_INJECTION_RE = re.compile(
+    r"(--)"
+    r"|(/\*)|(\*/)"
+    r"|(;\s*(drop|delete|update|insert|alter|exec|union|select)\b)"
+    r"|(\bunion\b\s+\bselect\b)"
+    r"|(\bor\b\s+['\"]?\d+['\"]?\s*=\s*['\"]?\d+)"
+    r"|(<\s*script\b)"
+    r"|(javascript\s*:)"
+    r"|(\bxp_cmdshell\b)"
+    r"|(\x00)",
+    re.IGNORECASE,
+)
 
 
 class BARUtils:
@@ -237,10 +95,11 @@ class BARUtils:
 
     @staticmethod
     def is_barley_gene_valid(gene):
-        """Validates barley gene IDs: HORVU0Hr1G000320, HORVU.MOREX.r3.1HG0003350.1,
+        """Validates barley gene IDs: HORVU0Hr1G000320, HORVU.MOREX.r3.1HG0000030 (bare gene,
+        BAR's own live example), HORVU.MOREX.r3.1HG0003350.1 (with isoform suffix),
         or HORVU.MOREX.r3.UnG0797170.1 (Un = unplaced scaffold, no chromosome digit)"""
         return bool(
-            gene and re.search(r"^HORVU(\d+Hr\d+G\d+|\.MOREX\.r\d+\.(\dH|Un)G\d+\.\d+)$", gene, re.I)
+            gene and re.search(r"^HORVU(\d+Hr\d+G\d+|\.MOREX\.r\d+\.(\dH|Un)G\d+(\.\d+)?)$", gene, re.I)
         )
 
     @staticmethod
@@ -255,8 +114,9 @@ class BARUtils:
 
     @staticmethod
     def is_camelina_gene_valid(gene):
-        """Validates Camelina gene IDs: Csa01g012560.1, Csa00462s060.1"""
-        return bool(gene and re.search(r"^Csa\d+[gs]\d+\.\d+$", gene, re.I))
+        """Validates Camelina gene IDs: Csa01g001040 (bare gene, BAR's own live example),
+        Csa01g012560.1, Csa00462s060.1 (with isoform suffix)"""
+        return bool(gene and re.search(r"^Csa\d+[gs]\d+(\.\d+)?$", gene, re.I))
 
     @staticmethod
     def is_cassava_gene_valid(gene):
@@ -624,6 +484,21 @@ class BARUtils:
         return poplar_gene.translate(str.maketrans("pOTRIg", "PotriG"))
 
     @staticmethod
+    def is_injection_attempt(data: str) -> bool:
+        """Flag obvious SQL/script injection payloads.
+
+        Meant to run before any format-specific check (probeset-shape check,
+        per-project regex, species validator) since some of those are
+        deliberately permissive -- e.g. efpconfig's near-unrestricted
+        `.{0,16}` or the metabolite/lipid projects' freeform text patterns --
+        and would otherwise let attack syntax through unexamined.
+
+        :param data: Raw input string to inspect
+        :return: True if the input looks like an injection attempt
+        """
+        return bool(_INJECTION_RE.search(data))
+
+    @staticmethod
     def is_efp_gene_valid(gene: str, efp_project: str) -> bool:
         """Validate a gene ID against the named eFP project's input regex.
 
@@ -635,6 +510,8 @@ class BARUtils:
         :param efp_project: eFP project key (e.g. 'efp_arabidopsis', 'efpbarley')
         :return: True if the gene ID matches the project's accepted format
         """
+        if BARUtils.is_injection_attempt(gene):
+            return False
         pattern = EFP_PROJECT_REGEXES.get(efp_project)
         if not pattern:
             return False

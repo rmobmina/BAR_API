@@ -1,0 +1,242 @@
+[
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 40,
+    "proj_id": "1",
+    "data_probeset_id": "Sh08_g008850",
+    "data_signal": 0.267511,
+    "data_bot_id": "LB.T4.R3"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 48,
+    "proj_id": "1",
+    "data_probeset_id": "Sh04_g024420",
+    "data_signal": 24.5201,
+    "data_bot_id": "LB.T1.R3"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 24,
+    "proj_id": "1",
+    "data_probeset_id": "Sh09_g007790",
+    "data_signal": 0.315425,
+    "data_bot_id": "HB.T1.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 37,
+    "proj_id": "1",
+    "data_probeset_id": "Sh01_g011930",
+    "data_signal": 0.0,
+    "data_bot_id": "LB.T4.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "Sh03_g029430",
+    "data_signal": 8.11668,
+    "data_bot_id": "HB.T1.R1"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 30,
+    "proj_id": "1",
+    "data_probeset_id": "Sh02_g026480",
+    "data_signal": 4.51668,
+    "data_bot_id": "LB.T2.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 41,
+    "proj_id": "1",
+    "data_probeset_id": "Sh01_g030260",
+    "data_signal": 7.73398,
+    "data_bot_id": "VLB.T2.R3"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 26,
+    "proj_id": "1",
+    "data_probeset_id": "Sh09_g007620",
+    "data_signal": 15.9252,
+    "data_bot_id": "LB.T3.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 48,
+    "proj_id": "1",
+    "data_probeset_id": "Sh03_g008670",
+    "data_signal": 13.6223,
+    "data_bot_id": "LB.T1.R3"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "Sh01_g020520",
+    "data_signal": 40.4377,
+    "data_bot_id": "VHB.T1.R1"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 30,
+    "proj_id": "1",
+    "data_probeset_id": "Sh03_g023750",
+    "data_signal": 1.03348,
+    "data_bot_id": "LB.T2.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "Sh03_g022440",
+    "data_signal": 2.71415,
+    "data_bot_id": "HB.T4.R1"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 45,
+    "proj_id": "1",
+    "data_probeset_id": "Sh09_g012700",
+    "data_signal": 183.778,
+    "data_bot_id": "HB.T3.R3"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 10,
+    "proj_id": "1",
+    "data_probeset_id": "Sh04_g000730",
+    "data_signal": 157.126,
+    "data_bot_id": "HB.T3.R1"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 41,
+    "proj_id": "1",
+    "data_probeset_id": "Sh02_g031360",
+    "data_signal": 0.464884,
+    "data_bot_id": "VLB.T2.R3"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 32,
+    "proj_id": "1",
+    "data_probeset_id": "Sh02_g025230",
+    "data_signal": 14.7703,
+    "data_bot_id": "VHB.T3.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 6,
+    "proj_id": "1",
+    "data_probeset_id": "Sh02_g015210",
+    "data_signal": 5.3709,
+    "data_bot_id": "VHB.T1.R1"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 20,
+    "proj_id": "1",
+    "data_probeset_id": "Sh03_g033930",
+    "data_signal": 0.55113,
+    "data_bot_id": "HB.T3.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 30,
+    "proj_id": "1",
+    "data_probeset_id": "Sh04_g007470",
+    "data_signal": 182.734,
+    "data_bot_id": "LB.T2.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 29,
+    "proj_id": "1",
+    "data_probeset_id": "Sh03_g018070",
+    "data_signal": 31.5461,
+    "data_bot_id": "VLB.T3.R3"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 8,
+    "proj_id": "1",
+    "data_probeset_id": "Sh03_g010230",
+    "data_signal": 10.9545,
+    "data_bot_id": "VLB.T2.R1"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 7,
+    "proj_id": "1",
+    "data_probeset_id": "Sh03_g005600",
+    "data_signal": 0.0,
+    "data_bot_id": "VLB.T1.R1"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 21,
+    "proj_id": "1",
+    "data_probeset_id": "Sh09_g003860",
+    "data_signal": 16.9731,
+    "data_bot_id": "LB.T1.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 13,
+    "proj_id": "1",
+    "data_probeset_id": "Sh10_g007960",
+    "data_signal": 0.0,
+    "data_bot_id": "HB.T1.R1"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 27,
+    "proj_id": "1",
+    "data_probeset_id": "Sh04_g012540",
+    "data_signal": 3.76756,
+    "data_bot_id": "VLB.T1.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 19,
+    "proj_id": "1",
+    "data_probeset_id": "Sh08_g002040",
+    "data_signal": 5.31725,
+    "data_bot_id": "VHB.T4.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 35,
+    "proj_id": "1",
+    "data_probeset_id": "Sh08_g010440",
+    "data_signal": 3.55508,
+    "data_bot_id": "HB.T2.R3"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 22,
+    "proj_id": "1",
+    "data_probeset_id": "Sh03_g030190",
+    "data_signal": 33.0037,
+    "data_bot_id": "VLB.T3.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 27,
+    "proj_id": "1",
+    "data_probeset_id": "Sh01_g004010",
+    "data_signal": 103.449,
+    "data_bot_id": "VLB.T1.R2"
+  },
+  {
+    "db": "sugarcane_culms",
+    "sample_id": 26,
+    "proj_id": "1",
+    "data_probeset_id": "Sh08_g005190",
+    "data_signal": 8.02159,
+    "data_bot_id": "LB.T3.R2"
+  }
+]

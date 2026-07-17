@@ -1,0 +1,242 @@
+[
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Bradi4g02220.1",
+    "data_signal": 2.0,
+    "data_bot_id": "pre.anthesis.ovaries"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Bradi5g15790.1",
+    "data_signal": 20.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Bradi5g04030.1",
+    "data_signal": 358.0,
+    "data_bot_id": "full.length.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Bradi1g11910.1",
+    "data_signal": 0.1,
+    "data_bot_id": "pre.anthesis.ovaries"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Bradi2g07560.1",
+    "data_signal": 26.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Bradi4g31040.1",
+    "data_signal": 146.0,
+    "data_bot_id": "young.seedlings"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Bradi2g43056.1",
+    "data_signal": 0.1,
+    "data_bot_id": "germinating.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Bradi1g45666.1",
+    "data_signal": 0.0,
+    "data_bot_id": "middle.length.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Bradi4g12975.1",
+    "data_signal": 3.0,
+    "data_bot_id": "pre.anthesis.ovaries"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Bradi2g37200.1",
+    "data_signal": 0.0,
+    "data_bot_id": "young.seedlings"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Bradi1g25577.1",
+    "data_signal": 10.0,
+    "data_bot_id": "young.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Bradi3g02130.1",
+    "data_signal": 0.0,
+    "data_bot_id": "young.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Bradi2g04800.1",
+    "data_signal": 0.0,
+    "data_bot_id": "pre.anthesis.ovaries"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Bradi4g41900.1",
+    "data_signal": 12.0,
+    "data_bot_id": "mature.grains.without.embryo"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Bradi2g03374.1",
+    "data_signal": 0.0,
+    "data_bot_id": "middle.length.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Bradi4g02000.1",
+    "data_signal": 58.0,
+    "data_bot_id": "middle.length.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Bradi2g46820.1",
+    "data_signal": 0.7,
+    "data_bot_id": "pre.anthesis.ovaries"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Bradi4g35140.1",
+    "data_signal": 33.0,
+    "data_bot_id": "full.length.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Bradi5g14275.1",
+    "data_signal": 0.4,
+    "data_bot_id": "mature.grains.without.embryo"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Bradi2g02380.1",
+    "data_signal": 5.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 6,
+    "data_probeset_id": "Bradi1g43230.1",
+    "data_signal": 6.0,
+    "data_bot_id": "pre.anthesis.ovaries"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Bradi2g58640.1",
+    "data_signal": 189.0,
+    "data_bot_id": "germinating.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Bradi1g57804.1",
+    "data_signal": 0.1,
+    "data_bot_id": "middle.length.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Bradi2g00690.1",
+    "data_signal": 3.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Bradi1g46610.1",
+    "data_signal": 212.0,
+    "data_bot_id": "young.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Bradi3g35985.1",
+    "data_signal": 0.2,
+    "data_bot_id": "young.seedlings"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Bradi4g03470.1",
+    "data_signal": 8.0,
+    "data_bot_id": "young.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Bradi1g47682.1",
+    "data_signal": 0.0,
+    "data_bot_id": "full.length.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Bradi4g29030.1",
+    "data_signal": 29.0,
+    "data_bot_id": "young.grains"
+  },
+  {
+    "db": "brachypodium_grains",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Bradi2g34950.1",
+    "data_signal": 117.0,
+    "data_bot_id": "young.grains"
+  }
+]

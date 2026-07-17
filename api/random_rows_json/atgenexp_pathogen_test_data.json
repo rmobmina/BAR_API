@@ -1,0 +1,302 @@
+[
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 148,
+    "proj_id": "168",
+    "data_probeset_id": "266380_at",
+    "data_signal": 30.65,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "2791"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 55,
+    "proj_id": "122",
+    "data_probeset_id": "251459_at",
+    "data_signal": 68.7,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_B-29_3-1-1_REP3_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 61,
+    "proj_id": "122",
+    "data_probeset_id": "249261_at",
+    "data_signal": 14.2,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_B-36_3-1-4_REP3_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 184,
+    "proj_id": "169",
+    "data_probeset_id": "245482_at",
+    "data_signal": 81.47,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "JD AT+EO TIME EXP3 EO INF 18H"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 52,
+    "proj_id": "122",
+    "data_probeset_id": "265724_at",
+    "data_signal": 45.6,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_B-13_1-6-4_REP1_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 50,
+    "proj_id": "122",
+    "data_probeset_id": "258364_at",
+    "data_signal": 103.9,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_B-12_1-5-4_REP1_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 218,
+    "proj_id": "GEO:GSE22274",
+    "data_probeset_id": "258123_at",
+    "data_signal": 88.8754,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "GSM554311_WT_Emwa1_0dpi_rep2"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 223,
+    "proj_id": "GEO:GSE22274",
+    "data_probeset_id": "252732_at",
+    "data_signal": 0.903218,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "GSM554314_WT_Emwa1_4dpi_rep1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 47,
+    "proj_id": "120",
+    "data_probeset_id": "255139_s_at",
+    "data_signal": 22.4,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_A-3_17-3_REP3_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 239,
+    "proj_id": "GEO:GSE6823",
+    "data_probeset_id": "250641_at",
+    "data_signal": 0.423127,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "GSM157301_Pritchard_A-3_CTR_Rep3_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 85,
+    "proj_id": "122",
+    "data_probeset_id": "254533_at",
+    "data_signal": 129.0,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_B-10_1-3-4_REP1_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 47,
+    "proj_id": "120",
+    "data_probeset_id": "250035_at",
+    "data_signal": 118.9,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_A-3_17-3_REP3_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 116,
+    "proj_id": "167",
+    "data_probeset_id": "253794_at",
+    "data_signal": 22.02,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "CT181-2"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 140,
+    "proj_id": "168",
+    "data_probeset_id": "254129_at",
+    "data_signal": 10.08,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "2506"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 39,
+    "proj_id": "120",
+    "data_probeset_id": "249665_at",
+    "data_signal": 22.0,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_A-25_26-1_REP1_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 91,
+    "proj_id": "123",
+    "data_probeset_id": "261385_at",
+    "data_signal": 4.6,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_C-9_3-C-24_REP3_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 123,
+    "proj_id": "168",
+    "data_probeset_id": "252017_at",
+    "data_signal": 10.26,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "2786"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 191,
+    "proj_id": "169",
+    "data_probeset_id": "256809_at",
+    "data_signal": 21.33,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "JD AT+EO TIME EXP3 EO INF 12H"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 173,
+    "proj_id": "169",
+    "data_probeset_id": "261919_at",
+    "data_signal": 645.69,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "JD AT+EO TIME EXP3 UNINF 24H"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 212,
+    "proj_id": "GEO:GSE15680",
+    "data_probeset_id": "245238_at",
+    "data_signal": 625.922,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "GSM392499"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 58,
+    "proj_id": "122",
+    "data_probeset_id": "262337_at",
+    "data_signal": 2.6,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_B-40_3-5-4_REP3_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 222,
+    "proj_id": "GEO:GSE22274",
+    "data_probeset_id": "252362_at",
+    "data_signal": 77.166,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "GSM554313_WT_Emwa1_2dpi_rep2"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 136,
+    "proj_id": "168",
+    "data_probeset_id": "255838_at",
+    "data_signal": 69.31,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "2792"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 7,
+    "proj_id": "120",
+    "data_probeset_id": "261216_at",
+    "data_signal": 44.3,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_A-31-27-3_REP3_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 228,
+    "proj_id": "GEO:GSE22274",
+    "data_probeset_id": "247706_at",
+    "data_signal": 146.938,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "GSM554316_rpp4_Emwa1_0dpi_rep2"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 119,
+    "proj_id": "167",
+    "data_probeset_id": "257818_at",
+    "data_signal": 105.74,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "CT481-1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 95,
+    "proj_id": "123",
+    "data_probeset_id": "252153_at",
+    "data_signal": 2.3,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_C-7_1-C-24_REP1_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 18,
+    "proj_id": "120",
+    "data_probeset_id": "258221_at",
+    "data_signal": 209.6,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "AtGen_A-46_31-2_REP2_ATH1"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 171,
+    "proj_id": "169",
+    "data_probeset_id": "262452_at",
+    "data_signal": 68.68,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "JD AT+EO COL WT 24H UNINFECTED"
+  },
+  {
+    "db": "atgenexp_pathogen",
+    "sample_id": 231,
+    "proj_id": "GEO:GSE22274",
+    "data_probeset_id": "251959_at",
+    "data_signal": 34.7633,
+    "data_call": null,
+    "data_p_val": null,
+    "data_bot_id": "GSM554318_rpp4_Emwa1_2dpi_rep1"
+  }
+]

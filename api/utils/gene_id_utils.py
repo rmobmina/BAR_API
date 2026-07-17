@@ -3,6 +3,15 @@ from __future__ import annotations
 import re
 
 from api.utils.bar_utils import BARUtils
+from api.utils.master_data_utils import load_combined_master
+
+
+def _load_database_regex_projects() -> dict[str, str]:
+    databases = load_combined_master()["databases"]
+    return {
+        db: info["regex_project"] for db, info in databases.items() if info.get("regex_project")
+    }
+
 
 _PROBESET_RE = re.compile(r"^.+_at$", re.IGNORECASE)
 _AROS_PROBESET_RE = re.compile(r"^A\d{6}_\d{2}$", re.IGNORECASE)
@@ -87,7 +96,7 @@ DATABASE_SPECIES: dict[str, str] = {
     "eucalyptus":                           "eucalyptus",
     "euphorbia":                            "euphorbia",
     "grape_developmental":                  "grape",
-    "heterodera_schachtii":                 "heterodera",
+    "heterodera_schachtii":                 "arabidopsis",
     "human_body_map_2":                     "human",
     "human_developmental":                  "human",
     "human_developmental_SpongeLab":        "human",
@@ -207,71 +216,15 @@ DATABASE_SPECIES: dict[str, str] = {
     "sample_data":                          "arabidopsis",
 }
 
-# Maps databases that store microarray probeset IDs to their eFP project regex key.
-# These databases accept both canonical gene IDs (with AGI→probeset lookup for Arabidopsis)
-# AND direct probeset ID input.
-# fmt: off
-DATABASE_EFP_PROJECT: dict[str, str] = {
-    # Arabidopsis ATH1 microarray databases — support AGI + probeset input
-    "affydb":                       "efp_arabidopsis",
-    "arabidopsis_ecotypes":         "efp_arabidopsis",
-    "atgenexp":                     "efp_arabidopsis",
-    "atgenexp_hormone":             "efp_arabidopsis",
-    "atgenexp_pathogen":            "efp_arabidopsis",
-    "atgenexp_plus":                "efp_arabidopsis",
-    "atgenexp_stress":              "efp_arabidopsis",
-    "guard_cell":                   "efp_arabidopsis",
-    "hnahal":                       "efp_arabidopsis",
-    "lateral_root_initiation":      "efp_arabidopsis",
-    "light_series":                 "efp_arabidopsis",
-    "meristem_db":                  "efp_arabidopsis",
-    "meristem_db_new":              "efp_arabidopsis",
-    "root":                         "efp_arabidopsis",
-    "rohan":                        "efp_arabidopsis",
-    "rpatel":                       "efp_arabidopsis",
-    "seed_db":                      "efp_arabidopsis",
-    # Seedcoat uses CATMA/AROS probes in addition to AGI
-    "seedcoat":                     "efp_seedcoat",
-    # Non-Arabidopsis microarray databases — probeset input only (no AGI conversion)
-    # barley_seed / barley_spike_meristem(_v3) and poplar_leaf / poplar_xylem were
-    # previously (incorrectly) mapped here too: their real sample IDs are plain
-    # gene IDs (HORVU..., Potri...), not probesets, and were 0% passing this
-    # override. Removed so they fall back to the barley/poplar species validator,
-    # which already accepts their format.
-    "barley_mas":                   "efp_barley",
-    "barley_rma":                   "efp_barley",
-    "rice_mas":                     "efp_rice",
-    "rice_rma":                     "efp_rice",
-    "medicago_mas":                 "efp_medicago",
-    "medicago_rma":                 "efp_medicago",
-    "poplar":                       "efp_poplar",
-    "poplar_hormone":               "efp_poplar",
-    "triticale":                    "efp_triticale",
-    "triticale_mas":                "efp_triticale",
-    "human_developmental":          "efp_human",
-    "human_developmental_SpongeLab": "efp_human",
-    "human_diseased":               "efp_human",
-    "maize_gdowns":                 "efp_maize",
-    # Added after Task 2 (Jun 2026) regex-coverage audit: species validator rejected
-    # real sample IDs that Vincent's per-project eFP regex correctly accepts.
-    "arachis":                      "efp_arachis",
-    "canola_seed":                  "efp_canola",
-    "thellungiella_db":             "efp_eutrema",
-    "physcomitrella_db":            "efp_physcomitrella",
-    "tomato":                       "efp_tomato",
-    "tomato_renormalized":          "efp_tomato",
-    "lipid_map":                    "efp_arabidopsis_lipid",
-    # Metabolite/enzyme-class eFPs: real "gene_id" values are compound/enzyme/trait
-    # names looked up against one fixed database, not actual gene IDs -- see
-    # scrape_view_databases.py's _HARDCODED comment for how these sites are scraped.
-    "maize_enzyme":                 "efp_maize_enzyme",
-    "maize_metabolite":             "efp_maize_metabolite",
-    "maize_lipid_map":              "efp_maize_lipid_map",
-    "rice_metabolite":              "efp_rice_metabolite",
-    "brachypodium_metabolites_map": "efp_brachypodium_metabolites",
-    "tomato_trait":                 "efp_tomato_trait",
-}
-# fmt: on
+# Maps databases that store microarray probeset IDs (or, for a handful of
+# metabolite/enzyme/trait eFPs, freeform category names) to their eFP project
+# regex key. Sourced from Vincent's regex_master_list_efp_eplant registry via
+# combined_master.json's per-database "regex_project" field, which is itself
+# empirically verified against real sample data at build time (see
+# verify_regex_projects() in build_combined_master_json.py) -- databases whose
+# assigned project doesn't actually validate most of their own real IDs are
+# left out here and fall back to species-based validation below instead.
+DATABASE_EFP_PROJECT: dict[str, str] = _load_database_regex_projects()
 
 
 _VALIDATORS: dict = {
@@ -291,7 +244,6 @@ _VALIDATORS: dict = {
     "eucalyptus":    BARUtils.is_eucalyptus_gene_valid,
     "euphorbia":     BARUtils.is_euphorbia_gene_valid,
     "grape":         BARUtils.is_grape_gene_valid,
-    "heterodera":    BARUtils.is_arabidopsis_gene_valid,
     "human":         BARUtils.is_human_gene_valid,
     "kalanchoe":     BARUtils.is_kalanchoe_gene_valid,
     "little_millet": BARUtils.is_little_millet_gene_valid,
@@ -360,6 +312,8 @@ class GeneIdUtils:
         :param database: Database name (e.g. 'light_series', 'barley_mas')
         :return: True if the gene ID is valid for the given database
         """
+        if BARUtils.is_injection_attempt(gene_id):
+            return False
         efp_project = DATABASE_EFP_PROJECT.get(database)
         if efp_project:
             return BARUtils.is_efp_gene_valid(gene_id, efp_project)

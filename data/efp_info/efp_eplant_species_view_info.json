@@ -21804,40 +21804,1238 @@
         "species": "human",
         "database": "human_developmental",
         "view_name": "Circulatory Respiratory",
-        "view_file": null,
-        "groups": {}
+        "view_file": "Circulatory_Respiratory",
+        "groups": {
+          "GSE1133_CTRL": {
+            "controls": [
+              "GSE1133_CTRL"
+            ],
+            "treatments": {
+              "CD33+_Myeloid_Cell-[1]": [
+                "GSM18869",
+                "GSM18870"
+              ],
+              "Fetal_Lung-[1]": [
+                "GSM18965",
+                "GSM18966"
+              ],
+              "Heart-[1]": [
+                "GSM18951",
+                "GSM18952"
+              ],
+              "Blood-[1]": [
+                "GSM18867",
+                "GSM18868"
+              ],
+              "Skin-[1]": [
+                "GSM19001",
+                "GSM19002"
+              ],
+              "Bronchial_Epithelial_Cells-[1]": [
+                "GSM18993",
+                "GSM18994"
+              ],
+              "CD71+_Early_Erythroid_Cell-[1]": [
+                "GSM18907",
+                "GSM18908"
+              ],
+              "Kidney-[1]": [
+                "GSM18955",
+                "GSM18956"
+              ],
+              "Lung-[1]": [
+                "GSM18949",
+                "GSM18950"
+              ],
+              "Trachea-[1]": [
+                "GSM18993",
+                "GSM18994"
+              ],
+              "Placenta-[1]": [
+                "GSM18967",
+                "GSM18968"
+              ]
+            }
+          },
+          "GSE3526_CTRL": {
+            "controls": [
+              "GSE3526_CTRL"
+            ],
+            "treatments": {
+              "Ventricle-[5]": [
+                "GSM80659",
+                "GSM80658",
+                "GSM80657"
+              ],
+              "Saphenous_Vein-[5]": [
+                "GSM80788",
+                "GSM80793",
+                "GSM80789"
+              ],
+              "Urethra-[5]": [
+                "GSM80913",
+                "GSM80912",
+                "GSM80911"
+              ],
+              "Bronchus-[5]": [
+                "GSM80582",
+                "GSM80579",
+                "GSM80578"
+              ],
+              "Kidney_Medulla-[5]": [
+                "GSM80731",
+                "GSM80734",
+                "GSM80733",
+                "GSM80732"
+              ],
+              "Atrium-[5]": [
+                "GSM80655",
+                "GSM80654",
+                "GSM80698",
+                "GSM80656"
+              ],
+              "Coronary_Artery-[5]": [
+                "GSM80609",
+                "GSM80631",
+                "GSM80610"
+              ],
+              "Lung-[5]": [
+                "GSM80710",
+                "GSM80712",
+                "GSM80707"
+              ],
+              "Kidney_Cortex-[5]": [
+                "GSM80689",
+                "GSM80688",
+                "GSM80687",
+                "GSM80686"
+              ],
+              "Trachea-[5]": [
+                "GSM80890",
+                "GSM80888",
+                "GSM80887"
+              ]
+            }
+          },
+          "GSE2361_CTRL": {
+            "controls": [
+              "GSE2361_CTRL"
+            ],
+            "treatments": {
+              "Heart-[4]": [
+                "GSM44671"
+              ],
+              "Kidney-[4]": [
+                "GSM44675"
+              ],
+              "Skin-[4]": [
+                "GSM44686"
+              ],
+              "Fetal_Lung-[4]": [
+                "GSM44705"
+              ],
+              "Bladder-[4]": [
+                "GSM44682"
+              ],
+              "Lung-[4]": [
+                "GSM44704"
+              ],
+              "Trachea-[4]": [
+                "GSM44688"
+              ],
+              "Placenta-[4]": [
+                "GSM44681"
+              ]
+            }
+          },
+          "PULM_CTRL": {
+            "controls": [
+              "PULM_CTRL"
+            ],
+            "treatments": {
+              "Pulmonary_Trunk-[7]": [
+                "GSM101996",
+                "GSM101997",
+                "GSM101998",
+                "GSM101999"
+              ],
+              "Pulmonary_Vessels-[7]": [
+                "GSM101996",
+                "GSM101997",
+                "GSM101998",
+                "GSM101999"
+              ]
+            }
+          },
+          "PLEURA_CTRL": {
+            "controls": [
+              "PLEURA_CTRL"
+            ],
+            "treatments": {
+              "Pleura-[2]": [
+                "Biopsy_01",
+                "Biopsy_13",
+                "Biopsy_02",
+                "Biopsy_04",
+                "Biopsy_06",
+                "Biopsy_08",
+                "Biopsy_10",
+                "Biopsy_14",
+                "Biopsy_20",
+                "Biopsy_11",
+                "Biopsy_22"
+              ]
+            }
+          },
+          "AVC_CTRL": {
+            "controls": [
+              "AVC_CTRL"
+            ],
+            "treatments": {
+              "Aorta-[8]": [
+                "GSM176016",
+                "GSM176112",
+                "GSM176263",
+                "GSM176264"
+              ],
+              "Vena_Cava-[8]": [
+                "GSM176038"
+              ]
+            }
+          },
+          "DIAPHRAGM_CTRL": {
+            "controls": [
+              "DIAPHRAGM_CTRL"
+            ],
+            "treatments": {
+              "Diaphragm-[3]": [
+                "GSM4004",
+                "GSM4005",
+                "GSM4006",
+                "GSM48597"
+              ]
+            }
+          },
+          "BRONCHIOLE_CTRL": {
+            "controls": [
+              "BRONCHIOLE_CTRL"
+            ],
+            "treatments": {
+              "Bronchioles-[6]": [
+                "GSM226994",
+                "GSM226995",
+                "GSM226996"
+              ]
+            }
+          }
+        }
       },
       {
         "source": "efp",
         "species": "human",
         "database": "human_body_map_2",
         "view_name": "Illumina Body Map 2 - FPKM",
-        "view_file": null,
-        "groups": {}
+        "view_file": "Illumina_Body_Map_2_-_FPKM",
+        "groups": {
+          "Illumina": {
+            "controls": [
+              "CTRL_ILLUMINA"
+            ],
+            "treatments": {
+              "Adrenal_Gland_(male)": [
+                "adrenal"
+              ],
+              "Liver_(male)": [
+                "liver"
+              ],
+              "White_Blood_Cells_(male)": [
+                "blood"
+              ],
+              "Skeletal_Muscle_(male)": [
+                "skeletal_muscle"
+              ],
+              "Lung_(male)": [
+                "lung"
+              ],
+              "Heart_(male)": [
+                "heart"
+              ],
+              "Prostate_(male)": [
+                "prostate"
+              ],
+              "Testes_(male)": [
+                "testes"
+              ],
+              "Thyroid_(female)": [
+                "thyroid"
+              ],
+              "Breast_(female)": [
+                "breast"
+              ],
+              "Ovary_(female)": [
+                "ovary"
+              ],
+              "Brain_(female)": [
+                "brain"
+              ],
+              "Lymph_(female)": [
+                "lymph"
+              ],
+              "Kidney_(female)": [
+                "kidney"
+              ],
+              "Colon_(female)": [
+                "colon"
+              ],
+              "Adipose_(female)": [
+                "adipose"
+              ]
+            }
+          }
+        }
       },
       {
         "source": "efp",
         "species": "human",
         "database": "human_developmental",
         "view_name": "Nervous",
-        "view_file": null,
-        "groups": {}
+        "view_file": "Nervous",
+        "groups": {
+          "GSE2361_CTRL": {
+            "controls": [
+              "GSE2361_CTRL"
+            ],
+            "treatments": {
+              "Whole_Brain-[3]": [
+                "GSM44690"
+              ],
+              "Corpus_Callosum-[3]": [
+                "GSM44696"
+              ],
+              "Amygdala-[3]": [
+                "GSM44694"
+              ],
+              "Fetal_Brain-[3]": [
+                "GSM44691"
+              ],
+              "Thalamus-[3]": [
+                "GSM44698"
+              ],
+              "Caudate_Nucleus-[3]": [
+                "GSM44695"
+              ],
+              "Hippocampus-[3]": [
+                "GSM44697"
+              ],
+              "Cerebellum-[3]": [
+                "GSM44689"
+              ],
+              "Spinal_Cord-[3]": [
+                "GSM44700"
+              ]
+            }
+          },
+          "GSE1133_CTRL": {
+            "controls": [
+              "GSE1133_CTRL"
+            ],
+            "treatments": {
+              "Ciliary_Ganglion-[1]": [
+                "GSM19003",
+                "GSM19004"
+              ],
+              "Amygdala-[1]": [
+                "GSM18927",
+                "GSM18928"
+              ],
+              "Subthalamic_Nucleus-[1]": [
+                "GSM18937",
+                "GSM18938"
+              ],
+              "Fetal_Brain-[1]": [
+                "GSM18945",
+                "GSM18946"
+              ],
+              "Thalamus-[1]": [
+                "GSM18935",
+                "GSM18936"
+              ],
+              "Trigeminal_Ganglion-[1]": [
+                "GSM19005",
+                "GSM19006"
+              ],
+              "Whole_Brain-[1]": [
+                "GSM18921",
+                "GSM18922"
+              ],
+              "Olfactory_Bulb-[1]": [
+                "GSM19019",
+                "GSM19020"
+              ],
+              "Caudate_Nucleus-[1]": [
+                "GSM18919",
+                "GSM18920"
+              ],
+              "Cingulate_Cortex-[1]": [
+                "GSM18939",
+                "GSM18940"
+              ],
+              "Globus_Pallidus-[1]": [
+                "GSM18913",
+                "GSM18914"
+              ],
+              "Hypothalamus-[1]": [
+                "GSM18933",
+                "GSM18934"
+              ],
+              "Prefrontal_Cortex-[1]": [
+                "GSM18929",
+                "GSM18930"
+              ],
+              "Parietal_Lobe-[1]": [
+                "GSM18923",
+                "GSM18924"
+              ],
+              "Occipital_Lobe-[1]": [
+                "GSM18931",
+                "GSM18932"
+              ],
+              "Temporal_Lobe-[1]": [
+                "GSM18911",
+                "GSM18912"
+              ],
+              "Cerebellum-[1]": [
+                "GSM18917",
+                "GSM18918"
+              ],
+              "Cardiac_Myocyte-[1]": [
+                "GSM18969",
+                "GSM18970"
+              ],
+              "Atrioventricular_Node-[1]": [
+                "GSM19007",
+                "GSM19008"
+              ],
+              "Dorsal_Root_Ganglion-[1]": [
+                "GSM19009",
+                "GSM19010"
+              ],
+              "Cerebellum_Peduncle-[1]": [
+                "GSM18915",
+                "GSM18916"
+              ],
+              "Pons-[1]": [
+                "GSM18941",
+                "GSM18942"
+              ],
+              "Medulla_Oblongata-[1]": [
+                "GSM18925",
+                "GSM18926"
+              ],
+              "Spinal_Cord-[1]": [
+                "GSM18943",
+                "GSM18944"
+              ],
+              "SCG-[1]": [
+                "GSM19011",
+                "GSM19012"
+              ]
+            }
+          },
+          "GSE3526_CTRL": {
+            "controls": [
+              "GSE3526_CTRL"
+            ],
+            "treatments": {
+              "Corpus_Callosum-[2]": [
+                "GSM80622",
+                "GSM80647",
+                "GSM80646",
+                "GSM80620",
+                "GSM80645",
+                "GSM80644",
+                "GSM80628",
+                "GSM80623",
+                "GSM80621"
+              ],
+              "Amygdala-[2]": [
+                "GSM80566",
+                "GSM80593",
+                "GSM80592",
+                "GSM80591",
+                "GSM80585",
+                "GSM80568",
+                "GSM80567",
+                "GSM80565"
+              ],
+              "Subthalamic_Nucleus-[2]": [
+                "GSM80857",
+                "GSM80856",
+                "GSM80827",
+                "GSM80854",
+                "GSM80850",
+                "GSM80846",
+                "GSM80829",
+                "GSM80828"
+              ],
+              "Hippocampus-[2]": [
+                "GSM80664",
+                "GSM80682",
+                "GSM80681",
+                "GSM80680",
+                "GSM80665",
+                "GSM80663",
+                "GSM80679",
+                "GSM80668",
+                "GSM80662"
+              ],
+              "Thalamus-[2]": [
+                "GSM80839",
+                "GSM80862",
+                "GSM80863",
+                "GSM80852",
+                "GSM80849",
+                "GSM80841",
+                "GSM80840",
+                "GSM80838"
+              ],
+              "Nucleus_Accumbens-[2]": [
+                "GSM80573",
+                "GSM80600",
+                "GSM80599",
+                "GSM80598",
+                "GSM80597",
+                "GSM80587",
+                "GSM80575",
+                "GSM80574",
+                "GSM80572"
+              ],
+              "Trigeminal_Ganglion-[2]": [
+                "GSM80906",
+                "GSM80905",
+                "GSM80876",
+                "GSM80895",
+                "GSM80891",
+                "GSM80878",
+                "GSM80877",
+                "GSM80875"
+              ],
+              "Hypothalamus-[2]": [
+                "GSM80691",
+                "GSM80690",
+                "GSM80684",
+                "GSM80670",
+                "GSM80683",
+                "GSM80669",
+                "GSM80692",
+                "GSM80693"
+              ],
+              "Putamen-[2]": [
+                "GSM80595",
+                "GSM80571",
+                "GSM80601",
+                "GSM80596",
+                "GSM80594",
+                "GSM80586",
+                "GSM80581",
+                "GSM80570",
+                "GSM80569"
+              ],
+              "Substantia_Nigra-[2]": [
+                "GSM80859",
+                "GSM80858",
+                "GSM80831",
+                "GSM80855",
+                "GSM80847",
+                "GSM80833",
+                "GSM80832",
+                "GSM80830"
+              ],
+              "Cerebral_Cortex-[2]": [
+                "GSM80650",
+                "GSM80643",
+                "GSM80642",
+                "GSM80640",
+                "GSM80641",
+                "GSM80653",
+                "GSM80652",
+                "GSM80627",
+                "GSM80651"
+              ],
+              "Frontal_Lobe-[2]": [
+                "GSM80660",
+                "GSM80666",
+                "GSM80678",
+                "GSM80677",
+                "GSM80676",
+                "GSM80675",
+                "GSM80667",
+                "GSM80671",
+                "GSM80661"
+              ],
+              "Parietal_Lobe-[2]": [
+                "GSM80746",
+                "GSM80763",
+                "GSM80762",
+                "GSM80744",
+                "GSM80761",
+                "GSM80760",
+                "GSM80752",
+                "GSM80747",
+                "GSM80745"
+              ],
+              "Occipital_Lobe-[2]": [
+                "GSM80773",
+                "GSM80772",
+                "GSM80767",
+                "GSM80756",
+                "GSM80775",
+                "GSM80754",
+                "GSM80766",
+                "GSM80774"
+              ],
+              "Temporal_Lobe-[2]": [
+                "GSM80835",
+                "GSM80860",
+                "GSM80861",
+                "GSM80851",
+                "GSM80848",
+                "GSM80837",
+                "GSM80836",
+                "GSM80834"
+              ],
+              "Cerebellum-[2]": [
+                "GSM80618",
+                "GSM80639",
+                "GSM80638",
+                "GSM80637",
+                "GSM80636",
+                "GSM80626",
+                "GSM80619",
+                "GSM80617",
+                "GSM80616"
+              ],
+              "Dorsal_Root_Ganglion-[2]": [
+                "GSM80649",
+                "GSM80611",
+                "GSM80613",
+                "GSM80648",
+                "GSM80630",
+                "GSM80629",
+                "GSM80614",
+                "GSM80612"
+              ],
+              "Midbrain-[2]": [
+                "GSM80699",
+                "GSM80715",
+                "GSM80701",
+                "GSM80706",
+                "GSM80705",
+                "GSM80704",
+                "GSM80703",
+                "GSM80702",
+                "GSM80700"
+              ],
+              "VTA-[2]": [
+                "GSM80871",
+                "GSM80907",
+                "GSM80908",
+                "GSM80894",
+                "GSM80892",
+                "GSM80873",
+                "GSM80872",
+                "GSM80870"
+              ],
+              "SVN-[2]": [
+                "GSM80910",
+                "GSM80909",
+                "GSM80879",
+                "GSM80896",
+                "GSM80893",
+                "GSM80881",
+                "GSM80880"
+              ],
+              "Medulla_Oblongata-[2]": [
+                "GSM80708",
+                "GSM80711",
+                "GSM80724",
+                "GSM80723",
+                "GSM80722",
+                "GSM80721",
+                "GSM80713",
+                "GSM80714",
+                "GSM80709"
+              ],
+              "Spinal_Cord-[2]": [
+                "GSM80799",
+                "GSM80798",
+                "GSM80785",
+                "GSM80795",
+                "GSM80794",
+                "GSM80787",
+                "GSM80786",
+                "GSM80784"
+              ],
+              "Nodose_Nucleus-[2]": [
+                "GSM80769",
+                "GSM80768",
+                "GSM80765",
+                "GSM80755",
+                "GSM80771",
+                "GSM80764",
+                "GSM80770",
+                "GSM80753"
+              ]
+            }
+          }
+        }
       },
       {
         "source": "efp",
         "species": "human",
         "database": "human_developmental",
         "view_name": "Reproductive",
-        "view_file": null,
-        "groups": {}
+        "view_file": "Reproductive",
+        "groups": {
+          "GSE3526_CTRL": {
+            "controls": [
+              "GSE3526_CTRL"
+            ],
+            "treatments": {
+              "Pituitary-[2]": [
+                "GSM80804",
+                "GSM80803",
+                "GSM80802",
+                "GSM80801 ",
+                "GSM80819",
+                "GSM80818",
+                "GSM80817",
+                "GSM80800"
+              ],
+              "Vulva-[2]": [
+                "GSM80897",
+                "GSM80900",
+                "GSM80899",
+                "GSM80898"
+              ],
+              "Vagina-[2]": [
+                "GSM80874",
+                "GSM80904",
+                "GSM80903",
+                "GSM80902"
+              ],
+              "Prostate-[2]": [
+                "GSM80824",
+                "GSM80806",
+                "GSM80805"
+              ],
+              "Nipple-[2]": [
+                "GSM80740",
+                "GSM80743",
+                "GSM80742",
+                "GSM80741"
+              ],
+              "Testes-[2]": [
+                "GSM80868",
+                "GSM80853",
+                "GSM80869"
+              ],
+              "Mammary_Gland-[2]": [
+                "GSM80726",
+                "GSM80725",
+                "GSM80716"
+              ],
+              "Cervix-[2]": [
+                "GSM80615",
+                "GSM80633",
+                "GSM80635",
+                "GSM80634"
+              ],
+              "Hypothalamus-[2]": [
+                "GSM80691",
+                "GSM80690",
+                "GSM80684",
+                "GSM80670",
+                "GSM80683",
+                "GSM80669",
+                "GSM80692",
+                "GSM80693"
+              ],
+              "Ovary-[2]": [
+                "GSM80759",
+                "GSM80757",
+                "GSM80758",
+                "GSM80780"
+              ],
+              "Thyroid-[2]": [
+                "GSM80867",
+                "GSM80866",
+                "GSM80865",
+                "GSM80864"
+              ],
+              "Adrenal_Cortex-[2]": [
+                "GSM80608",
+                "GSM80607",
+                "GSM80606",
+                "GSM80605"
+              ],
+              "Myometrium-[2]": [
+                "GSM80719",
+                "GSM80718",
+                "GSM80727",
+                "GSM80720",
+                "GSM80717"
+              ],
+              "Endometrium-[2]": [
+                "GSM80674",
+                "GSM80673",
+                "GSM80685",
+                "GSM80672"
+              ]
+            }
+          },
+          "GSE1133_CTRL": {
+            "controls": [
+              "GSE1133_CTRL"
+            ],
+            "treatments": {
+              "Pituitary-[1]": [
+                "GSM19021",
+                "GSM19022"
+              ],
+              "Testes-[1]": [
+                "GSM18981",
+                "GSM18982"
+              ],
+              "Adrenal_Gland-[1]": [
+                "GSM18947",
+                "GSM18948"
+              ],
+              "Prostate-[1]": [
+                "GSM18957",
+                "GSM18958"
+              ],
+              "Leydig_Cell-[1]": [
+                "GSM18983",
+                "GSM18984"
+              ],
+              "Pancreas-[1]": [
+                "GSM18977",
+                "GSM18978"
+              ],
+              "Hypothalamus-[1]": [
+                "GSM18933",
+                "GSM18934"
+              ],
+              "Thyroid-[1]": [
+                "GSM18961",
+                "GSM18962"
+              ],
+              "Adrenal_Cortex-[1]": [
+                "GSM18995",
+                "GSM18996"
+              ],
+              "Fetal_Thyroid-[1]": [
+                "GSM18963",
+                "GSM18964"
+              ],
+              "Germ_Cell-[1]": [
+                "GSM18985",
+                "GSM18986"
+              ],
+              "Seminiferous_Tubule-[1]": [
+                "GSM18989",
+                "GSM18990"
+              ],
+              "Uterus_Corpus-[1]": [
+                "GSM19015",
+                "GSM19016"
+              ],
+              "Uterus-[1]": [
+                "GSM18959",
+                "GSM18960"
+              ],
+              "Ovary-[1]": [
+                "GSM18997",
+                "GSM18998"
+              ]
+            }
+          },
+          "GSE2361_CTRL": {
+            "controls": [
+              "GSE2361_CTRL"
+            ],
+            "treatments": {
+              "Prostate-[3]": [
+                "GSM44678"
+              ],
+              "Uterus-[3]": [
+                "GSM44684"
+              ],
+              "Bladder-[3]": [
+                "GSM44682"
+              ],
+              "Testes-[3]": [
+                "GSM44701"
+              ],
+              "Pancreas-[3]": [
+                "GSM44677"
+              ],
+              "Breast-[3]": [
+                "GSM44683"
+              ],
+              "Thyroid-[3]": [
+                "GSM44685"
+              ],
+              "Ovary-[3]": [
+                "GSM44674"
+              ],
+              "Pituitary-[3]": [
+                "GSM44699"
+              ]
+            }
+          }
+        }
       },
       {
         "source": "efp",
         "species": "human",
         "database": "human_developmental",
         "view_name": "Skeletal Immune Digestive",
-        "view_file": null,
-        "groups": {}
+        "view_file": "Skeletal_Immune_Digestive",
+        "groups": {
+          "GSE1133_CTRL": {
+            "controls": [
+              "GSE1133_CTRL"
+            ],
+            "treatments": {
+              "Adipocyte-[1]": [
+                "GSM18975",
+                "GSM18976"
+              ],
+              "Smooth_Muscle-[1]": [
+                "GSM18971",
+                "GSM18972"
+              ],
+              "Psoas_Muscle-[1]": [
+                "GSM19013",
+                "GSM19014"
+              ],
+              "Salivary_Gland-[1]": [
+                "GSM18991",
+                "GSM18992"
+              ],
+              "CD56+_NK_Cells-[1]": [
+                "GSM18875",
+                "GSM18876"
+              ],
+              "CD19+_B_Cells-[1]": [
+                "GSM18881",
+                "GSM18882"
+              ],
+              "CD4+_T_Cells-[1]": [
+                "GSM18877",
+                "GSM18878"
+              ],
+              "BDCA4+_Dendritic_Cells-[1]": [
+                "GSM18873",
+                "GSM18874"
+              ],
+              "CD14+_Monocytes-[1]": [
+                "GSM18871",
+                "GSM18872"
+              ],
+              "CD105+_Endothelial_Cells-[1]": [
+                "GSM18883",
+                "GSM18884"
+              ],
+              "Appendix-[1]": [
+                "GSM18999",
+                "GSM19000"
+              ],
+              "Bone_Marrow-[1]": [
+                "GSM18909",
+                "GSM18910"
+              ],
+              "CD8+_T_Cells-[1]": [
+                "GSM18879",
+                "GSM18880"
+              ],
+              "721_B_Lymphocytes-[1]": [
+                "GSM18889",
+                "GSM18890"
+              ],
+              "Pancreas-[1]": [
+                "GSM18977",
+                "GSM18978"
+              ],
+              "Lymph_Node-[1]": [
+                "GSM18903",
+                "GSM18904"
+              ],
+              "Thymus-[1]": [
+                "GSM18899",
+                "GSM18900"
+              ],
+              "CD34+-[1]": [
+                "GSM18885",
+                "GSM18886"
+              ],
+              "Tonsil-[1]": [
+                "GSM18901",
+                "GSM18902"
+              ],
+              "Tongue-[1]": [
+                "GSM19017",
+                "GSM19018"
+              ],
+              "Islet_Cell-[1]": [
+                "GSM18979",
+                "GSM18980"
+              ],
+              "Liver-[1]": [
+                "GSM18953",
+                "GSM18954"
+              ],
+              "Fetal_Liver-[1]": [
+                "GSM18905",
+                "GSM18906"
+              ]
+            }
+          },
+          "GSE3526_CTRL": {
+            "controls": [
+              "GSE3526_CTRL"
+            ],
+            "treatments": {
+              "Adipose_Tissue_Omental-[3]": [
+                "GSM80561",
+                "GSM80562",
+                "GSM80563",
+                "GSM80564"
+              ],
+              "Adipose_Tissue_Subcutaneous-[3]": [
+                "GSM80584",
+                "GSM80589",
+                "GSM80590"
+              ],
+              "Adipose_Tissue-[3]": [
+                "GSM80580",
+                "GSM80583",
+                "GSM80588"
+              ],
+              "Skeletal_Muscle-[3]": [
+                "GSM80797",
+                "GSM80790",
+                "GSM80791",
+                "GSM80792",
+                "GSM80796"
+              ],
+              "Bone_Marrow-[3]": [
+                "GSM80576",
+                "GSM80604",
+                "GSM80577",
+                "GSM80602",
+                "GSM80603"
+              ],
+              "Salivary_Gland-[3]": [
+                "GSM80823",
+                "GSM80822",
+                "GSM80821",
+                "GSM80820"
+              ],
+              "Esophagus-[3]": [
+                "GSM80697",
+                "GSM80696",
+                "GSM80695",
+                "GSM80694"
+              ],
+              "Cardiac_Stomach-[3]": [
+                "GSM80783",
+                "GSM80782",
+                "GSM80781"
+              ],
+              "Liver-[3]": [
+                "GSM80730",
+                "GSM80729",
+                "GSM80728",
+                "GSM80739"
+              ],
+              "Spleen-[3]": [
+                "GSM80826",
+                "GSM80825",
+                "GSM80808",
+                "GSM80807"
+              ],
+              "Pharyngeal_Mucosa-[3]": [
+                "GSM80748",
+                "GSM80749",
+                "GSM80751",
+                "GSM80750"
+              ],
+              "Fundus-[3]": [
+                "GSM80812",
+                "GSM80811",
+                "GSM80810",
+                "GSM80809"
+              ],
+              "Pylorus-[3]": [
+                "GSM80816",
+                "GSM80815",
+                "GSM80814",
+                "GSM80813"
+              ],
+              "Lymph_Node-[3]": [
+                "GSM80735",
+                "GSM80738",
+                "GSM80737",
+                "GSM80736"
+              ],
+              "Cecum-[3]": [
+                "GSM80624",
+                "GSM80632",
+                "GSM80625"
+              ],
+              "Tonsil-[3]": [
+                "GSM80901",
+                "GSM80886",
+                "GSM80889"
+              ],
+              "Oral_Mucosa-[3]": [
+                "GSM80779",
+                "GSM80778",
+                "GSM80777",
+                "GSM80776"
+              ],
+              "Tongue-[3]": [
+                "GSM80845",
+                "GSM80843",
+                "GSM80842",
+                "GSM80844"
+              ],
+              "Tongue_superior-[3]": [
+                "GSM80885",
+                "GSM80884",
+                "GSM80883",
+                "GSM80882"
+              ]
+            }
+          },
+          "GSE2361_CTRL": {
+            "controls": [
+              "GSE2361_CTRL"
+            ],
+            "treatments": {
+              "Skeletal_Muscle-[4]": [
+                "GSM44676"
+              ],
+              "Bone_Marrow-[4]": [
+                "GSM44693"
+              ],
+              "Liver-[4]": [
+                "GSM44702"
+              ],
+              "Fetal_Liver-[4]": [
+                "GSM44706"
+              ],
+              "Salivary_Gland-[4]": [
+                "GSM44687"
+              ],
+              "Stomach-[4]": [
+                "GSM44703"
+              ],
+              "Colon-[4]": [
+                "GSM44680"
+              ],
+              "Small_Intestine-[4]": [
+                "GSM44679"
+              ],
+              "Thymus-[4]": [
+                "GSM44672"
+              ],
+              "Pancreas-[4]": [
+                "GSM44677"
+              ],
+              "Spleen-[4]": [
+                "GSM44673"
+              ]
+            }
+          },
+          "PV_CTRL": {
+            "controls": [
+              "PV_CTRL"
+            ],
+            "treatments": {
+              "Pelvis-[7]": [
+                "OST1-1",
+                "OST1-1pr2",
+                "OST19",
+                "OST37",
+                "OST38"
+              ],
+              "Vertebral_Column-[7]": [
+                "OST12",
+                "OST29",
+                "OST31",
+                "OST33",
+                "OST34",
+                "OST35",
+                "OST39",
+                "OST3l41",
+                "OST40",
+                "OST16",
+                "OST17",
+                "OST2-1",
+                "OST2-2",
+                "OST21",
+                "OST23",
+                "OST26",
+                "OST27"
+              ]
+            }
+          },
+          "COLON_CTRL": {
+            "controls": [
+              "COLON_CTRL"
+            ],
+            "treatments": {
+              "Large_Intestine-[2]": [
+                "GSE7307GSM175905",
+                "GSE7307GSM175983",
+                "GSE7307GSM175984",
+                "GSE7307GSM176123"
+              ]
+            }
+          },
+          "LYMPH_VESSELS_CTRL": {
+            "controls": [
+              "LYMPH_VESSELS_CTRL"
+            ],
+            "treatments": {
+              "Lymph_Vessels-[6]": [
+                "GSE6257GSM143717",
+                "GSE6257GSM143898",
+                "GSE6257GSM143900"
+              ]
+            }
+          },
+          "PANC_DUCT_CTRL": {
+            "controls": [
+              "PANC_DUCT_CTRL"
+            ],
+            "treatments": {
+              "Pancreatic_Duct-[5]": [
+                "GSM490138",
+                "GSM490139",
+                "GSM490140",
+                "GSM490141",
+                "GSM490142",
+                "GSM490143",
+                "GSM490144"
+              ]
+            }
+          }
+        }
       }
     ],
     "efp_phelipanche": [

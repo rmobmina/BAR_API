@@ -1,0 +1,242 @@
+[
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 92,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr1v1_08611",
+    "data_signal": 2.30288,
+    "data_bot_id": "DD-WTL-T3_R3"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 99,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr3v1_15922",
+    "data_signal": 16.5731,
+    "data_bot_id": "DD-WTL-T6_R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 55,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr1v1_10780",
+    "data_signal": 4.83962,
+    "data_bot_id": "DD-DTR-T5_R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 31,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr1v1_10642",
+    "data_signal": 15.1895,
+    "data_bot_id": "DD-DTL-T4_R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 66,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr2v1_07767",
+    "data_signal": 6.93115,
+    "data_bot_id": "DD-WTA-T2_R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 65,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr3v1_14690",
+    "data_signal": 20.1404,
+    "data_bot_id": "DD-WTA-T1_R3"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 47,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr9v1_23197",
+    "data_signal": 8.23488,
+    "data_bot_id": "DD-DTR-T2_R2"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 123,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr7v1_16872",
+    "data_signal": 0.0,
+    "data_bot_id": "DD-WTR-T7-R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 44,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr6v1_03825",
+    "data_signal": 0.339607,
+    "data_bot_id": "DD-DTR-T1_R2"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 62,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr4v1_01349",
+    "data_signal": 0.0,
+    "data_bot_id": "DD-DTR-T7_R3"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr5v1_19535",
+    "data_signal": 5.63555,
+    "data_bot_id": "DD-DTA-T1_R3"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 41,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr3v1_14188",
+    "data_signal": 0.0,
+    "data_bot_id": "DD-DTL-T7_R2"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 17,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr10v1_24773",
+    "data_signal": 1.15015,
+    "data_bot_id": "DD-DTA-T6_R2"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 62,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr1v1_09178",
+    "data_signal": 19.5697,
+    "data_bot_id": "DD-DTR-T7_R3"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 114,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr7v1_16311",
+    "data_signal": 11.3346,
+    "data_bot_id": "DD-WTR-T4_R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 3,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr3v1_15453",
+    "data_signal": 8.88683,
+    "data_bot_id": "DD-DTA-T1_R3"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 104,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr5v1_18540",
+    "data_signal": 15.2075,
+    "data_bot_id": "DD-WTL-T7_R3"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 11,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr9v1_21837",
+    "data_signal": 0.0,
+    "data_bot_id": "DD-DTA-T4_R2"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 30,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr1v1_08562",
+    "data_signal": 0.261077,
+    "data_bot_id": "DD-DTL-T3_R3"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 97,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr7v1_17245",
+    "data_signal": 5.09335,
+    "data_bot_id": "DD-WTL-T5_R2"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 93,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr7v1_16587",
+    "data_signal": 0.0,
+    "data_bot_id": "DD-WTL-T4_R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 84,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr4v1_00563",
+    "data_signal": 11.6715,
+    "data_bot_id": "DD-WTL-T1_R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 57,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr8v1_12013",
+    "data_signal": 17.0859,
+    "data_bot_id": "DD-DTR-T6_R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 22,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr4v1_01234",
+    "data_signal": 0.358758,
+    "data_bot_id": "DD-DTL-T1_R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 113,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr9v1_21106",
+    "data_signal": 28.9995,
+    "data_bot_id": "DD-WTR-T3_R3"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 66,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr3v1_15293",
+    "data_signal": 0.0,
+    "data_bot_id": "DD-WTA-T2_R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 123,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr1v1_09955",
+    "data_signal": 0.836916,
+    "data_bot_id": "DD-WTR-T7-R1"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 68,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr6v1_03132",
+    "data_signal": 0.215907,
+    "data_bot_id": "DD-WTA-T2_R3"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 48,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr2v1_07379",
+    "data_signal": 0.0,
+    "data_bot_id": "DD-DTR-T2_R3"
+  },
+  {
+    "db": "cacao_drought_diurnal_atlas",
+    "sample_id": 40,
+    "proj_id": "1",
+    "data_probeset_id": "CCN-51_Chr1v1_09305",
+    "data_signal": 1.51226,
+    "data_bot_id": "DD-DTL-T7_R1"
+  }
+]

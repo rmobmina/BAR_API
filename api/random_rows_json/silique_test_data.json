@@ -1,0 +1,242 @@
+[
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "AT3G43830.1",
+    "data_signal": 0.0,
+    "data_bot_id": "9_dap_n_2_TAGCTT_L001_R1_001_9_dap_n_2_TAGCTT_L002_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "AT1G20220",
+    "data_signal": 35.4694,
+    "data_bot_id": "6_dap_n_3_ACAGTG_L001_R1_001_6_dap_n_3_ACAGTG_L002_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "AT5G39460",
+    "data_signal": 0.0,
+    "data_bot_id": "12_dap-3_GGCTAC_L006_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "AT1G08115",
+    "data_signal": 30.2426,
+    "data_bot_id": "6_dap_n_2_TGACCA_L001_R1_001_6_dap_n_2_TGACCA_L002_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "AT3G49110",
+    "data_signal": 0.185424,
+    "data_bot_id": "12_dap-2_ACAGTG_L006_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "AT2G03320",
+    "data_signal": 0.260593,
+    "data_bot_id": "6_dap-3_TGACCA_L005_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "AT4G13830",
+    "data_signal": 8.94507,
+    "data_bot_id": "3_dap-2_GAGTGG_L006_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "AT4G08180",
+    "data_signal": 9.35998,
+    "data_bot_id": "12_dap-3_GGCTAC_L006_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "AT1G16515",
+    "data_signal": 18.3556,
+    "data_bot_id": "6_dap-3_TGACCA_L005_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 15,
+    "data_probeset_id": "AT1G14610",
+    "data_signal": 18.2596,
+    "data_bot_id": "9_dap-3_ACTGAT_L005_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "AT3G43260",
+    "data_signal": 0.0,
+    "data_bot_id": "12_dap-2_ACAGTG_L006_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "AT3G17730",
+    "data_signal": 0.272637,
+    "data_bot_id": "6_dap-2_TTAGGC_L005_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "AT5G56360",
+    "data_signal": 17.4117,
+    "data_bot_id": "6_dap_n_1_ATCACG_L001_R1_001_6_dap_n_1_ATCACG_L002_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "AT2G07729.1",
+    "data_signal": 0.0,
+    "data_bot_id": "6_dap-3_TGACCA_L005_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "AT3G09060",
+    "data_signal": 0.597224,
+    "data_bot_id": "9_dap-1_CAGATC_L005_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "AT2G41997",
+    "data_signal": 0.0,
+    "data_bot_id": "6_dap_n_2_TGACCA_L001_R1_001_6_dap_n_2_TGACCA_L002_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "AT3G19020",
+    "data_signal": 2.5214,
+    "data_bot_id": "6_dap_n_3_ACAGTG_L001_R1_001_6_dap_n_3_ACAGTG_L002_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "AT2G20190",
+    "data_signal": 9.27676,
+    "data_bot_id": "12_dap-2_ACAGTG_L006_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 16,
+    "data_probeset_id": "AT2G25650",
+    "data_signal": 18.665,
+    "data_bot_id": "9_dap_n_1_ACTTGA_L001_R1_001_9_dap_n_1_ACTTGA_L002_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 16,
+    "data_probeset_id": "AT3G33008.1",
+    "data_signal": 0.0,
+    "data_bot_id": "9_dap_n_1_ACTTGA_L001_R1_001_9_dap_n_1_ACTTGA_L002_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "AT4G03170",
+    "data_signal": 0.0,
+    "data_bot_id": "6_dap_n_3_ACAGTG_L001_R1_001_6_dap_n_3_ACAGTG_L002_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "AT3G09300",
+    "data_signal": 18.9041,
+    "data_bot_id": "6_dap_n_1_ATCACG_L001_R1_001_6_dap_n_1_ATCACG_L002_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "AT5G18790",
+    "data_signal": 14.9348,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "AT2G26430",
+    "data_signal": 6.6715,
+    "data_bot_id": "3_dap-2_GAGTGG_L006_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 19,
+    "data_probeset_id": "AT3G42628",
+    "data_signal": 0.0,
+    "data_bot_id": "Med_CTRL"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "AT4G17040",
+    "data_signal": 137.651,
+    "data_bot_id": "3_dap-1_AGTTCC_L006_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "AT1G15175",
+    "data_signal": 1.85867,
+    "data_bot_id": "9_dap-1_CAGATC_L005_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "AT5G55080",
+    "data_signal": 0.0,
+    "data_bot_id": "6_dap_n_3_ACAGTG_L001_R1_001_6_dap_n_3_ACAGTG_L002_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "AT3G30713.1",
+    "data_signal": 0.0,
+    "data_bot_id": "9_dap-2_GATCAG_L005_R1_001"
+  },
+  {
+    "db": "silique",
+    "proj_id": "1",
+    "sample_id": 14,
+    "data_probeset_id": "AT4G24580",
+    "data_signal": 0.576779,
+    "data_bot_id": "9_dap-2_GATCAG_L005_R1_001"
+  }
+]

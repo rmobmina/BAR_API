@@ -1,0 +1,242 @@
+[
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Cc022789",
+    "data_signal": 0.878349,
+    "data_bot_id": "FR_ATT3"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 16,
+    "data_probeset_id": "Cc039788",
+    "data_signal": 1.14708,
+    "data_bot_id": "SL_SWE1"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Cc031033",
+    "data_signal": 2.30904,
+    "data_bot_id": "FR_niS2"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 12,
+    "data_probeset_id": "Cc032240",
+    "data_signal": 0.0,
+    "data_bot_id": "FR_PEN3"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 26,
+    "data_probeset_id": "Cc008946",
+    "data_signal": 0.0355808,
+    "data_bot_id": "SP_niS2"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "Cc044828",
+    "data_signal": 45.1986,
+    "data_bot_id": "FR_niS3"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 33,
+    "data_probeset_id": "Cc015280",
+    "data_signal": 0.0,
+    "data_bot_id": "SP_ATT3"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Cc045082",
+    "data_signal": 17.736,
+    "data_bot_id": "FR_SWE2"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 35,
+    "data_probeset_id": "Cc029415",
+    "data_signal": 0.0,
+    "data_bot_id": "SP_PEN2"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 23,
+    "data_probeset_id": "Cc044600",
+    "data_signal": 4.75197,
+    "data_bot_id": "SL_PEN2"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "Cc022916",
+    "data_signal": 0.0,
+    "data_bot_id": "FR_PEN1"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "Cc046062",
+    "data_signal": 0.0,
+    "data_bot_id": "FR_PEN2"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 13,
+    "data_probeset_id": "Cc028887",
+    "data_signal": 0.0,
+    "data_bot_id": "SL_niS1"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 22,
+    "data_probeset_id": "Cc011262",
+    "data_signal": 10.8408,
+    "data_bot_id": "SL_PEN1"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Cc007704",
+    "data_signal": 0.0,
+    "data_bot_id": "FR_ATT3"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 27,
+    "data_probeset_id": "Cc002001",
+    "data_signal": 4.20861,
+    "data_bot_id": "SP_niS3"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "Cc007916",
+    "data_signal": 16.4748,
+    "data_bot_id": "FR_SWE2"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "Cc000082",
+    "data_signal": 0.403358,
+    "data_bot_id": "FR_niS1"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "Cc043625",
+    "data_signal": 0.0,
+    "data_bot_id": "FR_PEN2"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 18,
+    "data_probeset_id": "Cc022060",
+    "data_signal": 0.0,
+    "data_bot_id": "SL_SWE3"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 4,
+    "data_probeset_id": "Cc029999",
+    "data_signal": 18.8229,
+    "data_bot_id": "FR_SWE1"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 18,
+    "data_probeset_id": "Cc026631",
+    "data_signal": 0.0,
+    "data_bot_id": "SL_SWE3"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 9,
+    "data_probeset_id": "Cc023226",
+    "data_signal": 0.0,
+    "data_bot_id": "FR_ATT3"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 21,
+    "data_probeset_id": "Cc010889",
+    "data_signal": 25.7172,
+    "data_bot_id": "SL_ATT3"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "Cc012825",
+    "data_signal": 2.95135,
+    "data_bot_id": "SL_SWE2"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 33,
+    "data_probeset_id": "Cc014044",
+    "data_signal": 6.65729,
+    "data_bot_id": "SP_ATT3"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "Cc014978",
+    "data_signal": 7.19184,
+    "data_bot_id": "FR_ATT1"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 11,
+    "data_probeset_id": "Cc025732",
+    "data_signal": 219.036,
+    "data_bot_id": "FR_PEN2"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 8,
+    "data_probeset_id": "Cc032015",
+    "data_signal": 6.28404,
+    "data_bot_id": "FR_ATT2"
+  },
+  {
+    "db": "cuscuta_early_haustoriogenesis",
+    "proj_id": "1",
+    "sample_id": 2,
+    "data_probeset_id": "Cc013047",
+    "data_signal": 31.7418,
+    "data_bot_id": "FR_niS2"
+  }
+]

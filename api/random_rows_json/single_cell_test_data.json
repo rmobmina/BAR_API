@@ -1,0 +1,242 @@
+[
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 75,
+    "data_probeset_id": "AT5G48020",
+    "data_signal": 0.308124,
+    "data_bot_id": "cluster24_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 71,
+    "data_probeset_id": "AT1G79340",
+    "data_signal": 1.38591,
+    "data_bot_id": "cluster23_WT2.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 3,
+    "data_probeset_id": "AT5G20220",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster0_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 69,
+    "data_probeset_id": "AT2G22730",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster22_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 79,
+    "data_probeset_id": "AT4G37740",
+    "data_signal": 0.00213227,
+    "data_bot_id": "cluster26_WT1.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 29,
+    "data_probeset_id": "AT3G28150",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster9_WT2.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "AT1G48170",
+    "data_signal": 0.0372507,
+    "data_bot_id": "cluster2_WT1.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 54,
+    "data_probeset_id": "AT5G15540",
+    "data_signal": 0.00686591,
+    "data_bot_id": "cluster17_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 73,
+    "data_probeset_id": "AT1G13370",
+    "data_signal": 1.11441,
+    "data_bot_id": "cluster24_WT1.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 88,
+    "data_probeset_id": "AT3G24490",
+    "data_signal": 0.123344,
+    "data_bot_id": "cluster29_WT1.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 48,
+    "data_probeset_id": "AT2G36355",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster15_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 10,
+    "data_probeset_id": "AT5G58820",
+    "data_signal": 0.00337014,
+    "data_bot_id": "cluster3_WT1.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 5,
+    "data_probeset_id": "AT1G13480",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster1_WT2.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 74,
+    "data_probeset_id": "AT2G19700",
+    "data_signal": 0.00233767,
+    "data_bot_id": "cluster24_WT2.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 67,
+    "data_probeset_id": "AT1G73250",
+    "data_signal": 0.0926039,
+    "data_bot_id": "cluster22_WT1.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 83,
+    "data_probeset_id": "AT2G31590",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster27_WT2.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 1,
+    "data_probeset_id": "AT2G45730",
+    "data_signal": 0.0292716,
+    "data_bot_id": "cluster0_WT1.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 48,
+    "data_probeset_id": "AT4G18230",
+    "data_signal": 0.3692,
+    "data_bot_id": "cluster15_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 51,
+    "data_probeset_id": "AT2G38820",
+    "data_signal": 0.0284947,
+    "data_bot_id": "cluster16_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 87,
+    "data_probeset_id": "AT4G37850",
+    "data_signal": 0.919365,
+    "data_bot_id": "cluster28_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 54,
+    "data_probeset_id": "AT5G07960",
+    "data_signal": 1.22012,
+    "data_bot_id": "cluster17_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 7,
+    "data_probeset_id": "AT4G17660",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster2_WT1.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 73,
+    "data_probeset_id": "AT3G58200",
+    "data_signal": 0.007346,
+    "data_bot_id": "cluster24_WT1.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 78,
+    "data_probeset_id": "AT4G37400",
+    "data_signal": 0.385704,
+    "data_bot_id": "cluster25_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 30,
+    "data_probeset_id": "AT4G18670",
+    "data_signal": 0.086632,
+    "data_bot_id": "cluster9_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 106,
+    "data_probeset_id": "AT3G26350",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster35_WT1.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 17,
+    "data_probeset_id": "AT1G43640",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster5_WT2.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 75,
+    "data_probeset_id": "AT4G26490",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster24_WT3.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 64,
+    "data_probeset_id": "AT2G26480",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster21_WT1.ExprMean"
+  },
+  {
+    "db": "single_cell",
+    "proj_id": "1",
+    "sample_id": 77,
+    "data_probeset_id": "AT3G52620",
+    "data_signal": 0.0,
+    "data_bot_id": "cluster25_WT2.ExprMean"
+  }
+]
