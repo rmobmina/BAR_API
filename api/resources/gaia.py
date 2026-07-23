@@ -3,10 +3,12 @@ from flask_restx import Namespace, Resource, fields
 from markupsafe import escape
 from api import db
 from api.utils.bar_utils import BARUtils
-from api.models.gaia import Genes, Aliases, PubIds, Figures
-from sqlalchemy import func, or_
+from api.models.gaia import Genes, Aliases, PublicationFigures, PubIds, Figures, AuthorList, FigureModels
+from sqlalchemy import func, or_, cast, literal
+from sqlalchemy.dialects import mysql
 from marshmallow import Schema, ValidationError, fields as marshmallow_fields
 import json
+import re
 
 gaia = Namespace("Gaia", description="Gaia", path="/gaia")
 
@@ -174,3 +176,168 @@ class GaiaPublicationFigures(Resource):
 
         # Return final data
         return BARUtils.success_exit(data)
+
+
+@gaia.route("/publication_figures_by_gene/<string:identifier>")
+class GaiaPublicationFiguresByGene(Resource):
+    @gaia.param("identifier", _in="path", default="ABI3")
+    def get(self, identifier=""):
+
+        # Escape input
+        identifier = escape(identifier)
+
+        # Is it valid
+        if not BARUtils.is_gaia_alias(identifier):
+            return BARUtils.error_exit("Invalid identifier"), 400
+
+        # Resolve to gene ids: try alias first, then locus / ncbi id
+        rows = db.session.execute(db.select(Aliases.genes_id).filter(Aliases.alias == identifier)).fetchall()
+        gene_ids = [r.genes_id for r in rows]
+
+        if not gene_ids:
+            rows = db.session.execute(
+                db.select(Genes.id).filter(or_(Genes.locus == identifier, Genes.geneid == identifier))
+            ).fetchall()
+            gene_ids = [r.id for r in rows]
+
+        if not gene_ids:
+            return BARUtils.error_exit("Nothing found"), 404
+
+        # Get the gene's full alias set
+        aliases = [
+            r.alias.lower()
+            for r in db.session.execute(db.select(Aliases.alias).filter(Aliases.genes_id.in_(gene_ids))).fetchall()
+        ]
+
+        # Match OCR words: word-boundary regex for long aliases, exact match for short ones
+        long_aliases = sorted({re.escape(a) for a in aliases if len(a) >= 4})
+        short_aliases = sorted({a for a in aliases if len(a) < 4})
+
+        # No usable aliases, nothing to match on
+        if not long_aliases and not short_aliases:
+            return BARUtils.success_exit({"figures": {}, "allImageWords": {}})
+
+        word_expr = func.lower(func.json_unquote(func.json_extract(FigureModels.data, "$.word")))
+        match_conds = []
+        if long_aliases:
+            alias_re = "(^|[^a-z0-9])(" + "|".join(long_aliases) + ")([^a-z0-9]|$)"
+            match_conds.append(word_expr.regexp_match(alias_re))
+        if short_aliases:
+            match_conds.append(word_expr.in_(short_aliases))
+
+        matched_rows = db.session.execute(db.select(FigureModels.data).where(or_(*match_conds))).fetchall()
+        if not matched_rows:
+            return BARUtils.success_exit({"figures": {}, "allImageWords": {}})
+
+        # Collect each matched image and its boxes (keep the image even if a box is missing)
+        bbox_by_name = {}
+        for row in matched_rows:
+            d = row.data if isinstance(row.data, dict) else json.loads(row.data)
+            for img in d.get("image", []):
+                name = (img.get("imageName") or "").lstrip("/")
+                if not name:
+                    continue
+                bbox_list = bbox_by_name.setdefault(name, [])
+                bbox = img.get("bbox")
+                if bbox is not None:
+                    bbox_list.append(bbox)
+
+        stripped_names = list(bbox_by_name.keys())
+        if not stripped_names:
+            return BARUtils.success_exit({"figures": {}, "allImageWords": {}})
+
+        # Drop image names used by more than one publication, we can't attribute those
+        collision = (
+            db.select(Figures.img_name)
+            .group_by(Figures.img_name)
+            .having(func.count(func.distinct(Figures.publication_figures_id)) > 1)
+        )
+
+        # Pull the figures and their publication info, skip null urls, newest pubmed first
+        core_stmt = (
+            db.select(
+                PubIds.pmc,
+                PubIds.pubmed,
+                PublicationFigures.id.label("pf_id"),
+                PublicationFigures.title,
+                PublicationFigures.abstract,
+                Figures.img_name,
+                Figures.img_url,
+                Figures.caption,
+            )
+            .select_from(Figures)
+            .join(PublicationFigures, PublicationFigures.id == Figures.publication_figures_id)
+            .join(PubIds, PubIds.publication_figures_id == PublicationFigures.id)
+            .where(Figures.img_name.in_(stripped_names))
+            .where(Figures.img_url.isnot(None))
+            .where(Figures.img_name.not_in(collision))
+            .order_by(cast(PubIds.pubmed, mysql.INTEGER(unsigned=True)).desc())
+        )
+        fig_rows = db.session.execute(core_stmt).fetchall()
+
+        if not fig_rows:
+            return BARUtils.success_exit({"figures": {}, "allImageWords": {}})
+
+        # Group figures by PMC, one entry per image name
+        figures_by_pmc, pmc_to_pf, pf_ids, seen_names = {}, {}, set(), set()
+        for r in fig_rows:
+            pf_ids.add(r.pf_id)
+            pmc_to_pf[r.pmc] = r.pf_id
+            if r.pmc not in figures_by_pmc:
+                figures_by_pmc[r.pmc] = {
+                    "title": r.title,
+                    "abstract": r.abstract,
+                    "authors": [],
+                    "pubmed": r.pubmed,
+                    "figures": [],
+                }
+            if r.img_name in seen_names:
+                continue
+            seen_names.add(r.img_name)
+            figures_by_pmc[r.pmc]["figures"].append(
+                {
+                    "img_name": r.img_name,
+                    "img_url": r.img_url,
+                    "caption": r.caption,
+                    "bbox": bbox_by_name.get(r.img_name, []),
+                }
+            )
+
+        # Attach authors to each publication
+        authors_by_pf = {}
+        for r in db.session.execute(
+            db.select(AuthorList.publication_figures_id, AuthorList.author).filter(
+                AuthorList.publication_figures_id.in_(pf_ids)
+            )
+        ).fetchall():
+            authors_by_pf.setdefault(r.publication_figures_id, []).append(r.author)
+        for pmc, pf_id in pmc_to_pf.items():
+            figures_by_pmc[pmc]["authors"] = authors_by_pf.get(pf_id, [])
+
+        # allImageWords: gene words detected on the shown figures, for the gene-name filter
+        displayed_names = list({r.img_name for r in fig_rows})
+        all_image_words = {}
+        if displayed_names:
+            displayed_slashed = json.dumps(["/" + n for n in displayed_names])  # stored names keep a leading /
+            words_rows = db.session.execute(
+                db.select(FigureModels.data)
+                .where(func.json_unquote(func.json_extract(FigureModels.data, "$.gene")) == "true")
+                .where(
+                    func.json_overlaps(
+                        func.json_extract(FigureModels.data, "$.image[*].imageName"),
+                        cast(literal(displayed_slashed), mysql.JSON),
+                    )
+                )
+            ).fetchall()
+            displayed_set = set(displayed_names)
+            for row in words_rows:
+                d = row.data if isinstance(row.data, dict) else json.loads(row.data)
+                word = (d.get("word") or "").lower()
+                for img in d.get("image", []):
+                    name = (img.get("imageName") or "").lstrip("/")
+                    if name in displayed_set:
+                        bbox = img.get("bbox")
+                        all_image_words.setdefault(word, {})[name] = bbox if bbox is not None else []
+
+        # Return final data
+        return BARUtils.success_exit({"figures": figures_by_pmc, "allImageWords": all_image_words})

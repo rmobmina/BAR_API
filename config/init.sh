@@ -64,6 +64,7 @@ import_if_missing striga                ./config/databases/striga.sql
 import_if_missing tomato_nssnp          ./config/databases/tomato_nssnp.sql
 import_if_missing tomato_sequence       ./config/databases/tomato_sequence.sql
 import_if_missing triphysaria           ./config/databases/triphysaria.sql
+import_if_missing gaia                  ./config/databases/gaia.sql
 
 echo "Data are now loaded. Preparing API config"
 echo "Please manually edit config file!"

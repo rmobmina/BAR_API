@@ -349,22 +349,25 @@ class BARUtils:
         :param gene:
         :return: True if valid
         """
-        if gene and re.search(r"^((Glyma\d{1,3}g\d{1,6}\.?\d?)|(Glyma\.\d{1,3}g\d{1,8}))$", gene, re.I):
+        if gene and re.search(r"^(Glyma\d{1,3}g\d{1,6}\.?\d?)$|^(Glyma\.\d{1,3}g\d{1,8})$", gene, re.I):
             return True
         else:
             return False
 
     @staticmethod
     def is_maize_gene_valid(gene):
-        """Validates maize gene IDs: Zm00001d046170, Zm00001eb006030, AC195946.3_FG003, GRMZM2G000116"""
-        return bool(
-            gene
-            and re.search(
-                r"^(AC[0-9]{6}\.[0-9]+_FGT?[0-9]{3}|GRMZM[25]G[0-9]{6}(_T[0-9]{2})?|Zm\d+(d|eb)\d+)$",
-                gene,
-                re.I,
-            )
-        )
+        """This function verifies if maize gene is valid: Zm00001d046170
+        :param gene:
+        :return: True if valid
+        """
+        if gene and re.search(
+            r"^(AC[0-9]{6}\.[0-9]{1}_FG[0-9]{3})$|^(AC[0-9]{6}\.[0-9]{1}_FGT[0-9]{3})$|^(GRMZM(2|5)G[0-9]{6})$|^(GRMZM(2|5)G[0-9]{6}_T[0-9]{2})$|^(Zm\d+d\d+)$|^(Zm\d{1,8}\D{1,3}\d{1,8})$",
+            gene,
+            re.I,
+        ):
+            return True
+        else:
+            return False
 
     @staticmethod
     def is_sorghum_gene_valid(gene):
