@@ -64,14 +64,6 @@ import_if_missing striga                ./config/databases/striga.sql
 import_if_missing tomato_nssnp          ./config/databases/tomato_nssnp.sql
 import_if_missing tomato_sequence       ./config/databases/tomato_sequence.sql
 import_if_missing triphysaria           ./config/databases/triphysaria.sql
-import_if_missing light_series          ./config/databases/light_series.sql
-import_if_missing maize_RMA_linear      ./config/databases/maize_RMA_linear.sql
-import_if_missing meristem_db           ./config/databases/meristem_db.sql
-import_if_missing potato_stress         ./config/databases/potato_stress.sql
-import_if_missing seedcoat              ./config/databases/seedcoat.sql
-import_if_missing soybean               ./config/databases/soybean.sql
-import_if_missing soybean_severin       ./config/databases/soybean_severin.sql
-import_if_missing tomato_ils            ./config/databases/tomato_ils.sql
 
 echo "Data are now loaded. Preparing API config"
 echo "Please manually edit config file!"
