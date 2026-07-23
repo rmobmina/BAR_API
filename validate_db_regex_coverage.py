@@ -1,6 +1,4 @@
 """
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
-
 Task 2 (Jun 11 2026): test Vincent's per-project eFP regexes against every
 database that has real sample data in api/random_rows_json/, to find
 databases whose probeset/gene IDs the current production validator

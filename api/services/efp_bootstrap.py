@@ -1,6 +1,4 @@
 """
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
-
 Bootstrap utilities for creating eFP MySQL databases from the shared schema registry.
 
 Used by:

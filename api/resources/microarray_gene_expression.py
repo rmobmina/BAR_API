@@ -64,7 +64,6 @@ class GetWorldeFPExpression(Resource):
             return BARUtils.error_exit("There are no data found for the given gene")
 
 
-# Endpoint made by Reena
 @microarray_gene_expression.route("/<string:species>/databases")
 class GetDatabases(Resource):
     @microarray_gene_expression.param("species", _in="path", default="arabidopsis")
@@ -103,7 +102,6 @@ class GetDatabases(Resource):
         })
 
 
-# Endpoint made by Reena
 @microarray_gene_expression.route("/<string:species>/<string:view>/samples")
 class GetSamples1(Resource):
     """This endpoint returns control and sample group mappings for a given species and view (or all views)"""

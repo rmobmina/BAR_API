@@ -1,6 +1,4 @@
 """
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
-
 Schema definitions for all eFP databases that expose a sample_data table.
 
 Every database shares the same three-column structure:

@@ -1,6 +1,4 @@
 """
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
-
 Centralised query service for all eFP databases.
 
 Exposes a single entry point query_efp_database_dynamic() that handles:

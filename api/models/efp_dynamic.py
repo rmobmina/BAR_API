@@ -1,6 +1,4 @@
 """
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
-
 Dynamic SQLAlchemy model generation for all eFP databases.
 
 At import time, one ORM model class is generated per database entry in

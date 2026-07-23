@@ -1,6 +1,4 @@
 """
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
-
 Scrapes view names and their database names from each species' datasources.xml,
 covering BOTH eFP databases and ePlant databases, so the master list notes which
 databases are eFP-only, ePlant-only, or available through both frontends.

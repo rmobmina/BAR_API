@@ -1,6 +1,4 @@
 """
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
-
 Scrapes groups, controls, and treatments for every view of every species,
 covering BOTH eFP databases and ePlant databases, tagged by source so
 eFP-only / ePlant-only / shared databases can be told apart.

@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
-
 CLI script to create all eFP MySQL databases from the shared schema registry.
 
 Usage:

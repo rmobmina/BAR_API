@@ -1,6 +1,4 @@
 """
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
-
 Task 4 (Jun 2026): assemble the final "master list" of every BAR database
 discovered across both frontends, organized the way Vincent asked for --
 by species, noting eFP vs ePlant vs both, and microarray vs RNA-seq.

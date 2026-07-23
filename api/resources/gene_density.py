@@ -1,6 +1,4 @@
 """
-Reena Obmina | UTEA Project 2026 | University of Toronto
-
 Gene density endpoint for the BAR API.
 
 Returns per-bin gene density across all Arabidopsis thaliana chromosomes for a

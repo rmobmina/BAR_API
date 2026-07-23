@@ -1,6 +1,4 @@
 """
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
-
 Task 3 (Jun 11 2026): for databases like atgenexp where multiple eFP/ePlant
 views/papers share one physical database, derive which proj_id(s) belong to
 which view, by cross-referencing each view's known sample names (from Task 1's
