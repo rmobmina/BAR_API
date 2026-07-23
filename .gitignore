@@ -156,3 +156,6 @@ config/databases/tomato_ils.sql
 
 # Archive test data — large DB dumps, exports, and CSVs; not for version control
 archive/test_data/
+
+# Scratch output from scripts/check_efp_experiment_links.py
+scripts/results/
