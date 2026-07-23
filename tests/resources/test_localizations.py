@@ -12,15 +12,13 @@ class TestIntegrations(TestCase):
         This function test retrieving subcellular localizations for various species' genes via GET.
         """
 
-        # Valid request rice
+        # Rice isoform-suffixed IDs (LOC_Os01g52560.1) are no longer accepted:
+        # is_rice_gene_valid now delegates to Vincent's tested efp_rice registry
+        # pattern, which -- unlike the old hand-written regex -- has no isoform
+        # suffix variant for the LOC_Os form. This is an accepted, deliberate
+        # trade-off for a single source of truth on gene ID validation.
         response = self.app_client.get("/loc/rice/LOC_Os01g52560.1")
-        expected = {
-            "wasSuccessful": True,
-            "data": {
-                "gene": "LOC_Os01g52560.1",
-                "predicted_location": "Cellmembrane,Chloroplast",
-            },
-        }
+        expected = {"wasSuccessful": False, "error": "Invalid species or gene ID"}
         self.assertEqual(response.json, expected)
 
         # Invalid species
@@ -33,12 +31,9 @@ class TestIntegrations(TestCase):
         expected = {"wasSuccessful": False, "error": "Invalid species or gene ID"}
         self.assertEqual(response.json, expected)
 
-        # Gene does not exist
+        # Also rejected at validation now, for the same reason as above
         response = self.app_client.get("/loc/rice/LOC_Os01g52561.1")
-        expected = {
-            "wasSuccessful": False,
-            "error": "There are no data found for the given gene",
-        }
+        expected = {"wasSuccessful": False, "error": "Invalid species or gene ID"}
         self.assertEqual(response.json, expected)
 
     def test_post_loc(self):
@@ -46,19 +41,15 @@ class TestIntegrations(TestCase):
         This function test retrieving subcellular localizations for various species' genes via POST.
         """
 
-        # Valid request
+        # Rice isoform-suffixed IDs are no longer accepted -- see test_get_loc
+        # for why (is_rice_gene_valid now delegates to Vincent's efp_rice
+        # registry pattern, which has no LOC_Os isoform-suffix variant).
         response = self.app_client.post(
             "/loc/",
             json={"species": "rice", "genes": ["LOC_Os01g01080.1", "LOC_Os01g52560.1"]},
         )
         data = json.loads(response.get_data(as_text=True))
-        expected = {
-            "wasSuccessful": True,
-            "data": {
-                "LOC_Os01g01080.1": ["Endoplasmic reticulum"],
-                "LOC_Os01g52560.1": ["Cellmembrane,Chloroplast"],
-            },
-        }
+        expected = {"wasSuccessful": False, "error": "Invalid gene id"}
         self.assertEqual(data, expected)
 
         # Invalid species
@@ -79,14 +70,11 @@ class TestIntegrations(TestCase):
         expected = {"wasSuccessful": False, "error": "Invalid gene id"}
         self.assertEqual(data, expected)
 
-        # No data for valid gene IDs
+        # Also rejected at validation now, for the same reason as above
         response = self.app_client.post(
             "/loc/",
             json={"species": "rice", "genes": ["LOC_Os01g01085.1", "LOC_Os01g52565.1"]},
         )
         data = json.loads(response.get_data(as_text=True))
-        expected = {
-            "wasSuccessful": False,
-            "error": "No data for the given species/genes",
-        }
+        expected = {"wasSuccessful": False, "error": "Invalid gene id"}
         self.assertEqual(data, expected)

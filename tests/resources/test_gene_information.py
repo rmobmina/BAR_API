@@ -225,11 +225,12 @@ class TestIntegrations(TestCase):
         }
         self.assertEqual(response.json, expected)
 
+        # AT1G010400 (extra trailing digit, no isoform separator) was loosely
+        # tolerated by the old hand-written regex; Vincent's efp_arabidopsis
+        # registry pattern -- which is_arabidopsis_gene_valid now delegates
+        # to -- correctly rejects it as malformed.
         response = self.app_client.get("/gene_information/gene_publications/arabidopsis/AT1G010400")
-        expected = {
-            "wasSuccessful": False,
-            "error": "There are no data found for the given gene",
-        }
+        expected = {"wasSuccessful": False, "error": "Invalid gene id"}
         self.assertEqual(response.json, expected)
 
         # Invalid Gene

@@ -25,8 +25,10 @@ class UtilsUnitTest(TestCase):
         # Invalid gene
         result = BARUtils.is_arabidopsis_gene_valid("abc")
         self.assertFalse(result)
+        # Two-digit isoform suffix: accepted by Vincent's efp_arabidopsis
+        # registry pattern, which is_arabidopsis_gene_valid now delegates to.
         result = BARUtils.is_arabidopsis_gene_valid("At1g01010.11")
-        self.assertFalse(result)
+        self.assertTrue(result)
 
     def test_is_brassica_rapa_gene_valid(self):
         # Valid gene
