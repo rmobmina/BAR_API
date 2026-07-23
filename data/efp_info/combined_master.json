@@ -1983,12 +1983,12 @@
         {
           "frontend": "efp",
           "instance": "efp_arabidopsis",
-          "view": "Hormone"
+          "view": "Chemical"
         },
         {
           "frontend": "efp",
           "instance": "efp_arabidopsis",
-          "view": "Chemical"
+          "view": "Hormone"
         },
         {
           "frontend": "eplant",
@@ -3074,17 +3074,7 @@
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
-          "view": "Biotic Stress Phytophthora infestans"
-        },
-        {
-          "frontend": "eplant",
-          "instance": "eplant_arabidopsis",
-          "view": "Biotic Stress Hyaloperonospora arabidopsidis"
-        },
-        {
-          "frontend": "eplant",
-          "instance": "eplant_arabidopsis",
-          "view": "Biotic Stress Golovinomyces orontii"
+          "view": "Biotic Stress Botrytis cinerea"
         },
         {
           "frontend": "eplant",
@@ -3094,17 +3084,27 @@
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
+          "view": "Biotic Stress Erysiphe orontii"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_arabidopsis",
+          "view": "Biotic Stress Golovinomyces orontii"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_arabidopsis",
+          "view": "Biotic Stress Hyaloperonospora arabidopsidis"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_arabidopsis",
           "view": "Biotic Stress Myzus persicaere"
         },
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
-          "view": "Biotic Stress Botrytis cinerea"
-        },
-        {
-          "frontend": "eplant",
-          "instance": "eplant_arabidopsis",
-          "view": "Biotic Stress Erysiphe orontii"
+          "view": "Biotic Stress Phytophthora infestans"
         },
         {
           "frontend": "eplant",
@@ -4589,27 +4589,12 @@
         {
           "frontend": "efp",
           "instance": "efp_arabidopsis",
-          "view": "Tissue Specific"
+          "view": "Developmental Mutants"
         },
         {
           "frontend": "efp",
           "instance": "efp_arabidopsis",
-          "view": "Developmental Mutants"
-        },
-        {
-          "frontend": "eplant",
-          "instance": "eplant_arabidopsis",
-          "view": "Tissue Specific Embryo Development"
-        },
-        {
-          "frontend": "eplant",
-          "instance": "eplant_arabidopsis",
-          "view": "Tissue Specific Shoot Apical Meristem"
-        },
-        {
-          "frontend": "eplant",
-          "instance": "eplant_arabidopsis",
-          "view": "Tissue Specific Xylem And Cork"
+          "view": "Tissue Specific"
         },
         {
           "frontend": "eplant",
@@ -4619,7 +4604,12 @@
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
-          "view": "Tissue Specific Stem Epidermis"
+          "view": "Tissue Specific Embryo Development"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_arabidopsis",
+          "view": "Tissue Specific Guard And Mesophyll Cells"
         },
         {
           "frontend": "eplant",
@@ -4634,17 +4624,27 @@
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
+          "view": "Tissue Specific Shoot Apical Meristem"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_arabidopsis",
+          "view": "Tissue Specific Stem Epidermis"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_arabidopsis",
           "view": "Tissue Specific Stigma And Ovaries"
         },
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
-          "view": "Tissue Specific Guard And Mesophyll Cells"
+          "view": "Tissue Specific Trichomes"
         },
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
-          "view": "Tissue Specific Trichomes"
+          "view": "Tissue Specific Xylem And Cork"
         }
       ],
       "views": {
@@ -5825,22 +5825,22 @@
         {
           "frontend": "efp",
           "instance": "efp_arabidopsis",
-          "view": "Abiotic Stress II"
+          "view": "Abiotic Stress"
         },
         {
           "frontend": "efp",
           "instance": "efp_arabidopsis",
-          "view": "Abiotic Stress"
-        },
-        {
-          "frontend": "eplant",
-          "instance": "eplant_arabidopsis",
           "view": "Abiotic Stress II"
         },
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
           "view": "Abiotic Stress"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_arabidopsis",
+          "view": "Abiotic Stress II"
         }
       ],
       "views": {
@@ -8633,17 +8633,17 @@
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
+          "view": "Guard Cell Meristemoids"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_arabidopsis",
           "view": "Guard Cell Mutant And Wild Type Guard Cell ABA Response"
         },
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
           "view": "Guard Cell Suspension Cell ABA Response With ROS Scavenger"
-        },
-        {
-          "frontend": "eplant",
-          "instance": "eplant_arabidopsis",
-          "view": "Guard Cell Meristemoids"
         }
       ],
       "views": {
@@ -11742,12 +11742,12 @@
         {
           "frontend": "efp",
           "instance": "efp_arabidopsis",
-          "view": "Root II"
+          "view": "Root"
         },
         {
           "frontend": "efp",
           "instance": "efp_arabidopsis",
-          "view": "Root"
+          "view": "Root II"
         },
         {
           "frontend": "eplant",
@@ -14280,12 +14280,12 @@
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
-          "view": "Single Cell"
+          "view": "Cell"
         },
         {
           "frontend": "eplant",
           "instance": "eplant_arabidopsis",
-          "view": "Cell"
+          "view": "Single Cell"
         }
       ],
       "views": {
@@ -20717,7 +20717,7 @@
         {
           "frontend": "efp",
           "instance": "efp_human",
-          "view": "Skeletal Immune Digestive"
+          "view": "Nervous"
         },
         {
           "frontend": "efp",
@@ -20727,7 +20727,7 @@
         {
           "frontend": "efp",
           "instance": "efp_human",
-          "view": "Nervous"
+          "view": "Skeletal Immune Digestive"
         }
       ],
       "views": {
@@ -23518,12 +23518,12 @@
         {
           "frontend": "efp",
           "instance": "efp_maize",
-          "view": "Hoopes et al Stress"
+          "view": "Hoopes et al Atlas"
         },
         {
           "frontend": "efp",
           "instance": "efp_maize",
-          "view": "Hoopes et al Atlas"
+          "view": "Hoopes et al Stress"
         }
       ],
       "views": {
@@ -24089,12 +24089,12 @@
         {
           "frontend": "efp",
           "instance": "efp_maize",
-          "view": "Maize Kernel"
+          "view": "Early Seed"
         },
         {
           "frontend": "efp",
           "instance": "efp_maize",
-          "view": "Early Seed"
+          "view": "Maize Kernel"
         }
       ],
       "views": {
@@ -29925,22 +29925,22 @@
         {
           "frontend": "efp",
           "instance": "efp_poplar",
-          "view": "PoplarTreatment"
+          "view": "Poplar"
         },
         {
           "frontend": "efp",
           "instance": "efp_poplar",
-          "view": "Poplar"
-        },
-        {
-          "frontend": "eplant",
-          "instance": "eplant_poplar",
-          "view": "Poplar Treatment"
+          "view": "PoplarTreatment"
         },
         {
           "frontend": "eplant",
           "instance": "eplant_poplar",
           "view": "Plant"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_poplar",
+          "view": "Poplar Treatment"
         }
       ],
       "views": {
@@ -32991,16 +32991,6 @@
         {
           "frontend": "efp",
           "instance": "efp_rice",
-          "view": "ricestigma mas"
-        },
-        {
-          "frontend": "efp",
-          "instance": "efp_rice",
-          "view": "ricestress mas"
-        },
-        {
-          "frontend": "efp",
-          "instance": "efp_rice",
           "view": "rice mas"
         },
         {
@@ -33009,9 +32999,14 @@
           "view": "riceanoxia mas"
         },
         {
-          "frontend": "eplant",
-          "instance": "eplant_rice",
-          "view": "Plant"
+          "frontend": "efp",
+          "instance": "efp_rice",
+          "view": "ricestigma mas"
+        },
+        {
+          "frontend": "efp",
+          "instance": "efp_rice",
+          "view": "ricestress mas"
         },
         {
           "frontend": "eplant",
@@ -33021,12 +33016,17 @@
         {
           "frontend": "eplant",
           "instance": "eplant_rice",
-          "view": "Stress"
+          "view": "Plant"
         },
         {
           "frontend": "eplant",
           "instance": "eplant_rice",
           "view": "Stigma"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_rice",
+          "view": "Stress"
         }
       ],
       "views": {
@@ -33735,12 +33735,12 @@
         {
           "frontend": "efp",
           "instance": "efp_rice",
-          "view": "riceanoxia rma"
+          "view": "rice rma"
         },
         {
           "frontend": "efp",
           "instance": "efp_rice",
-          "view": "ricestress rma"
+          "view": "riceanoxia rma"
         },
         {
           "frontend": "efp",
@@ -33750,7 +33750,7 @@
         {
           "frontend": "efp",
           "instance": "efp_rice",
-          "view": "rice rma"
+          "view": "ricestress rma"
         }
       ],
       "views": {
@@ -38214,12 +38214,12 @@
         {
           "frontend": "eplant",
           "instance": "eplant_tomato",
-          "view": "Plant"
+          "view": "Fruit"
         },
         {
           "frontend": "eplant",
           "instance": "eplant_tomato",
-          "view": "Fruit"
+          "view": "Plant"
         }
       ],
       "views": {
@@ -40305,17 +40305,17 @@
         {
           "frontend": "eplant",
           "instance": "eplant_wheat",
-          "view": "MiddleStages"
-        },
-        {
-          "frontend": "eplant",
-          "instance": "eplant_wheat",
           "view": "EarlyStages"
         },
         {
           "frontend": "eplant",
           "instance": "eplant_wheat",
           "view": "LateStages"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_wheat",
+          "view": "MiddleStages"
         }
       ],
       "views": {

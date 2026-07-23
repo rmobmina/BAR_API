@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""
-Reena Obmina | BCB330 Project 2025-2026 | University of Toronto
-"""
-
 import json
 import re
 import xml.etree.ElementTree as ET
@@ -428,7 +424,7 @@ def build_databases(master_db_list, view_info, schema_variants, db_regex_project
             used_by = []
 
             for frontend in ["efp", "eplant"]:
-                for instance, view_name in db_frontend_usage[db_name][frontend]:
+                for instance, view_name in sorted(db_frontend_usage[db_name][frontend]):
                     instance_families.add(instance)
                     used_by.append({
                         "frontend": frontend,
