@@ -10,15 +10,6 @@ DB_HOST=${DB_HOST:-"localhost"}
 # Load the data
 echo "Welcome to the BAR API. Running init!"
 
-# Build simple eFP databases dynamically so we do not need static SQL dumps
-echo "Bootstrapping simple eFP databases..."
-python3 ./scripts/bootstrap_simple_efp_dbs.py --user "$DB_USER" --password "$DB_PASS"
-if [ $? -ne 0 ]; then
-    echo "ERROR: Failed to bootstrap simple eFP databases"
-    exit 1
-fi
-echo "Successfully bootstrapped simple eFP databases"
-
 db_exists() {
     mysql -h $DB_HOST -u $DB_USER -p$DB_PASS -e "SELECT SCHEMA_NAME FROM information_schema.SCHEMATA WHERE SCHEMA_NAME='$1';" 2>/dev/null | grep -q "$1"
 }
@@ -34,10 +25,22 @@ import_if_missing() {
     fi
 }
 
+# Import real curated data for databases that have a static dump BEFORE
+# bootstrapping the simple eFP schemas below. Several of these databases
+# (e.g. shoot_apex, arachis, single_cell) are also entries in
+# SIMPLE_EFP_DATABASE_SCHEMAS; if the dynamic bootstrap ran first it would
+# create their table empty, db_exists() would then see it as "already
+# there", and import_if_missing would skip loading the real data --
+# leaving real endpoints permanently empty in any fresh environment (CI,
+# a new dev machine) even though it looks fine on a machine that already
+# had the data from before the dynamic bootstrap existed.
 import_if_missing annotations_lookup    ./config/databases/annotations_lookup.sql
 import_if_missing arabidopsis_ecotypes  ./config/databases/arabidopsis_ecotypes.sql
 import_if_missing arachis               ./config/databases/arachis.sql
+import_if_missing cannabis              ./config/databases/cannabis.sql
 import_if_missing canola_nssnp          ./config/databases/canola_nssnp.sql
+import_if_missing dna_damage            ./config/databases/dna_damage.sql
+import_if_missing embryo                ./config/databases/embryo.sql
 import_if_missing eplant2               ./config/databases/eplant2.sql
 import_if_missing eplant_poplar         ./config/databases/eplant_poplar.sql
 import_if_missing eplant_rice           ./config/databases/eplant_rice.sql
@@ -65,6 +68,18 @@ import_if_missing tomato_nssnp          ./config/databases/tomato_nssnp.sql
 import_if_missing tomato_sequence       ./config/databases/tomato_sequence.sql
 import_if_missing triphysaria           ./config/databases/triphysaria.sql
 import_if_missing gaia                  ./config/databases/gaia.sql
+
+# Build the remaining simple eFP databases dynamically so we do not need a
+# static SQL dump for every one of them. Uses checkfirst=True, so any
+# database already created by the real-data imports above (same name) is
+# left untouched rather than being recreated empty.
+echo "Bootstrapping simple eFP databases..."
+python3 ./scripts/bootstrap_simple_efp_dbs.py --user "$DB_USER" --password "$DB_PASS"
+if [ $? -ne 0 ]; then
+    echo "ERROR: Failed to bootstrap simple eFP databases"
+    exit 1
+fi
+echo "Successfully bootstrapped simple eFP databases"
 
 echo "Data are now loaded. Preparing API config"
 echo "Please manually edit config file!"
