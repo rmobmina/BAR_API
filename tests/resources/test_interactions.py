@@ -139,8 +139,10 @@ class TestIntegrations(TestCase):
         This function test mfinder via POST.
         """
         # Valid request
-        # skip pytest in github environment
-        if os.getenv("GITHUB_ACTIONS") == "true":
+        # The mfinder binary (/bartmp/mfinder) isn't installed in CI or on a
+        # typical dev machine, so skip the real subprocess call wherever it's
+        # missing and just check the fixture round-trips instead.
+        if not os.path.exists("/bartmp/mfinder"):
             with open("tests/data/mfinder_output.json") as json_file_2:
                 expected = load(json_file_2)
             data = expected
