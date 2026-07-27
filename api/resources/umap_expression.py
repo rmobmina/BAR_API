@@ -1,15 +1,3 @@
-"""
-Steven Qiao | BCB330 Project 2025-2026 | University of Toronto
-
-REST endpoint for per-cell UMAP coordinate + expression queries.
-
-Routes: GET /umap_expression/umap/<database>/<gene_id>
-
-All gene IDs are validated by species before reaching the query layer.
-Expression is stored as a JSON array per gene in umap_expression; UMAP
-coordinates are stored once per dataset in umap_coords. The two are
-merged server-side by position before returning to the client.
-"""
 import json
 
 from flask_restx import Namespace, Resource
