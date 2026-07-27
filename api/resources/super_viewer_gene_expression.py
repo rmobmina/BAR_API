@@ -1,36 +1,4 @@
-"""
-Steven Qiao | SUPeR Viewer | BAR_API
 
-REST endpoint for SUPeR Viewer gene expression queries across the eFP
-pseudobulk databases (arabidopsis_NIE_pseudobulk, rice_OW_pseudobulk,
-arabidopsis_root_rs_pseudobulk, etc).
-
-This is deliberately modeled on the existing gene_expression endpoint
-(same validation / probeset-conversion pipeline, same
-query_efp_database_dynamic call) so it queries the *same* `sample_data`
-table — there is no second SQL table. The "two tables" the SUPeR Viewer
-needs are produced by splitting the single query result in Python:
-
-  - "expression"       : one row per real tissue/condition (data_bot_id
-                         values other than Mean_CTRL) — same shape as
-                         the existing gene_expression response.
-  - "mean_expression"  : the single Mean_CTRL row — the gene's average
-                         (and std) across every cell in the dataset,
-                         regardless of tissue/condition. Populated by
-                         generate_pseudobulk_dumps.py, which now writes
-                         a Mean_CTRL row for every gene in every
-                         dataset (see MEAN_CTRL_BOT_ID there).
-
-Routes: GET /super_viewer_gene_expression/expression/<database>/<gene_id>
-
-NOTE: this file assumes query_efp_database_dynamic's success payload is a
-dict with a "data" key holding the list of sample_data rows, and that
-each row is a dict exposing "name" (the tissue/data_bot_id) and "value"
-(the expression signal) — confirmed against a live response. If the
-real return shape differs again, adjust the `_split_rows` helper below
-accordingly — the validation and error handling above it are copied
-verbatim from gene_expression.py and should not need changes.
-"""
 from flask_restx import Namespace, Resource
 from markupsafe import escape
 
