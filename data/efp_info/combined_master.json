@@ -41512,6 +41512,167 @@
       "regex_project": null,
       "used_by": [],
       "views": {}
+    },
+    "arabidopsis_NIE_pseudobulk": {
+      "species": "arabidopsis",
+      "instance_families": [
+        "efp_arabidopsis"
+      ],
+      "source": "efp",
+      "platform": "single_cell_pseudobulk",
+      "schema_variant": "pseudobulk_with_std",
+      "schema_verified": false,
+      "schema_verification_note": "Not yet run through build_combined_master_json.py's XML-based scrape/verification pipeline -- the SUPeR Viewer XML metadata for this new endpoint isn't available yet. Added by hand from the actual sample_data dump shipped in config/databases/arabidopsis_NIE_pseudobulk_dump.sql (columns: data_probeset_id, data_signal, data_signal_std, data_bot_id -- one extra column vs. the standard 3-column sample_data schema, unused by query_efp_database_dynamic). Regenerate once XMLs exist.",
+      "value_semantics": null,
+      "gene_id_class": "gene_model",
+      "gene_id_namespace": null,
+      "regex_project": "efp_arabidopsis",
+      "used_by": [
+        {
+          "frontend": "efp",
+          "instance": "efp_arabidopsis",
+          "view": "SUPeR Viewer NIE"
+        }
+      ],
+      "views": {}
+    },
+    "arabidopsis_flower_lee_pseudobulk": {
+      "species": "arabidopsis",
+      "instance_families": [
+        "efp_arabidopsis"
+      ],
+      "source": "efp",
+      "platform": "single_cell_pseudobulk",
+      "schema_variant": "pseudobulk_with_std",
+      "schema_verified": false,
+      "schema_verification_note": "Not yet run through build_combined_master_json.py's XML-based scrape/verification pipeline -- the SUPeR Viewer XML metadata for this new endpoint isn't available yet. Added by hand from the actual sample_data dump shipped in config/databases/arabidopsis_flower_lee_pseudobulk_dump.sql (columns: data_probeset_id, data_signal, data_signal_std, data_bot_id -- one extra column vs. the standard 3-column sample_data schema, unused by query_efp_database_dynamic). Regenerate once XMLs exist.",
+      "value_semantics": null,
+      "gene_id_class": "gene_model",
+      "gene_id_namespace": null,
+      "regex_project": "efp_arabidopsis",
+      "used_by": [
+        {
+          "frontend": "efp",
+          "instance": "efp_arabidopsis",
+          "view": "SUPeR Viewer Flower (Lee)"
+        }
+      ],
+      "views": {}
+    },
+    "arabidopsis_root_rs_pseudobulk": {
+      "species": "arabidopsis",
+      "instance_families": [
+        "efp_arabidopsis"
+      ],
+      "source": "efp",
+      "platform": "single_cell_pseudobulk",
+      "schema_variant": "pseudobulk_with_std",
+      "schema_verified": false,
+      "schema_verification_note": "Not yet run through build_combined_master_json.py's XML-based scrape/verification pipeline -- the SUPeR Viewer XML metadata for this new endpoint isn't available yet. Added by hand from the actual sample_data dump shipped in config/databases/arabidopsis_root_rs_pseudobulk_dump.sql (columns: data_probeset_id, data_signal, data_signal_std, data_bot_id -- one extra column vs. the standard 3-column sample_data schema, unused by query_efp_database_dynamic). Regenerate once XMLs exist.",
+      "value_semantics": null,
+      "gene_id_class": "gene_model",
+      "gene_id_namespace": null,
+      "regex_project": "efp_arabidopsis",
+      "used_by": [
+        {
+          "frontend": "efp",
+          "instance": "efp_arabidopsis",
+          "view": "SUPeR Viewer Root (Shahan)"
+        }
+      ],
+      "views": {}
+    },
+    "arabidopsis_seed_martin_pseudobulk": {
+      "species": "arabidopsis",
+      "instance_families": [
+        "efp_arabidopsis"
+      ],
+      "source": "efp",
+      "platform": "single_cell_pseudobulk",
+      "schema_variant": "pseudobulk_with_std",
+      "schema_verified": false,
+      "schema_verification_note": "Not yet run through build_combined_master_json.py's XML-based scrape/verification pipeline -- the SUPeR Viewer XML metadata for this new endpoint isn't available yet. Added by hand from the actual sample_data dump shipped in config/databases/arabidopsis_seed_martin_pseudobulk_dump.sql (columns: data_probeset_id, data_signal, data_signal_std, data_bot_id -- one extra column vs. the standard 3-column sample_data schema, unused by query_efp_database_dynamic). Regenerate once XMLs exist.",
+      "value_semantics": null,
+      "gene_id_class": "gene_model",
+      "gene_id_namespace": null,
+      "regex_project": "efp_arabidopsis",
+      "used_by": [
+        {
+          "frontend": "efp",
+          "instance": "efp_arabidopsis",
+          "view": "SUPeR Viewer Seed (Martin)"
+        }
+      ],
+      "views": {}
+    },
+    "arabidopsis_silique_lee_pseudobulk": {
+      "species": "arabidopsis",
+      "instance_families": [
+        "efp_arabidopsis"
+      ],
+      "source": "efp",
+      "platform": "single_cell_pseudobulk",
+      "schema_variant": "pseudobulk_with_std",
+      "schema_verified": false,
+      "schema_verification_note": "Not yet run through build_combined_master_json.py's XML-based scrape/verification pipeline -- the SUPeR Viewer XML metadata for this new endpoint isn't available yet. Added by hand from the actual sample_data dump shipped in config/databases/arabidopsis_silique_lee_pseudobulk_dump.sql (columns: data_probeset_id, data_signal, data_signal_std, data_bot_id -- one extra column vs. the standard 3-column sample_data schema, unused by query_efp_database_dynamic). Regenerate once XMLs exist.",
+      "value_semantics": null,
+      "gene_id_class": "gene_model",
+      "gene_id_namespace": null,
+      "regex_project": "efp_arabidopsis",
+      "used_by": [
+        {
+          "frontend": "efp",
+          "instance": "efp_arabidopsis",
+          "view": "SUPeR Viewer Silique (Lee)"
+        }
+      ],
+      "views": {}
+    },
+    "arabidopsis_stem_lee_pseudobulk": {
+      "species": "arabidopsis",
+      "instance_families": [
+        "efp_arabidopsis"
+      ],
+      "source": "efp",
+      "platform": "single_cell_pseudobulk",
+      "schema_variant": "pseudobulk_with_std",
+      "schema_verified": false,
+      "schema_verification_note": "Not yet run through build_combined_master_json.py's XML-based scrape/verification pipeline -- the SUPeR Viewer XML metadata for this new endpoint isn't available yet. Added by hand from the actual sample_data dump shipped in config/databases/arabidopsis_stem_lee_pseudobulk_dump.sql (columns: data_probeset_id, data_signal, data_signal_std, data_bot_id -- one extra column vs. the standard 3-column sample_data schema, unused by query_efp_database_dynamic). Regenerate once XMLs exist.",
+      "value_semantics": null,
+      "gene_id_class": "gene_model",
+      "gene_id_namespace": null,
+      "regex_project": "efp_arabidopsis",
+      "used_by": [
+        {
+          "frontend": "efp",
+          "instance": "efp_arabidopsis",
+          "view": "SUPeR Viewer Stem (Lee)"
+        }
+      ],
+      "views": {}
+    },
+    "rice_OW_pseudobulk": {
+      "species": "rice",
+      "instance_families": [
+        "efp_rice"
+      ],
+      "source": "efp",
+      "platform": "single_cell_pseudobulk",
+      "schema_variant": "pseudobulk_with_std",
+      "schema_verified": false,
+      "schema_verification_note": "Not yet run through build_combined_master_json.py's XML-based scrape/verification pipeline -- the SUPeR Viewer XML metadata for this new endpoint isn't available yet. Added by hand from the actual sample_data dump shipped in config/databases/rice_OW_pseudobulk_dump.sql (columns: data_probeset_id, data_signal, data_signal_std, data_bot_id -- one extra column vs. the standard 3-column sample_data schema, unused by query_efp_database_dynamic). Regenerate once XMLs exist.",
+      "value_semantics": null,
+      "gene_id_class": "gene_model",
+      "gene_id_namespace": null,
+      "regex_project": "efp_rice",
+      "used_by": [
+        {
+          "frontend": "efp",
+          "instance": "efp_rice",
+          "view": "SUPeR Viewer OW"
+        }
+      ],
+      "views": {}
     }
   }
 }

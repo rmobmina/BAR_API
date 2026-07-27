@@ -69,6 +69,25 @@ import_if_missing tomato_sequence       ./config/databases/tomato_sequence.sql
 import_if_missing triphysaria           ./config/databases/triphysaria.sql
 import_if_missing gaia                  ./config/databases/gaia.sql
 
+# SUPeR Viewer pseudobulk + UMAP databases (real per-gene dumps with an extra
+# data_signal_std column on the pseudobulk side, and a separate umap_coords /
+# umap_expression pair on the UMAP side) -- must load before the dynamic
+# bootstrap below for the same reason as the real-data imports above.
+import_if_missing arabidopsis_NIE_pseudobulk        ./config/databases/arabidopsis_NIE_pseudobulk_dump.sql
+import_if_missing arabidopsis_flower_lee_pseudobulk ./config/databases/arabidopsis_flower_lee_pseudobulk_dump.sql
+import_if_missing arabidopsis_root_rs_pseudobulk    ./config/databases/arabidopsis_root_rs_pseudobulk_dump.sql
+import_if_missing arabidopsis_seed_martin_pseudobulk ./config/databases/arabidopsis_seed_martin_pseudobulk_dump.sql
+import_if_missing arabidopsis_silique_lee_pseudobulk ./config/databases/arabidopsis_silique_lee_pseudobulk_dump.sql
+import_if_missing arabidopsis_stem_lee_pseudobulk   ./config/databases/arabidopsis_stem_lee_pseudobulk_dump.sql
+import_if_missing rice_OW_pseudobulk                ./config/databases/rice_OW_pseudobulk_dump.sql
+import_if_missing arabidopsis_NIE_umap              ./config/databases/arabidopsis_NIE_umap.sql
+import_if_missing arabidopsis_flower_lee_umap       ./config/databases/arabidopsis_flower_lee_umap.sql
+import_if_missing arabidopsis_root_shahan_umap      ./config/databases/arabidopsis_root_shahan_umap.sql
+import_if_missing arabidopsis_seed_martin_umap      ./config/databases/arabidopsis_seed_martin_umap.sql
+import_if_missing arabidopsis_silique_lee_umap      ./config/databases/arabidopsis_silique_lee_umap.sql
+import_if_missing arabidopsis_stem_lee_umap         ./config/databases/arabidopsis_stem_lee_umap.sql
+import_if_missing rice_OW_umap                      ./config/databases/rice_OW_umap.sql
+
 # Build the remaining simple eFP databases dynamically so we do not need a
 # static SQL dump for every one of them. Uses checkfirst=True, so any
 # database already created by the real-data imports above (same name) is

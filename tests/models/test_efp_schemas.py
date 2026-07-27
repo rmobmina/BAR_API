@@ -1,7 +1,7 @@
 """
 Comprehensive tests for EFP database schemas and dynamic ORM generation.
 
-Tests all 191 EFP databases to ensure:
+Tests all 198 EFP databases to ensure:
 1. Schema definitions are valid
 2. Dynamic ORM models generate correctly
 3. Column types and constraints are properly configured
@@ -22,12 +22,12 @@ from api.models.efp_dynamic import SIMPLE_EFP_SAMPLE_MODELS  # noqa: E402
 
 
 class TestEfpSchemaDefinitions(TestCase):
-    """Test all 191 EFP database schema definitions."""
+    """Test all 198 EFP database schema definitions."""
 
-    def test_all_191_databases_loaded(self):
-        """Verify all 191 databases from CSV are loaded."""
+    def test_all_198_databases_loaded(self):
+        """Verify all 198 databases from CSV are loaded."""
         self.assertEqual(
-            len(SIMPLE_EFP_DATABASE_SCHEMAS), 191, f"Expected 191 databases, found {len(SIMPLE_EFP_DATABASE_SCHEMAS)}"
+            len(SIMPLE_EFP_DATABASE_SCHEMAS), 198, f"Expected 198 databases, found {len(SIMPLE_EFP_DATABASE_SCHEMAS)}"
         )
 
     def test_all_schemas_have_required_keys(self):
@@ -129,10 +129,10 @@ class TestDynamicOrmGeneration(TestCase):
         """Tear down application context."""
         self.ctx.pop()
 
-    def test_all_191_models_generated(self):
-        """Verify all 191 dynamic ORM models are generated."""
+    def test_all_198_models_generated(self):
+        """Verify all 198 dynamic ORM models are generated."""
         self.assertEqual(
-            len(SIMPLE_EFP_SAMPLE_MODELS), 191, f"Expected 191 ORM models, found {len(SIMPLE_EFP_SAMPLE_MODELS)}"
+            len(SIMPLE_EFP_SAMPLE_MODELS), 198, f"Expected 198 ORM models, found {len(SIMPLE_EFP_SAMPLE_MODELS)}"
         )
 
     def test_model_names_match_database_names(self):
