@@ -156,12 +156,3 @@ config/databases/tomato_ils.sql
 
 # Archive test data — large DB dumps, exports, and CSVs; not for version control
 archive/test_data/
-
-# Scratch output from scripts/check_efp_experiment_links.py
-scripts/results/
-
-# Real per-database sample dumps used only as build_combined_master_json.py's
-# input (schema/regex verification against real data) -- not read at runtime
-# by the API or by any test, and large/noisy enough (193 files, ~52k lines)
-# to not belong in the PR diff. Keep locally to rerun the build script.
-api/random_rows_json/

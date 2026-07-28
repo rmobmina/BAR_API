@@ -2,8 +2,7 @@ from __future__ import annotations
 
 import re
 
-from api.utils.bar_utils import BARUtils
-from api.utils.master_data_utils import load_combined_master
+from api.utils.bar_utils import BARUtils, load_combined_master
 
 
 def _load_database_regex_projects() -> dict[str, str]:

@@ -13,7 +13,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, List
 
-from api.utils.master_data_utils import load_combined_master
+from api.utils.bar_utils import load_combined_master
 
 _MASTER_DATABASES = load_combined_master()["databases"]
 

@@ -1,5 +1,5 @@
 from api import app
-from api.utils.master_data_utils import load_combined_master
+from api.utils.bar_utils import load_combined_master
 from unittest import TestCase
 from json import load
 

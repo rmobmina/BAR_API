@@ -3,8 +3,7 @@ from markupsafe import escape
 from api import db
 from api.models.annotations_lookup import AtAgiLookup
 from api.models.efp_dynamic import SIMPLE_EFP_SAMPLE_MODELS
-from api.utils.bar_utils import BARUtils
-from api.utils.master_data_utils import load_combined_master
+from api.utils.bar_utils import BARUtils, load_combined_master
 from api.utils.world_efp_utils import WorldeFPUtils
 from sqlalchemy import func
 

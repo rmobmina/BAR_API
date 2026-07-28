@@ -1,8 +1,21 @@
+import json
 import re
 import redis
 import os
+from functools import lru_cache
+from pathlib import Path
 
-from api.utils.master_data_utils import load_combined_master
+_COMBINED_MASTER_PATH = Path(__file__).resolve().parents[2] / "data" / "efp_info" / "combined_master.json"
+
+
+@lru_cache(maxsize=1)
+def load_combined_master() -> dict:
+    """Load data/efp_info/combined_master.json (species, databases, views, and
+    validation_patterns), cached after first read.
+    """
+    with open(_COMBINED_MASTER_PATH) as f:
+        return json.load(f)
+
 
 # Per-eFP-project input validation regexes. Sourced from Vincent's
 # regex_master_list_efp_eplant registry (tested at 99%+ coverage against real
