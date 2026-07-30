@@ -8,7 +8,7 @@ Covers three important cases:
      is accepted (data retrieval itself is tested in CI where the lookup DB is present).
 
 Sample probeset IDs are drawn from the JSON files in
-.github/workflows/random_rows_json/ to ensure we test with real IDs, not synthetic ones.
+api/random_rows_json/ to ensure we test with real IDs, not synthetic ones.
 """
 from unittest import TestCase
 

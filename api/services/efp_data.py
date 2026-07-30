@@ -9,8 +9,11 @@ Exposes a single entry point query_efp_database_dynamic() that handles:
 
 from __future__ import annotations
 
+import json
 import re
 import traceback
+from functools import lru_cache
+from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 from types import SimpleNamespace
 
@@ -24,6 +27,8 @@ from api import db
 from api.models.annotations_lookup import AtAgiLookup
 from api.models.bar_utils import BARUtils
 from api.models.efp_schemas import SIMPLE_EFP_DATABASE_SCHEMAS
+
+_RANDOM_ROWS_DIR = Path(__file__).resolve().parents[1] / "random_rows_json"
 
 DEFAULT_SAMPLE_SCHEMA = {
     "table": "sample_data",
@@ -121,6 +126,40 @@ class EFPDataService:
         return catalog
 
     @staticmethod
+    @lru_cache(maxsize=None)
+    def _load_random_rows_dataset(database: str) -> Optional[Dict[str, List[Dict[str, str]]]]:
+        """Load api/random_rows_json/<database>_test_data.json as a per-gene fallback.
+
+        These are real (gene, sample, signal) rows scraped from each database for
+        regex/schema verification (see build_combined_master_json.py), not a full
+        dataset -- typically ~30 scattered rows, so most single genes will have at
+        most one matching sample. Used as a broader-coverage substitute for the
+        small hand-written LOCAL_EFP_DATASETS seed until real data is wired up.
+
+        :param database: Database name
+        :type database: str
+        :return: Mapping of uppercased gene/probeset ID to sample rows, or None if
+            no test data file exists for this database
+        :rtype: Optional[Dict[str, List[Dict[str, str]]]]
+        """
+        path = _RANDOM_ROWS_DIR / f"{database}_test_data.json"
+        try:
+            with open(path) as f:
+                raw_rows = json.load(f)
+        except (OSError, json.JSONDecodeError):
+            return None
+
+        dataset: Dict[str, List[Dict[str, str]]] = {}
+        for row in raw_rows:
+            gene_id = row.get("data_probeset_id")
+            sample = row.get("data_bot_id")
+            value = row.get("data_signal")
+            if not gene_id or not sample or value is None:
+                continue
+            dataset.setdefault(gene_id.upper(), []).append({"sample": sample, "value": str(value)})
+        return dataset
+
+    @staticmethod
     def _query_local_dataset(
         database: str,
         query_id: str,
@@ -128,6 +167,10 @@ class EFPDataService:
         sample_case_insensitive: bool,
     ) -> Optional[List[SimpleNamespace]]:
         """Return seed data rows for databases without a configured MySQL bind.
+
+        Checks the small hand-written LOCAL_EFP_DATASETS first, then falls back to
+        the broader (but sparser) api/random_rows_json/ test data when the gene
+        isn't in LOCAL_EFP_DATASETS.
 
         :param database: Database name
         :type database: str
@@ -137,14 +180,21 @@ class EFPDataService:
         :type sample_ids: Optional[List[str]]
         :param sample_case_insensitive: If True, compare sample IDs case-insensitively
         :type sample_case_insensitive: bool
-        :return: List of result rows or None if database not found
+        :return: List of result rows or None if no seed data source exists for this database
         :rtype: Optional[List[SimpleNamespace]]
         """
         dataset = LOCAL_EFP_DATASETS.get(database)
+        gene_rows = dataset.get(query_id.upper(), []) if dataset is not None else []
+
+        if not gene_rows:
+            random_rows_dataset = EFPDataService._load_random_rows_dataset(database)
+            if random_rows_dataset is not None:
+                dataset = random_rows_dataset
+                gene_rows = random_rows_dataset.get(query_id.upper(), [])
+
         if dataset is None:
             return None
 
-        gene_rows = dataset.get(query_id.upper(), [])
         rows = list(gene_rows)
 
         if sample_ids:
