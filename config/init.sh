@@ -54,24 +54,6 @@ mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/tomato_nssnp.sql
 mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/tomato_sequence.sql
 mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/triphysaria.sql
 
-# SUPeR Viewer pseudobulk + UMAP databases (real per-gene dumps with an extra
-# data_signal_std column on the pseudobulk side, and a separate umap_coords /
-# umap_expression pair on the UMAP side).
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_NIE_pseudobulk_dump.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_flower_lee_pseudobulk_dump.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_root_rs_pseudobulk_dump.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_seed_martin_pseudobulk_dump.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_silique_lee_pseudobulk_dump.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_stem_lee_pseudobulk_dump.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/rice_OW_pseudobulk_dump.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_NIE_umap.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_flower_lee_umap.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_root_shahan_umap.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_seed_martin_umap.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_silique_lee_umap.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_stem_lee_umap.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/rice_OW_umap.sql
-
 echo "Data are now loaded. Preparing API config"
 echo "Please manually edit config file!"
 
