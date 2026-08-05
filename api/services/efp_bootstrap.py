@@ -2,12 +2,18 @@
 Bootstrap utilities for creating eFP MySQL databases from the shared schema registry.
 
 Used by:
-  - scripts/bootstrap_simple_efp_dbs.py  (CLI)
-  - config/init.sh                        (Docker / CI)
+  - config/init.sh (Docker / CI), via `python3 -m api.services.efp_bootstrap`
+
+Usage:
+    python3 -m api.services.efp_bootstrap
+    python3 -m api.services.efp_bootstrap --databases embryo klepikova
+    python3 -m api.services.efp_bootstrap --host localhost --port 3306
 """
 
 from __future__ import annotations
 
+import argparse
+import os
 import re
 import hashlib
 from typing import Dict, Iterable, List
@@ -15,6 +21,7 @@ from typing import Dict, Iterable, List
 from sqlalchemy import Column, Index, MetaData, Table, create_engine, text
 from sqlalchemy.dialects.mysql import FLOAT, INTEGER, TEXT, VARCHAR
 from sqlalchemy.engine import URL
+from sqlalchemy.exc import SQLAlchemyError
 
 from api.models.efp_schemas import SIMPLE_EFP_DATABASE_SCHEMAS
 
@@ -221,10 +228,8 @@ def bootstrap_simple_efp_databases(
     2. Creates the sample_data table with schema from SIMPLE_EFP_DATABASE_SCHEMAS
     3. Inserts seed rows if the table is empty and seed_rows are defined
 
-    Used by:
-    - scripts/bootstrap_simple_efp_dbs.py (CLI tool)
-    - config/init.sh (Docker/CI initialization)
-    - api/resources/efp_proxy.py (HTTP bootstrap endpoint)
+    Used by config/init.sh (Docker/CI initialization) via the CLI entry point
+    at the bottom of this module (`python3 -m api.services.efp_bootstrap`).
 
     :param host: MySQL server hostname (e.g., 'localhost', 'BAR_mysqldb' for Docker)
     :type host: str
@@ -280,3 +285,67 @@ def bootstrap_simple_efp_databases(
 
 
 __all__ = ["bootstrap_simple_efp_databases"]
+
+
+def _default_host() -> str:
+    """Resolve the default MySQL hostname from environment variables.
+
+    Checks DB_HOST, then MYSQL_HOST, then falls back to 'localhost'.
+    Docker deployments should set DB_HOST=BAR_mysqldb explicitly.
+
+    :returns: MySQL hostname string.
+    :rtype: str
+    """
+    if os.environ.get("DB_HOST"):
+        return os.environ["DB_HOST"]
+    if os.environ.get("MYSQL_HOST"):
+        return os.environ["MYSQL_HOST"]
+    return "localhost"
+
+
+def _parse_args() -> argparse.Namespace:
+    """Parse command-line arguments for the bootstrap CLI.
+
+    :returns: Parsed arguments with host, port, user, password, and optional database list.
+    :rtype: argparse.Namespace
+    """
+    parser = argparse.ArgumentParser(description="Create simple eFP MySQL databases from in-memory schemas.")
+    parser.add_argument("--host", default=_default_host(), help="MySQL hostname (default: %(default)s)")
+    parser.add_argument("--port", type=int, default=int(os.environ.get("DB_PORT", 3306)), help="MySQL port")
+    parser.add_argument("--user", default=os.environ.get("DB_USER", "root"), help="MySQL user")
+    parser.add_argument("--password", default=os.environ.get("DB_PASS", "root"), help="MySQL password")
+    parser.add_argument(
+        "--databases",
+        nargs="*",
+        help="Optional list of databases to bootstrap (defaults to every simple schema).",
+    )
+    return parser.parse_args()
+
+
+def _main():
+    """Run the bootstrap CLI — creates all eFP databases and prints a result per entry.
+
+    Output format: [ok] ensured database_name.table_name (seeded N rows)
+
+    :raises SQLAlchemyError: If database creation or connection fails.
+    """
+    args = _parse_args()
+    results = bootstrap_simple_efp_databases(
+        host=args.host,
+        port=args.port,
+        user=args.user,
+        password=args.password,
+        databases=args.databases,
+    )
+    for entry in results:
+        seeded = entry["seeded_rows"]
+        seed_msg = f"seeded {seeded} rows" if seeded else "no seed rows inserted"
+        print(f"[ok] ensured {entry['database']}.{entry['table']} ({seed_msg})")
+
+
+if __name__ == "__main__":
+    try:
+        _main()
+    except SQLAlchemyError as exc:
+        print(f"failed to initialize simple efp databases: {exc}")
+        raise

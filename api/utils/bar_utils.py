@@ -28,12 +28,16 @@ EFP_PROJECT_REGEXES: dict = dict(load_combined_master()["validation_patterns"])
 
 # Aliases for alternate eFP project key spellings used by the BAR (not present
 # in Vincent's registry, which is keyed by canonical eFP project name only).
-EFP_PROJECT_REGEXES["efpbarley"] = EFP_PROJECT_REGEXES["efp_barley"]
-EFP_PROJECT_REGEXES["efprice"] = EFP_PROJECT_REGEXES["efp_rice"]
-EFP_PROJECT_REGEXES["efpmedicago"] = EFP_PROJECT_REGEXES["efp_medicago"]
-EFP_PROJECT_REGEXES["efppop"] = EFP_PROJECT_REGEXES["efp_poplar"]
-EFP_PROJECT_REGEXES["efpsoybean"] = EFP_PROJECT_REGEXES["efp_soybean"]
-EFP_PROJECT_REGEXES["maizeefp"] = EFP_PROJECT_REGEXES["efp_maize"]
+_PROJECT_ALIASES = {
+    "efpbarley": "efp_barley",
+    "efprice": "efp_rice",
+    "efpmedicago": "efp_medicago",
+    "efppop": "efp_poplar",
+    "efpsoybean": "efp_soybean",
+    "maizeefp": "efp_maize",
+}
+for _alias, _canonical in _PROJECT_ALIASES.items():
+    EFP_PROJECT_REGEXES[_alias] = EFP_PROJECT_REGEXES[_canonical]
 
 # General injection guard, run before any per-project/probeset format check.
 # A handful of eFP projects accept loose freeform text (metabolite/enzyme/trait

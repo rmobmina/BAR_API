@@ -25,8 +25,8 @@ from sqlalchemy.orm import Session
 
 from api import db
 from api.models.annotations_lookup import AtAgiLookup
-from api.models.bar_utils import BARUtils
 from api.models.efp_schemas import SIMPLE_EFP_DATABASE_SCHEMAS
+from api.utils.bar_utils import BARUtils
 
 _RANDOM_ROWS_DIR = Path(__file__).resolve().parents[1] / "random_rows_json"
 

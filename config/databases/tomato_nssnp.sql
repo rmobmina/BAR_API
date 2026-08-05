@@ -34,7 +34,8 @@ CREATE TABLE `lines_lookup` (
   `lines_id` varchar(45) NOT NULL,
   `species` varchar(35) DEFAULT NULL,
   `alias` varchar(35) DEFAULT NULL,
-  PRIMARY KEY (`lines_id`)
+  PRIMARY KEY (`lines_id`),
+  CONSTRAINT `lines_id` FOREIGN KEY (`lines_id`) REFERENCES `snps_reference` (`sample_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

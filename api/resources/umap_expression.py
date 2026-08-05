@@ -31,6 +31,53 @@ UMAP_DATABASE_SPECIES: dict[str, str] = {
     "arabidopsis_stem_lee_umap": "arabidopsis",
 }
 
+_EXPRESSION_SQL = text("SELECT expression FROM umap_expression WHERE gene_id = :gene_id")
+_COORDS_SQL = text("SELECT cell_id, umap_1, umap_2, cell_type FROM umap_coords ORDER BY cell_id")
+
+
+def _fetch_expression_row(engine, gene_id):
+    """Look up the expression JSON blob for gene_id, retrying uppercase
+    (some datasets store IDs in uppercase).
+
+    :returns: (row, error_response) -- exactly one of the two is None.
+    """
+    try:
+        with Session(engine) as session:
+            row = session.execute(_EXPRESSION_SQL, {"gene_id": gene_id}).first()
+            if row is None:
+                row = session.execute(_EXPRESSION_SQL, {"gene_id": gene_id.upper()}).first()
+    except SQLAlchemyError:
+        return None, (BARUtils.error_exit("Database query failed"), 500)
+
+    if row is None:
+        return None, (BARUtils.error_exit("No data found for the given gene"), 404)
+    return row, None
+
+
+def _fetch_coords(engine):
+    """Return every UMAP coordinate row (same for every gene), or an error response.
+
+    :returns: (rows, error_response) -- exactly one of the two is None.
+    """
+    try:
+        with Session(engine) as session:
+            return session.execute(_COORDS_SQL).all(), None
+    except SQLAlchemyError:
+        return None, (BARUtils.error_exit("Database query failed"), 500)
+
+
+def _merge_coords_and_expression(coords, expr_map):
+    """Zip UMAP coordinates with each cell's expression value, keyed by cell_id."""
+    return [
+        {
+            "umap_1": float(c.umap_1),
+            "umap_2": float(c.umap_2),
+            "expression": float(expr_map.get(str(c.cell_id), 0.0)),
+            "cell_type": str(c.cell_type),
+        }
+        for c in coords
+    ]
+
 
 @umap_expression.route("/<string:database>/<string:gene_id>")
 @umap_expression.doc(description="Retrieve per-cell UMAP coordinates and expression values for a gene.")
@@ -52,7 +99,6 @@ class UMAPExpression(Resource):
         database = str(escape(database))
         gene_id = str(escape(gene_id))
 
-        # 1. Resolve database species
         species = UMAP_DATABASE_SPECIES.get(database)
         if species is None:
             return BARUtils.error_exit(
@@ -60,68 +106,28 @@ class UMAPExpression(Resource):
                 f"Available: {', '.join(sorted(UMAP_DATABASE_SPECIES.keys()))}"
             ), 400
 
-        # 2. Validate gene ID format against the expected input species regex
         if BARUtils.is_injection_attempt(gene_id):
             return BARUtils.error_exit(f"Invalid {species} gene ID: '{gene_id}'"), 400
         if not GeneIdUtils.validate_gene_id(gene_id, species):
             return BARUtils.error_exit(f"Invalid {species} gene ID: '{gene_id}'"), 400
-
-        # 3. Normalise (e.g. strip maize transcript suffix _T##)
         gene_id = GeneIdUtils.normalize_gene_id(gene_id, species)
 
-        # 4. Get SQLAlchemy bind engine for this database
         engine = db.engines.get(database)
         if engine is None:
             return BARUtils.error_exit("Database not available"), 503
 
-        # 5. Query expression JSON array for this gene (single PK lookup)
-        expr_sql = text(
-            "SELECT expression FROM umap_expression WHERE gene_id = :gene_id"
-        )
+        expr_row, error = _fetch_expression_row(engine, gene_id)
+        if error:
+            return error
 
-        try:
-            with Session(engine) as session:
-                row = session.execute(expr_sql, {"gene_id": gene_id}).first()
-        except SQLAlchemyError as exc:
-            return BARUtils.error_exit(f"Database query failed: {str(exc)}"), 500
-
-        # Retry with uppercase (some datasets store IDs in uppercase)
-        if row is None:
-            try:
-                with Session(engine) as session:
-                    row = session.execute(expr_sql, {"gene_id": gene_id.upper()}).first()
-            except SQLAlchemyError as exc:
-                return BARUtils.error_exit(f"Database query failed: {str(exc)}"), 500
-
-        if row is None:
-            return BARUtils.error_exit("No data found for the given gene"), 404
-
-        # Parse expression JSON array: {cell_id: value, ...}
-        expr_raw = row.expression
+        expr_raw = expr_row.expression
         expr_map = json.loads(expr_raw) if isinstance(expr_raw, str) else expr_raw
 
-        # 6. Query all coords ordered by cell_id (same for every gene)
-        coords_sql = text(
-            "SELECT cell_id, umap_1, umap_2, cell_type "
-            "FROM umap_coords ORDER BY cell_id"
-        )
+        coords, error = _fetch_coords(engine)
+        if error:
+            return error
 
-        try:
-            with Session(engine) as session:
-                coords = session.execute(coords_sql).all()
-        except SQLAlchemyError as exc:
-            return BARUtils.error_exit(f"Database query failed: {str(exc)}"), 500
-
-        # 7. Merge coords + expression by cell_id
-        data = [
-            {
-                "umap_1": float(c.umap_1),
-                "umap_2": float(c.umap_2),
-                "expression": float(expr_map.get(str(c.cell_id), 0.0)),
-                "cell_type": str(c.cell_type),
-            }
-            for c in coords
-        ]
+        data = _merge_coords_and_expression(coords, expr_map)
 
         return BARUtils.success_exit({
             "gene_id": gene_id,
