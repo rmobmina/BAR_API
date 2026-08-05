@@ -11,7 +11,7 @@ _COMBINED_MASTER_PATH = Path(__file__).resolve().parents[2] / "data" / "efp_info
 @lru_cache(maxsize=1)
 def load_combined_master() -> dict:
     """Load data/efp_info/combined_master.json (species, databases, views, and
-    validation_patterns), cached after first read.
+    gene_id_patterns), cached after first read.
     """
     with open(_COMBINED_MASTER_PATH) as f:
         return json.load(f)
@@ -19,22 +19,30 @@ def load_combined_master() -> dict:
 
 # Per-eFP-project input validation regexes. Sourced from Vincent's
 # regex_master_list_efp_eplant registry (tested at 99%+ coverage against real
-# probeset/gene ID sample data) and embedded into combined_master.json at
-# build time by build_combined_master_json.py -- see get_validation_patterns().
+# probeset/gene ID sample data) and embedded into combined_master.json's
+# gene_id_patterns at build time by build_combined_master_json.py.
 # Each pattern covers canonical gene IDs AND (where applicable) microarray
-# probeset IDs. Copied (not aliased) so the aliases added below don't mutate
-# the shared cached master JSON other modules also read.
-EFP_PROJECT_REGEXES: dict = dict(load_combined_master()["validation_patterns"])
+# probeset IDs. gene_id_patterns is keyed by bare project name (e.g.
+# "arabidopsis"); every pattern is also exposed under the "efp_"-prefixed
+# spelling ("efp_arabidopsis") since that's the convention every
+# is_XXX_gene_valid() method below (and their tests) already call
+# is_efp_gene_valid() with -- one alias step here instead of updating every
+# call site to the newer bare-name convention.
+_GENE_ID_PATTERNS = load_combined_master()["gene_id_patterns"]
+EFP_PROJECT_REGEXES: dict = dict(_GENE_ID_PATTERNS)
+EFP_PROJECT_REGEXES.update({f"efp_{name}": pattern for name, pattern in _GENE_ID_PATTERNS.items()})
 
 # Aliases for alternate eFP project key spellings used by the BAR (not present
 # in Vincent's registry, which is keyed by canonical eFP project name only).
 _PROJECT_ALIASES = {
+    "efp": "efp_arabidopsis",
     "efpbarley": "efp_barley",
     "efprice": "efp_rice",
     "efpmedicago": "efp_medicago",
     "efppop": "efp_poplar",
     "efpsoybean": "efp_soybean",
     "maizeefp": "efp_maize",
+    "mouse_efp": "efp_mouse",
 }
 for _alias, _canonical in _PROJECT_ALIASES.items():
     EFP_PROJECT_REGEXES[_alias] = EFP_PROJECT_REGEXES[_canonical]

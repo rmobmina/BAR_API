@@ -1388,6 +1388,402 @@
       "schema_source": "prod_information_schema",
       "status": "active"
     },
+    "arabidopsis_NIE_pseudobulk": {
+      "species": "arabidopsis",
+      "source": "eplant",
+      "platform": "rna_seq",
+      "schema_variant": "rnaseq_simple",
+      "schema_verified": false,
+      "value_semantics": {
+        "quantity": null,
+        "unit": null,
+        "scale": null
+      },
+      "identifier_type": "gene_model",
+      "gene_id_pattern": null,
+      "used_by": [
+        {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "view": "SUPeR Viewer NIE"
+        }
+      ],
+      "views": {
+        "eplant_supeR_viewer::SUPeR Viewer NIE": {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "display_name": "SUPeR Viewer NIE",
+          "proj_ids": [],
+          "sample_groups": {
+            "Guard_cells": {
+              "controls": [
+                "W0_guard_cell"
+              ],
+              "treatments": {
+                "Guard_cells,_well-watered_(W0)": [
+                  "GSM8223167",
+                  "GSM8223168",
+                  "GSM8782294",
+                  "GSM8782295",
+                  "GSM8782296",
+                  "GSM8782297",
+                  "GSM9135018",
+                  "W0_Guard"
+                ],
+                "Guard_cells,_moderate_drought_(D0)": [
+                  "GSM8223165",
+                  "GSM8223166",
+                  "GSM8782290",
+                  "GSM8782291",
+                  "GSM8782292",
+                  "GSM8782293",
+                  "GSM9135020",
+                  "D0_Guard"
+                ],
+                "Guard_cells,_15_min_post-rehydration_(R15)": [
+                  "GSM8223171",
+                  "GSM8223172",
+                  "GSM8782301",
+                  "GSM8782302",
+                  "GSM8782303",
+                  "GSM9135019",
+                  "R15_Guard"
+                ],
+                "Guard_cells,_well-watered_+_irrigation_15_min_(W15)": [
+                  "GSM8223169",
+                  "GSM8223170",
+                  "GSM8782298",
+                  "GSM8782299",
+                  "GSM8782300",
+                  "GSM9135021",
+                  "W15_Guard"
+                ]
+              }
+            },
+            "Mesophyll": {
+              "controls": [
+                "W0_mesophyll"
+              ],
+              "treatments": {
+                "Mesophyll,_well-watered_(W0)": [
+                  "GSM8223167",
+                  "GSM8223168",
+                  "GSM8782294",
+                  "GSM8782295",
+                  "GSM8782296",
+                  "GSM8782297",
+                  "GSM9135018",
+                  "W0_Mesophyll"
+                ],
+                "Mesophyll,_moderate_drought_(D0)": [
+                  "GSM8223165",
+                  "GSM8223166",
+                  "GSM8782290",
+                  "GSM8782291",
+                  "GSM8782292",
+                  "GSM8782293",
+                  "GSM9135020",
+                  "D0_Mesophyll"
+                ],
+                "Mesophyll,_15_min_post-rehydration_(R15)": [
+                  "GSM8223171",
+                  "GSM8223172",
+                  "GSM8782301",
+                  "GSM8782302",
+                  "GSM8782303",
+                  "GSM9135019",
+                  "R15_Mesophyll"
+                ],
+                "Mesophyll,_well-watered_+_irrigation_15_min_(W15)": [
+                  "GSM8223169",
+                  "GSM8223170",
+                  "GSM8782298",
+                  "GSM8782299",
+                  "GSM8782300",
+                  "GSM9135021",
+                  "W15_Mesophyll"
+                ]
+              }
+            },
+            "Epidermal_cells": {
+              "controls": [
+                "W0_epidermal_cell"
+              ],
+              "treatments": {
+                "Epidermal_cells,_well-watered_(W0)": [
+                  "GSM8223167",
+                  "GSM8223168",
+                  "GSM8782294",
+                  "GSM8782295",
+                  "GSM8782296",
+                  "GSM8782297",
+                  "GSM9135018",
+                  "W0_Epidermal"
+                ],
+                "Epidermal_cells,_moderate_drought_(D0)": [
+                  "GSM8223165",
+                  "GSM8223166",
+                  "GSM8782290",
+                  "GSM8782291",
+                  "GSM8782292",
+                  "GSM8782293",
+                  "GSM9135020",
+                  "D0_Epidermal"
+                ],
+                "Epidermal_cells,_15_min_post-rehydration_(R15)": [
+                  "GSM8223171",
+                  "GSM8223172",
+                  "GSM8782301",
+                  "GSM8782302",
+                  "GSM8782303",
+                  "GSM9135019",
+                  "R15_Epidermal"
+                ],
+                "Epidermal_cells,_well-watered_+_irrigation_15_min_(W15)": [
+                  "GSM8223169",
+                  "GSM8223170",
+                  "GSM8782298",
+                  "GSM8782299",
+                  "GSM8782300",
+                  "GSM9135021",
+                  "W15_Epidermal"
+                ]
+              }
+            },
+            "Trichome": {
+              "controls": [
+                "W0_trichome"
+              ],
+              "treatments": {
+                "Trichome,_well-watered_(W0)": [
+                  "GSM8223167",
+                  "GSM8223168",
+                  "GSM8782294",
+                  "GSM8782295",
+                  "GSM8782296",
+                  "GSM8782297",
+                  "GSM9135018",
+                  "W0_Trichome"
+                ],
+                "Trichome,_moderate_drought_(D0)": [
+                  "GSM8223165",
+                  "GSM8223166",
+                  "GSM8782290",
+                  "GSM8782291",
+                  "GSM8782292",
+                  "GSM8782293",
+                  "GSM9135020",
+                  "D0_Trichome"
+                ],
+                "Trichome,_15_min_post-rehydration_(R15)": [
+                  "GSM8223171",
+                  "GSM8223172",
+                  "GSM8782301",
+                  "GSM8782302",
+                  "GSM8782303",
+                  "GSM9135019",
+                  "R15_Trichome"
+                ],
+                "Trichome,_well-watered_+_irrigation_15_min_(W15)": [
+                  "GSM8223169",
+                  "GSM8223170",
+                  "GSM8782298",
+                  "GSM8782299",
+                  "GSM8782300",
+                  "GSM9135021",
+                  "W15_Trichome"
+                ]
+              }
+            },
+            "Vascular_bundle": {
+              "controls": [
+                "W0_vascular_circle"
+              ],
+              "treatments": {
+                "Vascular_bundle,_well-watered_(W0)": [
+                  "GSM8223167",
+                  "GSM8223168",
+                  "GSM8782294",
+                  "GSM8782295",
+                  "GSM8782296",
+                  "GSM8782297",
+                  "GSM9135018",
+                  "W0_Vascular"
+                ],
+                "Vascular_bundle,_moderate_drought_(D0)": [
+                  "GSM8223165",
+                  "GSM8223166",
+                  "GSM8782290",
+                  "GSM8782291",
+                  "GSM8782292",
+                  "GSM8782293",
+                  "GSM9135020",
+                  "D0_Vascular"
+                ],
+                "Vascular_bundle,_15_min_post-rehydration_(R15)": [
+                  "GSM8223171",
+                  "GSM8223172",
+                  "GSM8782301",
+                  "GSM8782302",
+                  "GSM8782303",
+                  "GSM9135019",
+                  "R15_Vascular"
+                ],
+                "Vascular_bundle,_well-watered_+_irrigation_15_min_(W15)": [
+                  "GSM8223169",
+                  "GSM8223170",
+                  "GSM8782298",
+                  "GSM8782299",
+                  "GSM8782300",
+                  "GSM9135021",
+                  "W15_Vascular"
+                ]
+              }
+            },
+            "Phloem_parenchyma": {
+              "controls": [
+                "W0_phloem_parenchyma_circle"
+              ],
+              "treatments": {
+                "Phloem_parenchyma,_well-watered_(W0)": [
+                  "GSM8223167",
+                  "GSM8223168",
+                  "GSM8782294",
+                  "GSM8782295",
+                  "GSM8782296",
+                  "GSM8782297",
+                  "GSM9135018",
+                  "W0_Phloem Parenchyma"
+                ],
+                "Phloem_parenchyma,_moderate_drought_(D0)": [
+                  "GSM8223165",
+                  "GSM8223166",
+                  "GSM8782290",
+                  "GSM8782291",
+                  "GSM8782292",
+                  "GSM8782293",
+                  "GSM9135020",
+                  "D0_Phloem Parenchyma"
+                ],
+                "Phloem_parenchyma,_15_min_post-rehydration_(R15)": [
+                  "GSM8223171",
+                  "GSM8223172",
+                  "GSM8782301",
+                  "GSM8782302",
+                  "GSM8782303",
+                  "GSM9135019",
+                  "R15_Phloem Parenchyma"
+                ],
+                "Phloem_parenchyma,_well-watered_+_irrigation_15_min_(W15)": [
+                  "GSM8223169",
+                  "GSM8223170",
+                  "GSM8782298",
+                  "GSM8782299",
+                  "GSM8782300",
+                  "GSM9135021",
+                  "W15_Phloem Parenchyma"
+                ]
+              }
+            },
+            "Phloem_companion_cells": {
+              "controls": [
+                "W0_phloem_companion_circle"
+              ],
+              "treatments": {
+                "Phloem_companion_cells,_well-watered_(W0)": [
+                  "GSM8223167",
+                  "GSM8223168",
+                  "GSM8782294",
+                  "GSM8782295",
+                  "GSM8782296",
+                  "GSM8782297",
+                  "GSM9135018",
+                  "W0_Phloem companion"
+                ],
+                "Phloem_companion_cells,_moderate_drought_(D0)": [
+                  "GSM8223165",
+                  "GSM8223166",
+                  "GSM8782290",
+                  "GSM8782291",
+                  "GSM8782292",
+                  "GSM8782293",
+                  "GSM9135020",
+                  "D0_Phloem companion"
+                ],
+                "Phloem_companion_cells,_15_min_post-rehydration_(R15)": [
+                  "GSM8223171",
+                  "GSM8223172",
+                  "GSM8782301",
+                  "GSM8782302",
+                  "GSM8782303",
+                  "GSM9135019",
+                  "R15_Phloem companion"
+                ],
+                "Phloem_companion_cells,_well-watered_+_irrigation_15_min_(W15)": [
+                  "GSM8223169",
+                  "GSM8223170",
+                  "GSM8782298",
+                  "GSM8782299",
+                  "GSM8782300",
+                  "GSM9135021",
+                  "W15_Phloem companion"
+                ]
+              }
+            },
+            "Phloem_(averaged)": {
+              "controls": [
+                "W0_phloem"
+              ],
+              "treatments": {
+                "Phloem_(averaged),_well-watered_(W0)": [
+                  "GSM8223167",
+                  "GSM8223168",
+                  "GSM8782294",
+                  "GSM8782295",
+                  "GSM8782296",
+                  "GSM8782297",
+                  "GSM9135018",
+                  "W0_Phloem average"
+                ],
+                "Phloem_(averaged),_moderate_drought_(D0)": [
+                  "GSM8223165",
+                  "GSM8223166",
+                  "GSM8782290",
+                  "GSM8782291",
+                  "GSM8782292",
+                  "GSM8782293",
+                  "GSM9135020",
+                  "D0_Phloem average"
+                ],
+                "Phloem_(averaged),_15_min_post-rehydration_(R15)": [
+                  "GSM8223171",
+                  "GSM8223172",
+                  "GSM8782301",
+                  "GSM8782302",
+                  "GSM8782303",
+                  "GSM9135019",
+                  "R15_Phloem average"
+                ],
+                "Phloem_(averaged),_well-watered_+_irrigation_15_min_(W15)": [
+                  "GSM8223169",
+                  "GSM8223170",
+                  "GSM8782298",
+                  "GSM8782299",
+                  "GSM8782300",
+                  "GSM9135021",
+                  "W15_Phloem average"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "tables_present": [
+        "sample_data"
+      ],
+      "schema_source": "hand_added",
+      "status": "active"
+    },
     "arabidopsis_ecotypes": {
       "species": "arabidopsis",
       "source": "efp",
@@ -1556,6 +1952,1319 @@
         "sample_general_info"
       ],
       "schema_source": "prod_information_schema",
+      "status": "active"
+    },
+    "arabidopsis_flower_lee_pseudobulk": {
+      "species": "arabidopsis",
+      "source": "eplant",
+      "platform": "rna_seq",
+      "schema_variant": "rnaseq_simple",
+      "schema_verified": false,
+      "value_semantics": {
+        "quantity": null,
+        "unit": null,
+        "scale": null
+      },
+      "identifier_type": "gene_model",
+      "gene_id_pattern": null,
+      "used_by": [
+        {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "view": "SUPeR Viewer Flower (Lee)"
+        }
+      ],
+      "views": {
+        "eplant_supeR_viewer::SUPeR Viewer Flower (Lee)": {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "display_name": "SUPeR Viewer Flower (Lee)",
+          "proj_ids": [],
+          "sample_groups": {
+            "Anther": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Anther": [
+                  "GSM7063668",
+                  "GSM7063669",
+                  "GSM7063670",
+                  "GSM7063671",
+                  "GSM7063672",
+                  "GSM7063673"
+                ]
+              }
+            },
+            "Developing_ovule": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Developing_ovule": [
+                  "GSM7063668",
+                  "GSM7063669",
+                  "GSM7063670",
+                  "GSM7063671",
+                  "GSM7063672",
+                  "GSM7063673"
+                ]
+              }
+            },
+            "Epidermal": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Epidermal": [
+                  "GSM7063668",
+                  "GSM7063669",
+                  "GSM7063670",
+                  "GSM7063671",
+                  "GSM7063672",
+                  "GSM7063673"
+                ]
+              }
+            },
+            "Male_meiocyte": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Male_meiocyte": [
+                  "GSM7063668",
+                  "GSM7063669",
+                  "GSM7063670",
+                  "GSM7063671",
+                  "GSM7063672",
+                  "GSM7063673"
+                ]
+              }
+            },
+            "Pollen": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Pollen": [
+                  "GSM7063668",
+                  "GSM7063669",
+                  "GSM7063670",
+                  "GSM7063671",
+                  "GSM7063672",
+                  "GSM7063673"
+                ]
+              }
+            },
+            "Tapetum": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Tapetum": [
+                  "GSM7063668",
+                  "GSM7063669",
+                  "GSM7063670",
+                  "GSM7063671",
+                  "GSM7063672",
+                  "GSM7063673"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "tables_present": [
+        "sample_data"
+      ],
+      "schema_source": "hand_added",
+      "status": "active"
+    },
+    "arabidopsis_root_rs_pseudobulk": {
+      "species": "arabidopsis",
+      "source": "eplant",
+      "platform": "rna_seq",
+      "schema_variant": "rnaseq_simple",
+      "schema_verified": false,
+      "value_semantics": {
+        "quantity": null,
+        "unit": null,
+        "scale": null
+      },
+      "identifier_type": "gene_model",
+      "gene_id_pattern": null,
+      "used_by": [
+        {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "view": "SUPeR Viewer Root (Shahan)"
+        }
+      ],
+      "views": {
+        "eplant_supeR_viewer::SUPeR Viewer Root (Shahan)": {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "display_name": "SUPeR Viewer Root (Shahan)",
+          "proj_ids": [],
+          "sample_groups": {
+            "Root_cortex": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Root_cortex_(top_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Root_cortex_(side_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Root_cortex_(tip_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Root_cortex_(top_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Root_cortex_(side_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Root_cortex_(tip_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Root_cortex_(top_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ],
+                "Root_cortex_(side_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ],
+                "Root_cortex_(tip_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Root_endodermis": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Root_endodermis_(top_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Root_endodermis_(side_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Root_endodermis_(tip_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Root_endodermis_(top_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Root_endodermis_(side_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Root_endodermis_(tip_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Root_endodermis_(top_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ],
+                "Root_endodermis_(side_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ],
+                "Root_endodermis_(tip_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Pericycle": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Pericycle_(top_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Pericycle_(side_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Pericycle_(tip_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Pericycle_(top_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Pericycle_(side_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Pericycle_(tip_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Pericycle_(top_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ],
+                "Pericycle_(side_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ],
+                "Pericycle_(tip_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Phloem": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Phloem_(top_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Phloem_(side_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Phloem_(top_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Phloem_(side_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Phloem_(top_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ],
+                "Phloem_(side_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Root_procambium": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Root_procambium_(top_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Root_procambium_(side_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Root_procambium_(top_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Root_procambium_(side_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Root_procambium_(top_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ],
+                "Root_procambium_(side_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Trichoblast_(root-hair_cell)": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Trichoblast_(root-hair_cell)_(top_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Trichoblast_(root-hair_cell)_(side_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Trichoblast_(root-hair_cell)_(top_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Trichoblast_(root-hair_cell)_(side_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Trichoblast_(root-hair_cell)_(top_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ],
+                "Trichoblast_(root-hair_cell)_(side_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Xylem_(combined)": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Xylem_(combined)_(top_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Xylem_(combined)_(side_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Xylem_(combined)_(top_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Xylem_(combined)_(side_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Xylem_(combined)_(top_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ],
+                "Xylem_(combined)_(side_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Atrichoblast_(non-hair_cell)": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Atrichoblast_(non-hair_cell)_(top_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Atrichoblast_(non-hair_cell)_(tip_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Atrichoblast_(non-hair_cell)_(top_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Atrichoblast_(non-hair_cell)_(tip_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Atrichoblast_(non-hair_cell)_(top_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ],
+                "Atrichoblast_(non-hair_cell)_(tip_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Collumella_root_cap": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Collumella_root_cap_(tip_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Collumella_root_cap_(tip_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Collumella_root_cap_(tip_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Lateral_root_cap": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Lateral_root_cap_(tip_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Lateral_root_cap_(tip_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Lateral_root_cap_(tip_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Vascular_bundle": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Vascular_bundle_(tip_view),_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Vascular_bundle_(tip_view),_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Vascular_bundle_(tip_view),_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Xylem_pole_pericycle": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Xylem_pole_pericycle,_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Xylem_pole_pericycle,_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Xylem_pole_pericycle,_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Protoxylem": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Protoxylem,_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Protoxylem,_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Protoxylem,_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Phloem_pole_pericycle": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Phloem_pole_pericycle,_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Phloem_pole_pericycle,_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Phloem_pole_pericycle,_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            },
+            "Metaxylem": {
+              "controls": [
+                "GSM4625998",
+                "GSM4625999",
+                "GSM4626001",
+                "GSM4626002",
+                "GSM4626006"
+              ],
+              "treatments": {
+                "Metaxylem,_Col-0_wild_type": [
+                  "GSM4625998",
+                  "GSM4625999",
+                  "GSM4626001",
+                  "GSM4626002",
+                  "GSM4626006"
+                ],
+                "Metaxylem,_scarecrow-4_(scr-4)": [
+                  "GSM4626000",
+                  "GSM4626003"
+                ],
+                "Metaxylem,_shortroot-2_(shr-2)": [
+                  "GSM4626007",
+                  "GSM4626008"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "tables_present": [
+        "sample_data"
+      ],
+      "schema_source": "hand_added",
+      "status": "active"
+    },
+    "arabidopsis_seed_martin_pseudobulk": {
+      "species": "arabidopsis",
+      "source": "eplant",
+      "platform": "rna_seq",
+      "schema_variant": "rnaseq_simple",
+      "schema_verified": false,
+      "value_semantics": {
+        "quantity": null,
+        "unit": null,
+        "scale": null
+      },
+      "identifier_type": "gene_model",
+      "gene_id_pattern": null,
+      "used_by": [
+        {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "view": "SUPeR Viewer Seed (Martin, all)"
+        },
+        {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "view": "SUPeR Viewer Seed (Martin, embryo L3)"
+        }
+      ],
+      "views": {
+        "eplant_supeR_viewer::SUPeR Viewer Seed (Martin, embryo L3)": {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "display_name": "SUPeR Viewer Seed (Martin, embryo L3)",
+          "proj_ids": [],
+          "sample_groups": {
+            "Upper_protoderm": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "3DAP_1._EMB_upper_protoderm_(PDF1)": [
+                  "GSM8939988",
+                  "GSM8939989",
+                  "GSM8939990"
+                ],
+                "5DAP_1._EMB_upper_protoderm_I_(PDF1_and_KRATOS)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ],
+                "7DAP_1._EMB_upper_protoderm_(PDF1)": [
+                  "GSM8939993",
+                  "GSM8939994"
+                ]
+              }
+            },
+            "Lower_protoderm": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "5DAP_3._EMB_lower_protoderm_(PDF1_and_KAN1)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ],
+                "7DAP_2._EMB_lower_protoderm_(PDF1_and_KAN1)": [
+                  "GSM8939993",
+                  "GSM8939994"
+                ]
+              }
+            },
+            "Suspensor": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "3DAP_3._EMB_suspensor_(PIN7)": [
+                  "GSM8939988",
+                  "GSM8939989",
+                  "GSM8939990"
+                ]
+              }
+            },
+            "Cortical_initials": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "5DAP_4._EMB_cortical_initials_(XYL4_and_JKD)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ],
+                "7DAP_6._EMB_cortical_initials_(JKD)": [
+                  "GSM8939993",
+                  "GSM8939994"
+                ]
+              }
+            },
+            "Vascular_primordium_and_hypophysis": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "5DAP_5._EMB_vascular_primordium_and_hypophysis_(SHR_and_PIN4)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ],
+                "7DAP_4._EMB_vascular_primordium_(SHR_and_JUL1)": [
+                  "GSM8939993",
+                  "GSM8939994"
+                ],
+                "7DAP_7._EMB_hypophysis_(SMB)": [
+                  "GSM8939993",
+                  "GSM8939994"
+                ]
+              }
+            },
+            "Inner_cotyledon": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "7DAP_3._EMB_inner_cotyledon_(XYL4)": [
+                  "GSM8939993",
+                  "GSM8939994"
+                ]
+              }
+            },
+            "Ground_tissue_initials": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "7DAP_5._EMB_ground_tissue_initials_(JKD_and_SCR)": [
+                  "GSM8939993",
+                  "GSM8939994"
+                ]
+              }
+            }
+          }
+        },
+        "eplant_supeR_viewer::SUPeR Viewer Seed (Martin, all)": {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "display_name": "SUPeR Viewer Seed (Martin, all)",
+          "proj_ids": [],
+          "sample_groups": {
+            "Embryo": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Embryo,_3_days_after_pollination_(3DAP)": [
+                  "GSM8939988",
+                  "GSM8939989",
+                  "GSM8939990"
+                ],
+                "Embryo,_5_days_after_pollination_(5DAP)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ]
+              }
+            },
+            "Endosperm": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Endosperm,_3_days_after_pollination_(3DAP)": [
+                  "GSM8939988",
+                  "GSM8939989",
+                  "GSM8939990"
+                ],
+                "Chalazal_endosperm_(CZE),_7_days_after_pollination_(7DAP)": [
+                  "GSM8939993",
+                  "GSM8939994"
+                ],
+                "Micropylar_endosperm_(MCE),_7_days_after_pollination_(7DAP)": [
+                  "GSM8939993",
+                  "GSM8939994"
+                ],
+                "Peripheral_endosperm_(PEN),_7_days_after_pollination_(7DAP)": [
+                  "GSM8939993",
+                  "GSM8939994"
+                ]
+              }
+            },
+            "Seed_coat": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Seed_coat,_3_days_after_pollination_(3DAP)": [
+                  "GSM8939988",
+                  "GSM8939989",
+                  "GSM8939990"
+                ],
+                "Chalazal_proliferating_tissue_(CPT),_5_days_after_pollination_(5DAP)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ],
+                "Chalazal_seed_coat_(CZSC),_5_days_after_pollination_(5DAP)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ],
+                "Inner_integument_1_(ii1),_5_days_after_pollination_(5DAP)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ],
+                "Inner_integument_1′_(ii1′),_5_days_after_pollination_(5DAP)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ],
+                "Inner_integument_2_(ii2),_5_days_after_pollination_(5DAP)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ],
+                "Outer_integument_1_(oi1),_5_days_after_pollination_(5DAP)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ],
+                "Outer_integument_2_(oi2),_5_days_after_pollination_(5DAP)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ]
+              }
+            },
+            "Unfertilized_ovule_and_funiculus": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Funiculus,_3_days_after_pollination_(3DAP)": [
+                  "GSM8939988",
+                  "GSM8939989",
+                  "GSM8939990"
+                ],
+                "Unfertilized_ovule,_3_days_after_pollination_(3DAP)": [
+                  "GSM8939988",
+                  "GSM8939989",
+                  "GSM8939990"
+                ],
+                "Funiculus,_5_days_after_pollination_(5DAP)": [
+                  "GSM8939991",
+                  "GSM8939992"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "tables_present": [
+        "sample_data"
+      ],
+      "schema_source": "hand_added",
+      "status": "active"
+    },
+    "arabidopsis_silique_lee_pseudobulk": {
+      "species": "arabidopsis",
+      "source": "eplant",
+      "platform": "rna_seq",
+      "schema_variant": "rnaseq_simple",
+      "schema_verified": false,
+      "value_semantics": {
+        "quantity": null,
+        "unit": null,
+        "scale": null
+      },
+      "identifier_type": "gene_model",
+      "gene_id_pattern": null,
+      "used_by": [
+        {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "view": "SUPeR Viewer Silique (Lee)"
+        }
+      ],
+      "views": {
+        "eplant_supeR_viewer::SUPeR Viewer Silique (Lee)": {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "display_name": "SUPeR Viewer Silique (Lee)",
+          "proj_ids": [],
+          "sample_groups": {
+            "Young_silique": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Young_silique": [
+                  "GSM7063688",
+                  "GSM7063689",
+                  "GSM7063690",
+                  "GSM7063691",
+                  "GSM7063692",
+                  "GSM7063693",
+                  "GSM7063694",
+                  "GSM7063695"
+                ]
+              }
+            },
+            "Mature_silique": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Mature_silique": [
+                  "GSM7063688",
+                  "GSM7063689",
+                  "GSM7063690",
+                  "GSM7063691",
+                  "GSM7063692",
+                  "GSM7063693",
+                  "GSM7063694",
+                  "GSM7063695"
+                ]
+              }
+            },
+            "Seed_(silique)": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Seed_(silique)": [
+                  "GSM7063688",
+                  "GSM7063689",
+                  "GSM7063690",
+                  "GSM7063691",
+                  "GSM7063692",
+                  "GSM7063693",
+                  "GSM7063694",
+                  "GSM7063695"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "tables_present": [
+        "sample_data"
+      ],
+      "schema_source": "hand_added",
+      "status": "active"
+    },
+    "arabidopsis_stem_lee_pseudobulk": {
+      "species": "arabidopsis",
+      "source": "eplant",
+      "platform": "rna_seq",
+      "schema_variant": "rnaseq_simple",
+      "schema_verified": false,
+      "value_semantics": {
+        "quantity": null,
+        "unit": null,
+        "scale": null
+      },
+      "identifier_type": "gene_model",
+      "gene_id_pattern": null,
+      "used_by": [
+        {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "view": "SUPeR Viewer Stem (Lee)"
+        }
+      ],
+      "views": {
+        "eplant_supeR_viewer::SUPeR Viewer Stem (Lee)": {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "display_name": "SUPeR Viewer Stem (Lee)",
+          "proj_ids": [],
+          "sample_groups": {
+            "Cambium": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Cambium": [
+                  "GSM7063702",
+                  "GSM7063703",
+                  "GSM7063704",
+                  "GSM7063705",
+                  "GSM7063706",
+                  "GSM7063707",
+                  "GSM7063708",
+                  "GSM7063709",
+                  "GSM7063710",
+                  "GSM7063711",
+                  "GSM7063712",
+                  "GSM7063713",
+                  "GSM7063714"
+                ]
+              }
+            },
+            "Cortex": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Cortex": [
+                  "GSM7063702",
+                  "GSM7063703",
+                  "GSM7063704",
+                  "GSM7063705",
+                  "GSM7063706",
+                  "GSM7063707",
+                  "GSM7063708",
+                  "GSM7063709",
+                  "GSM7063710",
+                  "GSM7063711",
+                  "GSM7063712",
+                  "GSM7063713",
+                  "GSM7063714"
+                ]
+              }
+            },
+            "Epidermal": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Epidermal": [
+                  "GSM7063702",
+                  "GSM7063703",
+                  "GSM7063704",
+                  "GSM7063705",
+                  "GSM7063706",
+                  "GSM7063707",
+                  "GSM7063708",
+                  "GSM7063709",
+                  "GSM7063710",
+                  "GSM7063711",
+                  "GSM7063712",
+                  "GSM7063713",
+                  "GSM7063714"
+                ]
+              }
+            },
+            "Guard": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Guard": [
+                  "GSM7063702",
+                  "GSM7063703",
+                  "GSM7063704",
+                  "GSM7063705",
+                  "GSM7063706",
+                  "GSM7063707",
+                  "GSM7063708",
+                  "GSM7063709",
+                  "GSM7063710",
+                  "GSM7063711",
+                  "GSM7063712",
+                  "GSM7063713",
+                  "GSM7063714"
+                ]
+              }
+            },
+            "Phloem": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Phloem": [
+                  "GSM7063702",
+                  "GSM7063703",
+                  "GSM7063704",
+                  "GSM7063705",
+                  "GSM7063706",
+                  "GSM7063707",
+                  "GSM7063708",
+                  "GSM7063709",
+                  "GSM7063710",
+                  "GSM7063711",
+                  "GSM7063712",
+                  "GSM7063713",
+                  "GSM7063714"
+                ]
+              }
+            },
+            "Phloem_cap": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Phloem_cap": [
+                  "GSM7063702",
+                  "GSM7063703",
+                  "GSM7063704",
+                  "GSM7063705",
+                  "GSM7063706",
+                  "GSM7063707",
+                  "GSM7063708",
+                  "GSM7063709",
+                  "GSM7063710",
+                  "GSM7063711",
+                  "GSM7063712",
+                  "GSM7063713",
+                  "GSM7063714"
+                ]
+              }
+            },
+            "Pith": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Pith": [
+                  "GSM7063702",
+                  "GSM7063703",
+                  "GSM7063704",
+                  "GSM7063705",
+                  "GSM7063706",
+                  "GSM7063707",
+                  "GSM7063708",
+                  "GSM7063709",
+                  "GSM7063710",
+                  "GSM7063711",
+                  "GSM7063712",
+                  "GSM7063713",
+                  "GSM7063714"
+                ]
+              }
+            },
+            "Starch_sheath": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Starch_sheath": [
+                  "GSM7063702",
+                  "GSM7063703",
+                  "GSM7063704",
+                  "GSM7063705",
+                  "GSM7063706",
+                  "GSM7063707",
+                  "GSM7063708",
+                  "GSM7063709",
+                  "GSM7063710",
+                  "GSM7063711",
+                  "GSM7063712",
+                  "GSM7063713",
+                  "GSM7063714"
+                ]
+              }
+            },
+            "Trichome": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Trichome": [
+                  "GSM7063702",
+                  "GSM7063703",
+                  "GSM7063704",
+                  "GSM7063705",
+                  "GSM7063706",
+                  "GSM7063707",
+                  "GSM7063708",
+                  "GSM7063709",
+                  "GSM7063710",
+                  "GSM7063711",
+                  "GSM7063712",
+                  "GSM7063713",
+                  "GSM7063714"
+                ]
+              }
+            },
+            "Xylem": {
+              "controls": [
+                "Med_CTRL"
+              ],
+              "treatments": {
+                "Xylem": [
+                  "GSM7063702",
+                  "GSM7063703",
+                  "GSM7063704",
+                  "GSM7063705",
+                  "GSM7063706",
+                  "GSM7063707",
+                  "GSM7063708",
+                  "GSM7063709",
+                  "GSM7063710",
+                  "GSM7063711",
+                  "GSM7063712",
+                  "GSM7063713",
+                  "GSM7063714"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "tables_present": [
+        "sample_data"
+      ],
+      "schema_source": "hand_added",
       "status": "active"
     },
     "arachis": {
@@ -15841,6 +17550,27 @@
         "sample_data"
       ],
       "schema_source": "prod_information_schema",
+      "status": "active"
+    },
+    "hnahal": {
+      "species": "arabidopsis",
+      "source": "legacy_not_in_dropdown",
+      "platform": "microarray",
+      "schema_variant": "legacy_microarray_projinfo_plus_channel_minus_data_call_data_p_val",
+      "schema_verified": true,
+      "value_semantics": {
+        "quantity": null,
+        "unit": null,
+        "scale": null
+      },
+      "identifier_type": "probeset",
+      "gene_id_pattern": "arabidopsis",
+      "used_by": [],
+      "views": {},
+      "tables_present": [
+        "sample_data"
+      ],
+      "schema_source": "carried_over_legacy",
       "status": "active"
     },
     "human_body_map_2": {
@@ -30180,6 +31910,342 @@
       "schema_source": "prod_information_schema",
       "status": "inactive"
     },
+    "rice_OW_pseudobulk": {
+      "species": "rice",
+      "source": "eplant",
+      "platform": "rna_seq",
+      "schema_variant": "rnaseq_simple",
+      "schema_verified": false,
+      "value_semantics": {
+        "quantity": null,
+        "unit": null,
+        "scale": null
+      },
+      "identifier_type": "gene_model",
+      "gene_id_pattern": null,
+      "used_by": [
+        {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "view": "SUPeR Viewer OW"
+        }
+      ],
+      "views": {
+        "eplant_supeR_viewer::SUPeR Viewer OW": {
+          "frontend": "eplant",
+          "instance": "eplant_supeR_viewer",
+          "display_name": "SUPeR Viewer OW",
+          "proj_ids": [],
+          "sample_groups": {
+            "Bundle_Sheath": {
+              "controls": [
+                "PENDING-GEO_WW_rep1",
+                "PENDING-GEO_WW_rep2"
+              ],
+              "treatments": {
+                "Bundle_Sheath,_Well_Watered": [
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2",
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2"
+                ],
+                "Bundle_Sheath,_Mild_Drought": [
+                  "PENDING-GEO_MD_rep1",
+                  "PENDING-GEO_MD_rep2"
+                ],
+                "Bundle_Sheath,_Moderate_Drought": [
+                  "PENDING-GEO_ModD_rep1",
+                  "PENDING-GEO_ModD_rep2"
+                ],
+                "Bundle_Sheath,_Mild_Salinity": [
+                  "PENDING-GEO_MS_rep1",
+                  "PENDING-GEO_MS_rep2"
+                ],
+                "Bundle_Sheath,_Moderate_Salinity": [
+                  "PENDING-GEO_ModS_rep1",
+                  "PENDING-GEO_ModS_rep2"
+                ]
+              }
+            },
+            "Epidermis": {
+              "controls": [
+                "PENDING-GEO_WW_rep1",
+                "PENDING-GEO_WW_rep2"
+              ],
+              "treatments": {
+                "Epidermis,_Well_Watered": [
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2",
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2"
+                ],
+                "Epidermis,_Mild_Drought": [
+                  "PENDING-GEO_MD_rep1",
+                  "PENDING-GEO_MD_rep2"
+                ],
+                "Epidermis,_Moderate_Drought": [
+                  "PENDING-GEO_ModD_rep1",
+                  "PENDING-GEO_ModD_rep2"
+                ],
+                "Epidermis,_Mild_Salinity": [
+                  "PENDING-GEO_MS_rep1",
+                  "PENDING-GEO_MS_rep2"
+                ],
+                "Epidermis,_Moderate_Salinity": [
+                  "PENDING-GEO_ModS_rep1",
+                  "PENDING-GEO_ModS_rep2"
+                ]
+              }
+            },
+            "Fibre": {
+              "controls": [
+                "PENDING-GEO_WW_rep1",
+                "PENDING-GEO_WW_rep2"
+              ],
+              "treatments": {
+                "Fibre,_Well_Watered": [
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2",
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2"
+                ],
+                "Fibre,_Mild_Drought": [
+                  "PENDING-GEO_MD_rep1",
+                  "PENDING-GEO_MD_rep2"
+                ],
+                "Fibre,_Moderate_Drought": [
+                  "PENDING-GEO_ModD_rep1",
+                  "PENDING-GEO_ModD_rep2"
+                ],
+                "Fibre,_Mild_Salinity": [
+                  "PENDING-GEO_MS_rep1",
+                  "PENDING-GEO_MS_rep2"
+                ],
+                "Fibre,_Moderate_Salinity": [
+                  "PENDING-GEO_ModS_rep1",
+                  "PENDING-GEO_ModS_rep2"
+                ]
+              }
+            },
+            "Large_Parenchyma": {
+              "controls": [
+                "PENDING-GEO_WW_rep1",
+                "PENDING-GEO_WW_rep2"
+              ],
+              "treatments": {
+                "Large_Parenchyma,_Well_Watered": [
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2",
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2"
+                ],
+                "Large_Parenchyma,_Mild_Drought": [
+                  "PENDING-GEO_MD_rep1",
+                  "PENDING-GEO_MD_rep2"
+                ],
+                "Large_Parenchyma,_Moderate_Drought": [
+                  "PENDING-GEO_ModD_rep1",
+                  "PENDING-GEO_ModD_rep2"
+                ],
+                "Large_Parenchyma,_Mild_Salinity": [
+                  "PENDING-GEO_MS_rep1",
+                  "PENDING-GEO_MS_rep2"
+                ],
+                "Large_Parenchyma,_Moderate_Salinity": [
+                  "PENDING-GEO_ModS_rep1",
+                  "PENDING-GEO_ModS_rep2"
+                ]
+              }
+            },
+            "Mesophyll": {
+              "controls": [
+                "PENDING-GEO_WW_rep1",
+                "PENDING-GEO_WW_rep2"
+              ],
+              "treatments": {
+                "Mesophyll,_Well_Watered": [
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2",
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2"
+                ],
+                "Mesophyll,_Mild_Drought": [
+                  "PENDING-GEO_MD_rep1",
+                  "PENDING-GEO_MD_rep2"
+                ],
+                "Mesophyll,_Moderate_Drought": [
+                  "PENDING-GEO_ModD_rep1",
+                  "PENDING-GEO_ModD_rep2"
+                ],
+                "Mesophyll,_Mild_Salinity": [
+                  "PENDING-GEO_MS_rep1",
+                  "PENDING-GEO_MS_rep2"
+                ],
+                "Mesophyll,_Moderate_Salinity": [
+                  "PENDING-GEO_ModS_rep1",
+                  "PENDING-GEO_ModS_rep2"
+                ]
+              }
+            },
+            "Mestome_Sheath": {
+              "controls": [
+                "PENDING-GEO_WW_rep1",
+                "PENDING-GEO_WW_rep2"
+              ],
+              "treatments": {
+                "Mestome_Sheath,_Well_Watered": [
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2",
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2"
+                ],
+                "Mestome_Sheath,_Mild_Drought": [
+                  "PENDING-GEO_MD_rep1",
+                  "PENDING-GEO_MD_rep2"
+                ],
+                "Mestome_Sheath,_Moderate_Drought": [
+                  "PENDING-GEO_ModD_rep1",
+                  "PENDING-GEO_ModD_rep2"
+                ],
+                "Mestome_Sheath,_Mild_Salinity": [
+                  "PENDING-GEO_MS_rep1",
+                  "PENDING-GEO_MS_rep2"
+                ],
+                "Mestome_Sheath,_Moderate_Salinity": [
+                  "PENDING-GEO_ModS_rep1",
+                  "PENDING-GEO_ModS_rep2"
+                ]
+              }
+            },
+            "Phloem_Companion_Cells": {
+              "controls": [
+                "PENDING-GEO_WW_rep1",
+                "PENDING-GEO_WW_rep2"
+              ],
+              "treatments": {
+                "Phloem_Companion_Cells,_Well_Watered": [
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2",
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2"
+                ],
+                "Phloem_Companion_Cells,_Mild_Drought": [
+                  "PENDING-GEO_MD_rep1",
+                  "PENDING-GEO_MD_rep2"
+                ],
+                "Phloem_Companion_Cells,_Moderate_Drought": [
+                  "PENDING-GEO_ModD_rep1",
+                  "PENDING-GEO_ModD_rep2"
+                ],
+                "Phloem_Companion_Cells,_Mild_Salinity": [
+                  "PENDING-GEO_MS_rep1",
+                  "PENDING-GEO_MS_rep2"
+                ],
+                "Phloem_Companion_Cells,_Moderate_Salinity": [
+                  "PENDING-GEO_ModS_rep1",
+                  "PENDING-GEO_ModS_rep2"
+                ]
+              }
+            },
+            "Phloem_Sieve_Elements": {
+              "controls": [
+                "PENDING-GEO_WW_rep1",
+                "PENDING-GEO_WW_rep2"
+              ],
+              "treatments": {
+                "Phloem_Sieve_Elements,_Well_Watered": [
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2",
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2"
+                ],
+                "Phloem_Sieve_Elements,_Mild_Drought": [
+                  "PENDING-GEO_MD_rep1",
+                  "PENDING-GEO_MD_rep2"
+                ],
+                "Phloem_Sieve_Elements,_Moderate_Drought": [
+                  "PENDING-GEO_ModD_rep1",
+                  "PENDING-GEO_ModD_rep2"
+                ],
+                "Phloem_Sieve_Elements,_Mild_Salinity": [
+                  "PENDING-GEO_MS_rep1",
+                  "PENDING-GEO_MS_rep2"
+                ],
+                "Phloem_Sieve_Elements,_Moderate_Salinity": [
+                  "PENDING-GEO_ModS_rep1",
+                  "PENDING-GEO_ModS_rep2"
+                ]
+              }
+            },
+            "Xylem": {
+              "controls": [
+                "PENDING-GEO_WW_rep1",
+                "PENDING-GEO_WW_rep2"
+              ],
+              "treatments": {
+                "Xylem,_Well_Watered": [
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2",
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2"
+                ],
+                "Xylem,_Mild_Drought": [
+                  "PENDING-GEO_MD_rep1",
+                  "PENDING-GEO_MD_rep2"
+                ],
+                "Xylem,_Moderate_Drought": [
+                  "PENDING-GEO_ModD_rep1",
+                  "PENDING-GEO_ModD_rep2"
+                ],
+                "Xylem,_Mild_Salinity": [
+                  "PENDING-GEO_MS_rep1",
+                  "PENDING-GEO_MS_rep2"
+                ],
+                "Xylem,_Moderate_Salinity": [
+                  "PENDING-GEO_ModS_rep1",
+                  "PENDING-GEO_ModS_rep2"
+                ]
+              }
+            },
+            "Xylem_Parenchyma": {
+              "controls": [
+                "PENDING-GEO_WW_rep1",
+                "PENDING-GEO_WW_rep2"
+              ],
+              "treatments": {
+                "Xylem_Parenchyma,_Well_Watered": [
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2",
+                  "PENDING-GEO_WW_rep1",
+                  "PENDING-GEO_WW_rep2"
+                ],
+                "Xylem_Parenchyma,_Mild_Drought": [
+                  "PENDING-GEO_MD_rep1",
+                  "PENDING-GEO_MD_rep2"
+                ],
+                "Xylem_Parenchyma,_Moderate_Drought": [
+                  "PENDING-GEO_ModD_rep1",
+                  "PENDING-GEO_ModD_rep2"
+                ],
+                "Xylem_Parenchyma,_Mild_Salinity": [
+                  "PENDING-GEO_MS_rep1",
+                  "PENDING-GEO_MS_rep2"
+                ],
+                "Xylem_Parenchyma,_Moderate_Salinity": [
+                  "PENDING-GEO_ModS_rep1",
+                  "PENDING-GEO_ModS_rep2"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "tables_present": [
+        "sample_data"
+      ],
+      "schema_source": "hand_added",
+      "status": "active"
+    },
     "rice_abiotic_stress_sc_pseudobulk": {
       "species": "rice",
       "source": "efp",
@@ -32122,6 +34188,27 @@
       "schema_source": "prod_information_schema",
       "status": "active"
     },
+    "rohan": {
+      "species": "arabidopsis",
+      "source": "legacy_not_in_dropdown",
+      "platform": "microarray",
+      "schema_variant": "legacy_microarray_projinfo",
+      "schema_verified": true,
+      "value_semantics": {
+        "quantity": null,
+        "unit": null,
+        "scale": null
+      },
+      "identifier_type": "probeset",
+      "gene_id_pattern": "arabidopsis",
+      "used_by": [],
+      "views": {},
+      "tables_present": [
+        "sample_data"
+      ],
+      "schema_source": "carried_over_legacy",
+      "status": "active"
+    },
     "root": {
       "species": "arabidopsis",
       "source": "both",
@@ -33840,6 +35927,27 @@
         "sample_data"
       ],
       "schema_source": "prod_information_schema",
+      "status": "active"
+    },
+    "rpatel": {
+      "species": "arabidopsis",
+      "source": "legacy_not_in_dropdown",
+      "platform": "microarray",
+      "schema_variant": "legacy_microarray_projinfo",
+      "schema_verified": true,
+      "value_semantics": {
+        "quantity": null,
+        "unit": null,
+        "scale": null
+      },
+      "identifier_type": "probeset",
+      "gene_id_pattern": "arabidopsis",
+      "used_by": [],
+      "views": {},
+      "tables_present": [
+        "sample_data"
+      ],
+      "schema_source": "carried_over_legacy",
       "status": "active"
     },
     "seed_db": {

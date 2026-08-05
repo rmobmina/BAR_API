@@ -48,7 +48,7 @@ def _schema(species: str, charset: str = "latin1") -> DatabaseSpec:
 
 
 # fmt: off
-# Database names exposing a sample_data table (species/gene_id_class come from combined_master.json)
+# Database names exposing a sample_data table (species/identifier_type come from combined_master.json)
 _DATABASE_NAMES: List[str] = [
     "actinidia_bud_development",
     "actinidia_flower_fruit_development",
@@ -299,7 +299,7 @@ _UTF8MB4 = {
 SIMPLE_EFP_DATABASE_SCHEMAS: Dict[str, DatabaseSpec] = {
     n: {
         **_schema(_MASTER_DATABASES[n]["species"], "utf8mb4" if n in _UTF8MB4 else "latin1"),
-        **({"identifier_type": "probeset"} if _MASTER_DATABASES[n]["gene_id_class"] == "probeset" else {}),
+        **({"identifier_type": "probeset"} if _MASTER_DATABASES[n]["identifier_type"] == "probeset" else {}),
     }
     for n in _DATABASE_NAMES
 }

@@ -8,7 +8,7 @@ from api.utils.bar_utils import BARUtils, load_combined_master
 def _load_database_regex_projects() -> dict[str, str]:
     databases = load_combined_master()["databases"]
     return {
-        db: info["regex_project"] for db, info in databases.items() if info.get("regex_project")
+        db: info["gene_id_pattern"] for db, info in databases.items() if info.get("gene_id_pattern")
     }
 
 
@@ -31,11 +31,13 @@ DATABASE_SPECIES: dict[str, str] = _load_database_species()
 # Maps databases that store microarray probeset IDs (or, for a handful of
 # metabolite/enzyme/trait eFPs, freeform category names) to their eFP project
 # regex key. Sourced from Vincent's regex_master_list_efp_eplant registry via
-# combined_master.json's per-database "regex_project" field, which is itself
+# combined_master.json's per-database "gene_id_pattern" field, which is itself
 # empirically verified against real sample data at build time (see
 # verify_regex_projects() in build_combined_master_json.py) -- databases whose
 # assigned project doesn't actually validate most of their own real IDs are
 # left out here and fall back to species-based validation below instead.
+# Values are bare project names (e.g. "arabidopsis"); BARUtils.EFP_PROJECT_REGEXES
+# exposes every pattern under that same bare key, so no "efp_" prefix needed here.
 DATABASE_EFP_PROJECT: dict[str, str] = _load_database_regex_projects()
 
 
