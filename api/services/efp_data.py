@@ -9,13 +9,9 @@ Exposes a single entry point query_efp_database_dynamic() that handles:
 
 from __future__ import annotations
 
-import json
 import re
 import traceback
-from functools import lru_cache
-from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
-from types import SimpleNamespace
 
 from flask import has_app_context
 from sqlalchemy import text
@@ -27,8 +23,7 @@ from api import db
 from api.models.annotations_lookup import AtAgiLookup
 from api.models.efp_schemas import SIMPLE_EFP_DATABASE_SCHEMAS
 from api.utils.bar_utils import BARUtils
-
-_RANDOM_ROWS_DIR = Path(__file__).resolve().parents[1] / "random_rows_json"
+from api.utils.gene_id_utils import GeneIdUtils
 
 DEFAULT_SAMPLE_SCHEMA = {
     "table": "sample_data",
@@ -65,39 +60,6 @@ MANUAL_DATABASE_SCHEMAS = {
     for name in _MANUAL_DEFAULT_DATABASES
 }
 
-MANUAL_DATABASE_SCHEMAS["sample_data"] = {
-    **DEFAULT_SAMPLE_SCHEMA,
-    "identifier_type": "probeset",
-    "metadata": {"species": "arabidopsis"},
-}
-
-# Minimal seed data for databases that have no MySQL bind configured
-# (e.g. the synthetic "sample_data" test database). Keys are normalized to
-# uppercase to simplify lookups.
-LOCAL_EFP_DATASETS: Dict[str, Dict[str, List[Dict[str, str]]]] = {
-    "sample_data": {
-        "261585_AT": [
-            {"sample": "ATGE_100_A", "value": "40.381"},
-            {"sample": "ATGE_100_B", "value": "38.924"},
-        ]
-    },
-    "embryo": {
-        "AT1G01010": [
-            {"sample": "pg_1", "value": "0.67"},
-        ]
-    },
-    "cannabis": {
-        "AGQN03009284": [
-            {"sample": "PK-RT", "value": "0"},
-        ]
-    },
-    "dna_damage": {
-        "AT1G01010": [
-            {"sample": "col-0_rep1_12hr_minus_Y", "value": "59"},
-        ]
-    },
-}
-
 
 class EFPDataService:
     """Service class for querying eFP (electronic Fluorescent Pictograph) databases."""
@@ -124,97 +86,6 @@ class EFPDataService:
             catalog[db_name] = dict(schema)
 
         return catalog
-
-    @staticmethod
-    @lru_cache(maxsize=None)
-    def _load_random_rows_dataset(database: str) -> Optional[Dict[str, List[Dict[str, str]]]]:
-        """Load api/random_rows_json/<database>_test_data.json as a per-gene fallback.
-
-        These are real (gene, sample, signal) rows scraped from each database for
-        regex/schema verification (see build_combined_master_json.py), not a full
-        dataset -- typically ~30 scattered rows, so most single genes will have at
-        most one matching sample. Used as a broader-coverage substitute for the
-        small hand-written LOCAL_EFP_DATASETS seed until real data is wired up.
-
-        :param database: Database name
-        :type database: str
-        :return: Mapping of uppercased gene/probeset ID to sample rows, or None if
-            no test data file exists for this database
-        :rtype: Optional[Dict[str, List[Dict[str, str]]]]
-        """
-        path = _RANDOM_ROWS_DIR / f"{database}_test_data.json"
-        try:
-            with open(path) as f:
-                raw_rows = json.load(f)
-        except (OSError, json.JSONDecodeError):
-            return None
-
-        dataset: Dict[str, List[Dict[str, str]]] = {}
-        for row in raw_rows:
-            gene_id = row.get("data_probeset_id")
-            sample = row.get("data_bot_id")
-            value = row.get("data_signal")
-            if not gene_id or not sample or value is None:
-                continue
-            dataset.setdefault(gene_id.upper(), []).append({"sample": sample, "value": str(value)})
-        return dataset
-
-    @staticmethod
-    def _query_local_dataset(
-        database: str,
-        query_id: str,
-        sample_ids: Optional[List[str]],
-        sample_case_insensitive: bool,
-    ) -> Optional[List[SimpleNamespace]]:
-        """Return seed data rows for databases without a configured MySQL bind.
-
-        Checks the small hand-written LOCAL_EFP_DATASETS first, then falls back to
-        the broader (but sparser) api/random_rows_json/ test data when the gene
-        isn't in LOCAL_EFP_DATASETS.
-
-        :param database: Database name
-        :type database: str
-        :param query_id: Gene identifier to query
-        :type query_id: str
-        :param sample_ids: Optional list of sample IDs to filter results
-        :type sample_ids: Optional[List[str]]
-        :param sample_case_insensitive: If True, compare sample IDs case-insensitively
-        :type sample_case_insensitive: bool
-        :return: List of result rows or None if no seed data source exists for this database
-        :rtype: Optional[List[SimpleNamespace]]
-        """
-        dataset = LOCAL_EFP_DATASETS.get(database)
-        gene_rows = dataset.get(query_id.upper(), []) if dataset is not None else []
-
-        if not gene_rows:
-            random_rows_dataset = EFPDataService._load_random_rows_dataset(database)
-            if random_rows_dataset is not None:
-                dataset = random_rows_dataset
-                gene_rows = random_rows_dataset.get(query_id.upper(), [])
-
-        if dataset is None:
-            return None
-
-        rows = list(gene_rows)
-
-        if sample_ids:
-            filtered = [sample for sample in sample_ids if sample]
-            if filtered:
-                if sample_case_insensitive:
-                    lookup = {sample.upper() for sample in filtered}
-
-                    def matches(row_name: str) -> bool:
-                        return row_name.upper() in lookup
-
-                else:
-                    lookup = set(filtered)
-
-                    def matches(row_name: str) -> bool:
-                        return row_name in lookup
-
-                rows = [row for row in rows if matches(row["sample"])]
-
-        return [SimpleNamespace(sample=row["sample"], value=row["value"]) for row in rows]
 
     @staticmethod
     def agi_to_probset(gene_id: str) -> Optional[str]:
@@ -296,7 +167,7 @@ class EFPDataService:
         different eFP databases, handling species-specific gene ID validation and
         automatic probeset conversion when needed.
 
-        :param database: Database name (e.g., 'cannabis', 'embryo', 'sample_data')
+        :param database: Database name (e.g., 'cannabis', 'embryo', 'klepikova')
         :type database: str
         :param gene_id: Gene identifier (AGI format, probeset, or species-specific format)
         :type gene_id: str
@@ -314,7 +185,7 @@ class EFPDataService:
             result = EFPDataService.query_efp_database_dynamic('embryo', 'AT1G01010')
             # Returns: {'success': True, 'gene_id': 'AT1G01010', 'data': [...]}
 
-            result = EFPDataService.query_efp_database_dynamic('sample_data', 'AT1G01010')
+            result = EFPDataService.query_efp_database_dynamic('klepikova', 'AT1G01010')
             # Auto-converts to probeset, returns: {'probset_id': '261585_at', ...}
         """
         try:
@@ -332,7 +203,6 @@ class EFPDataService:
                     "error_code": 400,
                 }
 
-            # Extract species information from schema metadata
             species = schema.get("metadata", {}).get("species", "").lower()
 
             query_id = gene_id
@@ -341,42 +211,12 @@ class EFPDataService:
             upper_id = gene_id.upper()
             is_agi_id = upper_id.startswith("AT") and "G" in upper_id
 
-            # Validate gene ID format based on species and ID pattern
-            # Only validate if the ID looks like it's in the species-specific format
             if is_agi_id:
-                # This looks like an Arabidopsis AGI ID - validate it
                 if not BARUtils.is_arabidopsis_gene_valid(upper_id):
                     return {"success": False, "error": "Invalid Arabidopsis gene ID format", "error_code": 400}
             elif species and schema["identifier_type"] == "agi":
-                # For non-AGI formatted IDs in species databases that expect AGI format,
-                # Validate against the specific species validator
-                if species == "arachis":
-                    if not BARUtils.is_arachis_gene_valid(upper_id):
-                        return {"success": False, "error": "Invalid Arachis gene ID", "error_code": 400}
-                elif species == "cannabis":
-                    if not BARUtils.is_cannabis_gene_valid(upper_id):
-                        return {"success": False, "error": "Invalid Cannabis gene ID", "error_code": 400}
-                elif species == "kalanchoe":
-                    if not BARUtils.is_kalanchoe_gene_valid(upper_id):
-                        return {"success": False, "error": "Invalid Kalanchoe gene ID", "error_code": 400}
-                elif species == "phelipanche":
-                    if not BARUtils.is_phelipanche_gene_valid(upper_id):
-                        return {"success": False, "error": "Invalid Phelipanche gene ID", "error_code": 400}
-                elif species == "physcomitrella":
-                    if not BARUtils.is_physcomitrella_gene_valid(upper_id):
-                        return {"success": False, "error": "Invalid Physcomitrella gene ID", "error_code": 400}
-                elif species == "selaginella":
-                    if not BARUtils.is_selaginella_gene_valid(upper_id):
-                        return {"success": False, "error": "Invalid Selaginella gene ID", "error_code": 400}
-                elif species == "strawberry":
-                    if not BARUtils.is_strawberry_gene_valid(upper_id):
-                        return {"success": False, "error": "Invalid Strawberry gene ID", "error_code": 400}
-                elif species == "striga":
-                    if not BARUtils.is_striga_gene_valid(upper_id):
-                        return {"success": False, "error": "Invalid Striga gene ID", "error_code": 400}
-                elif species == "triphysaria":
-                    if not BARUtils.is_triphysaria_gene_valid(upper_id):
-                        return {"success": False, "error": "Invalid Triphysaria gene ID", "error_code": 400}
+                if not GeneIdUtils.validate_gene_id(upper_id, species):
+                    return {"success": False, "error": f"Invalid {species.capitalize()} gene ID", "error_code": 400}
 
             # Handle Arabidopsis-specific logic for AGI IDs
             if is_agi_id:
@@ -461,17 +301,6 @@ class EFPDataService:
                         print(f"[warn] {last_error}")
             else:
                 last_error = f"Database {database} is not available (no active bind configured)."
-
-            local_rows = None
-            if results is None or not results:
-                local_rows = EFPDataService._query_local_dataset(
-                    database,
-                    query_id,
-                    sample_ids,
-                    sample_case_insensitive,
-                )
-                if local_rows is not None:
-                    results = local_rows
 
             if results is None:
                 _UNAVAILABLE_PHRASES = (

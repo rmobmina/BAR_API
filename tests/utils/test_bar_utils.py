@@ -155,15 +155,9 @@ class UtilsUnitTest(TestCase):
     def test_efp_project_regexes_exist(self):
         """All expected eFP project keys must be present in EFP_PROJECT_REGEXES."""
         required = [
-            "efp", "efp_arabidopsis", "efp_seedcoat",
-            "efp_barley", "efpbarley",
-            "efp_rice", "efprice",
-            "efp_medicago", "efpmedicago",
-            "efp_poplar", "efppop",
-            "efp_soybean", "efpsoybean",
-            "efp_maize", "maizeefp",
-            "efp_triticale",
-            "efp_human",
+            "efp_arabidopsis", "efp_seedcoat",
+            "efp_barley", "efp_rice", "efp_medicago", "efp_poplar",
+            "efp_soybean", "efp_maize", "efp_triticale", "efp_human",
         ]
         for key in required:
             self.assertIn(key, EFP_PROJECT_REGEXES, f"Missing eFP project key: {key}")
@@ -207,8 +201,6 @@ class UtilsUnitTest(TestCase):
         self.assertTrue(BARUtils.is_efp_gene_valid("EBro06_SQ001_B02_at", "efp_barley"))
         self.assertTrue(BARUtils.is_efp_gene_valid("HVSMEi0007J05r2_at", "efp_barley"))
         self.assertTrue(BARUtils.is_efp_gene_valid("Contig12089_at", "efp_barley"))
-        # efpbarley alias
-        self.assertTrue(BARUtils.is_efp_gene_valid("Contig7905_at", "efpbarley"))
 
         self.assertFalse(BARUtils.is_efp_gene_valid("AT1G01010", "efp_barley"))
         self.assertFalse(BARUtils.is_efp_gene_valid("randomjunk", "efp_barley"))
@@ -219,8 +211,6 @@ class UtilsUnitTest(TestCase):
         self.assertTrue(BARUtils.is_efp_gene_valid("Os.17822.2.S1_s_at", "efp_rice"))
         self.assertTrue(BARUtils.is_efp_gene_valid("OsAffx.4511.1.S1_s_at", "efp_rice"))
         self.assertTrue(BARUtils.is_efp_gene_valid("Os.12223.2.S1_at", "efp_rice"))
-        # efprice alias
-        self.assertTrue(BARUtils.is_efp_gene_valid("LOC_Os01g01430", "efprice"))
 
         self.assertFalse(BARUtils.is_efp_gene_valid("AT1G01010", "efp_rice"))
         self.assertFalse(BARUtils.is_efp_gene_valid("randomjunk", "efp_rice"))
@@ -233,8 +223,6 @@ class UtilsUnitTest(TestCase):
         self.assertTrue(BARUtils.is_efp_gene_valid("Sme.396.1.S1_at", "efp_medicago"))
         # _s_at variants must also match (e.g. Mtr.50680.1.S1_s_at from medicago_rma)
         self.assertTrue(BARUtils.is_efp_gene_valid("Mtr.50680.1.S1_s_at", "efp_medicago"))
-        # efpmedicago alias
-        self.assertTrue(BARUtils.is_efp_gene_valid("Medtr1g018805", "efpmedicago"))
 
         self.assertFalse(BARUtils.is_efp_gene_valid("AT1G01010", "efp_medicago"))
         self.assertFalse(BARUtils.is_efp_gene_valid("randomjunk", "efp_medicago"))
@@ -245,8 +233,6 @@ class UtilsUnitTest(TestCase):
         self.assertTrue(BARUtils.is_efp_gene_valid("PtpAffx.154622.1.S1_at", "efp_poplar"))
         self.assertTrue(BARUtils.is_efp_gene_valid("PtpAffx.37687.1.S1_at", "efp_poplar"))
         self.assertTrue(BARUtils.is_efp_gene_valid("PtpAffx.202274.1.S1_s_at", "efp_poplar"))
-        # efppop alias
-        self.assertTrue(BARUtils.is_efp_gene_valid("PtpAffx.154622.1.S1_at", "efppop"))
 
         self.assertFalse(BARUtils.is_efp_gene_valid("AT1G01010", "efp_poplar"))
         self.assertFalse(BARUtils.is_efp_gene_valid("randomjunk", "efp_poplar"))

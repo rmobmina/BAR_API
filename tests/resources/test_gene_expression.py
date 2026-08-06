@@ -3,12 +3,9 @@ Tests for the /gene_expression/expression/<database>/<gene_id> endpoint.
 
 Covers three important cases:
   1. Gene ID validation — valid/invalid inputs per database.
-  2. Probeset ID input — actual probeset IDs from sample data (no AGI conversion needed).
+  2. Probeset ID input — accepted directly, no AGI conversion needed.
   3. AGI input for Arabidopsis microarray databases — verifies the AGI→probeset lookup path
      is accepted (data retrieval itself is tested in CI where the lookup DB is present).
-
-Sample probeset IDs are drawn from the JSON files in
-api/random_rows_json/ to ensure we test with real IDs, not synthetic ones.
 """
 from unittest import TestCase
 
@@ -237,23 +234,6 @@ class TestGeneIdUtilsDatabase(TestCase):
     def test_validate_triticale_probeset(self):
         """Triticale probeset IDs are valid for the triticale database."""
         self.assertTrue(GeneIdUtils.validate_gene_for_database("Ta.8002.1.S1_at", "triticale"))
-
-    def test_is_probeset_id_detects_catma_probe(self):
-        """CATMA probes (At + 8 digits) are recognised as probeset IDs."""
-        self.assertTrue(GeneIdUtils.is_probeset_id("At30023977"))
-        self.assertTrue(GeneIdUtils.is_probeset_id("At30027789"))
-
-    def test_is_probeset_id_detects_affymetrix_probe(self):
-        """Standard _at probes are recognised as probeset IDs."""
-        self.assertTrue(GeneIdUtils.is_probeset_id("267643_at"))
-        self.assertTrue(GeneIdUtils.is_probeset_id("Contig7905_at"))
-        self.assertTrue(GeneIdUtils.is_probeset_id("Os.17822.2.S1_s_at"))
-
-    def test_is_probeset_id_rejects_gene_ids(self):
-        """Canonical gene IDs are NOT treated as probeset IDs."""
-        self.assertFalse(GeneIdUtils.is_probeset_id("AT1G01010"))
-        self.assertFalse(GeneIdUtils.is_probeset_id("LOC_Os01g01430"))
-        self.assertFalse(GeneIdUtils.is_probeset_id("randomjunk"))
 
     def test_validate_gene_for_non_efp_database_falls_back_to_species(self):
         """Non-microarray databases use species-based validation."""

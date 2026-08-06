@@ -14,30 +14,11 @@ def _load_database_regex_projects() -> dict[str, str]:
 
 def _load_database_species() -> dict[str, str]:
     databases = load_combined_master()["databases"]
-    species = {db: info["species"] for db, info in databases.items() if info.get("species")}
-    # Synthetic database used only by local/CI test fixtures, not part of combined_master.json
-    species["sample_data"] = "arabidopsis"
-    return species
+    return {db: info["species"] for db, info in databases.items() if info.get("species")}
 
 
-_PROBESET_RE = re.compile(r"^.+_at$", re.IGNORECASE)
-_AROS_PROBESET_RE = re.compile(r"^A\d{6}_\d{2}$", re.IGNORECASE)
-# CATMA microarray probes used by the Seedcoat database (e.g. At30023977)
-_CATMA_PROBE_RE = re.compile(r"^At\d{8}$")
-
-# Sourced from combined_master.json's per-database "species" field.
+# Per-database species and gene ID pattern, sourced from combined_master.json.
 DATABASE_SPECIES: dict[str, str] = _load_database_species()
-
-# Maps databases that store microarray probeset IDs (or, for a handful of
-# metabolite/enzyme/trait eFPs, freeform category names) to their eFP project
-# regex key. Sourced from Vincent's regex_master_list_efp_eplant registry via
-# combined_master.json's per-database "gene_id_pattern" field, which is itself
-# empirically verified against real sample data at build time (see
-# verify_regex_projects() in build_combined_master_json.py) -- databases whose
-# assigned project doesn't actually validate most of their own real IDs are
-# left out here and fall back to species-based validation below instead.
-# Values are bare project names (e.g. "arabidopsis"); BARUtils.EFP_PROJECT_REGEXES
-# exposes every pattern under that same bare key, so no "efp_" prefix needed here.
 DATABASE_EFP_PROJECT: dict[str, str] = _load_database_regex_projects()
 
 
@@ -95,37 +76,13 @@ _BARLEY_V3_RE = re.compile(r"\.[Vv]\d+$")
 
 class GeneIdUtils:
     @staticmethod
-    def is_probeset_id(gene_id: str) -> bool:
-        """Return True if the gene_id looks like a microarray probeset rather than a gene ID.
-
-        Covers:
-        - Standard Affymetrix probes ending in _at (e.g. 267643_at, Contig7905_at)
-        - AROS array probes (e.g. A017813_01)
-        - CATMA array probes used by the Seedcoat database (e.g. At30023977)
-        """
-        return bool(
-            _PROBESET_RE.match(gene_id)
-            or _AROS_PROBESET_RE.match(gene_id)
-            or _CATMA_PROBE_RE.match(gene_id)
-        )
-
-    @staticmethod
     def validate_gene_id(gene_id: str, species: str) -> bool:
         validator = _VALIDATORS.get(species)
         return validator(gene_id) if validator is not None else True
 
     @staticmethod
     def validate_gene_for_database(gene_id: str, database: str) -> bool:
-        """Validate a gene ID against the rules for a specific database.
-
-        For microarray databases, uses the eFP project regex which accepts both
-        canonical gene IDs and probeset IDs. Falls back to species-based validation
-        for all other databases.
-
-        :param gene_id: Gene identifier to validate
-        :param database: Database name (e.g. 'light_series', 'barley_mas')
-        :return: True if the gene ID is valid for the given database
-        """
+        """Validate a gene ID (or probeset) against the pattern configured for a database."""
         if BARUtils.is_injection_attempt(gene_id):
             return False
         efp_project = DATABASE_EFP_PROJECT.get(database)

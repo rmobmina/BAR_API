@@ -5,54 +5,44 @@
 # The password below is for GitHub Actions. Please do not change.
 DB_USER="root"
 DB_PASS="root"
-DB_HOST=${DB_HOST:-"localhost"}
 
 # Load the data
 echo "Welcome to the BAR API. Running init!"
 
-# Build simple eFP databases dynamically so we do not need static SQL dumps
-echo "Bootstrapping simple eFP databases..."
-python3 -m api.services.efp_bootstrap --user "$DB_USER" --password "$DB_PASS"
-if [ $? -ne 0 ]; then
-    echo "ERROR: Failed to bootstrap simple eFP databases"
-    exit 1
-fi
-echo "Successfully bootstrapped simple eFP databases"
-
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/annotations_lookup.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_ecotypes.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/arachis.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/cannabis.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/canola_nssnp.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/dna_damage.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/embryo.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/eplant2.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/eplant_poplar.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/eplant_rice.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/eplant_soybean.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/eplant_tomato.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/fastpheno.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/gaia.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/germination.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/homologs_db.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/interactions_vincent_v2.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/kalanchoe.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/klepikova.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/llama3.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/phelipanche.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/physcomitrella_db.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/poplar_nssnp.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/rice_interactions.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/selaginella.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/shoot_apex.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/silique.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/single_cell.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/soybean_nssnp.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/strawberry.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/striga.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/tomato_nssnp.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/tomato_sequence.sql
-mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < ./config/databases/triphysaria.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/annotations_lookup.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/arabidopsis_ecotypes.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/arachis.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/cannabis.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/canola_nssnp.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/dna_damage.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/embryo.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant2.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant_poplar.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant_rice.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant_soybean.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/eplant_tomato.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/fastpheno.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/gaia.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/germination.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/homologs_db.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/interactions_vincent_v2.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/kalanchoe.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/klepikova.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/llama3.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/phelipanche.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/physcomitrella_db.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/poplar_nssnp.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/rice_interactions.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/selaginella.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/shoot_apex.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/silique.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/single_cell.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/soybean_nssnp.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/strawberry.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/striga.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/tomato_nssnp.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/tomato_sequence.sql
+mysql -u $DB_USER -p$DB_PASS < ./config/databases/triphysaria.sql
 
 echo "Data are now loaded. Preparing API config"
 echo "Please manually edit config file!"

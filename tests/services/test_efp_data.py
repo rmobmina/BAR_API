@@ -60,55 +60,6 @@ class TestDynamicEfpData(TestCase):
         self.assertEqual(result["error_code"], 400)
         self.assertIn("Invalid Arabidopsis gene ID format", result["error"])
 
-    def test_sample_data_agi_is_converted_to_probeset(self):
-        """sample_data requires probesets, so agi ids should be converted automatically"""
-        mapping_date = date(2020, 1, 1)
-        db.session.query(AtAgiLookup).filter_by(probeset="261585_at", agi="AT1G01010", date=mapping_date).delete()
-        db.session.add(
-            AtAgiLookup(
-                probeset="261585_at",
-                agi="AT1G01010",
-                date=mapping_date,
-            )
-        )
-        db.session.commit()
-        result = None
-        try:
-            result = query_efp_database_dynamic("sample_data", "At1g01010", allow_empty_results=False)
-        finally:
-            db.session.query(AtAgiLookup).filter_by(probeset="261585_at", agi="AT1G01010", date=mapping_date).delete()
-            db.session.commit()
-
-        self.assertTrue(result["success"])
-        self.assertEqual(result["probset_id"], "261585_at")
-        self.assertGreater(result["record_count"], 0)
-        sample_lookup = {row["name"]: row["value"] for row in result["data"]}
-        self.assertEqual(sample_lookup["ATGE_100_A"], "40.381")
-
-    def test_sample_data_filter_returns_case_insensitive_matches(self):
-        """sample_data filters should honor case-insensitive flag just like other datasets"""
-        result = query_efp_database_dynamic(
-            "sample_data",
-            "261585_at",
-            sample_ids=["atge_100_a", "ATGE_100_B"],
-            allow_empty_results=False,
-            sample_case_insensitive=True,
-        )
-        self.assertTrue(result["success"])
-        self.assertEqual(result["record_count"], 2)
-        names = sorted(row["name"] for row in result["data"])
-        self.assertEqual(names, ["ATGE_100_A", "ATGE_100_B"])
-
-    def test_sample_data_empty_results_allowed(self):
-        """allow_empty_results should return success even when filters exclude everything"""
-        result = query_efp_database_dynamic(
-            "sample_data", "256898_at", sample_ids=["DOES_NOT_EXIST"], allow_empty_results=True
-        )
-        self.assertTrue(result["success"])
-        self.assertEqual(result["record_count"], 0)
-        self.assertEqual(result["data"], [])
-
-
 class TestProbesetConversion(TestCase):
     """Verify that AGI → probeset conversion runs for all arabidopsis probeset databases.
 

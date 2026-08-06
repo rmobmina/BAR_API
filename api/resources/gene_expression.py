@@ -3,11 +3,7 @@ from markupsafe import escape
 
 from api.services.efp_data import query_efp_database_dynamic
 from api.utils.bar_utils import BARUtils
-from api.utils.gene_id_utils import (
-    DATABASE_SPECIES,
-    GeneIdUtils,
-    DATABASE_EFP_PROJECT,
-)
+from api.utils.gene_id_utils import DATABASE_SPECIES, GeneIdUtils, DATABASE_EFP_PROJECT
 
 gene_expression = Namespace(
     "Gene Expression",
@@ -26,7 +22,7 @@ gene_expression = Namespace(
 )
 @gene_expression.param(
     "database",
-    "Database name (e.g. klepikova, atgenexp, sample_data)",
+    "Database name (e.g. klepikova, atgenexp, embryo)",
     _in="path",
     default="klepikova",
 )
@@ -40,17 +36,11 @@ class GeneExpression(Resource):
         if species is None:
             return BARUtils.error_exit(f"Unknown database '{database}'"), 400
 
-        if BARUtils.is_injection_attempt(gene_id):
-            return BARUtils.error_exit(f"Invalid gene ID for {database}: '{gene_id}'"), 400
+        if not GeneIdUtils.validate_gene_for_database(gene_id, database):
+            label = DATABASE_EFP_PROJECT.get(database) or species or database
+            return BARUtils.error_exit(f"Invalid gene ID for {label}: '{gene_id}'"), 400
 
-        if GeneIdUtils.is_probeset_id(gene_id):
-            query_id = gene_id
-        else:
-            if not GeneIdUtils.validate_gene_for_database(gene_id, database):
-                label = DATABASE_EFP_PROJECT.get(database) or species or database
-                return BARUtils.error_exit(f"Invalid gene ID for {label}: '{gene_id}'"), 400
-            query_id = GeneIdUtils.normalize_gene_id(gene_id, species)
-
+        query_id = GeneIdUtils.normalize_gene_id(gene_id, species)
         result = query_efp_database_dynamic(database, query_id)
 
         if result["success"]:

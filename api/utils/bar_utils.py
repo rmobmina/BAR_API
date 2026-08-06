@@ -17,43 +17,20 @@ def load_combined_master() -> dict:
         return json.load(f)
 
 
-# Per-eFP-project input validation regexes. Sourced from Vincent's
-# regex_master_list_efp_eplant registry (tested at 99%+ coverage against real
-# probeset/gene ID sample data) and embedded into combined_master.json's
-# gene_id_patterns at build time by build_combined_master_json.py.
-# Each pattern covers canonical gene IDs AND (where applicable) microarray
-# probeset IDs. gene_id_patterns is keyed by bare project name (e.g.
-# "arabidopsis"); every pattern is also exposed under the "efp_"-prefixed
-# spelling ("efp_arabidopsis") since that's the convention every
-# is_XXX_gene_valid() method below (and their tests) already call
-# is_efp_gene_valid() with -- one alias step here instead of updating every
-# call site to the newer bare-name convention.
+# Per-eFP-project gene ID / probeset regexes, keyed by bare project name (e.g.
+# "arabidopsis") and also exposed under the "efp_"-prefixed spelling since
+# every is_XXX_gene_valid() method below calls is_efp_gene_valid() with that.
 _GENE_ID_PATTERNS = load_combined_master()["gene_id_patterns"]
-EFP_PROJECT_REGEXES: dict = dict(_GENE_ID_PATTERNS)
-EFP_PROJECT_REGEXES.update({f"efp_{name}": pattern for name, pattern in _GENE_ID_PATTERNS.items()})
-
-# Aliases for alternate eFP project key spellings used by the BAR (not present
-# in Vincent's registry, which is keyed by canonical eFP project name only).
-_PROJECT_ALIASES = {
-    "efp": "efp_arabidopsis",
-    "efpbarley": "efp_barley",
-    "efprice": "efp_rice",
-    "efpmedicago": "efp_medicago",
-    "efppop": "efp_poplar",
-    "efpsoybean": "efp_soybean",
-    "maizeefp": "efp_maize",
-    "mouse_efp": "efp_mouse",
+EFP_PROJECT_REGEXES: dict = {
+    **_GENE_ID_PATTERNS,
+    **{f"efp_{name}": pattern for name, pattern in _GENE_ID_PATTERNS.items()},
 }
-for _alias, _canonical in _PROJECT_ALIASES.items():
-    EFP_PROJECT_REGEXES[_alias] = EFP_PROJECT_REGEXES[_canonical]
 
-# General injection guard, run before any per-project/probeset format check.
-# A handful of eFP projects accept loose freeform text (metabolite/enzyme/trait
-# names, e.g. "TG 54:5; 16:0_20:1_18:4" or "efpconfig"'s near-unrestricted
-# `.{0,16}`), so this can't blacklist individual characters like ';' or "'" --
-# those are legitimate in real sample data. Instead it looks for actual attack
-# syntax: SQL comment/statement-chaining sequences, tautologies, UNION SELECT,
-# script tags, and null bytes.
+# General injection guard, run before any per-project format check. Can't
+# blacklist individual characters (some eFP projects accept freeform text like
+# metabolite/lipid names), so this looks for actual attack syntax instead: SQL
+# comment/statement-chaining sequences, tautologies, UNION SELECT, script tags,
+# and null bytes.
 _INJECTION_RE = re.compile(
     r"(--)"
     r"|(/\*)|(\*/)"
@@ -282,8 +259,8 @@ class BARUtils:
 
     @staticmethod
     def is_mouse_gene_valid(gene):
-        """Validates mouse gene IDs against Vincent's tested mouse_efp registry pattern."""
-        return BARUtils.is_efp_gene_valid(gene, "mouse_efp")
+        """Validates mouse gene IDs against Vincent's tested efp_mouse registry pattern."""
+        return BARUtils.is_efp_gene_valid(gene, "efp_mouse")
 
     @staticmethod
     def is_oat_gene_valid(gene):
@@ -405,7 +382,7 @@ class BARUtils:
         project. Returns False if the eFP project name is unknown.
 
         :param gene: Gene identifier to validate
-        :param efp_project: eFP project key (e.g. 'efp_arabidopsis', 'efpbarley')
+        :param efp_project: eFP project key (e.g. 'efp_arabidopsis', 'arabidopsis')
         :return: True if the gene ID matches the project's accepted format
         """
         if not gene:
@@ -415,7 +392,7 @@ class BARUtils:
         pattern = EFP_PROJECT_REGEXES.get(efp_project)
         if not pattern:
             return False
-        return bool(re.search(pattern, gene, re.I))
+        return bool(re.fullmatch(pattern, gene, re.I))
 
     @staticmethod
     def connect_redis():
