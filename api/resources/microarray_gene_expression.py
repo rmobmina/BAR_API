@@ -27,7 +27,7 @@ class GetWorldeFPExpression(Resource):
         gene_id = escape(gene_id)
 
         if species == "arabidopsis":
-            if not BARUtils.is_arabidopsis_gene_valid(gene_id):
+            if not BARUtils.is_efp_gene_valid(gene_id, "efp_arabidopsis"):
                 return BARUtils.error_exit("Invalid gene id")
         else:
             return BARUtils.error_exit("Invalid species")

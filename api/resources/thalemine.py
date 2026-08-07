@@ -22,7 +22,7 @@ class ThaleMineGeneRIFs(Resource):
         gene_id = escape(gene_id)
 
         # Is data valid
-        if not BARUtils.is_arabidopsis_gene_valid(gene_id):
+        if not BARUtils.is_efp_gene_valid(gene_id, "efp_arabidopsis"):
             return BARUtils.error_exit("Invalid gene id"), 400
 
         query = (
@@ -52,7 +52,7 @@ class ThaleMinePublications(Resource):
         gene_id = escape(gene_id)
 
         # Is data valid
-        if not BARUtils.is_arabidopsis_gene_valid(gene_id):
+        if not BARUtils.is_efp_gene_valid(gene_id, "efp_arabidopsis"):
             return BARUtils.error_exit("Invalid gene id"), 400
 
         query = (
@@ -84,7 +84,7 @@ class ThaleMineGeneInformation(Resource):
         gene_id = escape(gene_id)
 
         # Is data valid
-        if not BARUtils.is_arabidopsis_gene_valid(gene_id):
+        if not BARUtils.is_efp_gene_valid(gene_id, "efp_arabidopsis"):
             return BARUtils.error_exit("Invalid gene id"), 400
 
         query = (

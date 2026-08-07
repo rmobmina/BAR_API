@@ -45,7 +45,7 @@ class Localizations(Resource):
 
         species = escape(species.lower())
         query_gene = escape(query_gene)
-        if species == "rice" and BARUtils.is_rice_gene_valid(query_gene, True):
+        if species == "rice" and BARUtils.is_efp_gene_valid(query_gene, "efp_rice"):
             rows = db.session.execute(db.select(Rice_mPLoc).where(Rice_mPLoc.gene_id == query_gene)).scalars().all()
 
             if len(rows) == 0:
@@ -89,7 +89,7 @@ class LocalizationsPost(Resource):
 
         if species == "rice":
             for gene in genes:
-                if not BARUtils.is_rice_gene_valid(gene, True):
+                if not BARUtils.is_efp_gene_valid(gene, "efp_rice"):
                     return BARUtils.error_exit("Invalid gene id"), 400
 
             rows = db.session.execute(db.select(Rice_mPLoc).where(Rice_mPLoc.gene_id.in_(genes))).scalars().all()

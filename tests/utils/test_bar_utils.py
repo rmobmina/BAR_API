@@ -17,102 +17,102 @@ class UtilsUnitTest(TestCase):
 
     def test_is_arabidopsis_gene_valid(self):
         # Valid gene
-        result = BARUtils.is_arabidopsis_gene_valid("At1g01010")
+        result = BARUtils.is_efp_gene_valid("At1g01010", "efp_arabidopsis")
         self.assertTrue(result)
-        result = BARUtils.is_arabidopsis_gene_valid("At1g01010.1")
+        result = BARUtils.is_efp_gene_valid("At1g01010.1", "efp_arabidopsis")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_arabidopsis_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_arabidopsis")
         self.assertFalse(result)
         # Two-digit isoform suffix: accepted by Vincent's efp_arabidopsis
-        # registry pattern, which is_arabidopsis_gene_valid now delegates to.
-        result = BARUtils.is_arabidopsis_gene_valid("At1g01010.11")
+        # registry pattern.
+        result = BARUtils.is_efp_gene_valid("At1g01010.11", "efp_arabidopsis")
         self.assertTrue(result)
 
     def test_is_brassica_rapa_gene_valid(self):
         # Valid gene
-        result = BARUtils.is_brassica_rapa_gene_valid("BraA01g000010")
+        result = BARUtils.is_efp_gene_valid("BraA01g000010", "efp_brassica_rapa")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_brassica_rapa_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_brassica_rapa")
         self.assertFalse(result)
 
     def test_is_grape_gene_valid(self):
-        result = BARUtils.is_grape_gene_valid("VIT_00s0120g00060")
+        result = BARUtils.is_efp_gene_valid("VIT_00s0120g00060", "efp_grape")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_grape_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_grape")
         self.assertFalse(result)
 
     def test_is_kalanchoe_gene_valid(self):
         # Valid gene
-        result = BARUtils.is_kalanchoe_gene_valid("Kaladp0001s0001")
+        result = BARUtils.is_efp_gene_valid("Kaladp0001s0001", "efp_kalanchoe")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_kalanchoe_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_kalanchoe")
         self.assertFalse(result)
 
     def test_is_phelipanche_gene_valid(self):
         # Valid gene
-        result = BARUtils.is_phelipanche_gene_valid("OrAeBC5_9992.10")
+        result = BARUtils.is_efp_gene_valid("OrAeBC5_9992.10", "efp_phelipanche")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_phelipanche_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_phelipanche")
         self.assertFalse(result)
 
     def test_is_physcomitrella_gene_valid(self):
         # Valid gene
-        result = BARUtils.is_physcomitrella_gene_valid("Pp1s9_70V6.1")
+        result = BARUtils.is_efp_gene_valid("Pp1s9_70V6.1", "efp_physcomitrella")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_physcomitrella_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_physcomitrella")
         self.assertFalse(result)
 
     def test_is_selaginella_gene_valid(self):
         # Valid gene
-        result = BARUtils.is_selaginella_gene_valid("Smo402070")
+        result = BARUtils.is_efp_gene_valid("Smo402070", "efp_selaginella")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_selaginella_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_selaginella")
         self.assertFalse(result)
 
     def test_is_strawberry_gene_valid(self):
         # Valid gene
-        result = BARUtils.is_strawberry_gene_valid("FvH4_1g00010")
+        result = BARUtils.is_efp_gene_valid("FvH4_1g00010", "efp_strawberry")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_strawberry_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_strawberry")
         self.assertFalse(result)
 
     def test_is_striga_gene_valid(self):
         # Valid gene
-        result = BARUtils.is_striga_gene_valid("StHeBC3_9993.10")
+        result = BARUtils.is_efp_gene_valid("StHeBC3_9993.10", "efp_striga")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_striga_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_striga")
         self.assertFalse(result)
 
     def test_is_triphysaria_gene_valid(self):
         # Valid gene
-        result = BARUtils.is_triphysaria_gene_valid("TrVeBC3_9999.18")
+        result = BARUtils.is_efp_gene_valid("TrVeBC3_9999.18", "efp_triphysaria")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_triphysaria_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_triphysaria")
         self.assertFalse(result)
 
     def test_is_tomato_gene_valid(self):
         # For some reason, coverage is saying that we need this test
-        result = BARUtils.is_tomato_gene_valid("Solyc04g014530")
+        result = BARUtils.is_efp_gene_valid("Solyc04g014530", "efp_tomato")
         self.assertTrue(result)
 
     def test_is_integer(self):
@@ -130,20 +130,20 @@ class UtilsUnitTest(TestCase):
 
     def test_is_poplar_gene_valid(self):
         # Valid gene
-        result = BARUtils.is_poplar_gene_valid("Potri.019G123900.1")
+        result = BARUtils.is_efp_gene_valid("Potri.019G123900.1", "efp_poplar")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_poplar_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_poplar")
         self.assertFalse(result)
 
     def test_is_sorghum_gene_valid(self):
         # Valid gene
-        result = BARUtils.is_sorghum_gene_valid("Sobic.001G000100")
+        result = BARUtils.is_efp_gene_valid("Sobic.001G000100", "efp_sorghum")
         self.assertTrue(result)
 
         # Invalid gene
-        result = BARUtils.is_sorghum_gene_valid("abc")
+        result = BARUtils.is_efp_gene_valid("abc", "efp_sorghum")
         self.assertFalse(result)
 
     def test_format_poplar(self):

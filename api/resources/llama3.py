@@ -24,7 +24,7 @@ class Llama(Resource):
 
         gene_id = escape(gene_id.upper())
 
-        if BARUtils.is_arabidopsis_gene_valid(gene_id):
+        if BARUtils.is_efp_gene_valid(gene_id, "efp_arabidopsis"):
             rows = db.session.execute(db.select(Summaries).where(Summaries.gene_id == gene_id)).first()
 
             if rows and len(rows) > 0:

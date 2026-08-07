@@ -212,7 +212,7 @@ class EFPDataService:
             is_agi_id = upper_id.startswith("AT") and "G" in upper_id
 
             if is_agi_id:
-                if not BARUtils.is_arabidopsis_gene_valid(upper_id):
+                if not BARUtils.is_efp_gene_valid(upper_id, "efp_arabidopsis"):
                     return {"success": False, "error": "Invalid Arabidopsis gene ID format", "error_code": 400}
             elif species and schema["identifier_type"] == "agi":
                 if not GeneIdUtils.validate_gene_id(upper_id, species):

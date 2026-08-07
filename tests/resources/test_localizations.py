@@ -13,7 +13,7 @@ class TestIntegrations(TestCase):
         """
 
         # Rice isoform-suffixed IDs (LOC_Os01g52560.1) are no longer accepted:
-        # is_rice_gene_valid now delegates to Vincent's tested efp_rice registry
+        # the shared is_efp_gene_valid() check uses Vincent's tested efp_rice registry
         # pattern, which -- unlike the old hand-written regex -- has no isoform
         # suffix variant for the LOC_Os form. This is an accepted, deliberate
         # trade-off for a single source of truth on gene ID validation.
@@ -42,7 +42,7 @@ class TestIntegrations(TestCase):
         """
 
         # Rice isoform-suffixed IDs are no longer accepted -- see test_get_loc
-        # for why (is_rice_gene_valid now delegates to Vincent's efp_rice
+        # for why (validation now goes through Vincent's efp_rice
         # registry pattern, which has no LOC_Os isoform-suffix variant).
         response = self.app_client.post(
             "/loc/",

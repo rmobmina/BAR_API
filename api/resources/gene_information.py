@@ -83,7 +83,7 @@ class GeneAliases(Resource):
 
             # Check if gene is valid
             for gene in genes:
-                if not BARUtils.is_arabidopsis_gene_valid(gene):
+                if not BARUtils.is_efp_gene_valid(gene, "efp_arabidopsis"):
                     return BARUtils.error_exit("Invalid gene id"), 400
 
         else:
@@ -103,7 +103,7 @@ class GeneAliases(Resource):
             for row in rows:
                 normalized_agi = BARUtils.normalize_arabidopsis_gene(row.agi)
                 alias_value = row.alias
-                if BARUtils.is_arabidopsis_gene_valid(alias_value):
+                if BARUtils.is_efp_gene_valid(alias_value, "efp_arabidopsis"):
                     alias_value = BARUtils.normalize_arabidopsis_gene(alias_value)
 
                 if normalized_agi in data_items.keys():
@@ -140,7 +140,7 @@ class GenePublications(Resource):
             # Remove Arabidopsis isoforms
             gene_id = gene_id.split(".")[0]
 
-            if not BARUtils.is_arabidopsis_gene_valid(gene_id):
+            if not BARUtils.is_efp_gene_valid(gene_id, "efp_arabidopsis"):
                 return BARUtils.error_exit("Invalid gene id"), 400
         else:
             return BARUtils.error_exit("No data for the given species")
@@ -282,7 +282,7 @@ class GeneQueryGene(Resource):
         if species == "arabidopsis":
             # Term check
             for one_term in terms:
-                if not BARUtils.is_arabidopsis_gene_valid(one_term):
+                if not BARUtils.is_efp_gene_valid(one_term, "efp_arabidopsis"):
                     return BARUtils.error_exit("Input list contains invalid term"), 400
 
             alias_database = EPlant2AgiAlias
@@ -382,7 +382,7 @@ class SingleGeneQueryGene(Resource):
             annotation_database = EPlant2AgiAnnotation
 
             # Term check
-            if not BARUtils.is_arabidopsis_gene_valid(term):
+            if not BARUtils.is_efp_gene_valid(term, "efp_arabidopsis"):
                 return BARUtils.error_exit("Input term invalid"), 400
         else:
             return BARUtils.error_exit("No data for the given species"), 400
@@ -538,13 +538,13 @@ class GeneIsoforms(Resource):
         if species == "arabidopsis":
             database = EPlant2Isoforms
 
-            if not BARUtils.is_arabidopsis_gene_valid(gene_id):
+            if not BARUtils.is_efp_gene_valid(gene_id, "efp_arabidopsis"):
                 return BARUtils.error_exit("Invalid gene id"), 400
 
         elif species == "poplar":
             database = EPlantPoplarIsoforms
 
-            if not BARUtils.is_poplar_gene_valid(gene_id):
+            if not BARUtils.is_efp_gene_valid(gene_id, "efp_poplar"):
                 return BARUtils.error_exit("Invalid gene id"), 400
 
             # Format the gene first
@@ -553,13 +553,13 @@ class GeneIsoforms(Resource):
         elif species == "tomato":
             database = EPlantTomatoIsoforms
 
-            if not BARUtils.is_tomato_gene_valid(gene_id, False):
+            if not BARUtils.is_efp_gene_valid(gene_id, "efp_tomato"):
                 return BARUtils.error_exit("Invalid gene id"), 400
 
         elif species == "soybean":
             database = EPlantSoybeanIsoforms
 
-            if not BARUtils.is_soybean_gene_valid(gene_id):
+            if not BARUtils.is_efp_gene_valid(gene_id, "efp_soybean"):
                 return BARUtils.error_exit("Invalid gene id"), 400
         else:
             return BARUtils.error_exit("No data for the given species")
@@ -600,7 +600,7 @@ class PostGeneIsoforms(Resource):
 
             # Check if gene is valid
             for gene in genes:
-                if not BARUtils.is_arabidopsis_gene_valid(gene):
+                if not BARUtils.is_efp_gene_valid(gene, "efp_arabidopsis"):
                     return BARUtils.error_exit("Invalid gene id"), 400
 
         elif species == "poplar":
@@ -608,7 +608,7 @@ class PostGeneIsoforms(Resource):
 
             for gene in genes:
                 # Check if gene is valid
-                if not BARUtils.is_poplar_gene_valid(gene):
+                if not BARUtils.is_efp_gene_valid(gene, "efp_poplar"):
                     return BARUtils.error_exit("Invalid gene id"), 400
 
         elif species == "tomato":
@@ -616,7 +616,7 @@ class PostGeneIsoforms(Resource):
 
             for gene in genes:
                 # Check if gene is valid
-                if not BARUtils.is_tomato_gene_valid(gene, False):
+                if not BARUtils.is_efp_gene_valid(gene, "efp_tomato"):
                     return BARUtils.error_exit("Invalid gene id"), 400
 
         elif species == "soybean":
@@ -624,7 +624,7 @@ class PostGeneIsoforms(Resource):
 
             for gene in genes:
                 # Check if gene is valid
-                if not BARUtils.is_soybean_gene_valid(gene):
+                if not BARUtils.is_efp_gene_valid(gene, "efp_soybean"):
                     return BARUtils.error_exit("Invalid gene id"), 400
 
         else:

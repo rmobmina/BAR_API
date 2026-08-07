@@ -22,7 +22,7 @@ class ATTEDApi5(Resource):
         top_n = escape(top_n)
 
         # Is data valid
-        if not BARUtils.is_arabidopsis_gene_valid(gene_id):
+        if not BARUtils.is_efp_gene_valid(gene_id, "efp_arabidopsis"):
             return BARUtils.error_exit("Invalid gene id"), 400
 
         if not BARUtils.is_integer(top_n):

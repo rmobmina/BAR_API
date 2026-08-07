@@ -31,7 +31,7 @@ class Sequence(Resource):
         gene_id = escape(gene_id.capitalize())
 
         if species == "tomato":
-            if BARUtils.is_tomato_gene_valid(gene_id, True):
+            if BARUtils.is_efp_gene_valid(gene_id, "efp_tomato"):
                 rows = (
                     db.session.execute(db.select(Tomato32SequenceInfo).where(Tomato32SequenceInfo.gene_id == gene_id))
                     .scalars()
