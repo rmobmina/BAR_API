@@ -60,6 +60,7 @@ class TestDynamicEfpData(TestCase):
         self.assertEqual(result["error_code"], 400)
         self.assertIn("Invalid Arabidopsis gene ID format", result["error"])
 
+
 class TestProbesetConversion(TestCase):
     """Verify that AGI → probeset conversion runs for all arabidopsis probeset databases.
 
