@@ -1,13 +1,4 @@
-"""
-Schema definitions for all eFP databases that expose a sample_data table.
-
-Every database shares the same three-column structure:
-  data_probeset_id (VARCHAR 255), data_signal (FLOAT), data_bot_id (VARCHAR 255).
-
-Species and probeset/gene-model classification are sourced from combined_master.json.
-To add a new database, add its name to _DATABASE_NAMES (and an entry to combined_master.json
-if one doesn't already exist) — no other changes needed.
-"""
+"""Schema definitions for eFP databases sharing the same sample_data (data_probeset_id, data_signal, data_bot_id) table -- to add a database, just add its name to _DATABASE_NAMES."""
 
 from __future__ import annotations
 
@@ -33,13 +24,7 @@ _SCHEMA_TEMPLATE: DatabaseSpec = {
 
 
 def _schema(species: str, charset: str = "latin1") -> DatabaseSpec:
-    """Build a schema entry for one eFP database.
-
-    :param species: Species name stored in metadata (e.g., 'arabidopsis').
-    :param charset: MySQL character set — 'latin1' for most, 'utf8mb4' for non-Latin labels.
-    :returns: Full database schema dict ready for model generation.
-    :rtype: DatabaseSpec
-    """
+    """Build a schema entry for one eFP database, defaulting to latin1 (utf8mb4 for non-Latin labels)."""
     return {
         **_SCHEMA_TEMPLATE,
         "charset": charset,

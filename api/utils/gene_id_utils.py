@@ -34,12 +34,7 @@ _BARLEY_V3_RE = re.compile(r"\.[Vv]\d+$")
 class GeneIdUtils:
     @staticmethod
     def validate_gene_id(gene_id: str, species: str) -> bool:
-        """Validate a gene ID against its species' combined_master.json pattern.
-
-        Species with no known pattern (not in the registry at all) are passed
-        through as valid -- same permissive behaviour as before this used a
-        per-species lookup, since format-checking isn't possible without one.
-        """
+        """Validate a gene ID against its species' pattern; species with no known pattern pass through as valid."""
         efp_project = _SPECIES_EFP_PROJECT_OVERRIDES.get(species, f"efp_{species}")
         if efp_project not in EFP_PROJECT_REGEXES:
             return True

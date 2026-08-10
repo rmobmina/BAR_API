@@ -1,10 +1,4 @@
-"""
-Dynamic SQLAlchemy model generation for all eFP databases.
-
-At import time, one ORM model class is generated per database entry in
-SIMPLE_EFP_DATABASE_SCHEMAS and stored in SIMPLE_EFP_SAMPLE_MODELS.
-This replaces ~1,984 lines of hand-written boilerplate with a single registry.
-"""
+"""Generates one SQLAlchemy model class per database in SIMPLE_EFP_DATABASE_SCHEMAS at import time, instead of hand-writing each one."""
 
 from __future__ import annotations
 
@@ -18,23 +12,7 @@ from api.models.efp_schemas import SIMPLE_EFP_DATABASE_SCHEMAS
 
 
 def _to_sqla_type(column_spec):
-    """
-    Map a column specification dictionary to a SQLAlchemy column type.
-
-    Converts the simple type descriptors used in schema definitions to the
-    appropriate SQLAlchemy type objects for ORM model generation.
-
-    :param column_spec: Column specification with 'type', 'length', and 'unsigned' keys
-    :type column_spec: Dict[str, Any]
-    :return: SQLAlchemy column type (String, Integer, Float, or Text)
-    :rtype: sqlalchemy.types.TypeEngine
-    :raises ValueError: If column type is not one of: string, integer, float, text
-
-    Example::
-
-        col_spec = {"type": "string", "length": 24}
-        sqla_type = _to_sqla_type(col_spec)  # Returns String(24)
-    """
+    """Map a schema column spec ('type', 'length', 'unsigned') to a SQLAlchemy column type."""
     col_type = column_spec.get("type")
     if col_type == "string":
         return String(column_spec["length"])
@@ -50,26 +28,7 @@ def _to_sqla_type(column_spec):
 
 
 def _generate_model(bind_key: str, spec) -> db.Model:
-    """
-    Build a concrete SQLAlchemy model class for the given schema specification.
-
-    Dynamically creates an ORM model with the specified table name, bind key,
-    and columns based on the schema definition. The generated model class can
-    be used like any Flask-SQLAlchemy model.
-
-    :param bind_key: Database bind key (e.g., 'cannabis', 'embryo')
-    :type bind_key: str
-    :param spec: Database schema specification from SIMPLE_EFP_DATABASE_SCHEMAS
-    :type spec: Dict[str, Any]
-    :return: Dynamically generated SQLAlchemy model class
-    :rtype: db.Model
-
-    Example::
-
-        schema = SIMPLE_EFP_DATABASE_SCHEMAS['cannabis']
-        CannabisModel = _generate_model('cannabis', schema)
-        # Returns class: CannabisSampleData(db.Model)
-    """
+    """Build a concrete SQLAlchemy model class for the given database's schema spec."""
     attrs = {"__bind_key__": bind_key, "__tablename__": spec["table_name"]}
 
     for column in spec["columns"]:

@@ -67,11 +67,7 @@ class GetWorldeFPExpression(Resource):
 class GetDatabases(Resource):
     @microarray_gene_expression.param("species", _in="path", default="arabidopsis")
     def get(self, species=""):
-        """This endpoint returns the databases and views available for a given
-        species, and how many of each -- sourced live from combined_master.json
-        (data/efp_info/combined_master.json) instead of a hardcoded mapping, so
-        it can't drift out of sync with the actual database/frontend catalog.
-        """
+        """Returns the databases and views available for a given species, sourced live from combined_master.json."""
         species = str(escape(species)).lower()
 
         master = load_combined_master()
@@ -84,9 +80,7 @@ class GetDatabases(Resource):
             if db_info["species"] == species
         }
 
-        # A database can be exposed under different view display names by
-        # different frontend instances (efp vs eplant); collapse to a single
-        # view_name -> database_name mapping like the endpoint has always returned.
+        # collapse each database's views (efp/eplant may name them differently) into one view_name -> database_name mapping
         views = {}
         for db_name, db_info in databases.items():
             for used_by in db_info["used_by"]:
@@ -103,8 +97,6 @@ class GetDatabases(Resource):
 
 @microarray_gene_expression.route("/<string:species>/<string:view>/samples")
 class GetSamples1(Resource):
-    """This endpoint returns control and sample group mappings for a given species and view (or all views)"""
-
     @microarray_gene_expression.param("species", _in="path", default="arabidopsis")
     @microarray_gene_expression.param("view", _in="path", default="Abiotic_Stress")
     def get(self, species="", view=""):
@@ -122,8 +114,7 @@ class GetSamples1(Resource):
             if db_info["species"] == species
         }
 
-        # Collapse every database's views to a single view_name -> {database,
-        # platform, groups} mapping, same view-name normalization as /databases.
+        # same view_name -> {database, platform, groups} collapsing as /databases
         all_views = {}
         for db_name, db_info in species_databases.items():
             for view_info in db_info["views"].values():

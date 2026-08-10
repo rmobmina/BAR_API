@@ -60,6 +60,13 @@ class TestDynamicEfpData(TestCase):
         self.assertEqual(result["error_code"], 400)
         self.assertIn("Invalid Arabidopsis gene ID format", result["error"])
 
+    def test_invalid_cacao_gene_format(self):
+        """cacao databases split across ccn/sca/tc patterns still reject malformed ids per-database"""
+        result = query_efp_database_dynamic("cacao_leaf", "garbage-not-a-gene-id", allow_empty_results=True)
+        self.assertFalse(result["success"])
+        self.assertEqual(result["error_code"], 400)
+        self.assertIn("Invalid Cacao gene ID", result["error"])
+
 
 class TestProbesetConversion(TestCase):
     """Verify that AGI → probeset conversion runs for all arabidopsis probeset databases.

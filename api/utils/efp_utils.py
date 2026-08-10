@@ -55,78 +55,12 @@ class eFPUtils:
         if not eFPUtils.is_efp_mode(mode):
             return False, "Invalid eFP mode."
 
-        # Maybe this part could be improved
-        if efp == "efp_arabidopsis":
-            # Accept AGI format (AT1G01010) or microarray probeset IDs (267643_at)
-            if not BARUtils.is_efp_gene_valid(gene_1, "efp_arabidopsis"):
-                return False, "Gene 1 is invalid."
+        # efp is already constrained to one of the species list above, so it doubles as the gene-id project key
+        if not BARUtils.is_efp_gene_valid(gene_1, efp):
+            return False, "Gene 1 is invalid."
 
-            if mode == "Compare":
-                if not BARUtils.is_efp_gene_valid(gene_2, "efp_arabidopsis"):
-                    return False, "Gene 2 is invalid."
-
-        if efp == "efp_arachis":
-            # Validate gene ids
-            if not BARUtils.is_efp_gene_valid(gene_1, "efp_arachis"):
-                return False, "Gene 1 is invalid."
-
-            if mode == "Compare":
-                if not BARUtils.is_efp_gene_valid(gene_2, "efp_arachis"):
-                    return False, "Gene 2 is invalid."
-
-        if efp == "efp_cannabis":
-            # Validate gene ids
-            if not BARUtils.is_efp_gene_valid(gene_1, "efp_cannabis"):
-                return False, "Gene 1 is invalid."
-
-            if mode == "Compare":
-                if not BARUtils.is_efp_gene_valid(gene_2, "efp_cannabis"):
-                    return False, "Gene 2 is invalid."
-
-        if efp == "efp_grape":
-            # Validate gene Ids
-            if not BARUtils.is_efp_gene_valid(gene_1, "efp_grape"):
-                return False, "Gene 1 is invalid."
-
-            if mode == "Compare":
-                if not BARUtils.is_efp_gene_valid(gene_2, "efp_grape"):
-                    return False, "Gene 2 is invalid."
-
-        if efp == "efp_maize":
-            # Validate gene ids
-            if not BARUtils.is_efp_gene_valid(gene_1, "efp_maize"):
-                return False, "Gene 1 is invalid."
-
-            if mode == "Compare":
-                if not BARUtils.is_efp_gene_valid(gene_2, "efp_maize"):
-                    return False, "Gene 2 is invalid."
-
-        if efp == "efp_rice":
-            # Validate gene ids
-            if not BARUtils.is_efp_gene_valid(gene_1, "efp_rice"):
-                return False, "Gene 1 is invalid."
-
-            if mode == "Compare":
-                if not BARUtils.is_efp_gene_valid(gene_2, "efp_rice"):
-                    return False, "Gene 2 is invalid."
-
-        if efp == "efp_sorghum":
-            # Validate gene ids
-            if not BARUtils.is_efp_gene_valid(gene_1, "efp_sorghum"):
-                return False, "Gene 1 is invalid."
-
-            if mode == "Compare":
-                if not BARUtils.is_efp_gene_valid(gene_2, "efp_sorghum"):
-                    return False, "Gene 2 is invalid."
-
-        if efp == "efp_soybean":
-            # Validate gene ids
-            if not BARUtils.is_efp_gene_valid(gene_1, "efp_soybean"):
-                return False, "Gene 1 is invalid."
-
-            if mode == "Compare":
-                if not BARUtils.is_efp_gene_valid(gene_2, "efp_soybean"):
-                    return False, "Gene 2 is invalid."
+        if mode == "Compare" and not BARUtils.is_efp_gene_valid(gene_2, efp):
+            return False, "Gene 2 is invalid."
 
         # In compare mode gene1 != gene2
         if mode == "Compare" and gene_1 == gene_2:

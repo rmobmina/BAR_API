@@ -10,27 +10,19 @@ _COMBINED_MASTER_PATH = Path(__file__).resolve().parents[2] / "data" / "efp_info
 
 @lru_cache(maxsize=1)
 def load_combined_master() -> dict:
-    """Load data/efp_info/combined_master.json (species, databases, views, and
-    gene_id_patterns), cached after first read.
-    """
+    """Load data/efp_info/combined_master.json, cached after first read."""
     with open(_COMBINED_MASTER_PATH) as f:
         return json.load(f)
 
 
-# Per-eFP-project gene ID / probeset regexes, keyed by bare project name (e.g.
-# "arabidopsis") and also exposed under the "efp_"-prefixed spelling since
-# every is_XXX_gene_valid() method below calls is_efp_gene_valid() with that.
+# regexes keyed by both bare species name ("arabidopsis") and "efp_"-prefixed name
 _GENE_ID_PATTERNS = load_combined_master()["gene_id_patterns"]
 EFP_PROJECT_REGEXES: dict = {
     **_GENE_ID_PATTERNS,
     **{f"efp_{name}": pattern for name, pattern in _GENE_ID_PATTERNS.items()},
 }
 
-# General injection guard, run before any per-project format check. Can't
-# blacklist individual characters (some eFP projects accept freeform text like
-# metabolite/lipid names), so this looks for actual attack syntax instead: SQL
-# comment/statement-chaining sequences, tautologies, UNION SELECT, script tags,
-# and null bytes.
+# catches SQL comment/chaining, tautologies, UNION SELECT, script tags, null bytes -- not a per-char blacklist since some eFP projects accept freeform text
 _INJECTION_RE = re.compile(
     r"(--)"
     r"|(/\*)|(\*/)"
@@ -106,31 +98,12 @@ class BARUtils:
 
     @staticmethod
     def is_injection_attempt(data: str) -> bool:
-        """Flag obvious SQL/script injection payloads.
-
-        Meant to run before any format-specific check (probeset-shape check,
-        per-project regex, species validator) since some of those are
-        deliberately permissive -- e.g. efpconfig's near-unrestricted
-        `.{0,16}` or the metabolite/lipid projects' freeform text patterns --
-        and would otherwise let attack syntax through unexamined.
-
-        :param data: Raw input string to inspect
-        :return: True if the input looks like an injection attempt
-        """
+        """Flag obvious SQL/script injection payloads, run before any format-specific check since some of those are permissive by design."""
         return bool(_INJECTION_RE.search(data))
 
     @staticmethod
     def is_efp_gene_valid(gene: str, efp_project: str) -> bool:
-        """Validate a gene ID against the named eFP project's input regex.
-
-        Accepts both canonical gene IDs (e.g. AT1G01010 for Arabidopsis) and
-        microarray probeset IDs (e.g. 267643_at, Contig7905_at) depending on the
-        project. Returns False if the eFP project name is unknown.
-
-        :param gene: Gene identifier to validate
-        :param efp_project: eFP project key (e.g. 'efp_arabidopsis', 'arabidopsis')
-        :return: True if the gene ID matches the project's accepted format
-        """
+        """Validate a gene ID or probeset ID against the named eFP project's input regex."""
         if not gene:
             return False
         if BARUtils.is_injection_attempt(gene):
