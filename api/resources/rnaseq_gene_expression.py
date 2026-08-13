@@ -13,19 +13,18 @@ rnaseq_gene_expression = Namespace(
     path="/rnaseq_gene_expression",
 )
 
-# supported species stay here so schema metadata can reference them; gene IDs
-# are validated against the matching efp_<species> pattern in combined_master.json
-SPECIES_EFP_PROJECTS = {
-    "arabidopsis": "efp_arabidopsis",
-    "arachis": "efp_arachis",
-    "cannabis": "efp_cannabis",
-    "kalanchoe": "efp_kalanchoe",
-    "selaginella": "efp_selaginella",
-    "strawberry": "efp_strawberry",
-    "striga": "efp_striga",
-    "triphysaria": "efp_triphysaria",
-    "phelipanche": "efp_phelipanche",
-    "physcomitrella": "efp_physcomitrella",
+# validators stay here so schema metadata can reference them
+SPECIES_VALIDATORS = {
+    "arabidopsis": BARUtils.is_arabidopsis_gene_valid,
+    "arachis": BARUtils.is_arachis_gene_valid,
+    "cannabis": BARUtils.is_cannabis_gene_valid,
+    "kalanchoe": BARUtils.is_kalanchoe_gene_valid,
+    "selaginella": BARUtils.is_selaginella_gene_valid,
+    "strawberry": BARUtils.is_strawberry_gene_valid,
+    "striga": BARUtils.is_striga_gene_valid,
+    "triphysaria": BARUtils.is_triphysaria_gene_valid,
+    "phelipanche": BARUtils.is_phelipanche_gene_valid,
+    "physcomitrella": BARUtils.is_physcomitrella_gene_valid,
 }
 
 # metadata mirrors the schema catalog so validation stays in sync
@@ -68,8 +67,8 @@ class RNASeqUtils:
 
         # validate species selection and gene id format
         species = species.lower()
-        efp_project = SPECIES_EFP_PROJECTS.get(species)
-        if not efp_project:
+        gene_validator = SPECIES_VALIDATORS.get(species)
+        if not gene_validator:
             return {"success": False, "error": "Invalid species", "error_code": 400}
 
         database = database.lower()
@@ -78,7 +77,7 @@ class RNASeqUtils:
         if db_species and db_species != species:
             return {"success": False, "error": "Invalid species", "error_code": 400}
 
-        if not BARUtils.is_efp_gene_valid(gene_id, efp_project):
+        if not gene_validator(gene_id):
             return {"success": False, "error": "Invalid gene id", "error_code": 400}
 
         if database not in DATABASE_METADATA:

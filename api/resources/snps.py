@@ -63,7 +63,7 @@ class Docking(Resource):
         ligand = escape(ligand)
         docking_pdb_path = "/DATA/HEX_API/RESULTS/"
 
-        if not BARUtils.is_efp_gene_valid(receptor, "efp_arabidopsis"):
+        if not BARUtils.is_arabidopsis_gene_valid(receptor):
             return BARUtils.error_exit("Invalid arapbidopsis pdb gene id"), 400
 
         matched = re.search("[a-z]", ligand)
@@ -101,20 +101,20 @@ class Phenix(Resource):
         phenix_pdb_path = "/var/www/html/phenix-pdbs/"
 
         # Check if genes ids are valid
-        if BARUtils.is_efp_gene_valid(fixed_pdb, "efp_arabidopsis"):
+        if BARUtils.is_arabidopsis_gene_valid(fixed_pdb):
             fixed_pdb_path = arabidopsis_pdb_path + fixed_pdb.upper() + ".pdb"
-        elif BARUtils.is_efp_gene_valid(fixed_pdb, "efp_poplar"):
+        elif BARUtils.is_poplar_gene_valid(fixed_pdb):
             fixed_pdb_path = poplar_pdb_path + BARUtils.format_poplar(fixed_pdb) + ".pdb"
-        elif BARUtils.is_efp_gene_valid(fixed_pdb, "efp_tomato"):
+        elif BARUtils.is_tomato_gene_valid(fixed_pdb, True):
             fixed_pdb_path = tomato_pdb_path + fixed_pdb.capitalize() + ".pdb"
         else:
             return BARUtils.error_exit("Invalid fixed pdb gene id"), 400
 
-        if BARUtils.is_efp_gene_valid(moving_pdb, "efp_arabidopsis"):
+        if BARUtils.is_arabidopsis_gene_valid(moving_pdb):
             moving_pdb_path = arabidopsis_pdb_path + moving_pdb.upper() + ".pdb"
-        elif BARUtils.is_efp_gene_valid(moving_pdb, "efp_poplar"):
+        elif BARUtils.is_poplar_gene_valid(moving_pdb):
             moving_pdb_path = poplar_pdb_path + BARUtils.format_poplar(moving_pdb) + ".pdb"
-        elif BARUtils.is_efp_gene_valid(moving_pdb, "efp_tomato"):
+        elif BARUtils.is_tomato_gene_valid(moving_pdb, True):
             moving_pdb_path = tomato_pdb_path + moving_pdb.capitalize() + ".pdb"
         else:
             return BARUtils.error_exit("Invalid moving pdb gene id"), 400
@@ -152,25 +152,25 @@ class GeneNameAlias(Resource):
         # Escape input
         gene_id = escape(gene_id)
 
-        if species == "poplar" and BARUtils.is_efp_gene_valid(gene_id, "efp_poplar"):
+        if species == "poplar" and BARUtils.is_poplar_gene_valid(gene_id):
             protein_reference = PoplarProteinReference
             snps_to_protein = PoplarSnpsToProtein
             snps_reference = PoplarSnpsReference
-        elif species == "tomato" and BARUtils.is_efp_gene_valid(gene_id, "efp_tomato"):
+        elif species == "tomato" and BARUtils.is_tomato_gene_valid(gene_id, True):
             protein_reference = TomatoProteinReference
             snps_to_protein = TomatoSnpsToProtein
             snps_reference = TomatoSnpsReference
-        elif species == "soybean" and BARUtils.is_efp_gene_valid(gene_id, "efp_soybean"):
+        elif species == "soybean" and BARUtils.is_soybean_gene_valid(gene_id):
             protein_reference = SoybeanProteinReference
             snps_to_protein = SoybeanSnpsToProtein
             snps_reference = SoybeanSnpsReference
-        elif species == "canola" and BARUtils.is_efp_gene_valid(gene_id, "efp_canola"):
+        elif species == "canola" and BARUtils.is_canola_gene_valid(gene_id):
             protein_reference = CanolaProteinReference
             snps_to_protein = CanolaSnpsToProtein
         else:
             return BARUtils.error_exit("Invalid gene id"), 400
 
-        if species == "canola" and BARUtils.is_efp_gene_valid(gene_id, "efp_canola"):
+        if species == "canola" and BARUtils.is_canola_gene_valid(gene_id):
             rows = (
                 db.session.execute(
                     db.select(protein_reference, snps_to_protein)
@@ -304,11 +304,11 @@ class Pymol(Resource):
             return BARUtils.error_exit("Too many mutations, limit is 25"), 400
 
         # Check if gene input is valid
-        if BARUtils.is_efp_gene_valid(model, "efp_arabidopsis"):
+        if BARUtils.is_arabidopsis_gene_valid(model):
             gene_pdb_path = arabidopsis_pdb_path + model.upper() + ".pdb"
-        elif BARUtils.is_efp_gene_valid(model, "efp_poplar"):
+        elif BARUtils.is_poplar_gene_valid(model):
             gene_pdb_path = poplar_pdb_path + BARUtils.format_poplar(model) + ".pdb"
-        elif BARUtils.is_efp_gene_valid(model, "efp_tomato"):
+        elif BARUtils.is_tomato_gene_valid(model, True):
             gene_pdb_path = tomato_pdb_path + model.capitalize() + ".pdb"
 
         # new: check pdb id inputs
@@ -559,8 +559,8 @@ class Homologs(Resource):
 
         if (search_species not in supported) or (target_species not in supported):
             return BARUtils.error_exit("Species not supported"), 400
-        elif (search_species == "arabidopsis" and BARUtils.is_efp_gene_valid(gene_id, "efp_arabidopsis")) or (
-            search_species == "canola" and BARUtils.is_efp_gene_valid(gene_id, "efp_canola")
+        elif (search_species == "arabidopsis" and BARUtils.is_arabidopsis_gene_valid(gene_id)) or (
+            search_species == "canola" and BARUtils.is_canola_gene_valid(gene_id)
         ):
             results = HomologsDB.query.filter_by(
                 search_protein_name=gene_id, search_species_name=search_species, result_species_name=target_species

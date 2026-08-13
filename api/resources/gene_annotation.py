@@ -180,7 +180,7 @@ class GeneAnnotationPost(Resource):
         # First validate species and gene ids, and also select a database
         if species == "rice":
             for gene in genes:
-                if not BARUtils.is_efp_gene_valid(gene, "efp_rice"):
+                if not BARUtils.is_rice_gene_valid(gene):
                     return BARUtils.error_exit("Invalid gene id"), 400
 
             database = EplantRiceAnnotation

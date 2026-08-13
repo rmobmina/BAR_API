@@ -196,7 +196,7 @@ class Interactions(Resource):
         species = escape(species.lower())
         query_gene = escape(query_gene)
 
-        if species == "rice" and BARUtils.is_efp_gene_valid(query_gene, "efp_rice"):
+        if species == "rice" and BARUtils.is_rice_gene_valid(query_gene):
             rows = (
                 db.session.execute(
                     db.select(RiceInteractions).where(
@@ -253,7 +253,7 @@ class InteractionsPost(Resource):
 
         if species == "rice":
             for gene in genes:
-                if not BARUtils.is_efp_gene_valid(gene, "efp_rice"):
+                if not BARUtils.is_rice_gene_valid(gene):
                     return BARUtils.error_exit("Invalid gene id"), 400
 
             rows = (
