@@ -45,7 +45,7 @@ class MfinderUtils:
         if not all(isinstance(j, str) for i in input for j in i):
             return "invalid JSON, check if inside arr members are strings!"
 
-        if not all(BARUtils.is_efp_gene_valid(j, "efp_arabidopsis") for i in input for j in i):
+        if not all(BARUtils.is_arabidopsis_gene_valid(j) for i in input for j in i):
             return "Invalid gene ID contained!"
 
         # filter self-edges and duplicate edges (mFinder does not accept)
