@@ -18,6 +18,9 @@ from api.models.efp_schemas import SIMPLE_EFP_DATABASE_SCHEMAS
 from api.utils.bar_utils import BARUtils
 from api.utils.gene_id_utils import GeneIdUtils
 
+# Gates the AtAgiLookup conversion below; format validation itself is handled separately
+_ARABIDOPSIS_AGI_RE = re.compile(r"^AT[12345CM]G\d{5}(\.\d+)?$", re.I)
+
 DEFAULT_SAMPLE_SCHEMA = {
     "table": "sample_data",
     "gene_column": "data_probeset_id",
@@ -128,37 +131,28 @@ def query_efp_database_dynamic(
             }
 
         species = schema.get("metadata", {}).get("species", "").lower()
+        upper_id = gene_id.upper()
+
+        if not GeneIdUtils.validate_gene_for_database(upper_id, database):
+            error = f"Invalid {species.capitalize()} gene ID" if species else "Invalid gene ID"
+            return {"success": False, "error": error, "error_code": 400}
 
         query_id = gene_id
         probset_display = None
         gene_case_insensitive = False
-        upper_id = gene_id.upper()
-        is_agi_id = upper_id.startswith("AT") and "G" in upper_id
 
-        if is_agi_id:
-            if not BARUtils.is_efp_gene_valid(upper_id, "efp_arabidopsis"):
-                return {"success": False, "error": "Invalid Arabidopsis gene ID format", "error_code": 400}
-        elif species and schema["identifier_type"] == "agi":
-            if not GeneIdUtils.validate_gene_for_database(upper_id, database):
-                return {"success": False, "error": f"Invalid {species.capitalize()} gene ID", "error_code": 400}
-
-        # Arabidopsis probeset databases need the AGI converted first; everyone else queries as-is
-        if is_agi_id:
-            if schema["identifier_type"] == "probeset":
-                probset = agi_to_probset(upper_id)
-                if not probset:
-                    return {
-                        "success": False,
-                        "error": f"Could not find probeset for gene {gene_id}",
-                        "error_code": 404,
-                    }
-                query_id = probset
-                probset_display = probset
-                print(f"[info] Converted {gene_id} to probeset {query_id} for {database}")
-            else:
-                query_id = upper_id
-                gene_case_insensitive = True
-                probset_display = upper_id
+        # only arabidopsis probeset databases go through AtAgiLookup; everyone else queries as given
+        if schema["identifier_type"] == "probeset" and _ARABIDOPSIS_AGI_RE.fullmatch(upper_id):
+            probset = agi_to_probset(upper_id)
+            if not probset:
+                return {
+                    "success": False,
+                    "error": f"Could not find probeset for gene {gene_id}",
+                    "error_code": 404,
+                }
+            query_id = probset
+            probset_display = probset
+            print(f"[info] Converted {gene_id} to probeset {query_id} for {database}")
         else:
             query_id = upper_id if species else gene_id
             gene_case_insensitive = bool(species)

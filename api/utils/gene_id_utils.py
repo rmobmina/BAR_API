@@ -47,7 +47,7 @@ class GeneIdUtils:
             return False
         efp_project = DATABASE_EFP_PROJECT.get(database)
         if efp_project:
-            return BARUtils.is_efp_gene_valid(gene_id, efp_project)
+            return BARUtils.is_efp_gene_valid(gene_id, f"efp_{efp_project}")
         species = DATABASE_SPECIES.get(database)
         return GeneIdUtils.validate_gene_id(gene_id, species) if species else True
 

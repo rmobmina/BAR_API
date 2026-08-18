@@ -15,12 +15,9 @@ def load_combined_master() -> dict:
         return json.load(f)
 
 
-# regexes keyed by both bare species name ("arabidopsis") and "efp_"-prefixed name
+# regexes keyed by "efp_"-prefixed project name, e.g. "efp_arabidopsis"
 _GENE_ID_PATTERNS = load_combined_master()["gene_id_patterns"]
-EFP_PROJECT_REGEXES: dict = {
-    **_GENE_ID_PATTERNS,
-    **{f"efp_{name}": pattern for name, pattern in _GENE_ID_PATTERNS.items()},
-}
+EFP_PROJECT_REGEXES: dict = {f"efp_{name}": pattern for name, pattern in _GENE_ID_PATTERNS.items()}
 
 # catches SQL comment/chaining, tautologies, UNION SELECT, script tags, null bytes -- not a per-char blacklist since some eFP projects accept freeform text
 _INJECTION_RE = re.compile(

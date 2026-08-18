@@ -12,7 +12,7 @@ gene_expression = Namespace(
 )
 
 
-@gene_expression.route("/expression/<string:database>/<string:gene_id>")
+@gene_expression.route("/expression/<string:database>/<path:gene_id>")
 @gene_expression.doc(description="Retrieve gene expression values from a specified eFP database.")
 @gene_expression.param(
     "gene_id",
@@ -48,10 +48,10 @@ class GeneExpression(Resource):
 
         error_code = result.get("error_code", 500)
         if error_code == 404:
-            return BARUtils.error_exit("No data found for the given gene"), 404
+            return BARUtils.error_exit(result.get("error", "No data found for the given gene")), 404
         if error_code == 503:
             return BARUtils.error_exit("Database not available"), 503
         return BARUtils.error_exit("An error occurred"), 500
 
 
-gene_expression.add_resource(GeneExpression, "/expression/<string:database>/<string:gene_id>")
+gene_expression.add_resource(GeneExpression, "/expression/<string:database>/<path:gene_id>")
