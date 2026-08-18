@@ -58,7 +58,7 @@ class TestDynamicEfpData(TestCase):
         result = query_efp_database_dynamic("embryo", "AT1G0101X")
         self.assertFalse(result["success"])
         self.assertEqual(result["error_code"], 400)
-        self.assertIn("Invalid Arabidopsis gene ID format", result["error"])
+        self.assertIn("Invalid Arabidopsis gene ID", result["error"])
 
     def test_invalid_cacao_gene_format(self):
         """cacao databases split across ccn/sca/tc patterns still reject malformed ids per-database"""
