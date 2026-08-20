@@ -7,7 +7,7 @@ import traceback
 from typing import Any, Dict, List, Optional
 
 from flask import has_app_context
-from sqlalchemy import text
+from sqlalchemy import Column, MetaData, Table, func, select
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session
@@ -50,7 +50,7 @@ _MANUAL_DEFAULT_DATABASES = [
 MANUAL_DATABASE_SCHEMAS = {
     name: {
         **DEFAULT_SAMPLE_SCHEMA,
-        "identifier_type": "agi",
+        "identifier_type": "gene_model",
         "metadata": {},
     }
     for name in _MANUAL_DEFAULT_DATABASES
@@ -64,7 +64,7 @@ def _build_schema_catalog() -> Dict[str, Dict[str, Any]]:
         schema = dict(DEFAULT_SAMPLE_SCHEMA)
         schema.update(
             {
-                "identifier_type": spec.get("identifier_type", "agi"),
+                "identifier_type": spec.get("identifier_type", "gene_model"),
                 "metadata": spec.get("metadata") or {},
             }
         )
@@ -157,45 +157,28 @@ def query_efp_database_dynamic(
             query_id = upper_id if species else gene_id
             gene_case_insensitive = bool(species)
 
-        gene_col = schema["gene_column"]
-        sample_col = schema["sample_column"]
-        value_col = schema["value_column"]
-        table_name = schema["table"]
+        table = Table(
+            schema["table"],
+            MetaData(),
+            Column(schema["gene_column"]),
+            Column(schema["sample_column"]),
+            Column(schema["value_column"]),
+        )
+        gene_col = table.c[schema["gene_column"]]
+        sample_col = table.c[schema["sample_column"]]
+        value_col = table.c[schema["value_column"]]
 
-        # Column/table names come from the internal schema catalog, but validate anyway before interpolating into SQL
-        for identifier, name in [
-            (gene_col, "gene_column"),
-            (sample_col, "sample_column"),
-            (value_col, "value_column"),
-            (table_name, "table"),
-        ]:
-            if not re.match(r"^[a-zA-Z_][a-zA-Z0-9_]*$", identifier):
-                return {
-                    "success": False,
-                    "error": f"Invalid schema identifier for {name}: {identifier}",
-                    "error_code": 500,
-                }
-
-        gene_column_expr = f"UPPER({gene_col})" if gene_case_insensitive else gene_col
-        params = {"gene_id": query_id.upper() if gene_case_insensitive else query_id}
-        where_clauses = [f"{gene_column_expr} = :gene_id"]
+        gene_expr = func.upper(gene_col) if gene_case_insensitive else gene_col
+        gene_value = query_id.upper() if gene_case_insensitive else query_id
+        stmt = select(sample_col.label("sample"), value_col.label("value")).where(gene_expr == gene_value)
 
         if sample_ids:
             filtered = [s for s in sample_ids if s]
             if filtered:
-                sample_column_expr = f"UPPER({sample_col})" if sample_case_insensitive else sample_col
-                sample_conditions = []
-                for idx, sample in enumerate(filtered):
-                    key = f"sample_{idx}"
-                    params[key] = sample.upper() if sample_case_insensitive else sample
-                    sample_conditions.append(f"{sample_column_expr} = :{key}")
-                where_clauses.append(f"({' OR '.join(sample_conditions)})")
-
-        query_sql = text(
-            f"SELECT {sample_col} AS sample, {value_col} AS value "
-            f"FROM {table_name} "
-            f"WHERE {' AND '.join(where_clauses)}"
-        )
+                if sample_case_insensitive:
+                    stmt = stmt.where(func.upper(sample_col).in_([s.upper() for s in filtered]))
+                else:
+                    stmt = stmt.where(sample_col.in_(filtered))
 
         engine = _get_engine(database)
         results = None
@@ -204,7 +187,7 @@ def query_efp_database_dynamic(
         if engine:
             try:
                 with Session(engine) as session:
-                    results = session.execute(query_sql, params).all()
+                    results = session.execute(stmt).all()
             except SQLAlchemyError as exc:
                 last_error = f"query failed: {exc}"
                 print(f"[warn] {last_error}")

@@ -19,7 +19,7 @@ _SCHEMA_TEMPLATE: DatabaseSpec = {
         {"name": "data_bot_id", "type": "string", "length": 255, "nullable": True, "primary_key": True},
     ],
     "index": ["data_probeset_id", "data_bot_id", "data_signal"],
-    "identifier_type": "agi",
+    "identifier_type": "gene_model",
 }
 
 
