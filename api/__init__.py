@@ -38,11 +38,11 @@ def create_app():
         # Only adds databases that are not already explicitly configured.
         mysql_efp_base = bar_app.config.get("MYSQL_EFP_BASE_URI")
         if mysql_efp_base:
-            from api.models.efp_schemas import SIMPLE_EFP_DATABASE_SCHEMAS
+            from api.utils.bar_utils import load_combined_master
 
             binds = bar_app.config.get("SQLALCHEMY_BINDS") or {}
             base = mysql_efp_base.rstrip("/")
-            for db_name in SIMPLE_EFP_DATABASE_SCHEMAS:
+            for db_name in load_combined_master()["databases"]:
                 if db_name not in binds:
                     binds[db_name] = f"{base}/{db_name}"
             bar_app.config["SQLALCHEMY_BINDS"] = binds

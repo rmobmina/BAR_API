@@ -1,4 +1,6 @@
 """
+Reena Obmina | UTEA Project 2026 | University of Toronto
+
 Tests for the gene information endpoints (GET /gene_information/*).
 
 Covers id_autocomplete, gene_aliases, gene_publications, and isoforms,

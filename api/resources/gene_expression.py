@@ -1,9 +1,13 @@
+import re
+
 from flask_restx import Namespace, Resource
 from markupsafe import escape
+from sqlalchemy import func
 
-from api.services.efp_data import query_efp_database_dynamic
-from api.utils.bar_utils import BARUtils
-from api.utils.gene_id_utils import DATABASE_SPECIES, GeneIdUtils, DATABASE_EFP_PROJECT
+from api import db
+from api.models.annotations_lookup import AtAgiLookup
+from api.models.efp_dynamic import SAMPLE_DATA_MODELS
+from api.utils.bar_utils import BARUtils, load_combined_master
 
 gene_expression = Namespace(
     "Gene Expression",
@@ -11,47 +15,59 @@ gene_expression = Namespace(
     path="/gene_expression",
 )
 
+_AGI_RE = re.compile(r"^AT[12345CM]G\d{5}(\.\d+)?$", re.I)
+
 
 @gene_expression.route("/expression/<string:database>/<path:gene_id>")
-@gene_expression.doc(description="Retrieve gene expression values from a specified eFP database.")
+@gene_expression.param("database", "Database name (e.g. klepikova, atgenexp, embryo)", _in="path", default="klepikova")
 @gene_expression.param(
-    "gene_id",
-    "Gene ID (e.g. AT1G01010 for Arabidopsis, or a probeset like 261585_at)",
-    _in="path",
-    default="AT1G01010",
-)
-@gene_expression.param(
-    "database",
-    "Database name (e.g. klepikova, atgenexp, embryo)",
-    _in="path",
-    default="klepikova",
+    "gene_id", "Gene ID (e.g. AT1G01010 for Arabidopsis, or a probeset like 261585_at)", _in="path", default="AT1G01010"
 )
 class GeneExpression(Resource):
     def get(self, database, gene_id):
-        """Retrieve expression values for a gene from a given eFP database."""
+        """Returns expression values for a gene from a given eFP database."""
         database = str(escape(database))
         gene_id = str(escape(gene_id))
+        upper_id = gene_id.upper()
 
-        species = DATABASE_SPECIES.get(database)
-        if species is None:
-            return BARUtils.error_exit(f"Unknown database '{database}'"), 400
+        master = load_combined_master()
+        db_info = master["databases"].get(database)
+        model = SAMPLE_DATA_MODELS.get(database)
+        if not db_info or not model:
+            return BARUtils.error_exit("Invalid species or gene ID"), 400
 
-        if not GeneIdUtils.validate_gene_for_database(gene_id, database):
-            label = DATABASE_EFP_PROJECT.get(database) or species or database
-            return BARUtils.error_exit(f"Invalid gene ID for {label}: '{gene_id}'"), 400
+        pattern = master["gene_id_patterns"].get(db_info.get("gene_id_pattern") or db_info["species"])
+        if not pattern or BARUtils.is_injection_attempt(upper_id) or not re.fullmatch(pattern, upper_id, re.I):
+            return BARUtils.error_exit("Invalid species or gene ID"), 400
 
-        query_id = GeneIdUtils.normalize_gene_id(gene_id, species)
-        result = query_efp_database_dynamic(database, query_id)
+        # probeset-keyed databases store rows by probeset, so an AGI must be resolved first
+        query_id = upper_id
+        if db_info["identifier_type"] == "probeset" and _AGI_RE.fullmatch(upper_id):
+            rows = db.session.execute(
+                db.select(AtAgiLookup.probeset)
+                .where(AtAgiLookup.agi == upper_id)
+                .order_by(AtAgiLookup.date.desc())
+                .limit(1)
+            ).all()
 
-        if result["success"]:
-            return BARUtils.success_exit(result)
+            if len(rows) == 0:
+                return BARUtils.error_exit("Invalid species or gene ID"), 400
 
-        error_code = result.get("error_code", 500)
-        if error_code == 404:
-            return BARUtils.error_exit(result.get("error", "No data found for the given gene")), 404
-        if error_code == 503:
-            return BARUtils.error_exit("Database not available"), 503
-        return BARUtils.error_exit("An error occurred"), 500
+            query_id = rows[0][0]
 
+        rows = db.session.execute(
+            db.select(model.data_bot_id, model.data_signal).where(func.upper(model.data_probeset_id) == query_id.upper())
+        ).all()
 
-gene_expression.add_resource(GeneExpression, "/expression/<string:database>/<path:gene_id>")
+        if len(rows) == 0:
+            return BARUtils.error_exit("There are no data found for the given gene"), 400
+
+        res = {
+            "gene_id": gene_id,
+            "probset_id": query_id,
+            "database": database,
+            "record_count": len(rows),
+            "data": [{"name": name, "value": str(value)} for name, value in rows],
+        }
+
+        return BARUtils.success_exit(res)
