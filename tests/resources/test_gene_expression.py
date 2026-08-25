@@ -46,8 +46,8 @@ class TestGeneExpression(TestCase):
         self.assertEqual(response.json["error"], "There are no data found for the given gene")
 
     def test_probeset_database_accepts_probeset_directly(self):
-        """light_series stores rows by probeset -- a probeset-shaped ID skips the AGI lookup."""
-        response = self.client.get("/gene_expression/expression/light_series/261585_at")
+        """arabidopsis_ecotypes stores rows by probeset -- a probeset-shaped ID skips the AGI lookup."""
+        response = self.client.get("/gene_expression/expression/arabidopsis_ecotypes/261585_at")
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json["data"]["probset_id"], "261585_AT")
 
@@ -73,11 +73,11 @@ class TestAgiToProbesetConversion(TestCase):
             db.session.commit()
 
     def test_agi_converts_to_probeset_before_query(self):
-        response = self.client.get(f"/gene_expression/expression/light_series/{self.AGI}")
+        response = self.client.get(f"/gene_expression/expression/arabidopsis_ecotypes/{self.AGI}")
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json["data"]["probset_id"], self.PROBESET)
 
     def test_unmapped_agi_rejected(self):
-        response = self.client.get("/gene_expression/expression/light_series/AT5G99998")
+        response = self.client.get("/gene_expression/expression/arabidopsis_ecotypes/AT5G99998")
         self.assertEqual(response.status_code, 400)
         self.assertEqual(response.json["error"], "Invalid species or gene ID")
