@@ -160,7 +160,7 @@ class UtilsUnitTest(TestCase):
             "efp_soybean", "efp_maize", "efp_triticale", "efp_human",
         ]
         for key in required:
-            self.assertIn(key, EFP_PROJECT_REGEXES, f"Missing eFP project key: {key}")
+            self.assertIn(key, EFP_PROJECT_REGEXES, "Missing eFP project key: {}".format(key))
 
     def test_is_efp_gene_valid_arabidopsis(self):
         """efp_arabidopsis accepts AGI, ATH1 probeset IDs, and standalone numerics."""

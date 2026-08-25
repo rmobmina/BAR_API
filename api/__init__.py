@@ -44,7 +44,7 @@ def create_app():
             base = mysql_efp_base.rstrip("/")
             for db_name in load_combined_master()["databases"]:
                 if db_name not in binds:
-                    binds[db_name] = f"{base}/{db_name}"
+                    binds[db_name] = "{}/{}".format(base, db_name)
             bar_app.config["SQLALCHEMY_BINDS"] = binds
 
     elif is_ci:

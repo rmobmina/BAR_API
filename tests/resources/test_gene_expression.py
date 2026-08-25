@@ -73,7 +73,7 @@ class TestAgiToProbesetConversion(TestCase):
             db.session.commit()
 
     def test_agi_converts_to_probeset_before_query(self):
-        response = self.client.get(f"/gene_expression/expression/arabidopsis_ecotypes/{self.AGI}")
+        response = self.client.get("/gene_expression/expression/arabidopsis_ecotypes/{}".format(self.AGI))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json["data"]["probset_id"], self.PROBESET)
 
