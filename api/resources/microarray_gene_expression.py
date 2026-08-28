@@ -1,3 +1,5 @@
+import re
+
 from flask_restx import Namespace, Resource
 from markupsafe import escape
 from api import db
@@ -26,7 +28,8 @@ class GetWorldeFPExpression(Resource):
         gene_id = escape(gene_id)
 
         if species == "arabidopsis":
-            if not BARUtils.is_efp_gene_valid(gene_id, "efp_arabidopsis"):
+            pattern = load_combined_master()["gene_id_patterns"].get(species)  # 1:1 lookup of this species' regex
+            if not pattern or BARUtils.is_injection_attempt(gene_id) or not re.fullmatch(pattern, gene_id, re.I):
                 return BARUtils.error_exit("Invalid gene id")
         else:
             return BARUtils.error_exit("Invalid species")

@@ -15,10 +15,6 @@ def load_combined_master() -> dict:
         return json.load(f)
 
 
-# regexes keyed by "efp_"-prefixed project name, e.g. "efp_arabidopsis"
-_GENE_ID_PATTERNS = load_combined_master()["gene_id_patterns"]
-EFP_PROJECT_REGEXES: dict = {"efp_{}".format(name): pattern for name, pattern in _GENE_ID_PATTERNS.items()}
-
 # catches SQL comment/chaining, tautologies, UNION SELECT, script tags, null bytes -- not a per-char blacklist since some eFP projects accept freeform text
 _INJECTION_RE = re.compile(
     r"(--)"
@@ -313,21 +309,9 @@ class BARUtils:
         return poplar_gene.translate(str.maketrans("pOTRIg", "PotriG"))
 
     @staticmethod
-    def is_injection_attempt(data: str) -> bool:
+    def is_injection_attempt(data):
         """Flag obvious SQL/script injection payloads, run before any format-specific check since some of those are permissive by design."""
         return bool(_INJECTION_RE.search(data))
-
-    @staticmethod
-    def is_efp_gene_valid(gene: str, efp_project: str) -> bool:
-        """Validate a gene ID or probeset ID against the named eFP project's input regex."""
-        if not gene:
-            return False
-        if BARUtils.is_injection_attempt(gene):
-            return False
-        pattern = EFP_PROJECT_REGEXES.get(efp_project)
-        if not pattern:
-            return False
-        return bool(re.fullmatch(pattern, gene, re.I))
 
     @staticmethod
     def connect_redis():
