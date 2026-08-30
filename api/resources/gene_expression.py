@@ -37,10 +37,9 @@ class GeneExpression(Resource):
             return BARUtils.error_exit("Invalid species or gene ID"), 400
 
         pattern = master["gene_id_patterns"].get(db_info.get("gene_id_pattern") or db_info["species"])
-        if not pattern or BARUtils.is_injection_attempt(upper_id) or not re.fullmatch(pattern, upper_id, re.I):
+        if not BARUtils.is_valid_gene_id(pattern, upper_id):
             return BARUtils.error_exit("Invalid species or gene ID"), 400
 
-        # probeset-keyed databases store rows by probeset, so an AGI must be resolved first
         query_id = upper_id
         if db_info["identifier_type"] == "probeset" and _AGI_RE.fullmatch(upper_id):
             rows = db.session.execute(

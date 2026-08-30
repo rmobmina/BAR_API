@@ -314,6 +314,11 @@ class BARUtils:
         return bool(_INJECTION_RE.search(data))
 
     @staticmethod
+    def is_valid_gene_id(pattern, gene_id):
+        """Validate a gene/probeset ID against a combined_master.json gene_id_pattern, rejecting injection payloads first."""
+        return bool(pattern) and not BARUtils.is_injection_attempt(gene_id) and bool(re.fullmatch(pattern, gene_id, re.I))
+
+    @staticmethod
     def connect_redis():
         """This function connects to redis
         :returns: redis connection
